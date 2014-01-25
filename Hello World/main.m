@@ -19,6 +19,9 @@ int main(int argc, const char * argv[])
 		NSData *inputData = [NSData dataWithData:[console readDataToEndOfFile]];
 		NSString *inputString = [[NSString alloc] initWithData:inputData encoding:NSUTF8StringEncoding];
 		
+		// Spit out a UTF-8 formated string using printf (stdout)
+		printf("%s", [inputString UTF8String]);
+		
 	    NSLog(@"Hello, World!");
 	}
     return 0;
