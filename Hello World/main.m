@@ -12,10 +12,14 @@ int main(int argc, const char * argv[])
 {
 
 	@autoreleasepool {
-	    
-	    // insert code here...
+	    printf("Please enter in a message:");
+		
+		// Idea from http://caiustheory.com/read-standard-input-using-objective-c
+	    NSFileHandle *console = [NSFileHandle fileHandleWithStandardInput];
+		NSData *inputData = [NSData dataWithData:[console readDataToEndOfFile]];
+		NSString *inputString = [[NSString alloc] initWithData:inputData encoding:NSUTF8StringEncoding];
+		
 	    NSLog(@"Hello, World!");
-	    
 	}
     return 0;
 }
