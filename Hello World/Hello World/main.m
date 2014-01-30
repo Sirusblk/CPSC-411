@@ -37,9 +37,9 @@ int main(int argc, const char * argv[])
 }
 
 /*
- What is the name and version of the compiler used?		Clang
+ What is the name and version of the compiler used?		Clang LLVM (Apple's Version)
  Where is your project file and source code stored?		In my project folder...
- Where are the intermediate files stored?
- Where is the application bundle stored?
- Where is the project's binary executable stored?
+ Where are the intermediate files stored?				(Object files, etc) By default not with everything else. /Users/.../Library/Developer/Xcode/Derived Data/
+ Where is the application bundle stored?				Inside Application.app
+ Where is the project's binary executable stored?		Inside the Application.app folder under MacOS
  */
