@@ -11,6 +11,7 @@
 //Prototypes
 void primeNumber(int);
 bool isPrime(int);
+void sumOfMultiples(int, int, int);
 
 //Main
 int main(int argc, const char * argv[])
@@ -18,7 +19,7 @@ int main(int argc, const char * argv[])
 
 	@autoreleasepool {
 	    primeNumber(10001);
-	    
+	    sumOfMultiples(1000, 3, 5);
 	}
     return 0;
 }
@@ -34,7 +35,6 @@ void primeNumber(int maxCount)
 	for (int i = 1; i <= maxCount; ) {
 		// If it is prime, increase the count for prime number
 		if (isPrime(num)) {
-			printf("%d\n", num);
 			i++;
 		}
 		
@@ -59,4 +59,23 @@ bool isPrime(int input)
 	}
 	
 	return true;
+}
+
+void sumOfMultiples(int upperBound, int numA, int numB)
+{
+	NSLog(@"Entered Sum of Multiples Function");
+	
+	//Variables
+	int total = 0;
+	
+	//Loop
+	for(int i = 0; i < upperBound; i++)
+	{
+		if(i % numA == 0)
+			total += i;
+		else if(i % numB == 0)
+			total += i;
+	}
+	
+	printf("The sum of all multiples of %d  and %d under %d is: %d\n", numA, numB, upperBound, total);
 }
