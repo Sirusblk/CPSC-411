@@ -12,6 +12,7 @@
 void primeNumber(int);
 bool isPrime(int);
 void sumOfMultiples(int, int, int);
+void sortList();
 
 //Main
 int main(int argc, const char * argv[])
