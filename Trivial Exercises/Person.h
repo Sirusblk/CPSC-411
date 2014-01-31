@@ -9,10 +9,8 @@
 #import <Foundation/Foundation.h>
 
 @interface Person : NSObject
-{
-	NSString* _fullName;
-	NSNumber* _zipCode;
-}
+@property NSString* _fullName;
+@property NSNumber* _zipCode;
 
 //Init function
 -(id) initWithFullName:(NSString*) fullName LastName:(NSString*) zipCode;
