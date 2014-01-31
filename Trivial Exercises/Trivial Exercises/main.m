@@ -12,15 +12,17 @@
 void primeNumber(int);
 bool isPrime(int);
 void sumOfMultiples(int, int, int);
-void sortList();
+void listDiff(NSString *, NSString *);
+void sortList(NSArray *);
 
 //Main
 int main(int argc, const char * argv[])
 {
 
 	@autoreleasepool {
-	    primeNumber(10001);
-	    sumOfMultiples(1000, 3, 5);
+	    //primeNumber(10001);
+	    //sumOfMultiples(1000, 3, 5);
+		listDiff(@"impiety", @"megaloblastic");
 	}
     return 0;
 }
@@ -45,6 +47,10 @@ void primeNumber(int maxCount)
 	num--;
 	printf("The %dst prime number is: %d\n", maxCount, num);
 }
+
+///////////////////
+// Sub-Functions //
+///////////////////
 
 // Only checks numbers 2 or greater!
 bool isPrime(int input)
@@ -79,4 +85,17 @@ void sumOfMultiples(int upperBound, int numA, int numB)
 	}
 	
 	printf("The sum of all multiples of %d  and %d under %d is: %d\n", numA, numB, upperBound, total);
+}
+
+void listDiff(NSString *wordA, NSString *wordB)
+{
+	//NSFileHandle *unsortedWords = [NSFileHandle fileHandleForReadingAtPath:filePath];
+	NSString *words = [NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"shuffled" ofType:@"txt"]];
+	NSArray *wordArray = [words componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
+	NSLog(@"%@", wordArray);
+}
+
+void sortList(NSArray *inputArray)
+{
+	
 }
