@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Person.h"
 
 //Prototypes
 void primeNumber(int);
@@ -14,6 +15,7 @@ bool isPrime(int);
 void sumOfMultiples(int, int, int);
 void listDiff(NSString *, NSString *);
 void sortList(NSArray *);
+void inputPerson();
 
 //Main
 int main(int argc, const char * argv[])
@@ -22,7 +24,8 @@ int main(int argc, const char * argv[])
 	@autoreleasepool {
 	    //primeNumber(10001);
 	    //sumOfMultiples(1000, 3, 5);
-		listDiff(@"impiety", @"megaloblastic");
+		//listDiff(@"impiety", @"megaloblastic");
+		inputPerson();
 	}
     return 0;
 }
@@ -89,13 +92,41 @@ void sumOfMultiples(int upperBound, int numA, int numB)
 
 void listDiff(NSString *wordA, NSString *wordB)
 {
-	//NSFileHandle *unsortedWords = [NSFileHandle fileHandleForReadingAtPath:filePath];
-	NSString *words = [NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"shuffled" ofType:@"txt"]];
-	NSArray *wordArray = [words componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
-	NSLog(@"%@", wordArray);
+	
+	//NSLog(@"%@", wordArray);
 }
 
 void sortList(NSArray *inputArray)
 {
+	//Quick Sort here...
+}
+
+void inputPerson()
+{
+	//Variables
+	char str[256];
+	int number;
+	NSString *inputName = [[NSString alloc] init];
+	NSNumber *inputZip = [[NSNumber alloc] init];
+	Person *inputPerson = [[Person alloc] init];
+	NSMutableArray *personArray;
+	
+	//Loop
+	do {
+		printf("Please input a person's first name followed by their zip code: ");
+		scanf("%s %d", str, &number);
+		
+		inputName = [NSString stringWithUTF8String:str];
+		inputZip = [NSNumber numberWithInt:number];
+		
+		[inputPerson setFirstName:inputName];
+		[inputPerson setZipCode:inputZip];
+		
+		[personArray addObject:inputPerson];
+		
+		printf("\nPerson Added! Add another. To quit press Control+D\n");
+	} while (!feof(stdin));
+	
+	printf("\n====================================================\n\n");
 	
 }

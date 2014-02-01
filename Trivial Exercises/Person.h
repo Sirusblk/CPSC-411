@@ -10,14 +10,14 @@
 
 @interface Person : NSObject
 {
-	NSString *_fullName;
+	NSString *_firstName;
 	NSNumber *_zipCode;
 }
 
-@property (nonatomic, retain) NSString* fullName;
+@property (nonatomic, retain) NSString* firstName;
 @property (nonatomic, retain) NSNumber* zipCode;
 
 //Init function
--(id) initWithFullName:(NSString *) inputFullName ZipCode:(NSNumber *) inputZipCode;
+-(id) initWithFirstName:(NSString *) inputFirstName ZipCode:(NSNumber *) inputZipCode;
 
 @end
