@@ -9,14 +9,31 @@
 #import "Person.h"
 
 @implementation Person
--(id) initWithFullName:(NSString *)fullName LastName:(NSString *)zipCode
+@synthesize fullName = _fullName;
+@synthesize zipCode = _zipCode;
+
+-(id) initWithFullName:(NSString *) inputFullName ZipCode:(NSNumber *) inputZipCode
 {
 	self = [super init];	//init parent class
 	
 	if (self) {
-		_fullName = [fullName retain];
-		_zipCode = [zipCode retain];
+		_fullName = inputFullName;
+		_zipCode = inputZipCode;
 	}
+	
+	return self;
 }
+
+/*
+- (NSString *) fullName
+{
+	return _fullName;
+}
+
+- (NSNumber *) zipCode
+{
+	return _zipCode;
+}
+ */
 
 @end

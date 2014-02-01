@@ -9,18 +9,15 @@
 #import <Foundation/Foundation.h>
 
 @interface Person : NSObject
-@property NSString* _fullName;
-@property NSNumber* _zipCode;
+{
+	NSString *_fullName;
+	NSNumber *_zipCode;
+}
+
+@property (nonatomic, retain) NSString* fullName;
+@property (nonatomic, retain) NSNumber* zipCode;
 
 //Init function
--(id) initWithFullName:(NSString*) fullName LastName:(NSString*) zipCode;
-
-//Accessor Functions
--(NSString*) fullName;
--(NSNumber*) zipCode;
-
-//Set functions
--(void) setName:(NSString*) fullName;
--(void) setZip:(NSNumber*) zipCode;
+-(id) initWithFullName:(NSString *) inputFullName ZipCode:(NSNumber *) inputZipCode;
 
 @end
