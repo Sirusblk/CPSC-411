@@ -9,7 +9,7 @@
 #import "Person.h"
 
 @implementation Person
-@synthesize firstName = _firstName;
+@synthesize firstName = _fullName;
 @synthesize zipCode = _zipCode;
 
 -(id) initWithFirstName:(NSString *) inputFirstName ZipCode:(NSNumber *) inputZipCode
@@ -17,7 +17,7 @@
 	self = [super init];	//init parent class
 	
 	if (self) {
-		_firstName = inputFirstName;
+		_fullName = inputFirstName;
 		_zipCode = inputZipCode;
 	}
 	
