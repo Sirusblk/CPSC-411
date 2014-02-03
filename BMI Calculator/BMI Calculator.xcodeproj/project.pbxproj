@@ -1,0 +1,465 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EC2EF68A189F320F00F6331F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC2EF689189F320F00F6331F /* Foundation.framework */; };
+		EC2EF68C189F320F00F6331F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC2EF68B189F320F00F6331F /* CoreGraphics.framework */; };
+		EC2EF68E189F320F00F6331F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC2EF68D189F320F00F6331F /* UIKit.framework */; };
+		EC2EF694189F320F00F6331F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EC2EF692189F320F00F6331F /* InfoPlist.strings */; };
+		EC2EF696189F320F00F6331F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EC2EF695189F320F00F6331F /* main.m */; };
+		EC2EF69A189F320F00F6331F /* BMIAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EC2EF699189F320F00F6331F /* BMIAppDelegate.m */; };
+		EC2EF69C189F320F00F6331F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC2EF69B189F320F00F6331F /* Images.xcassets */; };
+		EC2EF6A3189F321000F6331F /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC2EF6A2189F320F00F6331F /* XCTest.framework */; };
+		EC2EF6A4189F321000F6331F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC2EF689189F320F00F6331F /* Foundation.framework */; };
+		EC2EF6A5189F321000F6331F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC2EF68D189F320F00F6331F /* UIKit.framework */; };
+		EC2EF6AD189F321000F6331F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EC2EF6AB189F321000F6331F /* InfoPlist.strings */; };
+		EC2EF6AF189F321000F6331F /* BMI_CalculatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EC2EF6AE189F321000F6331F /* BMI_CalculatorTests.m */; };
+		EC2EF6B9189F346000F6331F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC2EF6B8189F346000F6331F /* Main.storyboard */; };
+		EC2EF6BB189F3CA600F6331F /* stardust.png in Resources */ = {isa = PBXBuildFile; fileRef = EC2EF6BA189F3CA600F6331F /* stardust.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EC2EF6A6189F321000F6331F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EC2EF67E189F320F00F6331F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EC2EF685189F320F00F6331F;
+			remoteInfo = "BMI Calculator";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EC2EF686189F320F00F6331F /* BMI Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BMI Calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC2EF689189F320F00F6331F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		EC2EF68B189F320F00F6331F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		EC2EF68D189F320F00F6331F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		EC2EF691189F320F00F6331F /* BMI Calculator-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BMI Calculator-Info.plist"; sourceTree = "<group>"; };
+		EC2EF693189F320F00F6331F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EC2EF695189F320F00F6331F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EC2EF697189F320F00F6331F /* BMI Calculator-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BMI Calculator-Prefix.pch"; sourceTree = "<group>"; };
+		EC2EF698189F320F00F6331F /* BMIAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BMIAppDelegate.h; sourceTree = "<group>"; };
+		EC2EF699189F320F00F6331F /* BMIAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BMIAppDelegate.m; sourceTree = "<group>"; };
+		EC2EF69B189F320F00F6331F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		EC2EF6A1189F320F00F6331F /* BMI CalculatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BMI CalculatorTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC2EF6A2189F320F00F6331F /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		EC2EF6AA189F321000F6331F /* BMI CalculatorTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BMI CalculatorTests-Info.plist"; sourceTree = "<group>"; };
+		EC2EF6AC189F321000F6331F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EC2EF6AE189F321000F6331F /* BMI_CalculatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BMI_CalculatorTests.m; sourceTree = "<group>"; };
+		EC2EF6B8189F346000F6331F /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		EC2EF6BA189F3CA600F6331F /* stardust.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stardust.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EC2EF683189F320F00F6331F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC2EF68C189F320F00F6331F /* CoreGraphics.framework in Frameworks */,
+				EC2EF68E189F320F00F6331F /* UIKit.framework in Frameworks */,
+				EC2EF68A189F320F00F6331F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC2EF69E189F320F00F6331F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC2EF6A3189F321000F6331F /* XCTest.framework in Frameworks */,
+				EC2EF6A5189F321000F6331F /* UIKit.framework in Frameworks */,
+				EC2EF6A4189F321000F6331F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EC2EF67D189F320F00F6331F = {
+			isa = PBXGroup;
+			children = (
+				EC2EF68F189F320F00F6331F /* BMI Calculator */,
+				EC2EF6A8189F321000F6331F /* BMI CalculatorTests */,
+				EC2EF688189F320F00F6331F /* Frameworks */,
+				EC2EF687189F320F00F6331F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EC2EF687189F320F00F6331F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EC2EF686189F320F00F6331F /* BMI Calculator.app */,
+				EC2EF6A1189F320F00F6331F /* BMI CalculatorTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EC2EF688189F320F00F6331F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EC2EF689189F320F00F6331F /* Foundation.framework */,
+				EC2EF68B189F320F00F6331F /* CoreGraphics.framework */,
+				EC2EF68D189F320F00F6331F /* UIKit.framework */,
+				EC2EF6A2189F320F00F6331F /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EC2EF68F189F320F00F6331F /* BMI Calculator */ = {
+			isa = PBXGroup;
+			children = (
+				EC2EF698189F320F00F6331F /* BMIAppDelegate.h */,
+				EC2EF699189F320F00F6331F /* BMIAppDelegate.m */,
+				EC2EF6B8189F346000F6331F /* Main.storyboard */,
+				EC2EF6BA189F3CA600F6331F /* stardust.png */,
+				EC2EF69B189F320F00F6331F /* Images.xcassets */,
+				EC2EF690189F320F00F6331F /* Supporting Files */,
+			);
+			path = "BMI Calculator";
+			sourceTree = "<group>";
+		};
+		EC2EF690189F320F00F6331F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EC2EF691189F320F00F6331F /* BMI Calculator-Info.plist */,
+				EC2EF692189F320F00F6331F /* InfoPlist.strings */,
+				EC2EF695189F320F00F6331F /* main.m */,
+				EC2EF697189F320F00F6331F /* BMI Calculator-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EC2EF6A8189F321000F6331F /* BMI CalculatorTests */ = {
+			isa = PBXGroup;
+			children = (
+				EC2EF6AE189F321000F6331F /* BMI_CalculatorTests.m */,
+				EC2EF6A9189F321000F6331F /* Supporting Files */,
+			);
+			path = "BMI CalculatorTests";
+			sourceTree = "<group>";
+		};
+		EC2EF6A9189F321000F6331F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EC2EF6AA189F321000F6331F /* BMI CalculatorTests-Info.plist */,
+				EC2EF6AB189F321000F6331F /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EC2EF685189F320F00F6331F /* BMI Calculator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC2EF6B2189F321000F6331F /* Build configuration list for PBXNativeTarget "BMI Calculator" */;
+			buildPhases = (
+				EC2EF682189F320F00F6331F /* Sources */,
+				EC2EF683189F320F00F6331F /* Frameworks */,
+				EC2EF684189F320F00F6331F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "BMI Calculator";
+			productName = "BMI Calculator";
+			productReference = EC2EF686189F320F00F6331F /* BMI Calculator.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EC2EF6A0189F320F00F6331F /* BMI CalculatorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC2EF6B5189F321000F6331F /* Build configuration list for PBXNativeTarget "BMI CalculatorTests" */;
+			buildPhases = (
+				EC2EF69D189F320F00F6331F /* Sources */,
+				EC2EF69E189F320F00F6331F /* Frameworks */,
+				EC2EF69F189F320F00F6331F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EC2EF6A7189F321000F6331F /* PBXTargetDependency */,
+			);
+			name = "BMI CalculatorTests";
+			productName = "BMI CalculatorTests";
+			productReference = EC2EF6A1189F320F00F6331F /* BMI CalculatorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EC2EF67E189F320F00F6331F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = BMI;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "David McLaren";
+				TargetAttributes = {
+					EC2EF6A0189F320F00F6331F = {
+						TestTargetID = EC2EF685189F320F00F6331F;
+					};
+				};
+			};
+			buildConfigurationList = EC2EF681189F320F00F6331F /* Build configuration list for PBXProject "BMI Calculator" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = EC2EF67D189F320F00F6331F;
+			productRefGroup = EC2EF687189F320F00F6331F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EC2EF685189F320F00F6331F /* BMI Calculator */,
+				EC2EF6A0189F320F00F6331F /* BMI CalculatorTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EC2EF684189F320F00F6331F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC2EF694189F320F00F6331F /* InfoPlist.strings in Resources */,
+				EC2EF6BB189F3CA600F6331F /* stardust.png in Resources */,
+				EC2EF69C189F320F00F6331F /* Images.xcassets in Resources */,
+				EC2EF6B9189F346000F6331F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC2EF69F189F320F00F6331F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC2EF6AD189F321000F6331F /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EC2EF682189F320F00F6331F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC2EF696189F320F00F6331F /* main.m in Sources */,
+				EC2EF69A189F320F00F6331F /* BMIAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC2EF69D189F320F00F6331F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC2EF6AF189F321000F6331F /* BMI_CalculatorTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EC2EF6A7189F321000F6331F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EC2EF685189F320F00F6331F /* BMI Calculator */;
+			targetProxy = EC2EF6A6189F321000F6331F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EC2EF692189F320F00F6331F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EC2EF693189F320F00F6331F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		EC2EF6AB189F321000F6331F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EC2EF6AC189F321000F6331F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EC2EF6B0189F321000F6331F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		EC2EF6B1189F321000F6331F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EC2EF6B3189F321000F6331F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BMI Calculator/BMI Calculator-Prefix.pch";
+				INFOPLIST_FILE = "BMI Calculator/BMI Calculator-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		EC2EF6B4189F321000F6331F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BMI Calculator/BMI Calculator-Prefix.pch";
+				INFOPLIST_FILE = "BMI Calculator/BMI Calculator-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		EC2EF6B6189F321000F6331F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/BMI Calculator.app/BMI Calculator";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BMI Calculator/BMI Calculator-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "BMI CalculatorTests/BMI CalculatorTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		EC2EF6B7189F321000F6331F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/BMI Calculator.app/BMI Calculator";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BMI Calculator/BMI Calculator-Prefix.pch";
+				INFOPLIST_FILE = "BMI CalculatorTests/BMI CalculatorTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EC2EF681189F320F00F6331F /* Build configuration list for PBXProject "BMI Calculator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC2EF6B0189F321000F6331F /* Debug */,
+				EC2EF6B1189F321000F6331F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EC2EF6B2189F321000F6331F /* Build configuration list for PBXNativeTarget "BMI Calculator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC2EF6B3189F321000F6331F /* Debug */,
+				EC2EF6B4189F321000F6331F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		EC2EF6B5189F321000F6331F /* Build configuration list for PBXNativeTarget "BMI CalculatorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC2EF6B6189F321000F6331F /* Debug */,
+				EC2EF6B7189F321000F6331F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EC2EF67E189F320F00F6331F /* Project object */;
+}
