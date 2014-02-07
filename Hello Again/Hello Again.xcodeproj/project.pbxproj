@@ -1,0 +1,492 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EC2EF6C918A1D6A000F6331F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC2EF6C818A1D6A000F6331F /* Foundation.framework */; };
+		EC2EF6CB18A1D6A000F6331F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC2EF6CA18A1D6A000F6331F /* CoreGraphics.framework */; };
+		EC2EF6CD18A1D6A000F6331F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC2EF6CC18A1D6A000F6331F /* UIKit.framework */; };
+		EC2EF6D318A1D6A000F6331F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EC2EF6D118A1D6A000F6331F /* InfoPlist.strings */; };
+		EC2EF6D518A1D6A000F6331F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EC2EF6D418A1D6A000F6331F /* main.m */; };
+		EC2EF6D918A1D6A000F6331F /* DMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EC2EF6D818A1D6A000F6331F /* DMAppDelegate.m */; };
+		EC2EF6DC18A1D6A000F6331F /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC2EF6DA18A1D6A000F6331F /* Main_iPhone.storyboard */; };
+		EC2EF6DF18A1D6A000F6331F /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC2EF6DD18A1D6A000F6331F /* Main_iPad.storyboard */; };
+		EC2EF6E218A1D6A000F6331F /* DMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC2EF6E118A1D6A000F6331F /* DMViewController.m */; };
+		EC2EF6E418A1D6A000F6331F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC2EF6E318A1D6A000F6331F /* Images.xcassets */; };
+		EC2EF6EB18A1D6A000F6331F /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC2EF6EA18A1D6A000F6331F /* XCTest.framework */; };
+		EC2EF6EC18A1D6A000F6331F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC2EF6C818A1D6A000F6331F /* Foundation.framework */; };
+		EC2EF6ED18A1D6A000F6331F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC2EF6CC18A1D6A000F6331F /* UIKit.framework */; };
+		EC2EF6F518A1D6A000F6331F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EC2EF6F318A1D6A000F6331F /* InfoPlist.strings */; };
+		EC2EF6F718A1D6A000F6331F /* Hello_AgainTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EC2EF6F618A1D6A000F6331F /* Hello_AgainTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EC2EF6EE18A1D6A000F6331F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EC2EF6BD18A1D6A000F6331F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EC2EF6C418A1D6A000F6331F;
+			remoteInfo = "Hello Again";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EC2EF6C518A1D6A000F6331F /* Hello Again.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hello Again.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC2EF6C818A1D6A000F6331F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		EC2EF6CA18A1D6A000F6331F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		EC2EF6CC18A1D6A000F6331F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		EC2EF6D018A1D6A000F6331F /* Hello Again-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Hello Again-Info.plist"; sourceTree = "<group>"; };
+		EC2EF6D218A1D6A000F6331F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EC2EF6D418A1D6A000F6331F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EC2EF6D618A1D6A000F6331F /* Hello Again-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Hello Again-Prefix.pch"; sourceTree = "<group>"; };
+		EC2EF6D718A1D6A000F6331F /* DMAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DMAppDelegate.h; sourceTree = "<group>"; };
+		EC2EF6D818A1D6A000F6331F /* DMAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DMAppDelegate.m; sourceTree = "<group>"; };
+		EC2EF6DB18A1D6A000F6331F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		EC2EF6DE18A1D6A000F6331F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		EC2EF6E018A1D6A000F6331F /* DMViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DMViewController.h; sourceTree = "<group>"; };
+		EC2EF6E118A1D6A000F6331F /* DMViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DMViewController.m; sourceTree = "<group>"; };
+		EC2EF6E318A1D6A000F6331F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		EC2EF6E918A1D6A000F6331F /* Hello AgainTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Hello AgainTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC2EF6EA18A1D6A000F6331F /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		EC2EF6F218A1D6A000F6331F /* Hello AgainTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Hello AgainTests-Info.plist"; sourceTree = "<group>"; };
+		EC2EF6F418A1D6A000F6331F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EC2EF6F618A1D6A000F6331F /* Hello_AgainTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Hello_AgainTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EC2EF6C218A1D6A000F6331F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC2EF6CB18A1D6A000F6331F /* CoreGraphics.framework in Frameworks */,
+				EC2EF6CD18A1D6A000F6331F /* UIKit.framework in Frameworks */,
+				EC2EF6C918A1D6A000F6331F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC2EF6E618A1D6A000F6331F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC2EF6EB18A1D6A000F6331F /* XCTest.framework in Frameworks */,
+				EC2EF6ED18A1D6A000F6331F /* UIKit.framework in Frameworks */,
+				EC2EF6EC18A1D6A000F6331F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EC2EF6BC18A1D6A000F6331F = {
+			isa = PBXGroup;
+			children = (
+				EC2EF6CE18A1D6A000F6331F /* Hello Again */,
+				EC2EF6F018A1D6A000F6331F /* Hello AgainTests */,
+				EC2EF6C718A1D6A000F6331F /* Frameworks */,
+				EC2EF6C618A1D6A000F6331F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EC2EF6C618A1D6A000F6331F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EC2EF6C518A1D6A000F6331F /* Hello Again.app */,
+				EC2EF6E918A1D6A000F6331F /* Hello AgainTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EC2EF6C718A1D6A000F6331F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EC2EF6C818A1D6A000F6331F /* Foundation.framework */,
+				EC2EF6CA18A1D6A000F6331F /* CoreGraphics.framework */,
+				EC2EF6CC18A1D6A000F6331F /* UIKit.framework */,
+				EC2EF6EA18A1D6A000F6331F /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EC2EF6CE18A1D6A000F6331F /* Hello Again */ = {
+			isa = PBXGroup;
+			children = (
+				EC2EF6D718A1D6A000F6331F /* DMAppDelegate.h */,
+				EC2EF6D818A1D6A000F6331F /* DMAppDelegate.m */,
+				EC2EF6DA18A1D6A000F6331F /* Main_iPhone.storyboard */,
+				EC2EF6DD18A1D6A000F6331F /* Main_iPad.storyboard */,
+				EC2EF6E018A1D6A000F6331F /* DMViewController.h */,
+				EC2EF6E118A1D6A000F6331F /* DMViewController.m */,
+				EC2EF6E318A1D6A000F6331F /* Images.xcassets */,
+				EC2EF6CF18A1D6A000F6331F /* Supporting Files */,
+			);
+			path = "Hello Again";
+			sourceTree = "<group>";
+		};
+		EC2EF6CF18A1D6A000F6331F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EC2EF6D018A1D6A000F6331F /* Hello Again-Info.plist */,
+				EC2EF6D118A1D6A000F6331F /* InfoPlist.strings */,
+				EC2EF6D418A1D6A000F6331F /* main.m */,
+				EC2EF6D618A1D6A000F6331F /* Hello Again-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EC2EF6F018A1D6A000F6331F /* Hello AgainTests */ = {
+			isa = PBXGroup;
+			children = (
+				EC2EF6F618A1D6A000F6331F /* Hello_AgainTests.m */,
+				EC2EF6F118A1D6A000F6331F /* Supporting Files */,
+			);
+			path = "Hello AgainTests";
+			sourceTree = "<group>";
+		};
+		EC2EF6F118A1D6A000F6331F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EC2EF6F218A1D6A000F6331F /* Hello AgainTests-Info.plist */,
+				EC2EF6F318A1D6A000F6331F /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EC2EF6C418A1D6A000F6331F /* Hello Again */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC2EF6FA18A1D6A000F6331F /* Build configuration list for PBXNativeTarget "Hello Again" */;
+			buildPhases = (
+				EC2EF6C118A1D6A000F6331F /* Sources */,
+				EC2EF6C218A1D6A000F6331F /* Frameworks */,
+				EC2EF6C318A1D6A000F6331F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Hello Again";
+			productName = "Hello Again";
+			productReference = EC2EF6C518A1D6A000F6331F /* Hello Again.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EC2EF6E818A1D6A000F6331F /* Hello AgainTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC2EF6FD18A1D6A000F6331F /* Build configuration list for PBXNativeTarget "Hello AgainTests" */;
+			buildPhases = (
+				EC2EF6E518A1D6A000F6331F /* Sources */,
+				EC2EF6E618A1D6A000F6331F /* Frameworks */,
+				EC2EF6E718A1D6A000F6331F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EC2EF6EF18A1D6A000F6331F /* PBXTargetDependency */,
+			);
+			name = "Hello AgainTests";
+			productName = "Hello AgainTests";
+			productReference = EC2EF6E918A1D6A000F6331F /* Hello AgainTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EC2EF6BD18A1D6A000F6331F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = DM;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "David McLaren";
+				TargetAttributes = {
+					EC2EF6E818A1D6A000F6331F = {
+						TestTargetID = EC2EF6C418A1D6A000F6331F;
+					};
+				};
+			};
+			buildConfigurationList = EC2EF6C018A1D6A000F6331F /* Build configuration list for PBXProject "Hello Again" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EC2EF6BC18A1D6A000F6331F;
+			productRefGroup = EC2EF6C618A1D6A000F6331F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EC2EF6C418A1D6A000F6331F /* Hello Again */,
+				EC2EF6E818A1D6A000F6331F /* Hello AgainTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EC2EF6C318A1D6A000F6331F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC2EF6DF18A1D6A000F6331F /* Main_iPad.storyboard in Resources */,
+				EC2EF6E418A1D6A000F6331F /* Images.xcassets in Resources */,
+				EC2EF6DC18A1D6A000F6331F /* Main_iPhone.storyboard in Resources */,
+				EC2EF6D318A1D6A000F6331F /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC2EF6E718A1D6A000F6331F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC2EF6F518A1D6A000F6331F /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EC2EF6C118A1D6A000F6331F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC2EF6D518A1D6A000F6331F /* main.m in Sources */,
+				EC2EF6E218A1D6A000F6331F /* DMViewController.m in Sources */,
+				EC2EF6D918A1D6A000F6331F /* DMAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC2EF6E518A1D6A000F6331F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC2EF6F718A1D6A000F6331F /* Hello_AgainTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EC2EF6EF18A1D6A000F6331F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EC2EF6C418A1D6A000F6331F /* Hello Again */;
+			targetProxy = EC2EF6EE18A1D6A000F6331F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EC2EF6D118A1D6A000F6331F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EC2EF6D218A1D6A000F6331F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		EC2EF6DA18A1D6A000F6331F /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EC2EF6DB18A1D6A000F6331F /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		EC2EF6DD18A1D6A000F6331F /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EC2EF6DE18A1D6A000F6331F /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		EC2EF6F318A1D6A000F6331F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EC2EF6F418A1D6A000F6331F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EC2EF6F818A1D6A000F6331F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EC2EF6F918A1D6A000F6331F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EC2EF6FB18A1D6A000F6331F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Hello Again/Hello Again-Prefix.pch";
+				INFOPLIST_FILE = "Hello Again/Hello Again-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		EC2EF6FC18A1D6A000F6331F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Hello Again/Hello Again-Prefix.pch";
+				INFOPLIST_FILE = "Hello Again/Hello Again-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		EC2EF6FE18A1D6A000F6331F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Hello Again.app/Hello Again";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Hello Again/Hello Again-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Hello AgainTests/Hello AgainTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		EC2EF6FF18A1D6A000F6331F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Hello Again.app/Hello Again";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Hello Again/Hello Again-Prefix.pch";
+				INFOPLIST_FILE = "Hello AgainTests/Hello AgainTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EC2EF6C018A1D6A000F6331F /* Build configuration list for PBXProject "Hello Again" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC2EF6F818A1D6A000F6331F /* Debug */,
+				EC2EF6F918A1D6A000F6331F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EC2EF6FA18A1D6A000F6331F /* Build configuration list for PBXNativeTarget "Hello Again" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC2EF6FB18A1D6A000F6331F /* Debug */,
+				EC2EF6FC18A1D6A000F6331F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EC2EF6FD18A1D6A000F6331F /* Build configuration list for PBXNativeTarget "Hello AgainTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC2EF6FE18A1D6A000F6331F /* Debug */,
+				EC2EF6FF18A1D6A000F6331F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EC2EF6BD18A1D6A000F6331F /* Project object */;
+}
