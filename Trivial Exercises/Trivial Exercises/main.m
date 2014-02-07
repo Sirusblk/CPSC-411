@@ -14,7 +14,7 @@ void primeNumber(int);
 bool isPrime(int);
 void sumOfMultiples(int, int, int);
 void listDiff(NSString *, NSString *);
-void sortList(NSArray *);
+NSArray *sortList(NSArray *);
 void inputPerson();
 
 //Main
@@ -24,8 +24,8 @@ int main(int argc, const char * argv[])
 	@autoreleasepool {
 	    //primeNumber(10001);
 	    //sumOfMultiples(1000, 3, 5);
-		//listDiff(@"impiety", @"megaloblastic");
-		inputPerson();
+		listDiff(@"impiety", @"megaloblastic");
+		//inputPerson();
 	}
     return 0;
 }
@@ -92,13 +92,37 @@ void sumOfMultiples(int upperBound, int numA, int numB)
 
 void listDiff(NSString *wordA, NSString *wordB)
 {
+	//Variables
+	NSArray *wordArray;
+	
+	//Import words into array
+	
+	
+	wordArray = sortList(wordArray);
 	
 	//NSLog(@"%@", wordArray);
+	
+	NSUInteger lower = [wordArray indexOfObject: (NSString *) wordA];
+	NSUInteger upper = [wordArray indexOfObject: (NSString *) wordB];
+	NSUInteger diff = upper - lower;
+	
+	NSLog(@"Lower: %lu", lower);
+	NSLog(@"Upper: %lu", upper);
+	NSLog(@"Differance: %lu", diff);
+	
+	/*
+	for (NSString *item in wordArray) {
+		<#statements#>
+	}
+	 */
 }
 
-void sortList(NSArray *inputArray)
+NSArray *sortList(NSArray *inputArray)
 {
-	//Quick Sort here...
+	//Sort Array here...
+	NSArray *sortedArray = [inputArray sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
+	
+	return sortedArray;
 }
 
 void inputPerson()
@@ -123,10 +147,23 @@ void inputPerson()
 		[inputPerson setZipCode:inputZip];
 		
 		[personArray addObject:inputPerson];
+		printf("%s", [(NSString *)inputPerson UTF8String]);
 		
 		printf("\nPerson Added! Add another. To quit press Control+D\n");
 	} while (!feof(stdin));
 	
 	printf("\n====================================================\n\n");
 	
+	//Sort it by name here
+	//NSArray *descriptorArray =
+	//NSArray *sortedList = [personArray sortedArrayUsingDescriptors:<#(NSArray *)#>];
+	
+	//Print out
+	for (id entry in personArray) {
+		NSLog(@"Entered loop!");
+		printf("%s", [entry UTF8String]);
+	}
+	
+	//Sort again but by zip code here
+	//Print out
 }
