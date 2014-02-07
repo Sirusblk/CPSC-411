@@ -17,14 +17,14 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ky6-td-gEG">
-                                <rect key="frame" x="147" y="211" width="27" height="58"/>
+                                <rect key="frame" x="147" y="20" width="27" height="58"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="48"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EvW-k7-uLh">
-                                <rect key="frame" x="20" y="430" width="280" height="30"/>
+                                <rect key="frame" x="20" y="124" width="280" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
                                 <state key="normal" title="Touch Me!">
@@ -34,18 +34,32 @@
                                     <action selector="buttonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="4sn-XU-ooz"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bcc-nx-pgQ">
+                                <rect key="frame" x="20" y="86" width="280" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="vLZ-PF-p7j"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.17254902420000001" green="0.25098040700000002" blue="0.3058823645" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="EvW-k7-uLh" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" id="2bh-4N-5fu"/>
+                            <constraint firstItem="EvW-k7-uLh" firstAttribute="trailing" secondItem="bcc-nx-pgQ" secondAttribute="trailing" id="KY1-q1-DbR"/>
                             <constraint firstAttribute="centerX" secondItem="ky6-td-gEG" secondAttribute="centerX" id="LFf-3w-ZMy"/>
+                            <constraint firstItem="3rU-RE-b5z" firstAttribute="top" secondItem="EvW-k7-uLh" secondAttribute="bottom" constant="326" id="Xcn-Mv-4sz"/>
+                            <constraint firstItem="EvW-k7-uLh" firstAttribute="leading" secondItem="bcc-nx-pgQ" secondAttribute="leading" id="Zb5-Rk-zpq"/>
+                            <constraint firstAttribute="centerX" secondItem="ky6-td-gEG" secondAttribute="centerX" id="fD7-Uh-xtY"/>
+                            <constraint firstItem="bcc-nx-pgQ" firstAttribute="top" secondItem="ky6-td-gEG" secondAttribute="bottom" constant="8" symbolic="YES" id="fgF-hY-DZL"/>
                             <constraint firstAttribute="trailing" secondItem="EvW-k7-uLh" secondAttribute="trailing" constant="20" id="gWg-lr-8fB"/>
-                            <constraint firstItem="3rU-RE-b5z" firstAttribute="top" secondItem="EvW-k7-uLh" secondAttribute="bottom" constant="20" id="ps8-Ib-RwS"/>
-                            <constraint firstAttribute="centerY" secondItem="ky6-td-gEG" secondAttribute="centerY" id="xH8-lz-W7x"/>
+                            <constraint firstItem="EvW-k7-uLh" firstAttribute="top" secondItem="bcc-nx-pgQ" secondAttribute="bottom" constant="8" symbolic="YES" id="wy8-9N-xGV"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="myLabel" destination="ky6-td-gEG" id="bLC-Qm-maG"/>
+                        <outlet property="myLabel" destination="ky6-td-gEG" id="vmU-wg-I2l"/>
+                        <outlet property="myTextField" destination="bcc-nx-pgQ" id="4Cl-nY-g55"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

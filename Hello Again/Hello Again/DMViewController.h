@@ -9,7 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface DMViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UILabel *myLabel;
+
+@property (retain, nonatomic) IBOutlet UILabel *myLabel;
+@property (weak, nonatomic) IBOutlet UITextField *myTextField;
+
 - (IBAction)buttonPressed:(id)sender;
 
 @end
