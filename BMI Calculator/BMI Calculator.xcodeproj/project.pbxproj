@@ -450,6 +450,7 @@
 				EC2EF6B4189F321000F6331F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EC2EF6B5189F321000F6331F /* Build configuration list for PBXNativeTarget "BMI CalculatorTests" */ = {
 			isa = XCConfigurationList;
@@ -458,6 +459,7 @@
 				EC2EF6B7189F321000F6331F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
