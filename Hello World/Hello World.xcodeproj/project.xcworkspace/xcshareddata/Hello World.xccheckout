@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>0609D84F-E15A-4EDF-A404-B0DD707DFA72</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Hello World</string>
+	<key>IDESourceControlProjectPath</key>
+	<string>Hello World.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>78A35A2D-A4CE-4F79-A2C0-2830356FC108</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/Sirusblk/CPSC-411.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>78A35A2D-A4CE-4F79-A2C0-2830356FC108</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>78A35A2D-A4CE-4F79-A2C0-2830356FC108</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Hello World</string>
+		</dict>
+	</array>
+</dict>
+</plist>
