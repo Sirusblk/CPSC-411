@@ -53,8 +53,10 @@
         NSLog(@"Weight: %2.2f kg", weightBMI);
     } else {
         //Must convert to metric, change below!
-        heightBMI = 0;
-        weightBMI = 0;
+        heightBMI = [self.heightTextField.text integerValue] * 0.0254;
+        NSLog(@"Height: %2.2f m", heightBMI);
+        weightBMI = [self.weightTextField.text integerValue] * 0.453592;
+        NSLog(@"Weight: %2.2f kg", weightBMI);
     }
     
     //Calculate BMI Range
