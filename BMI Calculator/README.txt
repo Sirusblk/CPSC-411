@@ -1,3 +1,3 @@
 BMI Calculator to calculate BMI based on Height and Weight (in both metric and english units)
 -------------------------------------------
-Stardust background from Subtlepatterns.com
+Stardust background (stardust.png) from Subtlepatterns.com, created by Atle Mo.

@@ -2,7 +2,7 @@
 //  main.m
 //  BMI Calculator
 //
-//  Created by David McLaren on 2/2/14.
+//  Created by David McLaren on 2/7/14.
 //  Copyright (c) 2014 David McLaren. All rights reserved.
 //
 

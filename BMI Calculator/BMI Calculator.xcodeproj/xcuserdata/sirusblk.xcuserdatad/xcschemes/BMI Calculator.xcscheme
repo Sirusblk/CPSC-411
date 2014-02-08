@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "EC2EF685189F320F00F6331F"
+               BlueprintIdentifier = "EC19A89B18A5B0D30033D104"
                BuildableName = "BMI Calculator.app"
                BlueprintName = "BMI Calculator"
                ReferencedContainer = "container:BMI Calculator.xcodeproj">
@@ -32,7 +32,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "EC2EF6A0189F320F00F6331F"
+               BlueprintIdentifier = "EC19A8BC18A5B0D30033D104"
                BuildableName = "BMI CalculatorTests.xctest"
                BlueprintName = "BMI CalculatorTests"
                ReferencedContainer = "container:BMI Calculator.xcodeproj">
@@ -42,7 +42,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "EC2EF685189F320F00F6331F"
+            BlueprintIdentifier = "EC19A89B18A5B0D30033D104"
             BuildableName = "BMI Calculator.app"
             BlueprintName = "BMI Calculator"
             ReferencedContainer = "container:BMI Calculator.xcodeproj">
@@ -61,7 +61,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "EC2EF685189F320F00F6331F"
+            BlueprintIdentifier = "EC19A89B18A5B0D30033D104"
             BuildableName = "BMI Calculator.app"
             BlueprintName = "BMI Calculator"
             ReferencedContainer = "container:BMI Calculator.xcodeproj">
@@ -79,7 +79,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "EC2EF685189F320F00F6331F"
+            BlueprintIdentifier = "EC19A89B18A5B0D30033D104"
             BuildableName = "BMI Calculator.app"
             BlueprintName = "BMI Calculator"
             ReferencedContainer = "container:BMI Calculator.xcodeproj">
