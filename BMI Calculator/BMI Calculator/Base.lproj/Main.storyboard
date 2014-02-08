@@ -80,12 +80,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="heightLabel" destination="4TV-mq-h5j" id="gHU-IS-XlT"/>
                         <outlet property="heightTextField" destination="ABu-SB-vTs" id="NJa-cg-x8C"/>
-                        <outlet property="metricSwitch" destination="BTc-Z2-FF6" id="Fxa-Qa-amR"/>
                         <outlet property="metricSwitchOutlet" destination="BTc-Z2-FF6" id="d7M-SA-MpM"/>
                         <outlet property="resultLabel" destination="jCQ-I8-2r3" id="o9w-Pp-RGl"/>
-                        <outlet property="weightLabel" destination="4TV-mq-h5j" id="xRD-xd-aZc"/>
                         <outlet property="weightTextField" destination="4TV-mq-h5j" id="QfB-Uk-5Ai"/>
                     </connections>
                 </viewController>
