@@ -9,9 +9,12 @@
 #import <UIKit/UIKit.h>
 
 @interface BMIViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UITextField *heightLabel;
-@property (weak, nonatomic) IBOutlet UITextField *weightLabel;
-@property (weak, nonatomic) IBOutlet UISwitch *metricSwitch;
+@property (weak, nonatomic) IBOutlet UITextField *heightTextField;
+@property (weak, nonatomic) IBOutlet UITextField *weightTextField;
+@property (weak, nonatomic) IBOutlet UISwitch *metricSwitchOutlet;
 @property (weak, nonatomic) IBOutlet UILabel *resultLabel;
+
+- (IBAction)calculatePressed:(id)sender;
+- (IBAction)metricSwitch:(id)sender;
 
 @end

@@ -47,7 +47,7 @@
 		EC19A8AF18A5B0D30033D104 /* BMIAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BMIAppDelegate.m; sourceTree = "<group>"; };
 		EC19A8B218A5B0D30033D104 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EC19A8B418A5B0D30033D104 /* BMIViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BMIViewController.h; sourceTree = "<group>"; };
-		EC19A8B518A5B0D30033D104 /* BMIViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BMIViewController.m; sourceTree = "<group>"; };
+		EC19A8B518A5B0D30033D104 /* BMIViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BMIViewController.m; sourceTree = "<group>"; usesTabs = 0; };
 		EC19A8B718A5B0D30033D104 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		EC19A8BD18A5B0D30033D104 /* BMI CalculatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BMI CalculatorTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC19A8BE18A5B0D30033D104 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
