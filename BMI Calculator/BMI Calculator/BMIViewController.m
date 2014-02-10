@@ -93,6 +93,8 @@
         }
         
         self.resultLabel.text = [NSString stringWithFormat:@"%2.2f %@", rangeBMI, categoryBMI];
+    } else {
+        self.resultLabel.text = [NSString stringWithFormat:@"Please fill out both fields."];
     }
 }
 
