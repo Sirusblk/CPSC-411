@@ -13,6 +13,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *weightTextField;
 @property (weak, nonatomic) IBOutlet UISwitch *metricSwitchOutlet;
 @property (weak, nonatomic) IBOutlet UILabel *resultLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *resultImage;
 
 - (IBAction)calculatePressed:(id)sender;
 - (IBAction)metricSwitch:(id)sender;

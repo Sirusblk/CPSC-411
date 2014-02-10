@@ -17,11 +17,12 @@
 @synthesize heightTextField;
 @synthesize metricSwitchOutlet;
 @synthesize resultLabel;
+@synthesize resultImage;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+	self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"stardust.png"]];
 }
 
 - (void)didReceiveMemoryWarning
@@ -67,20 +68,28 @@
         //Calculate BMI Category
         if (rangeBMI < 16.00) {
             categoryBMI = @"Severe Thinness";
+            [resultImage setImage:[UIImage imageNamed:@"thin3.png"]];
         } else if (rangeBMI < 17.00) {
             categoryBMI = @"Moderate Thinness";
+            [resultImage setImage:[UIImage imageNamed:@"thin2.png"]];
         } else if (rangeBMI < 18.50) {
             categoryBMI = @"Mild Thinness";
+            [resultImage setImage:[UIImage imageNamed:@"thin1.png"]];
         } else if (rangeBMI < 25.00) {
             categoryBMI = @"Normal Range";
+            [resultImage setImage:[UIImage imageNamed:@"norm.png"]];
         } else if (rangeBMI < 30.00) {
             categoryBMI = @"Overweight";
+            [resultImage setImage:[UIImage imageNamed:@"over.png"]];
         } else if (rangeBMI < 35.00) {
             categoryBMI = @"Obese Class I (Moderate)";
+            [resultImage setImage:[UIImage imageNamed:@"obese1.png"]];
         } else if (rangeBMI < 40.00) {
             categoryBMI = @"Obese Class II (Severe)";
+            [resultImage setImage:[UIImage imageNamed:@"obese2.png"]];
         } else {
             categoryBMI = @"Obese Class III (Very Severe)";
+            [resultImage setImage:[UIImage imageNamed:@"obese3.png"]];
         }
         
         self.resultLabel.text = [NSString stringWithFormat:@"%2.2f %@", rangeBMI, categoryBMI];
