@@ -66,33 +66,44 @@
         NSLog(@"%2.2f", rangeBMI);
         
         //Calculate BMI Category
-        if (rangeBMI < 16.00) {
-            categoryBMI = @"Severe Thinness";
-            [resultImage setImage:[UIImage imageNamed:@"thin3.png"]];
-        } else if (rangeBMI < 17.00) {
-            categoryBMI = @"Moderate Thinness";
-            [resultImage setImage:[UIImage imageNamed:@"thin2.png"]];
-        } else if (rangeBMI < 18.50) {
-            categoryBMI = @"Mild Thinness";
-            [resultImage setImage:[UIImage imageNamed:@"thin1.png"]];
-        } else if (rangeBMI < 25.00) {
-            categoryBMI = @"Normal Range";
-            [resultImage setImage:[UIImage imageNamed:@"norm.png"]];
-        } else if (rangeBMI < 30.00) {
-            categoryBMI = @"Overweight";
-            [resultImage setImage:[UIImage imageNamed:@"over.png"]];
-        } else if (rangeBMI < 35.00) {
-            categoryBMI = @"Obese Class I (Moderate)";
-            [resultImage setImage:[UIImage imageNamed:@"obese1.png"]];
-        } else if (rangeBMI < 40.00) {
-            categoryBMI = @"Obese Class II (Severe)";
-            [resultImage setImage:[UIImage imageNamed:@"obese2.png"]];
+        if (isnan(rangeBMI)) {
+            categoryBMI = @"Not Acceptable Input";
+            self.resultLabel.text = [NSString stringWithFormat:@"%@", categoryBMI];
+        } else if (rangeBMI == INFINITY){
+            categoryBMI = @"Height cannot be 0";
+            self.resultLabel.text = [NSString stringWithFormat:@"%@", categoryBMI];
+        } else if (rangeBMI == 0) {
+            categoryBMI = @"Weight cannot be 0";
+            self.resultLabel.text = [NSString stringWithFormat:@"%@", categoryBMI];
         } else {
-            categoryBMI = @"Obese Class III (Very Severe)";
-            [resultImage setImage:[UIImage imageNamed:@"obese3.png"]];
+            if (rangeBMI < 16.00) {
+                categoryBMI = @"Severe Thinness";
+                [resultImage setImage:[UIImage imageNamed:@"thin3.png"]];
+            } else if (rangeBMI < 17.00) {
+                categoryBMI = @"Moderate Thinness";
+                [resultImage setImage:[UIImage imageNamed:@"thin2.png"]];
+            } else if (rangeBMI < 18.50) {
+                categoryBMI = @"Mild Thinness";
+                [resultImage setImage:[UIImage imageNamed:@"thin1.png"]];
+            } else if (rangeBMI < 25.00) {
+                categoryBMI = @"Normal Range";
+                [resultImage setImage:[UIImage imageNamed:@"norm.png"]];
+            } else if (rangeBMI < 30.00) {
+                categoryBMI = @"Overweight";
+                [resultImage setImage:[UIImage imageNamed:@"over.png"]];
+            } else if (rangeBMI < 35.00) {
+                categoryBMI = @"Obese Class I (Moderate)";
+                [resultImage setImage:[UIImage imageNamed:@"obese1.png"]];
+            } else if (rangeBMI < 40.00) {
+                categoryBMI = @"Obese Class II (Severe)";
+                [resultImage setImage:[UIImage imageNamed:@"obese2.png"]];
+            } else {
+                categoryBMI = @"Obese Class III (Very Severe)";
+                [resultImage setImage:[UIImage imageNamed:@"obese3.png"]];
+            }
+            
+            self.resultLabel.text = [NSString stringWithFormat:@"%2.2f %@", rangeBMI, categoryBMI];
         }
-        
-        self.resultLabel.text = [NSString stringWithFormat:@"%2.2f %@", rangeBMI, categoryBMI];
     } else {
         self.resultLabel.text = [NSString stringWithFormat:@"Please fill out both fields."];
     }
