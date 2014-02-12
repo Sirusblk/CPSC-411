@@ -12,6 +12,7 @@
 
 @property (retain, nonatomic) IBOutlet UILabel *myLabel;
 @property (weak, nonatomic) IBOutlet UITextField *myTextField;
+@property (weak, nonatomic) IBOutlet UIImageView *myImageView;
 
 - (IBAction)buttonPressed:(id)sender;
 

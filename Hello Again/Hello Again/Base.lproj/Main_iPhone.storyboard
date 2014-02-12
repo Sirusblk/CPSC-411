@@ -43,6 +43,10 @@
                                     <outlet property="delegate" destination="vXZ-lx-hvc" id="vLZ-PF-p7j"/>
                                 </connections>
                             </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LastOfUs02.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="jfN-ZZ-nj4">
+                                <rect key="frame" x="20" y="162" width="280" height="209"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.17254902420000001" green="0.25098040700000002" blue="0.3058823645" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -58,6 +62,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="myImageView" destination="jfN-ZZ-nj4" id="wo5-TD-J7A"/>
                         <outlet property="myLabel" destination="ky6-td-gEG" id="vmU-wg-I2l"/>
                         <outlet property="myTextField" destination="bcc-nx-pgQ" id="4Cl-nY-g55"/>
                     </connections>
@@ -66,6 +71,9 @@
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="LastOfUs02.jpg" width="2560" height="1600"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

@@ -7,6 +7,7 @@
 //
 
 #import "DMViewController.h"
+#import "assert.h"
 
 //Ignore this for now!
 @interface DMViewController ()
@@ -55,6 +56,17 @@
 	 */
 	
 	self.myLabel.text = self.myTextField.text;
+	NSBundle *myBundle = [NSBundle mainBundle];
+	NSString *pathForOtherImage = [myBundle pathForResource:@"LastOfUs03" ofType:@"jpg"];
+	
+	if (pathForOtherImage == nil) {
+		NSLog(@"ERROR");
+	}
+	
+	assert(pathForOtherImage != nil);
+	
+	UIImage *theOtherImage = [UIImage imageWithContentsOfFile:pathForOtherImage];
+	self.myImageView.image = theOtherImage;
 }
 
 @end

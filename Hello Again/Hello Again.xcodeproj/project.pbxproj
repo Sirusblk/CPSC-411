@@ -22,6 +22,8 @@
 		EC2EF6ED18A1D6A000F6331F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC2EF6CC18A1D6A000F6331F /* UIKit.framework */; };
 		EC2EF6F518A1D6A000F6331F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EC2EF6F318A1D6A000F6331F /* InfoPlist.strings */; };
 		EC2EF6F718A1D6A000F6331F /* Hello_AgainTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EC2EF6F618A1D6A000F6331F /* Hello_AgainTests.m */; };
+		ECE6FB7D18AB0D7C00DE6CE7 /* LastOfUs02.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ECE6FB7C18AB0D7C00DE6CE7 /* LastOfUs02.jpg */; };
+		ECE6FB7F18AB0D8C00DE6CE7 /* LastOfUs03.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ECE6FB7E18AB0D8C00DE6CE7 /* LastOfUs03.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		EC2EF6F218A1D6A000F6331F /* Hello AgainTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Hello AgainTests-Info.plist"; sourceTree = "<group>"; };
 		EC2EF6F418A1D6A000F6331F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		EC2EF6F618A1D6A000F6331F /* Hello_AgainTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Hello_AgainTests.m; sourceTree = "<group>"; };
+		ECE6FB7C18AB0D7C00DE6CE7 /* LastOfUs02.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = LastOfUs02.jpg; sourceTree = "<group>"; };
+		ECE6FB7E18AB0D8C00DE6CE7 /* LastOfUs03.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = LastOfUs03.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +133,8 @@
 		EC2EF6CF18A1D6A000F6331F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				ECE6FB7C18AB0D7C00DE6CE7 /* LastOfUs02.jpg */,
+				ECE6FB7E18AB0D8C00DE6CE7 /* LastOfUs03.jpg */,
 				EC2EF6D018A1D6A000F6331F /* Hello Again-Info.plist */,
 				EC2EF6D118A1D6A000F6331F /* InfoPlist.strings */,
 				EC2EF6D418A1D6A000F6331F /* main.m */,
@@ -233,6 +239,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC2EF6DF18A1D6A000F6331F /* Main_iPad.storyboard in Resources */,
+				ECE6FB7F18AB0D8C00DE6CE7 /* LastOfUs03.jpg in Resources */,
+				ECE6FB7D18AB0D7C00DE6CE7 /* LastOfUs02.jpg in Resources */,
 				EC2EF6E418A1D6A000F6331F /* Images.xcassets in Resources */,
 				EC2EF6DC18A1D6A000F6331F /* Main_iPhone.storyboard in Resources */,
 				EC2EF6D318A1D6A000F6331F /* InfoPlist.strings in Resources */,
