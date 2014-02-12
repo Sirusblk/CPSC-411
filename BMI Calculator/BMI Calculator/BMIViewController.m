@@ -31,6 +31,12 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+	[self.weightTextField resignFirstResponder];
+    [self.heightTextField resignFirstResponder];
+}
+
 - (BOOL)textFieldShouldReturn:(UITextField*)sender {
 	NSLog(@"Keyboard Closed.");
 	[sender resignFirstResponder];
