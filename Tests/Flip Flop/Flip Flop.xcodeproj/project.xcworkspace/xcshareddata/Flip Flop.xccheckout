@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>94B1EC3F-B940-436B-A5D2-22D34866655B</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Flip Flop</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>38B6825F-1700-46CA-AE97-0A02C124943E</key>
+		<string>https://github.com/Sirusblk/CPSC-411.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Tests/Flip Flop/Flip Flop.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>38B6825F-1700-46CA-AE97-0A02C124943E</key>
+		<string>../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/Sirusblk/CPSC-411.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>38B6825F-1700-46CA-AE97-0A02C124943E</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>38B6825F-1700-46CA-AE97-0A02C124943E</string>
+			<key>IDESourceControlWCCName</key>
+			<string>CPSC 411</string>
+		</dict>
+	</array>
+</dict>
+</plist>
