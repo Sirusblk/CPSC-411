@@ -14,14 +14,15 @@
 		ECD500BE18BDC36500AB835F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ECD500BD18BDC36500AB835F /* main.m */; };
 		ECD500C218BDC36500AB835F /* MDCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ECD500C118BDC36500AB835F /* MDCAppDelegate.m */; };
 		ECD500C518BDC36500AB835F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECD500C318BDC36500AB835F /* Main.storyboard */; };
-		ECD500C818BDC36500AB835F /* CalculatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = ECD500C718BDC36500AB835F /* CalculatorView.m */; };
+		ECD500C818BDC36500AB835F /* CalculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECD500C718BDC36500AB835F /* CalculatorViewController.m */; };
 		ECD500CA18BDC36600AB835F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECD500C918BDC36600AB835F /* Images.xcassets */; };
 		ECD500D118BDC36600AB835F /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECD500D018BDC36600AB835F /* XCTest.framework */; };
 		ECD500D218BDC36600AB835F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECD500B118BDC36500AB835F /* Foundation.framework */; };
 		ECD500D318BDC36600AB835F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECD500B518BDC36500AB835F /* UIKit.framework */; };
 		ECD500DB18BDC36600AB835F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = ECD500D918BDC36600AB835F /* InfoPlist.strings */; };
 		ECD500DD18BDC36600AB835F /* Discount_CalculatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ECD500DC18BDC36600AB835F /* Discount_CalculatorTests.m */; };
-		ECD500ED18C00E7100AB835F /* GraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = ECD500EC18C00E7100AB835F /* GraphView.m */; };
+		ECD500ED18C00E7100AB835F /* GraphViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECD500EC18C00E7100AB835F /* GraphViewController.m */; };
+		ECD500F118C156BD00AB835F /* CalculatorData.m in Sources */ = {isa = PBXBuildFile; fileRef = ECD500F018C156BD00AB835F /* CalculatorData.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,16 +47,18 @@
 		ECD500C018BDC36500AB835F /* MDCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MDCAppDelegate.h; sourceTree = "<group>"; };
 		ECD500C118BDC36500AB835F /* MDCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MDCAppDelegate.m; sourceTree = "<group>"; };
 		ECD500C418BDC36500AB835F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		ECD500C618BDC36500AB835F /* CalculatorView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CalculatorView.h; sourceTree = "<group>"; };
-		ECD500C718BDC36500AB835F /* CalculatorView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalculatorView.m; sourceTree = "<group>"; };
+		ECD500C618BDC36500AB835F /* CalculatorViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CalculatorViewController.h; sourceTree = "<group>"; };
+		ECD500C718BDC36500AB835F /* CalculatorViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalculatorViewController.m; sourceTree = "<group>"; };
 		ECD500C918BDC36600AB835F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		ECD500CF18BDC36600AB835F /* Discount CalculatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Discount CalculatorTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECD500D018BDC36600AB835F /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		ECD500D818BDC36600AB835F /* Discount CalculatorTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Discount CalculatorTests-Info.plist"; sourceTree = "<group>"; };
 		ECD500DA18BDC36600AB835F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		ECD500DC18BDC36600AB835F /* Discount_CalculatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Discount_CalculatorTests.m; sourceTree = "<group>"; };
-		ECD500EB18C00E7100AB835F /* GraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphView.h; sourceTree = "<group>"; };
-		ECD500EC18C00E7100AB835F /* GraphView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraphView.m; sourceTree = "<group>"; };
+		ECD500EB18C00E7100AB835F /* GraphViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphViewController.h; sourceTree = "<group>"; };
+		ECD500EC18C00E7100AB835F /* GraphViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraphViewController.m; sourceTree = "<group>"; };
+		ECD500EF18C156BD00AB835F /* CalculatorData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalculatorData.h; sourceTree = "<group>"; };
+		ECD500F018C156BD00AB835F /* CalculatorData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalculatorData.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +120,8 @@
 			children = (
 				ECD500C018BDC36500AB835F /* MDCAppDelegate.h */,
 				ECD500C118BDC36500AB835F /* MDCAppDelegate.m */,
+				ECD500EF18C156BD00AB835F /* CalculatorData.h */,
+				ECD500F018C156BD00AB835F /* CalculatorData.m */,
 				ECD500C318BDC36500AB835F /* Main.storyboard */,
 				ECD500EE18C0331A00AB835F /* View Controllers */,
 				ECD500C918BDC36600AB835F /* Images.xcassets */,
@@ -157,10 +162,10 @@
 		ECD500EE18C0331A00AB835F /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				ECD500C618BDC36500AB835F /* CalculatorView.h */,
-				ECD500C718BDC36500AB835F /* CalculatorView.m */,
-				ECD500EB18C00E7100AB835F /* GraphView.h */,
-				ECD500EC18C00E7100AB835F /* GraphView.m */,
+				ECD500C618BDC36500AB835F /* CalculatorViewController.h */,
+				ECD500C718BDC36500AB835F /* CalculatorViewController.m */,
+				ECD500EB18C00E7100AB835F /* GraphViewController.h */,
+				ECD500EC18C00E7100AB835F /* GraphViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -263,9 +268,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ECD500ED18C00E7100AB835F /* GraphView.m in Sources */,
+				ECD500ED18C00E7100AB835F /* GraphViewController.m in Sources */,
 				ECD500BE18BDC36500AB835F /* main.m in Sources */,
-				ECD500C818BDC36500AB835F /* CalculatorView.m in Sources */,
+				ECD500C818BDC36500AB835F /* CalculatorViewController.m in Sources */,
+				ECD500F118C156BD00AB835F /* CalculatorData.m in Sources */,
 				ECD500C218BDC36500AB835F /* MDCAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -19,10 +19,10 @@
             </objects>
             <point key="canvasLocation" x="-150" y="155"/>
         </scene>
-        <!--Calculator View - Calculator-->
+        <!--Calculator View Controller - Calculator-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="CalculatorView" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="CalculatorViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="3pL-jU-ish"/>
                         <viewControllerLayoutGuide type="bottom" id="ptI-dG-uf4"/>
@@ -124,10 +124,10 @@
             </objects>
             <point key="canvasLocation" x="257" y="155"/>
         </scene>
-        <!--Graph View - Results-->
+        <!--Graph View Controller - Results-->
         <scene sceneID="RLB-wI-1j5">
             <objects>
-                <viewController id="dzF-Pm-IWM" customClass="GraphView" sceneMemberID="viewController">
+                <viewController id="dzF-Pm-IWM" customClass="GraphViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Q2J-s3-jJM"/>
                         <viewControllerLayoutGuide type="bottom" id="x4E-vE-duD"/>
