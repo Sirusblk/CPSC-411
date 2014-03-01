@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CalculatorData.h"
 
 @interface CalculatorViewController : UIViewController
-
+@property CalculatorData* userData;
 
 - (IBAction)calculateButtonPressed:(id)sender;
-
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender;
 @end

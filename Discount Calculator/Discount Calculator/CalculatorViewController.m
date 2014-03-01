@@ -27,19 +27,25 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)calculateButtonPressed:(id)sender {
+- (BOOL)textFieldShouldReturn:(UITextField*)sender {
+	NSLog(@"Keyboard Closed.");
+	[sender resignFirstResponder];
+	return YES;
+}
+
+- (IBAction)calculateButtonPressed:(id)sender
+{
     NSLog(@"Calculate Pressed!");
     [self performSegueWithIdentifier:@"CalculateGraph" sender: sender];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if ([[segue identifier] isEqualToString: @"CalculateGraph"]) {
+    if ([[segue identifier] isEqualToString:@"CalculateGraph"]) {
         //Get Destination View
-        GraphViewController *secondViewController = [segue destinationViewController];
+        CalculatorViewController *secondViewController = [segue destinationViewController];
         
         //Pass Information
     }
 }
-
 @end
