@@ -11,7 +11,13 @@
 
 @interface CalculatorViewController : UIViewController
 @property CalculatorData* userData;
+@property (weak, nonatomic) IBOutlet UITextField *priceTextField;
+@property (weak, nonatomic) IBOutlet UITextField *flatDollarsOffTextField;
+@property (weak, nonatomic) IBOutlet UITextField *percentDiscountTextField;
+@property (weak, nonatomic) IBOutlet UITextField *otherPercentTextField;
+@property (weak, nonatomic) IBOutlet UITextField *taxTextField;
+@property (weak, nonatomic) IBOutlet UILabel *originalPriceLabel;
+@property (weak, nonatomic) IBOutlet UILabel *discountPriceLabel;
 
 - (IBAction)calculateButtonPressed:(id)sender;
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender;
 @end

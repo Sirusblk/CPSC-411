@@ -50,7 +50,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Other Discount" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iFT-AB-dBh">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Other Discount %" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iFT-AB-dBh">
                                 <rect key="frame" x="20" y="194" width="140" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -119,6 +119,15 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Calculator" id="qcK-n2-Mjf"/>
+                    <connections>
+                        <outlet property="discountPriceLabel" destination="elo-lF-bkh" id="41g-Jm-905"/>
+                        <outlet property="flatDollarsOffTextField" destination="sX6-QL-ktQ" id="bIG-K6-GCw"/>
+                        <outlet property="originalPriceLabel" destination="ZTA-01-VKR" id="X0z-gv-I2Z"/>
+                        <outlet property="otherPercentTextField" destination="36F-c6-oGq" id="u6a-P4-v4C"/>
+                        <outlet property="percentDiscountTextField" destination="OFi-W6-dAy" id="sHs-xT-gCH"/>
+                        <outlet property="priceTextField" destination="UwV-bC-jbh" id="D84-Yx-w32"/>
+                        <outlet property="taxTextField" destination="2FU-JF-ix3" id="8HJ-hL-hTq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
