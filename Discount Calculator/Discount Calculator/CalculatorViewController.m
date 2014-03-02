@@ -27,18 +27,18 @@
     [super viewDidLoad];
 
     // Create Calculator Data
-    CalculatorData *calcData = [[CalculatorData alloc] initWithData:70.00 dollarsOff:-10.00 discount:20 additionalDiscount:5 tax:8.75];
+    CalculatorData *calcData = [[CalculatorData alloc] initWithData:70.00 dollarsOff:-10 discount:20 additionalDiscount:5 tax:8.75];
     
     //Set Values to default data in view
     self.priceTextField.text = [NSString stringWithFormat:@"%.2f", [calcData price]];
-    self.flatDollarsOffTextField.text = [NSString stringWithFormat:@"%.2f", [calcData dollarsOff]];
-    self.percentDiscountTextField.text = [NSString stringWithFormat:@"%.2F", [calcData discount]];
-    self.otherPercentTextField.text = [NSString stringWithFormat:@"%.2F", [calcData additionalDiscount]];
+    self.flatDollarsOffTextField.text = [NSString stringWithFormat:@"%d", [calcData dollarsOff]];
+    self.percentDiscountTextField.text = [NSString stringWithFormat:@"%d", [calcData discount]];
+    self.otherPercentTextField.text = [NSString stringWithFormat:@"%d", [calcData additionalDiscount]];
     self.taxTextField.text = [NSString stringWithFormat:@"%.2F", [calcData tax]];
     
     //Set labels to output
-    self.originalPriceLabel.text = [NSString stringWithFormat:@"Original Price: %f", [calcData originalPrice]];
-    self.discountPriceLabel.text = [NSString stringWithFormat:@"Discounted Price: %f", [calcData discountedPrice]];
+    self.originalPriceLabel.text = [NSString stringWithFormat:@"Original Price: \t\t%.2f", [calcData originalPrice]];
+    self.discountPriceLabel.text = [NSString stringWithFormat:@"Discounted Price: \t%.2f", [calcData discountedPrice]];
 }
 
 - (void)didReceiveMemoryWarning

@@ -19,7 +19,7 @@ CalculatorData* _mainPrice;
 @synthesize discountedPrice;
 @synthesize originalPrice;
 
--(id) initWithData:(float)_price dollarsOff:(float)_dollarsOff discount:(float) _discount additionalDiscount:(float) _additionalDiscount tax:(float) _tax
+-(id) initWithData:(float)_price dollarsOff:(int)_dollarsOff discount:(int) _discount additionalDiscount:(int) _additionalDiscount tax:(float) _tax
 {
     self = [super init];
     if(self) {
@@ -34,11 +34,17 @@ CalculatorData* _mainPrice;
 
 -(float) discountedPrice
 {
+    //Add an additional half a cent to round up
+    discountedPrice = price * (1 - ((discount/100) + (additionalDiscount/100))) - dollarsOff + 0.005;
+    
     return discountedPrice;
 }
 
 -(float) originalPrice
 {
+    //Add an additional half a cent to round up
+    originalPrice = price * (1 + (tax / 100)) + 0.005;
+    
     return originalPrice;
 }
 
