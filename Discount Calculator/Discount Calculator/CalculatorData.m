@@ -19,13 +19,13 @@ CalculatorData* _mainPrice;
 @synthesize discountedPrice;
 @synthesize originalPrice;
 
--(id) initWithData:(float)_price dollarsOff:(int)_dollarsOff discount:(int) _discount additionalDiscount:(int) _additionalDiscount tax:(float) _tax
+-(id) initWithData:(float)_price dollarsOff:(float)_dollarsOff discount:(float) _discount additionalDiscount:(float) _additionalDiscount tax:(float) _tax
 {
     self = [super init];
     if(self) {
         price = _price;
         dollarsOff = _dollarsOff;
-        discount = _discount;
+        discount = fabsf(_discount);
         additionalDiscount = _additionalDiscount;
         tax = _tax;
     }
@@ -35,7 +35,7 @@ CalculatorData* _mainPrice;
 -(float) discountedPrice
 {
     //Add an additional half a cent to round up
-    discountedPrice = price * (1 - ((discount/100) + (additionalDiscount/100))) - dollarsOff + 0.005;
+    discountedPrice = price * (1 - ((discount/100) + (additionalDiscount/100))) - dollarsOff + (price * (tax/100)) + 0.005;
     
     return discountedPrice;
 }
@@ -51,7 +51,7 @@ CalculatorData* _mainPrice;
 +(CalculatorData*) mainPrice
 {
     if (_mainPrice == nil) {
-        _mainPrice = [[CalculatorData alloc] initWithData:70.00 dollarsOff:-10 discount:20 additionalDiscount:5 tax:8.75];
+        _mainPrice = [[CalculatorData alloc] initWithData:70.00 dollarsOff:10 discount:20 additionalDiscount:5 tax:8.75];
     }
     return _mainPrice;
 }

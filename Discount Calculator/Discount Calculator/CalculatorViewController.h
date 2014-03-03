@@ -18,6 +18,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *taxTextField;
 @property (weak, nonatomic) IBOutlet UILabel *originalPriceLabel;
 @property (weak, nonatomic) IBOutlet UILabel *discountPriceLabel;
+@property (weak, nonatomic) IBOutlet UILabel *errorLabel;
 
 - (IBAction)calculateButtonPressed:(id)sender;
+- (void) updateView;
 @end
