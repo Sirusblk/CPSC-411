@@ -101,14 +101,13 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     NSLog(@"Swiped!");
-    /*
+
     if ([[segue identifier] isEqualToString:@"CalculateGraph"]) {
         //Get Destination View
-        //CalculatorViewController *secondViewController = [segue destinationViewController];
+        CalculatorViewController *secondViewController = [segue destinationViewController];
         
         //Pass Information
     }
-     */
 }
 
 @end

@@ -27,12 +27,22 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    //Make Swipe Gesture
+    UISwipeGestureRecognizer* swipeRightGestureRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget: self action: @selector(handleSwipeRightFrom:)];
+    swipeRightGestureRecognizer.direction = UISwipeGestureRecognizerDirectionRight;
+    [self.view addGestureRecognizer: swipeRightGestureRecognizer];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)handleSwipeRightFrom:(UIGestureRecognizer*)recognizer {
+    [self.navigationController popViewControllerAnimated:YES];
+    NSLog(@"Popping!");
 }
 
 @end
