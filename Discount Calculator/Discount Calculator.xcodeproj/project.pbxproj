@@ -88,6 +88,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		ECCAC07218C50B7900776CDD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				ECCAC06D18C45B7100776CDD /* QuartzGraphView.h */,
+				ECCAC06E18C45B7100776CDD /* QuartzGraphView.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		ECD500A518BDC36500AB835F = {
 			isa = PBXGroup;
 			children = (
@@ -126,8 +135,7 @@
 				ECD500EF18C156BD00AB835F /* CalculatorData.h */,
 				ECD500F018C156BD00AB835F /* CalculatorData.m */,
 				ECD500C318BDC36500AB835F /* Main.storyboard */,
-				ECCAC06D18C45B7100776CDD /* QuartzGraphView.h */,
-				ECCAC06E18C45B7100776CDD /* QuartzGraphView.m */,
+				ECCAC07218C50B7900776CDD /* Views */,
 				ECD500EE18C0331A00AB835F /* View Controllers */,
 				ECD500C918BDC36600AB835F /* Images.xcassets */,
 				ECD500B818BDC36500AB835F /* Supporting Files */,
