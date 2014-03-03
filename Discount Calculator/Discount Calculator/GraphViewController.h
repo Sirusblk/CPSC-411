@@ -11,4 +11,9 @@
 
 @interface GraphViewController : UIViewController
 @property CalculatorData* userData;
+@property (weak, nonatomic) IBOutlet UILabel *totalLabel;
+@property (weak, nonatomic) IBOutlet UILabel *discountAmountLabel;
+@property (weak, nonatomic) IBOutlet UILabel *discountPercentLabel;
+@property (weak, nonatomic) IBOutlet UILabel *saleAmountLabel;
+@property (weak, nonatomic) IBOutlet UILabel *salePercentLabel;
 @end

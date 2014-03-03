@@ -14,6 +14,11 @@
 
 @implementation GraphViewController
 @synthesize userData;
+@synthesize totalLabel;
+@synthesize discountAmountLabel;
+@synthesize discountPercentLabel;
+@synthesize saleAmountLabel;
+@synthesize salePercentLabel;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -27,7 +32,18 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+	
+    float price = [userData price];
+    float discount = [userData discountedPrice];
+    float discountPercent = ([userData discountedPrice] / [userData price]) * 100;
+    float savings = price - discount;
+    float savingsPerscent = (100 - discountPercent);
+    
+    self.totalLabel.text = [NSString stringWithFormat:@"$%.2f", price];
+    self.discountAmountLabel.text = [NSString stringWithFormat:@"$%.2f", discount];
+    self.discountPercentLabel.text = [NSString stringWithFormat:@"%.f%%", discountPercent];
+    self.saleAmountLabel.text = [NSString stringWithFormat:@"$%.2f", savings];
+    self.salePercentLabel.text = [NSString stringWithFormat:@"%.f%%",savingsPerscent];
     
     //Make Swipe Gesture
     UISwipeGestureRecognizer* swipeRightGestureRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget: self action: @selector(handleSwipeRightFrom:)];

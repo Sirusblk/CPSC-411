@@ -30,27 +30,30 @@
     float originalPrice = secondViewController.userData.originalPrice;
     float discountedPrice = secondViewController.userData.discountedPrice;
     float discount = originalPrice - discountedPrice;
+    float percent = discount/originalPrice;
+    NSLog(@"OriginalPrice: %f", originalPrice);
+    NSLog(@"Percent: %f", percent);
     
     // Drawing code
     CGContextRef context = UIGraphicsGetCurrentContext();
     
     //Total Price Bar
     //Green Color Fill
-    CGContextSetRGBFillColor(context, 0.4, 0.5, 0.4, 1.0);
+    CGContextSetRGBFillColor(context, 0.412, 0.545, 0.443, 1.0);
     //Left Most Bar
     CGContextFillRect(context, CGRectMake(20.0, 80.0, 140.0, 335.0));
     
     //DiscountedPrice Price Bar
     //Green Color Fill
-    CGContextSetRGBFillColor(context, 1.0, 0.5, 0.5, 1.0);
+    CGContextSetRGBFillColor(context, 0.957, 0.918, 0.549, 1.0);
     //Left Most Bar
-    CGContextFillRect(context, CGRectMake(160.0, 80.0 + (335.0 * discountedPrice), 140.0, ((335.0 - 80.0) * discountedPrice)));
+    CGContextFillRect(context, CGRectMake(160.0, 80.0, 140.0, 335.0));
     
     //Discount Price Bar
     //Green Color Fill
-    CGContextSetRGBFillColor(context, 1.0, 0.5, 0.4, 1.0);
+    CGContextSetRGBFillColor(context, 0.447, 0.314, 0.329, 1.0);
     //Left Most Bar
-    CGContextFillRect(context, CGRectMake(20.0, 80.0, 140.0, 335.0));
+    CGContextFillRect(context, CGRectMake(20.0, 80.0, 140.0, (335.0 * percent)));
 }
 
 @end
