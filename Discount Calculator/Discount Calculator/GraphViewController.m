@@ -13,6 +13,7 @@
 @end
 
 @implementation GraphViewController
+@synthesize userData;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ECCAC06F18C45B7100776CDD /* QuartzGraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = ECCAC06E18C45B7100776CDD /* QuartzGraphView.m */; };
 		ECD500B218BDC36500AB835F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECD500B118BDC36500AB835F /* Foundation.framework */; };
 		ECD500B418BDC36500AB835F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECD500B318BDC36500AB835F /* CoreGraphics.framework */; };
 		ECD500B618BDC36500AB835F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECD500B518BDC36500AB835F /* UIKit.framework */; };
@@ -36,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		ECCAC06D18C45B7100776CDD /* QuartzGraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuartzGraphView.h; sourceTree = "<group>"; };
+		ECCAC06E18C45B7100776CDD /* QuartzGraphView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuartzGraphView.m; sourceTree = "<group>"; };
 		ECD500AE18BDC36500AB835F /* Discount Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Discount Calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECD500B118BDC36500AB835F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		ECD500B318BDC36500AB835F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -123,6 +126,8 @@
 				ECD500EF18C156BD00AB835F /* CalculatorData.h */,
 				ECD500F018C156BD00AB835F /* CalculatorData.m */,
 				ECD500C318BDC36500AB835F /* Main.storyboard */,
+				ECCAC06D18C45B7100776CDD /* QuartzGraphView.h */,
+				ECCAC06E18C45B7100776CDD /* QuartzGraphView.m */,
 				ECD500EE18C0331A00AB835F /* View Controllers */,
 				ECD500C918BDC36600AB835F /* Images.xcassets */,
 				ECD500B818BDC36500AB835F /* Supporting Files */,
@@ -270,6 +275,7 @@
 			files = (
 				ECD500ED18C00E7100AB835F /* GraphViewController.m in Sources */,
 				ECD500BE18BDC36500AB835F /* main.m in Sources */,
+				ECCAC06F18C45B7100776CDD /* QuartzGraphView.m in Sources */,
 				ECD500C818BDC36500AB835F /* CalculatorViewController.m in Sources */,
 				ECD500F118C156BD00AB835F /* CalculatorData.m in Sources */,
 				ECD500C218BDC36500AB835F /* MDCAppDelegate.m in Sources */,
@@ -481,6 +487,7 @@
 				ECD500E218BDC36600AB835F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		ECD500E318BDC36600AB835F /* Build configuration list for PBXNativeTarget "Discount CalculatorTests" */ = {
 			isa = XCConfigurationList;
@@ -489,6 +496,7 @@
 				ECD500E518BDC36600AB835F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

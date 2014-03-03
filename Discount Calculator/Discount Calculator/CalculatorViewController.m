@@ -14,6 +14,7 @@
 @end
 
 @implementation CalculatorViewController
+@synthesize userData;
 @synthesize priceTextField;
 @synthesize flatDollarsOffTextField;
 @synthesize percentDiscountTextField;
@@ -27,7 +28,7 @@
     [super viewDidLoad];
     
     // Create Calculator Data
-    _userData = [[CalculatorData alloc] initWithData:70.00 dollarsOff:10 discount:20 additionalDiscount:5 tax:8.75];
+    userData = [[CalculatorData alloc] initWithData:70.00 dollarsOff:10 discount:20 additionalDiscount:5 tax:8.75];
     
     //Set Values to default data in view
     [self updateView];
@@ -68,11 +69,11 @@
         self.errorLabel.text = @"Error: Please enter in tax!";
     } else {
         //Grab Data
-        _userData.price = [self.priceTextField.text floatValue];
-        _userData.dollarsOff = fabsf([self.flatDollarsOffTextField.text floatValue]);
-        _userData.discount = [self.percentDiscountTextField.text floatValue];
-        _userData.additionalDiscount = [self.otherPercentTextField.text floatValue];
-        _userData.tax = [self.taxTextField.text floatValue];
+        userData.price = [self.priceTextField.text floatValue];
+        userData.dollarsOff = fabsf([self.flatDollarsOffTextField.text floatValue]);
+        userData.discount = [self.percentDiscountTextField.text floatValue];
+        userData.additionalDiscount = [self.otherPercentTextField.text floatValue];
+        userData.tax = [self.taxTextField.text floatValue];
         
         self.errorLabel.font = [UIFont fontWithName:@"Snell Roundhand" size:24.0];
         self.errorLabel.text = @"Swipe right to view Graph";
@@ -84,15 +85,15 @@
 }
 
 - (void) updateView {
-    self.priceTextField.text = [NSString stringWithFormat:@"%.2f", [_userData price]];
-    self.flatDollarsOffTextField.text = [NSString stringWithFormat:@"%.f", [_userData dollarsOff]];
-    self.percentDiscountTextField.text = [NSString stringWithFormat:@"%.f", [_userData discount]];
-    self.otherPercentTextField.text = [NSString stringWithFormat:@"%.f", [_userData additionalDiscount]];
-    self.taxTextField.text = [NSString stringWithFormat:@"%.2F", [_userData tax]];
+    self.priceTextField.text = [NSString stringWithFormat:@"%.2f", [userData price]];
+    self.flatDollarsOffTextField.text = [NSString stringWithFormat:@"%.f", [userData dollarsOff]];
+    self.percentDiscountTextField.text = [NSString stringWithFormat:@"%.f", [userData discount]];
+    self.otherPercentTextField.text = [NSString stringWithFormat:@"%.f", [userData additionalDiscount]];
+    self.taxTextField.text = [NSString stringWithFormat:@"%.2F", [userData tax]];
     
     //Set labels to output
-    self.originalPriceLabel.text = [NSString stringWithFormat:@"Original Price: \t\t%.2f", [_userData originalPrice]];
-    self.discountPriceLabel.text = [NSString stringWithFormat:@"Discounted Price: \t%.2f", [_userData discountedPrice]];
+    self.originalPriceLabel.text = [NSString stringWithFormat:@"Original Price: \t\t%.2f", [userData originalPrice]];
+    self.discountPriceLabel.text = [NSString stringWithFormat:@"Discounted Price: \t%.2f", [userData discountedPrice]];
 }
 
 - (void)handleSwipeLeftFrom:(UIGestureRecognizer*)recognizer {
@@ -107,6 +108,7 @@
         CalculatorViewController *secondViewController = [segue destinationViewController];
         
         //Pass Information
+        secondViewController.userData = [self userData];
     }
 }
 

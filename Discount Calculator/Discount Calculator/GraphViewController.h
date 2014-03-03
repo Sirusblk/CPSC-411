@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CalculatorData.h"
 
 @interface GraphViewController : UIViewController
-
+@property CalculatorData* userData;
 @end
