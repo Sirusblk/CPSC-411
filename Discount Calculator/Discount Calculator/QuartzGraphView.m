@@ -5,6 +5,7 @@
 //  Created by David McLaren on 3/2/14.
 //  Copyright (c) 2014 David McLaren. All rights reserved.
 //
+//  Color Scheme inspired by: https://kuler.adobe.com/Vintage-color-theme-3460192/
 
 #import "QuartzGraphView.h"
 #import "CalculatorData.h"
@@ -24,16 +25,8 @@
     return self;
 }
 
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
 - (void)drawRect:(CGRect)rect
 {
-    /*
-    GraphViewController *secondViewController = [[GraphViewController alloc] init];
-    float originalPrice = secondViewController.userData.originalPrice;
-    float discountedPrice = secondViewController.userData.discountedPrice;
-    float discount = originalPrice - discountedPrice;
-     */
     NSLog(@"Paid: %f", percentPaid);
     NSLog(@"Savings: %f", percentSavings);
     

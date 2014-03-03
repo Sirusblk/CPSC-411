@@ -33,7 +33,7 @@
 {
     [super viewDidLoad];
 	
-    float price = [userData price];
+    float price = [userData originalPrice];
     float discount = [userData discountedPrice];
     float discountPercent = ([userData discountedPrice] / [userData price]) * 100;
     float savings = price - discount;
@@ -59,7 +59,6 @@
     //!This only works with our View Controller Auto Layout left unchecked!
     //275 is the height of our green bar, offset by 90
     //Labels are 140 wide, 21 high
-    ////(275 / 2) + 90 + (21 / 2)
     //(335 / 2) - 21 + 90 = 236.5
     self.totalLabel.frame = CGRectMake(20.0, 236.5, 140.0, 21.0);
     position = (335 * (savingsPercent / 100) / 2) + 90 - 31.5;
@@ -84,6 +83,9 @@
 }
 
 - (void)handleSwipeRightFrom:(UIGestureRecognizer*)recognizer {
+    // No need to save copy of userData to pass back to CalculatorViewController
+    // since we were pushing and popping back. CalculatorViewController never
+    // lost it's data!
     [self.navigationController popViewControllerAnimated:YES];
     NSLog(@"Popping!");
 }
