@@ -39,10 +39,14 @@
     //Set labels to output
     self.originalPriceLabel.text = [NSString stringWithFormat:@"Original Price: \t\t%.2f", [calcData originalPrice]];
     self.discountPriceLabel.text = [NSString stringWithFormat:@"Discounted Price: \t%.2f", [calcData discountedPrice]];
+    
+    //Make Swipe Gesture
+    UISwipeGestureRecognizer* swipeLeftGestureRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget: self action: @selector(handleSwipeLeftFrom:)];
+    swipeLeftGestureRecognizer.direction = UISwipeGestureRecognizerDirectionLeft;
+    [self.view addGestureRecognizer: swipeLeftGestureRecognizer];
 }
 
-- (void)didReceiveMemoryWarning
-{
+- (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
@@ -53,24 +57,37 @@
 	return YES;
 }
 
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+	[self.priceTextField resignFirstResponder];
+    [self.flatDollarsOffTextField resignFirstResponder];
+    [self.percentDiscountTextField resignFirstResponder];
+    [self.otherPercentTextField resignFirstResponder];
+    [self.taxTextField resignFirstResponder];
+}
+
 - (IBAction)calculateButtonPressed:(id)sender
 {
     //Set
+    //CalculatorData *calcData = [[CalculatorData alloc] initWithData:[self.priceTextField.text] dolorsOff:[self.flatDollarsOffTextField.text] dollarsOff:[self.dollarsOffTextField.text] discount:[self.percentDiscountTextField.text] additionalDiscount:[self.otherPercentTextField.text] tax:[self.taxTextField.text]];
     
     NSLog(@"Calculate Pressed!");
 }
 
 - (void)handleSwipeLeftFrom:(UIGestureRecognizer*)recognizer {
-    [self performSegueWithIdentifier:@"CakculateGraph" sender:self];
+    [self performSegueWithIdentifier:@"CalculateGraph" sender:self];
 }
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    NSLog(@"Swiped!");
+    /*
     if ([[segue identifier] isEqualToString:@"CalculateGraph"]) {
         //Get Destination View
         //CalculatorViewController *secondViewController = [segue destinationViewController];
         
         //Pass Information
     }
+     */
 }
+
 @end

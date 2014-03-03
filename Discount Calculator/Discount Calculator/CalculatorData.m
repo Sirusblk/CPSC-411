@@ -51,7 +51,7 @@ CalculatorData* _mainPrice;
 +(CalculatorData*) mainPrice
 {
     if (_mainPrice == nil) {
-        _mainPrice = [[CalculatorData alloc] initWithData:36.99 dollarsOff:4.00 discount:10 additionalDiscount:5 tax:7.50];
+        _mainPrice = [[CalculatorData alloc] initWithData:70.00 dollarsOff:-10 discount:20 additionalDiscount:5 tax:8.75];
     }
     return _mainPrice;
 }
