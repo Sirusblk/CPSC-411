@@ -25,20 +25,20 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    
     // Create Calculator Data
-    CalculatorData *calcData = [[CalculatorData alloc] initWithData:70.00 dollarsOff:-10 discount:20 additionalDiscount:5 tax:8.75];
+    _userData = [[CalculatorData alloc] initWithData:70.00 dollarsOff:-10 discount:20 additionalDiscount:5 tax:8.75];
     
     //Set Values to default data in view
-    self.priceTextField.text = [NSString stringWithFormat:@"%.2f", [calcData price]];
-    self.flatDollarsOffTextField.text = [NSString stringWithFormat:@"%d", [calcData dollarsOff]];
-    self.percentDiscountTextField.text = [NSString stringWithFormat:@"%d", [calcData discount]];
-    self.otherPercentTextField.text = [NSString stringWithFormat:@"%d", [calcData additionalDiscount]];
-    self.taxTextField.text = [NSString stringWithFormat:@"%.2F", [calcData tax]];
+    self.priceTextField.text = [NSString stringWithFormat:@"%.2f", [_userData price]];
+    self.flatDollarsOffTextField.text = [NSString stringWithFormat:@"%d", [_userData dollarsOff]];
+    self.percentDiscountTextField.text = [NSString stringWithFormat:@"%d", [_userData discount]];
+    self.otherPercentTextField.text = [NSString stringWithFormat:@"%d", [_userData additionalDiscount]];
+    self.taxTextField.text = [NSString stringWithFormat:@"%.2F", [_userData tax]];
     
     //Set labels to output
-    self.originalPriceLabel.text = [NSString stringWithFormat:@"Original Price: \t\t%.2f", [calcData originalPrice]];
-    self.discountPriceLabel.text = [NSString stringWithFormat:@"Discounted Price: \t%.2f", [calcData discountedPrice]];
+    self.originalPriceLabel.text = [NSString stringWithFormat:@"Original Price: \t\t%.2f", [_userData originalPrice]];
+    self.discountPriceLabel.text = [NSString stringWithFormat:@"Discounted Price: \t%.2f", [_userData discountedPrice]];
     
     //Make Swipe Gesture
     UISwipeGestureRecognizer* swipeLeftGestureRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget: self action: @selector(handleSwipeLeftFrom:)];
@@ -69,7 +69,11 @@
 - (IBAction)calculateButtonPressed:(id)sender
 {
     //Set
-    //CalculatorData *calcData = [[CalculatorData alloc] initWithData:[self.priceTextField.text] dolorsOff:[self.flatDollarsOffTextField.text] dollarsOff:[self.dollarsOffTextField.text] discount:[self.percentDiscountTextField.text] additionalDiscount:[self.otherPercentTextField.text] tax:[self.taxTextField.text]];
+    _userData.price = [self.priceTextField.text floatValue];
+    _userData.dollarsOff = [self.flatDollarsOffTextField.text intValue];
+    _userData.discount = [self.percentDiscountTextField.text intValue];
+    _userData.additionalDiscount = [self.percentDiscountTextField.text intValue];
+    _userData.tax = [self.taxTextField.text intValue];
     
     NSLog(@"Calculate Pressed!");
 }
