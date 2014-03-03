@@ -39,6 +39,15 @@
     float savings = price - discount;
     float savingsPerscent = (100 - discountPercent);
     
+    //This is where the magic happens!
+    [(QuartzGraphView*)self.view setValues:discountPercent savings:savingsPerscent];
+    
+    self.totalLabel.textColor = [UIColor whiteColor];
+    self.discountAmountLabel.textColor = [UIColor whiteColor];
+    self.discountPercentLabel.textColor = [UIColor whiteColor];
+    self.saleAmountLabel.textColor = [UIColor whiteColor];
+    self.salePercentLabel.textColor = [UIColor whiteColor];
+    
     self.totalLabel.text = [NSString stringWithFormat:@"$%.2f", price];
     self.discountAmountLabel.text = [NSString stringWithFormat:@"$%.2f", discount];
     self.discountPercentLabel.text = [NSString stringWithFormat:@"%.f%%", discountPercent];

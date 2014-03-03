@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "CalculatorData.h"
+#import "QuartzGraphView.h"
 
 @interface GraphViewController : UIViewController
 @property CalculatorData* userData;

@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface QuartzGraphView : UIView
+@property float percentSavings;
+@property float percentPaid;
 
+- (void)setValues:(float)paid savings:(float)savings;
 @end
