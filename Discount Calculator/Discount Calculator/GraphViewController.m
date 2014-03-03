@@ -37,10 +37,11 @@
     float discount = [userData discountedPrice];
     float discountPercent = ([userData discountedPrice] / [userData price]) * 100;
     float savings = price - discount;
-    float savingsPerscent = (100 - discountPercent);
+    float savingsPercent = (100 - discountPercent);
+    float position;
     
     //This is where the magic happens!
-    [(QuartzGraphView*)self.view setValues:discountPercent savings:savingsPerscent];
+    [(QuartzGraphView*)self.view setValues:discountPercent savings:savingsPercent];
     
     self.totalLabel.textColor = [UIColor whiteColor];
     self.discountAmountLabel.textColor = [UIColor whiteColor];
@@ -52,7 +53,23 @@
     self.discountAmountLabel.text = [NSString stringWithFormat:@"$%.2f", discount];
     self.discountPercentLabel.text = [NSString stringWithFormat:@"%.f%%", discountPercent];
     self.saleAmountLabel.text = [NSString stringWithFormat:@"$%.2f", savings];
-    self.salePercentLabel.text = [NSString stringWithFormat:@"%.f%%",savingsPerscent];
+    self.salePercentLabel.text = [NSString stringWithFormat:@"%.f%%",savingsPercent];
+    
+    //Reposition Labels
+    //!This only works with our View Controller Auto Layout left unchecked!
+    //275 is the height of our green bar, offset by 90
+    //Labels are 140 wide, 21 high
+    ////(275 / 2) + 90 + (21 / 2)
+    //(335 / 2) - 21 + 90 = 236.5
+    self.totalLabel.frame = CGRectMake(20.0, 236.5, 140.0, 21.0);
+    position = (335 * (savingsPercent / 100) / 2) + 90 - 31.5;
+    self.saleAmountLabel.frame = CGRectMake(160.0, position, 140.0, 21.0);
+    position = (335 * (savingsPercent / 100) / 2) + 90 - 10.5;
+    self.salePercentLabel.frame = CGRectMake(160.0, position, 140.0, 21.0);
+    position = (275 - (275 * (discountPercent / 100) / 2)) + 90 + 10.5;
+    self.discountAmountLabel.frame = CGRectMake(160.0, position, 140.0, 21.0);
+    position = (275 - (275 * (discountPercent / 100) / 2)) + 90 + 31.5;
+    self.discountPercentLabel.frame = CGRectMake(160.0, position, 140.0, 21.0);
     
     //Make Swipe Gesture
     UISwipeGestureRecognizer* swipeRightGestureRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget: self action: @selector(handleSwipeRightFrom:)];
