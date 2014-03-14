@@ -14,7 +14,7 @@
 		EC3BEA7318D2D404006D7D48 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EC3BEA7218D2D404006D7D48 /* main.m */; };
 		EC3BEA7718D2D404006D7D48 /* DMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EC3BEA7618D2D404006D7D48 /* DMAppDelegate.m */; };
 		EC3BEA7A18D2D404006D7D48 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC3BEA7818D2D404006D7D48 /* Main.storyboard */; };
-		EC3BEA7D18D2D404006D7D48 /* DMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC3BEA7C18D2D404006D7D48 /* DMViewController.m */; };
+		EC3BEA7D18D2D404006D7D48 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC3BEA7C18D2D404006D7D48 /* MainViewController.m */; };
 		EC3BEA7F18D2D404006D7D48 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC3BEA7E18D2D404006D7D48 /* Images.xcassets */; };
 		EC3BEA8618D2D404006D7D48 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC3BEA8518D2D404006D7D48 /* XCTest.framework */; };
 		EC3BEA8718D2D404006D7D48 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC3BEA6618D2D404006D7D48 /* Foundation.framework */; };
@@ -45,8 +45,8 @@
 		EC3BEA7518D2D404006D7D48 /* DMAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DMAppDelegate.h; sourceTree = "<group>"; };
 		EC3BEA7618D2D404006D7D48 /* DMAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DMAppDelegate.m; sourceTree = "<group>"; };
 		EC3BEA7918D2D404006D7D48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		EC3BEA7B18D2D404006D7D48 /* DMViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DMViewController.h; sourceTree = "<group>"; };
-		EC3BEA7C18D2D404006D7D48 /* DMViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DMViewController.m; sourceTree = "<group>"; };
+		EC3BEA7B18D2D404006D7D48 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		EC3BEA7C18D2D404006D7D48 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		EC3BEA7E18D2D404006D7D48 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		EC3BEA8418D2D404006D7D48 /* CalculatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalculatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC3BEA8518D2D404006D7D48 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -115,8 +115,7 @@
 				EC3BEA7518D2D404006D7D48 /* DMAppDelegate.h */,
 				EC3BEA7618D2D404006D7D48 /* DMAppDelegate.m */,
 				EC3BEA7818D2D404006D7D48 /* Main.storyboard */,
-				EC3BEA7B18D2D404006D7D48 /* DMViewController.h */,
-				EC3BEA7C18D2D404006D7D48 /* DMViewController.m */,
+				EC3BEA9B18D2DD84006D7D48 /* View Controller */,
 				EC3BEA7E18D2D404006D7D48 /* Images.xcassets */,
 				EC3BEA6D18D2D404006D7D48 /* Supporting Files */,
 			);
@@ -150,6 +149,15 @@
 				EC3BEA8E18D2D404006D7D48 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EC3BEA9B18D2DD84006D7D48 /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EC3BEA7B18D2D404006D7D48 /* MainViewController.h */,
+				EC3BEA7C18D2D404006D7D48 /* MainViewController.m */,
+			);
+			name = "View Controller";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,7 +259,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC3BEA7318D2D404006D7D48 /* main.m in Sources */,
-				EC3BEA7D18D2D404006D7D48 /* DMViewController.m in Sources */,
+				EC3BEA7D18D2D404006D7D48 /* MainViewController.m in Sources */,
 				EC3BEA7718D2D404006D7D48 /* DMAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
