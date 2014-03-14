@@ -6,13 +6,13 @@
 //  Copyright (c) 2014 David McLaren. All rights reserved.
 //
 
-#import "DMViewController.h"
+#import "MainViewController.h"
 
-@interface DMViewController ()
+@interface MainViewController ()
 
 @end
 
-@implementation DMViewController
+@implementation MainViewController
 
 - (void)viewDidLoad
 {

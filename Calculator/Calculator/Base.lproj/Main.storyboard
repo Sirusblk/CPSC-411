@@ -190,6 +190,30 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="allClear" destination="UOo-5M-w0R" id="hQL-3d-YJx"/>
+                        <outlet property="decimal" destination="q9I-AJ-Dan" id="1CV-O4-zrU"/>
+                        <outlet property="divideOp" destination="wTF-S3-4po" id="EzW-BR-ZzH"/>
+                        <outlet property="eightDigit" destination="1m4-vG-DYU" id="vu4-T6-bRJ"/>
+                        <outlet property="equalEval" destination="4v4-KC-FQu" id="m8D-n1-OXW"/>
+                        <outlet property="fiveDigit" destination="t03-Gr-gCi" id="tXR-KB-kyY"/>
+                        <outlet property="fourDigit" destination="Uzi-PG-8y2" id="OMX-uY-CPV"/>
+                        <outlet property="multiplyOp" destination="maA-oo-F4c" id="I8Q-tb-a5A"/>
+                        <outlet property="newTerm" destination="aar-96-wRo" id="Xg4-kD-5bf"/>
+                        <outlet property="nineDigit" destination="RC2-68-5aF" id="ooq-QI-Xiu"/>
+                        <outlet property="oldTerm" destination="hq2-2Z-rIk" id="GhU-Ex-71w"/>
+                        <outlet property="oneDigit" destination="Fhp-41-QV5" id="Ym6-M6-BQX"/>
+                        <outlet property="operator" destination="rYP-Ug-rx5" id="PwD-4A-vAq"/>
+                        <outlet property="plusOp" destination="f4k-wD-Iei" id="W6l-nP-cIf"/>
+                        <outlet property="posOrNeg" destination="UHx-cN-3l7" id="Dzd-Xk-XFB"/>
+                        <outlet property="sevenDigit" destination="ZXT-Z7-84K" id="KTC-dA-57f"/>
+                        <outlet property="sixDigit" destination="A7q-WU-mky" id="CN8-J5-8ep"/>
+                        <outlet property="squareRoot" destination="Y4o-5e-UDb" id="aih-tL-9UC"/>
+                        <outlet property="subtractOp" destination="nQB-4S-UOh" id="Hc5-Jc-tup"/>
+                        <outlet property="threeDigit" destination="MSi-M7-5cn" id="vnF-mE-lwk"/>
+                        <outlet property="twoDigit" destination="NHP-kb-ZoN" id="vDD-yr-ypl"/>
+                        <outlet property="zeroDigit" destination="xPj-pO-ugQ" id="4b6-od-CPJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
