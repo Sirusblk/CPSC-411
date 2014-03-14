@@ -1,5 +1,5 @@
 //
-//  DMViewController.h
+//  MainViewController.h
 //  Calculator
 //
 //  Created by David McLaren on 3/14/14.
@@ -9,9 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface MainViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UILabel *oldTerm;
-@property (weak, nonatomic) IBOutlet UILabel *operatorLabel;
-@property (weak, nonatomic) IBOutlet UILabel *newTerm;
+@property (weak, nonatomic) IBOutlet UILabel *pastTerm;
+@property (weak, nonatomic) IBOutlet UILabel *opTerm;
+@property (weak, nonatomic) IBOutlet UILabel *currentTerm;
 
 @property (weak, nonatomic) IBOutlet UIButton *allClear;
 @property (weak, nonatomic) IBOutlet UIButton *squareRoot;

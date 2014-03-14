@@ -1,5 +1,5 @@
 //
-//  DMViewController.m
+//  MainViewController.m
 //  Calculator
 //
 //  Created by David McLaren on 3/14/14.
@@ -13,11 +13,39 @@
 @end
 
 @implementation MainViewController
+@synthesize pastTerm;
+@synthesize opTerm;
+@synthesize currentTerm;
+
+@synthesize allClear;
+@synthesize squareRoot;
+@synthesize multiplyOp;
+@synthesize divideOp;
+@synthesize plusOp;
+@synthesize subtractOp;
+@synthesize equalEval;
+
+@synthesize posOrNeg;
+
+@synthesize decimal;
+@synthesize zeroDigit;
+@synthesize oneDigit;
+@synthesize twoDigit;
+@synthesize threeDigit;
+@synthesize fourDigit;
+@synthesize fiveDigit;
+@synthesize sixDigit;
+@synthesize sevenDigit;
+@synthesize eightDigit;
+@synthesize nineDigit;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+	// Remove placement text
+    self.pastTerm.text = @"";
+    self.opTerm.text = @"";
+    self.currentTerm.text = @"";
 }
 
 - (void)didReceiveMemoryWarning
