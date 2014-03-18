@@ -44,6 +44,11 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)updateData
+{
+    userData.
+}
+
 - (void)updateView
 {
     if (userData.lastTerm == 0) {
@@ -129,8 +134,6 @@
 }
 
 - (IBAction)equalPressed:(id)sender {
-    float temp;
-    
     if (![lastTermString isEqualToString:@""]) {
         [userData calculate];
         //userData.lastTerm = [userData.currentTermString floatValue];
@@ -142,6 +145,7 @@
 
 //Modifiers
 - (IBAction)sqrtPressed:(id)sender {
+    NSLog(@"%.f", sqrt(userData.currentTerm));
     userData.currentTerm = sqrt(userData.currentTerm);
     
     //Update Display
@@ -152,10 +156,18 @@
 }
 
 - (IBAction)decimalPressed:(id)sender {
+    if (![self.currentTerm.text isEqualToString:@"0"]) {
+        NSMutableString *temp = [[NSMutableString alloc] initWithFormat:@"%@", self.currentTerm.text];
+        [temp appendString:@"."];
+        self.currentTerm.text = temp;
+    } else {
+        self.currentTerm.text = @".";
+    }
 }
 
 //Digits
 - (IBAction)zeroPressed:(id)sender {
+    //Current term is not 0, so append
     if (![self.currentTerm.text isEqual: @"0"]) {
         NSMutableString *temp = [[NSMutableString alloc] initWithFormat:@"%@", self.currentTerm.text];
         [temp appendString:@"0"];
@@ -164,7 +176,9 @@
 }
 
 - (IBAction)onePressed:(id)sender {
-    if (![self.currentTerm.text isEqual: @"0"]) {
+    //Current term is not 0, so append
+    NSLog(@"Blah:%@", self.currentTerm.text);
+    if (![self.currentTerm.text isEqualToString:@"0"]) {
         NSMutableString *temp = [[NSMutableString alloc] initWithFormat:@"%@", self.currentTerm.text];
         [temp appendString:@"1"];
         self.currentTerm.text = temp;
@@ -174,7 +188,7 @@
 }
 
 - (IBAction)twoPressed:(id)sender {
-    if (![self.currentTerm.text isEqual: @"0"]) {
+    if (![self.currentTerm.text isEqualToString: @"0"]) {
         NSMutableString *temp = [[NSMutableString alloc] initWithFormat:@"%@", self.currentTerm.text];
         [temp appendString:@"2"];
         self.currentTerm.text = temp;
@@ -184,23 +198,73 @@
 }
 
 - (IBAction)threePressed:(id)sender {
+    //This always appends for some reason.
+    if (![self.currentTerm.text isEqualToString:@"0"]) {
+        NSMutableString *temp = [[NSMutableString alloc] initWithFormat:@"%@", self.currentTerm.text];
+        [temp appendString:@"3"];
+        self.currentTerm.text = temp;
+    } else {
+        self.currentTerm.text = @"3";
+    }
 }
 
 - (IBAction)fourPressed:(id)sender {
+    if (![self.currentTerm.text isEqualToString:@"0"]) {
+        NSMutableString *temp = [[NSMutableString alloc] initWithFormat:@"%@", self.currentTerm.text];
+        [temp appendString:@"4"];
+        self.currentTerm.text = temp;
+    } else {
+        self.currentTerm.text = @"4";
+    }
 }
 
 - (IBAction)fivePressed:(id)sender {
+    if (![self.currentTerm.text isEqualToString:@"0"]) {
+        NSMutableString *temp = [[NSMutableString alloc] initWithFormat:@"%@", self.currentTerm.text];
+        [temp appendString:@"5"];
+        self.currentTerm.text = temp;
+    } else {
+        self.currentTerm.text = @"5";
+    }
 }
 
 - (IBAction)sixPressed:(id)sender {
+    if (![self.currentTerm.text isEqualToString:@"0"]) {
+        NSMutableString *temp = [[NSMutableString alloc] initWithFormat:@"%@", self.currentTerm.text];
+        [temp appendString:@"6"];
+        self.currentTerm.text = temp;
+    } else {
+        self.currentTerm.text = @"6";
+    }
 }
 
 - (IBAction)sevenPressed:(id)sender {
+    if (![self.currentTerm.text isEqualToString:@"0"]) {
+        NSMutableString *temp = [[NSMutableString alloc] initWithFormat:@"%@", self.currentTerm.text];
+        [temp appendString:@"7"];
+        self.currentTerm.text = temp;
+    } else {
+        self.currentTerm.text = @"7";
+    }
 }
 
 - (IBAction)eightPressed:(id)sender {
+    if (![self.currentTerm.text isEqualToString:@"0"]) {
+        NSMutableString *temp = [[NSMutableString alloc] initWithFormat:@"%@", self.currentTerm.text];
+        [temp appendString:@"8"];
+        self.currentTerm.text = temp;
+    } else {
+        self.currentTerm.text = @"8";
+    }
 }
 
 - (IBAction)ninePressed:(id)sender {
+    if (![self.currentTerm.text isEqualToString:@"0"]) {
+        NSMutableString *temp = [[NSMutableString alloc] initWithFormat:@"%@", self.currentTerm.text];
+        [temp appendString:@"9"];
+        self.currentTerm.text = temp;
+    } else {
+        self.currentTerm.text = @"9";
+    }
 }
 @end

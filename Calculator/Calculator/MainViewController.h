@@ -18,6 +18,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *opTerm;
 @property (weak, nonatomic) IBOutlet UILabel *currentTerm;
 
+- (void)updateData;
 - (void)updateView;
 
 - (IBAction)clearPressed:(id)sender;

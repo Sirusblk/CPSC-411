@@ -53,12 +53,12 @@
 
 - (NSString*)getLastTerm
 {
-    return [NSString stringWithFormat:@"%8.8f", lastTerm];
+    return [NSString stringWithFormat:@"%8.f", lastTerm];
 }
 
 - (NSString*)getCurrentTerm
 {
-    return [NSString stringWithFormat:@"%8.8f", currentTerm];
+    return [NSString stringWithFormat:@"%8.f", currentTerm];
 }
 
 @end
