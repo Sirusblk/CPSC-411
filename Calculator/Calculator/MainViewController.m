@@ -86,13 +86,13 @@
 
 //Operators
 - (IBAction)multiPressed:(id)sender {
-    [self updateData];
-    
+
     //Check if Operator field is not empty
     if (![userData.opCommand isEqual:@""]) {
         [userData calculate];
         userData.opCommand = @"x";
-        currentTerm.text = @"0";
+        self.currentTerm.text = @"0";
+        userData.currentTerm = 0;
     } else {
         //Is empty, so
         //Shift everything!
@@ -108,25 +108,37 @@
     }
      */
     
+    [self updateData];
+    
     //Update Display
-    [self updateView];
+    //[self updateView];
+    pastTerm.text = currentTerm.text;
+    currentTerm.text = @"0";
+    userData.currentTerm = 0;
 }
 
 - (IBAction)diviPressed:(id)sender {
-    [self updateData];
-    
-    //Check if Operator field is empty or not
+    //Check if Operator field is not empty
     if (![userData.opCommand isEqual:@""]) {
         [userData calculate];
+        //userData.opCommand = @"÷";
+        self.currentTerm.text = @"0";
+        //userData.currentTerm = 0;
     } else {
-        //Shift everything
+        //Is empty, so
+        //Shift everything!
         self.pastTerm.text = [userData getCurrentTerm];
-        userData.opCommand = @"÷";
+        //userData.opCommand = @"÷";
         self.opTerm.text = @"÷";
     }
     
+    [self updateData];
+    
     //Update Display
-    [self updateView];
+    //[self updateView];
+    pastTerm.text = currentTerm.text;
+    currentTerm.text = @"0";
+    userData.currentTerm = 0;
 }
 
 - (IBAction)plusPressed:(id)sender {
