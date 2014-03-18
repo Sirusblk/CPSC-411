@@ -15,8 +15,8 @@
 @implementation MainViewController
 @synthesize userData;
 
-@synthesize currentTermString;
-@synthesize lastTermString;
+//@synthesize currentTermString;
+//@synthesize lastTermString;
 
 @synthesize pastTerm;
 @synthesize opTerm;
@@ -28,11 +28,11 @@
     
     //Setup Data Model
     userData = [[CalculatorData alloc] init];
-    currentTermString = [[NSMutableString alloc] init];
-    lastTermString = [[NSMutableString alloc] init];
+    //currentTermString = [[NSMutableString alloc] init];
+    //lastTermString = [[NSMutableString alloc] init];
     
-    [currentTermString setString:@"0"];
-    [lastTermString setString:@""];
+    //[currentTermString setString:@"0"];
+    //[lastTermString setString:@""];
     
 	// Remove placement text
     [self updateView];
@@ -46,7 +46,17 @@
 
 - (void)updateData
 {
-    userData.
+    NSLog(@"%f", [self.pastTerm.text floatValue]);
+    
+    if (![pastTerm.text isEqualToString:@""]) {
+        userData.lastTerm = [self.pastTerm.text floatValue];
+    }
+    
+    NSLog(@"%f", [self.currentTerm.text floatValue]);
+    
+    if (![currentTerm.text isEqualToString:@"0"]) {
+        userData.currentTerm = [self.currentTerm.text floatValue];
+    }
 }
 
 - (void)updateView
@@ -63,8 +73,8 @@
 
 - (IBAction)clearPressed:(id)sender {
     //Reset userData
-    [lastTermString setString:@""];
-    [currentTermString setString:@"0"];
+    pastTerm.text = @"";
+    currentTerm.text = @"0";
     //userData.opCommand = @"";
     
     //userData.lastTerm = 0;
@@ -76,6 +86,8 @@
 
 //Operators
 - (IBAction)multiPressed:(id)sender {
+    [self updateData];
+    
     //Check if Operator field is not empty
     if (![userData.opCommand isEqual:@""]) {
         [userData calculate];
@@ -101,6 +113,8 @@
 }
 
 - (IBAction)diviPressed:(id)sender {
+    [self updateData];
+    
     //Check if Operator field is empty or not
     if (![userData.opCommand isEqual:@""]) {
         [userData calculate];
@@ -116,8 +130,10 @@
 }
 
 - (IBAction)plusPressed:(id)sender {
-    if (![lastTermString isEqualToString:@""]) {
-        userData.lastTerm = [currentTermString floatValue];
+    [self updateData];
+    
+    if (![pastTerm.text isEqualToString:@""]) {
+        userData.lastTerm = [pastTerm.text floatValue];
     }
     
     //Update Display
@@ -125,8 +141,10 @@
 }
 
 - (IBAction)minusPressed:(id)sender {
-    if (![lastTermString isEqualToString:@""]) {
-        userData.lastTerm = [currentTermString floatValue];
+    [self updateData];
+    
+    if (![pastTerm.text isEqualToString:@""]) {
+        userData.lastTerm = [currentTerm.text floatValue];
     }
     
     //Update Display
@@ -134,17 +152,24 @@
 }
 
 - (IBAction)equalPressed:(id)sender {
-    if (![lastTermString isEqualToString:@""]) {
+    [self updateData];
+    
+    if (![pastTerm.text isEqualToString:@""]) {
         [userData calculate];
         //userData.lastTerm = [userData.currentTermString floatValue];
     }
     
     //Update Display
-    //[self updateView];
+    [self updateView];
 }
 
 //Modifiers
 - (IBAction)sqrtPressed:(id)sender {
+    [self updateData];
+    NSLog(@"Last Term: %f", userData.lastTerm);
+    NSLog(@"Current Term: %f", userData.currentTerm);
+    NSLog(@"Operator: %@", userData.opCommand);
+    
     NSLog(@"%.f", sqrt(userData.currentTerm));
     userData.currentTerm = sqrt(userData.currentTerm);
     
