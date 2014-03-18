@@ -7,32 +7,40 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CalculatorData.h"
 
 @interface MainViewController : UIViewController
+@property CalculatorData *userData;
+@property NSMutableString *lastTermString;
+@property NSMutableString *currentTermString;
+
 @property (weak, nonatomic) IBOutlet UILabel *pastTerm;
 @property (weak, nonatomic) IBOutlet UILabel *opTerm;
 @property (weak, nonatomic) IBOutlet UILabel *currentTerm;
 
-@property (weak, nonatomic) IBOutlet UIButton *allClear;
-@property (weak, nonatomic) IBOutlet UIButton *squareRoot;
-@property (weak, nonatomic) IBOutlet UIButton *multiplyOp;
-@property (weak, nonatomic) IBOutlet UIButton *divideOp;
-@property (weak, nonatomic) IBOutlet UIButton *plusOp;
-@property (weak, nonatomic) IBOutlet UIButton *subtractOp;
-@property (weak, nonatomic) IBOutlet UIButton *equalEval;
+- (void)updateView;
 
-@property (weak, nonatomic) IBOutlet UIButton *posOrNeg;
+- (IBAction)clearPressed:(id)sender;
+- (IBAction)sqrtPressed:(id)sender;
+- (IBAction)multiPressed:(id)sender;
+- (IBAction)diviPressed:(id)sender;
+- (IBAction)plusPressed:(id)sender;
+- (IBAction)minusPressed:(id)sender;
 
-@property (weak, nonatomic) IBOutlet UIButton *decimal;
-@property (weak, nonatomic) IBOutlet UIButton *zeroDigit;
-@property (weak, nonatomic) IBOutlet UIButton *oneDigit;
-@property (weak, nonatomic) IBOutlet UIButton *twoDigit;
-@property (weak, nonatomic) IBOutlet UIButton *threeDigit;
-@property (weak, nonatomic) IBOutlet UIButton *fourDigit;
-@property (weak, nonatomic) IBOutlet UIButton *fiveDigit;
-@property (weak, nonatomic) IBOutlet UIButton *sixDigit;
-@property (weak, nonatomic) IBOutlet UIButton *sevenDigit;
-@property (weak, nonatomic) IBOutlet UIButton *eightDigit;
-@property (weak, nonatomic) IBOutlet UIButton *nineDigit;
+- (IBAction)equalPressed:(id)sender;
+
+- (IBAction)posNegPressed:(id)sender;
+- (IBAction)decimalPressed:(id)sender;
+
+- (IBAction)zeroPressed:(id)sender;
+- (IBAction)onePressed:(id)sender;
+- (IBAction)twoPressed:(id)sender;
+- (IBAction)threePressed:(id)sender;
+- (IBAction)fourPressed:(id)sender;
+- (IBAction)fivePressed:(id)sender;
+- (IBAction)sixPressed:(id)sender;
+- (IBAction)sevenPressed:(id)sender;
+- (IBAction)eightPressed:(id)sender;
+- (IBAction)ninePressed:(id)sender;
 
 @end

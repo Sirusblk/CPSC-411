@@ -9,5 +9,14 @@
 #import <Foundation/Foundation.h>
 
 @interface CalculatorData : NSObject
+//@property NSMutableString *lastTermString;
+//@property NSMutableString *currentTermString;
+@property float lastTerm;
+@property float currentTerm;
+@property NSString *opCommand;
+
+- (void)calculate;
+- (NSString*)getLastTerm;
+- (NSString*)getCurrentTerm;
 
 @end
