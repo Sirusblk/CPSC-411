@@ -13,13 +13,17 @@
 @property CalculatorData *userData;
 @property NSMutableString *lastTermString;
 @property NSMutableString *currentTermString;
+@property BOOL decimal;
+@property BOOL negative;
 
 @property (weak, nonatomic) IBOutlet UILabel *pastTerm;
 @property (weak, nonatomic) IBOutlet UILabel *opTerm;
 @property (weak, nonatomic) IBOutlet UILabel *currentTerm;
 
+/*
 - (void)updateData;
 - (void)updateView;
+ */
 
 - (IBAction)clearPressed:(id)sender;
 - (IBAction)sqrtPressed:(id)sender;
