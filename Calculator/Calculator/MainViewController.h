@@ -7,12 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "CalculatorData.h"
 
 @interface MainViewController : UIViewController
-@property CalculatorData *userData;
-@property NSMutableString *lastTermString;
-@property NSMutableString *currentTermString;
 @property BOOL decimal;
 @property BOOL negative;
 
@@ -20,10 +16,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *opTerm;
 @property (weak, nonatomic) IBOutlet UILabel *currentTerm;
 
-/*
-- (void)updateData;
-- (void)updateView;
- */
+- (float)equation:(NSString*)opCode;
 
 - (IBAction)clearPressed:(id)sender;
 - (IBAction)sqrtPressed:(id)sender;

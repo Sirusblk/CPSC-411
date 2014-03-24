@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EC1FAE1818D74F030077761C /* CalculatorData.m in Sources */ = {isa = PBXBuildFile; fileRef = EC1FAE1718D74F030077761C /* CalculatorData.m */; };
 		EC3BEA6718D2D404006D7D48 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC3BEA6618D2D404006D7D48 /* Foundation.framework */; };
 		EC3BEA6918D2D404006D7D48 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC3BEA6818D2D404006D7D48 /* CoreGraphics.framework */; };
 		EC3BEA6B18D2D404006D7D48 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC3BEA6A18D2D404006D7D48 /* UIKit.framework */; };
@@ -35,8 +34,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		EC1FAE1618D74F030077761C /* CalculatorData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalculatorData.h; sourceTree = "<group>"; };
-		EC1FAE1718D74F030077761C /* CalculatorData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalculatorData.m; sourceTree = "<group>"; };
 		EC3BEA6318D2D404006D7D48 /* Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC3BEA6618D2D404006D7D48 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EC3BEA6818D2D404006D7D48 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -118,8 +115,6 @@
 				EC3BEA7518D2D404006D7D48 /* DMAppDelegate.h */,
 				EC3BEA7618D2D404006D7D48 /* DMAppDelegate.m */,
 				EC3BEA7818D2D404006D7D48 /* Main.storyboard */,
-				EC1FAE1618D74F030077761C /* CalculatorData.h */,
-				EC1FAE1718D74F030077761C /* CalculatorData.m */,
 				EC3BEA9B18D2DD84006D7D48 /* View Controller */,
 				EC3BEA7E18D2D404006D7D48 /* Images.xcassets */,
 				EC3BEA6D18D2D404006D7D48 /* Supporting Files */,
@@ -210,7 +205,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = DM;
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "David McLaren";
 				TargetAttributes = {
 					EC3BEA8318D2D404006D7D48 = {
@@ -266,7 +261,6 @@
 				EC3BEA7318D2D404006D7D48 /* main.m in Sources */,
 				EC3BEA7D18D2D404006D7D48 /* MainViewController.m in Sources */,
 				EC3BEA7718D2D404006D7D48 /* DMAppDelegate.m in Sources */,
-				EC1FAE1818D74F030077761C /* CalculatorData.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,7 +314,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -359,7 +352,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -417,7 +409,6 @@
 		EC3BEA9918D2D404006D7D48 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Calculator.app/Calculator";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -440,7 +431,6 @@
 		EC3BEA9A18D2D404006D7D48 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Calculator.app/Calculator";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",

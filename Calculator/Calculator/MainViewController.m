@@ -13,8 +13,6 @@
 @end
 
 @implementation MainViewController
-@synthesize userData;
-
 @synthesize pastTerm;
 @synthesize opTerm;
 @synthesize currentTerm;
@@ -45,20 +43,84 @@
     currentTerm.text = @"0";
 }
 
+- (float)equation:(NSString *)opCode {
+    float result = 0;
+    
+    if ([opCode isEqualToString:@"×"]) {
+        result = [pastTerm.text floatValue] * [currentTerm.text floatValue];
+    } else if ([opCode isEqualToString:@"÷"]) {
+        result = [pastTerm.text floatValue] / [currentTerm.text floatValue];
+    } else if ([opCode isEqualToString:@"+"]) {
+        result = [pastTerm.text floatValue] + [currentTerm.text floatValue];
+    } else if ([opCode isEqualToString:@"-"]) {
+        result = [pastTerm.text floatValue] - [currentTerm.text floatValue];
+    } else {
+        NSLog(@"%@", @"ERROR: Unexpected Operator!");
+    }
+    
+    return result;
+}
+
 //Operators
 - (IBAction)multiPressed:(id)sender {
+    if ([opTerm.text isEqualToString:@""]) {
+        pastTerm.text = currentTerm.text;
+        opTerm.text = @"×";
+        currentTerm.text = @"0";
+    } else {
+        float temp = [self equation:opTerm.text];
+        pastTerm.text = [NSString stringWithFormat:@"%g", temp];
+        opTerm.text = @"×";
+        currentTerm.text = @"0";
+    }
 }
 
 - (IBAction)diviPressed:(id)sender {
+    if ([opTerm.text isEqualToString:@""]) {
+        pastTerm.text = currentTerm.text;
+        opTerm.text = @"÷";
+        currentTerm.text = @"0";
+    } else {
+        float temp = [self equation:opTerm.text];
+        pastTerm.text = [NSString stringWithFormat:@"%g", temp];
+        opTerm.text = @"÷";
+        currentTerm.text = @"0";
+    }
 }
 
 - (IBAction)plusPressed:(id)sender {
+    if ([opTerm.text isEqualToString:@""]) {
+        pastTerm.text = currentTerm.text;
+        opTerm.text = @"+";
+        currentTerm.text = @"0";
+    } else {
+        float temp = [self equation:opTerm.text];
+        pastTerm.text = [NSString stringWithFormat:@"%g", temp];
+        opTerm.text = @"+";
+        currentTerm.text = @"0";
+    }
 }
 
 - (IBAction)minusPressed:(id)sender {
+    if ([opTerm.text isEqualToString:@""]) {
+        pastTerm.text = currentTerm.text;
+        opTerm.text = @"-";
+        currentTerm.text = @"0";
+    } else {
+        float temp = [self equation:opTerm.text];
+        pastTerm.text = [NSString stringWithFormat:@"%g", temp];
+        opTerm.text = @"-";
+        currentTerm.text = @"0";
+    }
 }
 
 - (IBAction)equalPressed:(id)sender {
+    if (![opTerm.text isEqualToString:@""]) {
+        float temp = [self equation:opTerm.text];
+        currentTerm.text = [NSString stringWithFormat:@"%g", temp];
+        opTerm.text = @"";
+        pastTerm.text = @"";
+    }
 }
 
 //Modifiers
