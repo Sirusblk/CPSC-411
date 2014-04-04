@@ -1,5 +1,5 @@
 //
-//  SecondViewController.h
+//  OCTATableViewController.h
 //  Mass Transit
 //
 //  Created by David McLaren on 4/4/14.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SecondViewController : UIViewController
+@interface OCTATableViewController : UITableViewController
 
 @end
