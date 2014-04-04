@@ -22,6 +22,10 @@
 		EC1C7EE018EF361800332D70 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC1C7EBF18EF361800332D70 /* UIKit.framework */; };
 		EC1C7EE818EF361800332D70 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EC1C7EE618EF361800332D70 /* InfoPlist.strings */; };
 		EC1C7EEA18EF361800332D70 /* Mass_TransitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EC1C7EE918EF361800332D70 /* Mass_TransitTests.m */; };
+		EC1C7EF818EF3D4300332D70 /* metrolink.png in Resources */ = {isa = PBXBuildFile; fileRef = EC1C7EF418EF3D4300332D70 /* metrolink.png */; };
+		EC1C7EF918EF3D4300332D70 /* metrolink@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EC1C7EF518EF3D4300332D70 /* metrolink@2x.png */; };
+		EC1C7EFA18EF3D4300332D70 /* octa.png in Resources */ = {isa = PBXBuildFile; fileRef = EC1C7EF618EF3D4300332D70 /* octa.png */; };
+		EC1C7EFB18EF3D4300332D70 /* octa@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EC1C7EF718EF3D4300332D70 /* octa@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +60,10 @@
 		EC1C7EE518EF361800332D70 /* Mass TransitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Mass TransitTests-Info.plist"; sourceTree = "<group>"; };
 		EC1C7EE718EF361800332D70 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		EC1C7EE918EF361800332D70 /* Mass_TransitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Mass_TransitTests.m; sourceTree = "<group>"; };
+		EC1C7EF418EF3D4300332D70 /* metrolink.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = metrolink.png; sourceTree = "<group>"; };
+		EC1C7EF518EF3D4300332D70 /* metrolink@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "metrolink@2x.png"; sourceTree = "<group>"; };
+		EC1C7EF618EF3D4300332D70 /* octa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = octa.png; sourceTree = "<group>"; };
+		EC1C7EF718EF3D4300332D70 /* octa@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "octa@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +132,7 @@
 				EC1C7ED418EF361800332D70 /* SecondViewController.m */,
 				EC1C7ED618EF361800332D70 /* Images.xcassets */,
 				EC1C7EC218EF361800332D70 /* Supporting Files */,
+				EC1C7EF318EF3D4300332D70 /* Icons */,
 			);
 			path = "Mass Transit";
 			sourceTree = "<group>";
@@ -155,6 +164,17 @@
 				EC1C7EE618EF361800332D70 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EC1C7EF318EF3D4300332D70 /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				EC1C7EF418EF3D4300332D70 /* metrolink.png */,
+				EC1C7EF518EF3D4300332D70 /* metrolink@2x.png */,
+				EC1C7EF618EF3D4300332D70 /* octa.png */,
+				EC1C7EF718EF3D4300332D70 /* octa@2x.png */,
+			);
+			path = Icons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,8 +254,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC1C7ED718EF361800332D70 /* Images.xcassets in Resources */,
+				EC1C7EF818EF3D4300332D70 /* metrolink.png in Resources */,
+				EC1C7EFA18EF3D4300332D70 /* octa.png in Resources */,
+				EC1C7EFB18EF3D4300332D70 /* octa@2x.png in Resources */,
 				EC1C7EC618EF361800332D70 /* InfoPlist.strings in Resources */,
 				EC1C7ECF18EF361800332D70 /* Main.storyboard in Resources */,
+				EC1C7EF918EF3D4300332D70 /* metrolink@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
