@@ -7,7 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "sqlite3.h"
 
+// Prototypes
+NSArray* fetchResults(sqlite3 *dataBase);
+
+
+// Main
 int main(int argc, const char * argv[])
 {
 
@@ -20,3 +26,9 @@ int main(int argc, const char * argv[])
     return 0;
 }
 
+NSArray* fetchResults(sqlite3 *dataBase)
+{
+    NSMutableArray* results = [[NSMutableArray alloc] init];
+    
+    return (NSArray*)results;
+}
