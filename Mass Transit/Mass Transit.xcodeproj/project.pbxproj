@@ -14,8 +14,6 @@
 		EC1C7EC818EF361800332D70 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EC1C7EC718EF361800332D70 /* main.m */; };
 		EC1C7ECC18EF361800332D70 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EC1C7ECB18EF361800332D70 /* AppDelegate.m */; };
 		EC1C7ECF18EF361800332D70 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC1C7ECD18EF361800332D70 /* Main.storyboard */; };
-		EC1C7ED218EF361800332D70 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC1C7ED118EF361800332D70 /* FirstViewController.m */; };
-		EC1C7ED518EF361800332D70 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC1C7ED418EF361800332D70 /* SecondViewController.m */; };
 		EC1C7ED718EF361800332D70 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC1C7ED618EF361800332D70 /* Images.xcassets */; };
 		EC1C7EDE18EF361800332D70 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC1C7EDD18EF361800332D70 /* XCTest.framework */; };
 		EC1C7EDF18EF361800332D70 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC1C7EBB18EF361700332D70 /* Foundation.framework */; };
@@ -26,6 +24,15 @@
 		EC1C7EF918EF3D4300332D70 /* metrolink@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EC1C7EF518EF3D4300332D70 /* metrolink@2x.png */; };
 		EC1C7EFA18EF3D4300332D70 /* octa.png in Resources */ = {isa = PBXBuildFile; fileRef = EC1C7EF618EF3D4300332D70 /* octa.png */; };
 		EC1C7EFB18EF3D4300332D70 /* octa@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EC1C7EF718EF3D4300332D70 /* octa@2x.png */; };
+		EC1C7EFE18EF46B600332D70 /* OCTAMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC1C7EFD18EF46B600332D70 /* OCTAMapViewController.m */; };
+		EC1C7F0118EF482F00332D70 /* train@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EC1C7EFF18EF482F00332D70 /* train@2x.png */; };
+		EC1C7F0218EF482F00332D70 /* train.png in Resources */ = {isa = PBXBuildFile; fileRef = EC1C7F0018EF482F00332D70 /* train.png */; };
+		EC1C7F0518EF4C5100332D70 /* bus@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EC1C7F0318EF4C5100332D70 /* bus@2x.png */; };
+		EC1C7F0618EF4C5100332D70 /* bus.png in Resources */ = {isa = PBXBuildFile; fileRef = EC1C7F0418EF4C5100332D70 /* bus.png */; };
+		EC1C7F0918EF4CFA00332D70 /* MetrolinkMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC1C7F0818EF4CFA00332D70 /* MetrolinkMapViewController.m */; };
+		EC75E49018EF4FA50091213B /* OCTATableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC75E48F18EF4FA50091213B /* OCTATableViewController.m */; };
+		EC75E49318EF5C970091213B /* MetrolinkTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC75E49218EF5C970091213B /* MetrolinkTableViewController.m */; };
+		EC75E49618EF61CF0091213B /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC75E49518EF61CF0091213B /* DetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,10 +57,6 @@
 		EC1C7ECA18EF361800332D70 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EC1C7ECB18EF361800332D70 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		EC1C7ECE18EF361800332D70 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		EC1C7ED018EF361800332D70 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		EC1C7ED118EF361800332D70 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		EC1C7ED318EF361800332D70 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		EC1C7ED418EF361800332D70 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		EC1C7ED618EF361800332D70 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		EC1C7EDC18EF361800332D70 /* Mass TransitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mass TransitTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC1C7EDD18EF361800332D70 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -64,6 +67,20 @@
 		EC1C7EF518EF3D4300332D70 /* metrolink@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "metrolink@2x.png"; sourceTree = "<group>"; };
 		EC1C7EF618EF3D4300332D70 /* octa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = octa.png; sourceTree = "<group>"; };
 		EC1C7EF718EF3D4300332D70 /* octa@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "octa@2x.png"; sourceTree = "<group>"; };
+		EC1C7EFC18EF46B600332D70 /* OCTAMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCTAMapViewController.h; sourceTree = "<group>"; };
+		EC1C7EFD18EF46B600332D70 /* OCTAMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCTAMapViewController.m; sourceTree = "<group>"; };
+		EC1C7EFF18EF482F00332D70 /* train@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "train@2x.png"; sourceTree = "<group>"; };
+		EC1C7F0018EF482F00332D70 /* train.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = train.png; sourceTree = "<group>"; };
+		EC1C7F0318EF4C5100332D70 /* bus@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bus@2x.png"; sourceTree = "<group>"; };
+		EC1C7F0418EF4C5100332D70 /* bus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bus.png; sourceTree = "<group>"; };
+		EC1C7F0718EF4CFA00332D70 /* MetrolinkMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MetrolinkMapViewController.h; sourceTree = "<group>"; };
+		EC1C7F0818EF4CFA00332D70 /* MetrolinkMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MetrolinkMapViewController.m; sourceTree = "<group>"; };
+		EC75E48E18EF4FA50091213B /* OCTATableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCTATableViewController.h; sourceTree = "<group>"; };
+		EC75E48F18EF4FA50091213B /* OCTATableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCTATableViewController.m; sourceTree = "<group>"; };
+		EC75E49118EF5C970091213B /* MetrolinkTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MetrolinkTableViewController.h; sourceTree = "<group>"; };
+		EC75E49218EF5C970091213B /* MetrolinkTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MetrolinkTableViewController.m; sourceTree = "<group>"; };
+		EC75E49418EF61CF0091213B /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		EC75E49518EF61CF0091213B /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,10 +143,16 @@
 				EC1C7ECA18EF361800332D70 /* AppDelegate.h */,
 				EC1C7ECB18EF361800332D70 /* AppDelegate.m */,
 				EC1C7ECD18EF361800332D70 /* Main.storyboard */,
-				EC1C7ED018EF361800332D70 /* FirstViewController.h */,
-				EC1C7ED118EF361800332D70 /* FirstViewController.m */,
-				EC1C7ED318EF361800332D70 /* SecondViewController.h */,
-				EC1C7ED418EF361800332D70 /* SecondViewController.m */,
+				EC75E49418EF61CF0091213B /* DetailViewController.h */,
+				EC75E49518EF61CF0091213B /* DetailViewController.m */,
+				EC75E48E18EF4FA50091213B /* OCTATableViewController.h */,
+				EC75E48F18EF4FA50091213B /* OCTATableViewController.m */,
+				EC75E49118EF5C970091213B /* MetrolinkTableViewController.h */,
+				EC75E49218EF5C970091213B /* MetrolinkTableViewController.m */,
+				EC1C7EFC18EF46B600332D70 /* OCTAMapViewController.h */,
+				EC1C7EFD18EF46B600332D70 /* OCTAMapViewController.m */,
+				EC1C7F0718EF4CFA00332D70 /* MetrolinkMapViewController.h */,
+				EC1C7F0818EF4CFA00332D70 /* MetrolinkMapViewController.m */,
 				EC1C7ED618EF361800332D70 /* Images.xcassets */,
 				EC1C7EC218EF361800332D70 /* Supporting Files */,
 				EC1C7EF318EF3D4300332D70 /* Icons */,
@@ -169,6 +192,10 @@
 		EC1C7EF318EF3D4300332D70 /* Icons */ = {
 			isa = PBXGroup;
 			children = (
+				EC1C7F0018EF482F00332D70 /* train.png */,
+				EC1C7EFF18EF482F00332D70 /* train@2x.png */,
+				EC1C7F0418EF4C5100332D70 /* bus.png */,
+				EC1C7F0318EF4C5100332D70 /* bus@2x.png */,
 				EC1C7EF418EF3D4300332D70 /* metrolink.png */,
 				EC1C7EF518EF3D4300332D70 /* metrolink@2x.png */,
 				EC1C7EF618EF3D4300332D70 /* octa.png */,
@@ -254,12 +281,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC1C7ED718EF361800332D70 /* Images.xcassets in Resources */,
+				EC1C7F0518EF4C5100332D70 /* bus@2x.png in Resources */,
 				EC1C7EF818EF3D4300332D70 /* metrolink.png in Resources */,
 				EC1C7EFA18EF3D4300332D70 /* octa.png in Resources */,
 				EC1C7EFB18EF3D4300332D70 /* octa@2x.png in Resources */,
 				EC1C7EC618EF361800332D70 /* InfoPlist.strings in Resources */,
+				EC1C7F0618EF4C5100332D70 /* bus.png in Resources */,
 				EC1C7ECF18EF361800332D70 /* Main.storyboard in Resources */,
 				EC1C7EF918EF3D4300332D70 /* metrolink@2x.png in Resources */,
+				EC1C7F0118EF482F00332D70 /* train@2x.png in Resources */,
+				EC1C7F0218EF482F00332D70 /* train.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,10 +309,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC1C7ED518EF361800332D70 /* SecondViewController.m in Sources */,
-				EC1C7ECC18EF361800332D70 /* AppDelegate.m in Sources */,
-				EC1C7ED218EF361800332D70 /* FirstViewController.m in Sources */,
+				EC75E49018EF4FA50091213B /* OCTATableViewController.m in Sources */,
 				EC1C7EC818EF361800332D70 /* main.m in Sources */,
+				EC1C7ECC18EF361800332D70 /* AppDelegate.m in Sources */,
+				EC75E49318EF5C970091213B /* MetrolinkTableViewController.m in Sources */,
+				EC1C7EFE18EF46B600332D70 /* OCTAMapViewController.m in Sources */,
+				EC1C7F0918EF4CFA00332D70 /* MetrolinkMapViewController.m in Sources */,
+				EC75E49618EF61CF0091213B /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -486,6 +520,7 @@
 				EC1C7EEF18EF361800332D70 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EC1C7EF018EF361800332D70 /* Build configuration list for PBXNativeTarget "Mass TransitTests" */ = {
 			isa = XCConfigurationList;
@@ -494,6 +529,7 @@
 				EC1C7EF218EF361800332D70 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
