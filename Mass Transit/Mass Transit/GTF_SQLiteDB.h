@@ -7,11 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "TransitRoute.h"
 #import "sqlite3.h"
 
 @interface GTF_SQLiteDB : NSObject
 
-@property NSString* _dbFileName;
-@property sqlite3 *db;
+@property sqlite3* databaseConnection;
+@property NSString* databaseName;
+
++(GTF_SQLiteDB*) database;
+-(NSArray*) routes;
 
 @end

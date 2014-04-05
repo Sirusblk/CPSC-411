@@ -35,6 +35,9 @@
 		EC75E49618EF61CF0091213B /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC75E49518EF61CF0091213B /* DetailViewController.m */; };
 		EC75E49918EF67630091213B /* GTF_SQLiteDB.m in Sources */ = {isa = PBXBuildFile; fileRef = EC75E49818EF67630091213B /* GTF_SQLiteDB.m */; };
 		EC75E49B18F0A61B0091213B /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EC75E49A18F0A61B0091213B /* libsqlite3.dylib */; };
+		EC75E4A018F0AFC80091213B /* Metrolink.sl3 in Resources */ = {isa = PBXBuildFile; fileRef = EC75E49E18F0AFC80091213B /* Metrolink.sl3 */; };
+		EC75E4A118F0AFC80091213B /* OCTA.sl3 in Resources */ = {isa = PBXBuildFile; fileRef = EC75E49F18F0AFC80091213B /* OCTA.sl3 */; };
+		EC75E4A418F0B4E10091213B /* TransitRoute.m in Sources */ = {isa = PBXBuildFile; fileRef = EC75E4A318F0B4E10091213B /* TransitRoute.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,23 +72,27 @@
 		EC1C7EF518EF3D4300332D70 /* metrolink@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "metrolink@2x.png"; sourceTree = "<group>"; };
 		EC1C7EF618EF3D4300332D70 /* octa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = octa.png; sourceTree = "<group>"; };
 		EC1C7EF718EF3D4300332D70 /* octa@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "octa@2x.png"; sourceTree = "<group>"; };
-		EC1C7EFC18EF46B600332D70 /* OCTAMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCTAMapViewController.h; sourceTree = "<group>"; };
-		EC1C7EFD18EF46B600332D70 /* OCTAMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCTAMapViewController.m; sourceTree = "<group>"; };
+		EC1C7EFC18EF46B600332D70 /* OCTAMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OCTAMapViewController.h; path = "View Controllers/OCTAMapViewController.h"; sourceTree = "<group>"; };
+		EC1C7EFD18EF46B600332D70 /* OCTAMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OCTAMapViewController.m; path = "View Controllers/OCTAMapViewController.m"; sourceTree = "<group>"; };
 		EC1C7EFF18EF482F00332D70 /* train@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "train@2x.png"; sourceTree = "<group>"; };
 		EC1C7F0018EF482F00332D70 /* train.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = train.png; sourceTree = "<group>"; };
 		EC1C7F0318EF4C5100332D70 /* bus@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bus@2x.png"; sourceTree = "<group>"; };
 		EC1C7F0418EF4C5100332D70 /* bus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bus.png; sourceTree = "<group>"; };
-		EC1C7F0718EF4CFA00332D70 /* MetrolinkMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MetrolinkMapViewController.h; sourceTree = "<group>"; };
-		EC1C7F0818EF4CFA00332D70 /* MetrolinkMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MetrolinkMapViewController.m; sourceTree = "<group>"; };
-		EC75E48E18EF4FA50091213B /* OCTATableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCTATableViewController.h; sourceTree = "<group>"; };
-		EC75E48F18EF4FA50091213B /* OCTATableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCTATableViewController.m; sourceTree = "<group>"; };
-		EC75E49118EF5C970091213B /* MetrolinkTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MetrolinkTableViewController.h; sourceTree = "<group>"; };
-		EC75E49218EF5C970091213B /* MetrolinkTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MetrolinkTableViewController.m; sourceTree = "<group>"; };
+		EC1C7F0718EF4CFA00332D70 /* MetrolinkMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MetrolinkMapViewController.h; path = "View Controllers/MetrolinkMapViewController.h"; sourceTree = "<group>"; };
+		EC1C7F0818EF4CFA00332D70 /* MetrolinkMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MetrolinkMapViewController.m; path = "View Controllers/MetrolinkMapViewController.m"; sourceTree = "<group>"; };
+		EC75E48E18EF4FA50091213B /* OCTATableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OCTATableViewController.h; path = "View Controllers/OCTATableViewController.h"; sourceTree = "<group>"; };
+		EC75E48F18EF4FA50091213B /* OCTATableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OCTATableViewController.m; path = "View Controllers/OCTATableViewController.m"; sourceTree = "<group>"; };
+		EC75E49118EF5C970091213B /* MetrolinkTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MetrolinkTableViewController.h; path = "View Controllers/MetrolinkTableViewController.h"; sourceTree = "<group>"; };
+		EC75E49218EF5C970091213B /* MetrolinkTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MetrolinkTableViewController.m; path = "View Controllers/MetrolinkTableViewController.m"; sourceTree = "<group>"; };
 		EC75E49418EF61CF0091213B /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		EC75E49518EF61CF0091213B /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		EC75E49718EF67630091213B /* GTF_SQLiteDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTF_SQLiteDB.h; sourceTree = "<group>"; };
 		EC75E49818EF67630091213B /* GTF_SQLiteDB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTF_SQLiteDB.m; sourceTree = "<group>"; };
 		EC75E49A18F0A61B0091213B /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		EC75E49E18F0AFC80091213B /* Metrolink.sl3 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Metrolink.sl3; sourceTree = "<group>"; };
+		EC75E49F18F0AFC80091213B /* OCTA.sl3 */ = {isa = PBXFileReference; lastKnownFileType = file; path = OCTA.sl3; sourceTree = "<group>"; };
+		EC75E4A218F0B4E10091213B /* TransitRoute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransitRoute.h; sourceTree = "<group>"; };
+		EC75E4A318F0B4E10091213B /* TransitRoute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransitRoute.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,17 +159,12 @@
 				EC1C7ECD18EF361800332D70 /* Main.storyboard */,
 				EC75E49418EF61CF0091213B /* DetailViewController.h */,
 				EC75E49518EF61CF0091213B /* DetailViewController.m */,
-				EC75E48E18EF4FA50091213B /* OCTATableViewController.h */,
+				EC75E49C18F0A9E90091213B /* View Controllers */,
 				EC75E49718EF67630091213B /* GTF_SQLiteDB.h */,
 				EC75E49818EF67630091213B /* GTF_SQLiteDB.m */,
-				EC75E48F18EF4FA50091213B /* OCTATableViewController.m */,
-				EC75E49118EF5C970091213B /* MetrolinkTableViewController.h */,
-				EC75E49218EF5C970091213B /* MetrolinkTableViewController.m */,
-				EC1C7EFC18EF46B600332D70 /* OCTAMapViewController.h */,
-				EC1C7EFD18EF46B600332D70 /* OCTAMapViewController.m */,
-				EC1C7F0718EF4CFA00332D70 /* MetrolinkMapViewController.h */,
-				EC1C7F0818EF4CFA00332D70 /* MetrolinkMapViewController.m */,
+				EC75E4A518F0B4ED0091213B /* Transit Objects */,
 				EC1C7ED618EF361800332D70 /* Images.xcassets */,
+				EC75E49D18F0AFC80091213B /* Databases */,
 				EC1C7EC218EF361800332D70 /* Supporting Files */,
 				EC1C7EF318EF3D4300332D70 /* Icons */,
 			);
@@ -211,6 +213,39 @@
 				EC1C7EF718EF3D4300332D70 /* octa@2x.png */,
 			);
 			path = Icons;
+			sourceTree = "<group>";
+		};
+		EC75E49C18F0A9E90091213B /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EC75E48E18EF4FA50091213B /* OCTATableViewController.h */,
+				EC75E48F18EF4FA50091213B /* OCTATableViewController.m */,
+				EC75E49118EF5C970091213B /* MetrolinkTableViewController.h */,
+				EC75E49218EF5C970091213B /* MetrolinkTableViewController.m */,
+				EC1C7EFC18EF46B600332D70 /* OCTAMapViewController.h */,
+				EC1C7EFD18EF46B600332D70 /* OCTAMapViewController.m */,
+				EC1C7F0718EF4CFA00332D70 /* MetrolinkMapViewController.h */,
+				EC1C7F0818EF4CFA00332D70 /* MetrolinkMapViewController.m */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		EC75E49D18F0AFC80091213B /* Databases */ = {
+			isa = PBXGroup;
+			children = (
+				EC75E49E18F0AFC80091213B /* Metrolink.sl3 */,
+				EC75E49F18F0AFC80091213B /* OCTA.sl3 */,
+			);
+			path = Databases;
+			sourceTree = "<group>";
+		};
+		EC75E4A518F0B4ED0091213B /* Transit Objects */ = {
+			isa = PBXGroup;
+			children = (
+				EC75E4A218F0B4E10091213B /* TransitRoute.h */,
+				EC75E4A318F0B4E10091213B /* TransitRoute.m */,
+			);
+			name = "Transit Objects";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -298,7 +333,9 @@
 				EC1C7F0618EF4C5100332D70 /* bus.png in Resources */,
 				EC1C7ECF18EF361800332D70 /* Main.storyboard in Resources */,
 				EC1C7EF918EF3D4300332D70 /* metrolink@2x.png in Resources */,
+				EC75E4A118F0AFC80091213B /* OCTA.sl3 in Resources */,
 				EC1C7F0118EF482F00332D70 /* train@2x.png in Resources */,
+				EC75E4A018F0AFC80091213B /* Metrolink.sl3 in Resources */,
 				EC1C7F0218EF482F00332D70 /* train.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -326,6 +363,7 @@
 				EC1C7EFE18EF46B600332D70 /* OCTAMapViewController.m in Sources */,
 				EC1C7F0918EF4CFA00332D70 /* MetrolinkMapViewController.m in Sources */,
 				EC75E49618EF61CF0091213B /* DetailViewController.m in Sources */,
+				EC75E4A418F0B4E10091213B /* TransitRoute.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
