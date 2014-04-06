@@ -1,21 +1,20 @@
 //
-//  OCTATableViewController.m
+//  OCTAQueryTableViewController.m
 //  Mass Transit
 //
-//  Created by David McLaren on 4/4/14.
+//  Created by David McLaren on 4/5/14.
 //  Copyright (c) 2014 David McLaren. All rights reserved.
 //
 
-#import "OCTATableViewController.h"
+#import "OCTAQueryTableViewController.h"
 
-@interface OCTATableViewController ()
+@interface OCTAQueryTableViewController ()
 
 @end
 
-@implementation OCTATableViewController
+@implementation OCTAQueryTableViewController
 
-@synthesize OCTA_database;
-@synthesize OCTA_routes;
+@synthesize queries;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -36,9 +35,10 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-    //Access database
-    OCTA_database = [[GTF_SQLiteDB alloc] initWithName:@"OCTA"];
-    self.OCTA_routes = OCTA_database.routes;
+    NSLog(@"OCTA Query View Loaded!");
+    
+    //Set up queries
+    queries = @[@"Search by Bus Route", @"Search by Bus Stop", @"Search by Bus Number"];
 }
 
 - (void)didReceiveMemoryWarning
@@ -51,21 +51,19 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    //#warning Potentially incomplete method implementation.
     // Return the number of sections.
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    //#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return [OCTA_routes count];
+    return [queries count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *cellIdentifier = @"ItemID";
+    static NSString *cellIdentifier = @"QueryID";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
     
     // Configure the cell...
@@ -74,9 +72,7 @@
 		cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellIdentifier];
     }
     
-    TransitRoute *route = [self.OCTA_routes objectAtIndex: indexPath.row];
-    cell.textLabel.text = route.route_long_name;
-    cell.detailTextLabel.text = route.route_desc;
+    cell.textLabel.text = [queries objectAtIndex:indexPath.row];
     
     return cell;
 }

@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GTF_SQLiteDB.h"
 
-@interface OCTATableViewController : UITableViewController
+@interface OCTATableViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource>
+
+@property GTF_SQLiteDB* OCTA_database;
+@property NSArray* OCTA_routes;
 
 @end
