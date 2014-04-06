@@ -224,18 +224,18 @@
 			children = (
 				EC75E4A618F0D18A0091213B /* OCTAQueryTableViewController.h */,
 				EC75E4A918F0E1810091213B /* OCTAQueryTableViewController.m */,
-				EC75E4AC18F0E2580091213B /* MetrolinkQueryTableViewController.h */,
-				EC75E4AD18F0E2580091213B /* MetrolinkQueryTableViewController.m */,
 				EC75E48E18EF4FA50091213B /* OCTATableViewController.h */,
 				EC75E48F18EF4FA50091213B /* OCTATableViewController.m */,
+				EC75E4AC18F0E2580091213B /* MetrolinkQueryTableViewController.h */,
+				EC75E4AD18F0E2580091213B /* MetrolinkQueryTableViewController.m */,
 				EC75E49118EF5C970091213B /* MetrolinkTableViewController.h */,
 				EC75E49218EF5C970091213B /* MetrolinkTableViewController.m */,
+				EC75E49418EF61CF0091213B /* DetailViewController.h */,
+				EC75E49518EF61CF0091213B /* DetailViewController.m */,
 				EC1C7EFC18EF46B600332D70 /* OCTAMapViewController.h */,
 				EC1C7EFD18EF46B600332D70 /* OCTAMapViewController.m */,
 				EC1C7F0718EF4CFA00332D70 /* MetrolinkMapViewController.h */,
 				EC1C7F0818EF4CFA00332D70 /* MetrolinkMapViewController.m */,
-				EC75E49418EF61CF0091213B /* DetailViewController.h */,
-				EC75E49518EF61CF0091213B /* DetailViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";

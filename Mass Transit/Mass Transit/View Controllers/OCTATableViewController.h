@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "GTF_SQLiteDB.h"
+#import "DetailViewController.h"
 
 @interface OCTATableViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource>
 

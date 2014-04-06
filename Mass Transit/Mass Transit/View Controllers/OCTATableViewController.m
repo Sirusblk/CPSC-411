@@ -119,7 +119,6 @@
 }
 */
 
-/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -127,7 +126,15 @@
 {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    
+    NSLog(@"prepareForSegue: %@", segue.identifier);
+    
+    if ([segue.identifier isEqualToString:@"detailsegue"]) {
+        DetailViewController* detailVC = segue.destinationViewController;
+        NSIndexPath *selectedRowIndex = [self.tableView indexPathForSelectedRow];
+        detailVC.currentRoute = [self.OCTA_routes objectAtIndex:selectedRowIndex.row];
+    }
 }
-*/
+
 
 @end
