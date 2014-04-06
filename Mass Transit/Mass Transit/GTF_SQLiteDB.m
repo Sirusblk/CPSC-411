@@ -13,7 +13,6 @@
 static GTF_SQLiteDB* _databaseObject;
 
 @synthesize databaseConnection;
-@synthesize databaseName;
 
 +(GTF_SQLiteDB*) database {
     if (_databaseObject == nil) {
@@ -22,10 +21,10 @@ static GTF_SQLiteDB* _databaseObject;
     return _databaseObject;
 }
 
-- (id) init{
+- (id) initWithName:(NSString*) databaseName {
     self = [super init];
     if (self) {
-        NSString* dbpath = [[NSBundle mainBundle] pathForResource:databaseName ofType:@"sq3"];
+        NSString* dbpath = [[NSBundle mainBundle] pathForResource:databaseName ofType:@"sl3"];
         if (sqlite3_open([dbpath UTF8String], &databaseConnection) != SQLITE_OK) {
             NSLog(@"Failed to open database.");
         }
