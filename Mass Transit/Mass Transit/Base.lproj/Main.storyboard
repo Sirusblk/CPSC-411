@@ -9,7 +9,7 @@
             <objects>
                 <tableViewController id="yTM-kc-Be4" customClass="OCTATableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="CDn-yF-7ka">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -37,7 +37,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="Qe0-lE-Lfc" kind="push" id="UPy-6y-V6t"/>
+                                    <segue destination="Qe0-lE-Lfc" kind="push" identifier="detailSegue" id="UPy-6y-V6t"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -59,7 +59,7 @@
             <objects>
                 <tableViewController title="OCTA" id="niy-sQ-Ktt" customClass="OCTAQueryTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="YxH-qL-LRu">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -80,7 +80,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="yTM-kc-Be4" kind="push" id="Z0d-aD-QqV"/>
+                                    <segue destination="yTM-kc-Be4" kind="push" identifier="querySegue" id="Z0d-aD-QqV"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -100,7 +100,7 @@
             <objects>
                 <tableViewController title="Metrolink" id="qaM-F1-YzO" customClass="MetrolinkQueryTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Imd-y0-unJ">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -141,7 +141,7 @@
             <objects>
                 <tableViewController id="67E-6I-Tde" customClass="MetrolinkTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="LQI-Wk-YB8">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -186,16 +186,16 @@
             </objects>
             <point key="canvasLocation" x="1189" y="-463"/>
         </scene>
-        <!--View Controller - Result Details-->
+        <!--Metrolink Detail View Controller - Result Details-->
         <scene sceneID="1Y7-NV-hnS">
             <objects>
-                <viewController id="JN5-Hj-c4I" sceneMemberID="viewController">
+                <viewController id="JN5-Hj-c4I" customClass="MetrolinkDetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ahI-hX-6xf"/>
                         <viewControllerLayoutGuide type="bottom" id="VSm-Rq-UrA"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Dll-99-P8p">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -269,7 +269,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Q2z-YO-SnX"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="yem-sL-aDd">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -282,42 +282,57 @@
         <!--Detail View Controller - Result Details-->
         <scene sceneID="n8T-6Q-DKG">
             <objects>
-                <viewController id="Qe0-lE-Lfc" customClass="DetailViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="88" sectionHeaderHeight="22" sectionFooterHeight="22" id="qdv-OV-eov">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                <viewController id="Qe0-lE-Lfc" customClass="OCTADetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qX8-xs-9NZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="ee2-UP-pVE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="emI-y6-BRG" customClass="DetailView">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <view key="tableFooterView" contentMode="scaleToFill" id="HV3-lC-mzz">
-                            <rect key="frame" x="0.0" y="174" width="320" height="344"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        </view>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="88" id="gXj-M7-mvf">
-                                <rect key="frame" x="0.0" y="86" width="320" height="88"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Subtitle" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="Me6-IC-3ph">
+                                <rect key="frame" x="20" y="202" width="280" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gXj-M7-mvf" id="p2h-s8-qj6">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="87"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fey-L6-kQj">
-                                            <rect key="frame" x="20" y="4" width="80" height="80"/>
-                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                        </imageView>
-                                    </subviews>
-                                </tableViewCellContentView>
-                                <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" none="YES" image="YES"/>
-                                </accessibility>
-                            </tableViewCell>
-                        </prototypes>
-                    </tableView>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9aK-3f-lx4">
+                                <rect key="frame" x="20" y="174" width="280" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bus@2x.png" translatesAutoresizingMaskIntoConstraints="NO" id="iz9-cS-U8L">
+                                <rect key="frame" x="20" y="84" width="60" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" scrollEnabled="NO" text="Bus Stops:" translatesAutoresizingMaskIntoConstraints="NO" id="NOv-YX-2th">
+                                <rect key="frame" x="20" y="244" width="280" height="186"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Transport #XXX" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bot-v8-m1B">
+                                <rect key="frame" x="98" y="84" width="202" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
                     <navigationItem key="navigationItem" title="Result Details" id="DV2-Hp-ZUi">
                         <barButtonItem key="backBarButtonItem" title="Back" id="1k6-Hx-yk5"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="headerCell" destination="gXj-M7-mvf" id="m9g-UB-lPx"/>
-                        <outlet property="headerIcon" destination="gXj-M7-mvf" id="nBj-9f-Lyw"/>
+                        <outlet property="detailStops" destination="NOv-YX-2th" id="fJ3-Bb-NkT"/>
+                        <outlet property="headerIcon" destination="iz9-cS-U8L" id="gYh-0m-Uxc"/>
+                        <outlet property="headerText" destination="bot-v8-m1B" id="m0M-Gs-0qA"/>
+                        <outlet property="subheadSubtitle" destination="Me6-IC-3ph" id="IP3-1V-MLm"/>
+                        <outlet property="subheadTitle" destination="9aK-3f-lx4" id="5F1-Pj-YdB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0dh-x1-K1K" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -333,7 +348,7 @@
                         <viewControllerLayoutGuide type="bottom" id="m1q-t3-UbW"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="MJ3-Md-HYf">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -346,6 +361,7 @@
     </scenes>
     <resources>
         <image name="bus.png" width="30" height="30"/>
+        <image name="bus@2x.png" width="1024" height="768"/>
         <image name="metrolink.png" width="30" height="30"/>
         <image name="octa.png" width="30" height="30"/>
         <image name="train.png" width="30" height="30"/>
@@ -353,6 +369,6 @@
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
+        <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
 </document>

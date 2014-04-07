@@ -1,18 +1,18 @@
 //
-//  DetailViewController.m
+//  MetrolinkDetailViewController.m
 //  Mass Transit
 //
 //  Created by David McLaren on 4/4/14.
 //  Copyright (c) 2014 David McLaren. All rights reserved.
 //
 
-#import "DetailViewController.h"
+#import "MetrolinkDetailViewController.h"
 
-@interface DetailViewController ()
+@interface MetrolinkDetailViewController ()
 
 @end
 
-@implementation DetailViewController
+@implementation MetrolinkDetailViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

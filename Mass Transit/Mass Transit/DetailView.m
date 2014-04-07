@@ -19,13 +19,19 @@
     return self;
 }
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
 - (void)drawRect:(CGRect)rect
 {
     // Drawing code
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    
+    //Header Bar
+    //Green Color Fill
+    CGContextSetRGBFillColor(context, 0.412, 0.545, 0.443, 1.0);
+    CGContextFillRect(context, CGRectMake(0.0, 64.0, 320.0, 100.0));
+    
+    //Divider Bar
+    CGContextSetRGBFillColor(context, 0.0, 0.0, 0.0, 0.8);
+    CGContextFillRect(context, CGRectMake(0.0, 164.0, 320.0, 0.5));
 }
-*/
 
 @end

@@ -14,6 +14,7 @@
 
 @implementation OCTATableViewController
 
+@synthesize queryType;
 @synthesize OCTA_database;
 @synthesize OCTA_routes;
 
@@ -129,9 +130,11 @@
     
     NSLog(@"prepareForSegue: %@", segue.identifier);
     
-    if ([segue.identifier isEqualToString:@"detailsegue"]) {
-        DetailViewController* detailVC = segue.destinationViewController;
+    if ([segue.identifier isEqualToString:@"detailSegue"]) {
+        OCTADetailViewController* detailVC = segue.destinationViewController;
         NSIndexPath *selectedRowIndex = [self.tableView indexPathForSelectedRow];
+        detailVC.queryType = self.queryType;
+        NSLog(@"Selected Row Index: %@", selectedRowIndex);
         detailVC.currentRoute = [self.OCTA_routes objectAtIndex:selectedRowIndex.row];
     }
 }

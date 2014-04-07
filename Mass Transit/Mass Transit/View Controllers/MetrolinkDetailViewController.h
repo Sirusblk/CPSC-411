@@ -1,5 +1,5 @@
 //
-//  DetailViewController.h
+//  MetrolinkDetailViewController.h
 //  Mass Transit
 //
 //  Created by David McLaren on 4/4/14.
@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TransitRoute.h"
 
-@interface DetailViewController : UIViewController
+@interface MetrolinkDetailViewController : UIViewController
 
 @end

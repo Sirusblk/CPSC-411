@@ -40,8 +40,7 @@ static GTF_SQLiteDB* _databaseObject;
     
     //Temporary stores
     const unsigned char* text;
-    NSNumber *routeID;
-    NSString *routeLongName, *routeDesc, *routeColor;
+    NSString *routeID, *routeLongName, *routeDesc, *routeColor;
     
     //Send the query, store results in stmt.
     if(sqlite3_prepare_v2(databaseConnection, [query UTF8String], [query length], &stmt, nil) == SQLITE_OK)
@@ -52,14 +51,9 @@ static GTF_SQLiteDB* _databaseObject;
             //Grab route_id
             text = sqlite3_column_text(stmt, 0);
             if(text)
-            {
-                routeID = [NSNumber numberWithChar:*text];
-                NSLog(@"%@", routeID);
-            }
+                routeID = [NSString stringWithCString: (const char*)text encoding:NSUTF8StringEncoding];
             else
-            {
                 routeID = nil;
-            }
             
             //Grab route_long_name
             text = sqlite3_column_text(stmt, 3);

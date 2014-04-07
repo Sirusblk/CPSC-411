@@ -8,10 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "GTF_SQLiteDB.h"
-#import "DetailViewController.h"
+#import "OCTADetailViewController.h"
 
 @interface OCTATableViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource>
 
+@property NSString* queryType;
 @property GTF_SQLiteDB* OCTA_database;
 @property NSArray* OCTA_routes;
 

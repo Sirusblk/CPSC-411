@@ -7,6 +7,7 @@
 //
 
 #import "OCTAQueryTableViewController.h"
+#import "OCTATableViewController.h"
 
 @interface OCTAQueryTableViewController ()
 
@@ -115,13 +116,23 @@
 
 #pragma mark - Navigation
 
-/*
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    
+    NSLog(@"prepareForSegue: %@", segue.identifier);
+    
+    if ([segue.identifier isEqualToString:@"querySegue"]) {
+        OCTATableViewController* tableVC = segue.destinationViewController;
+        //NSIndexPath *selectedRowIndex = [self.tableView indexPathForSelectedRow];
+        if([[self.tableView indexPathForSelectedRow] row] == 0)
+        {
+            tableVC.queryType = @"Bus Routes";
+        }
+        //tableVC.currentRoute = [self.OCTA_routes objectAtIndex:selectedRowIndex.row];
+    }
 }
-*/
  
 @end
