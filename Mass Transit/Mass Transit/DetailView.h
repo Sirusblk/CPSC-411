@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <QuartzCore/QuartzCore.h>
 
 @interface DetailView : UIView
+
+@property NSString* headerColor;
+
+-(double) redColorFromHexString:(NSString*)hexInput;
+-(double) greenColorFromHexString:(NSString*)hexInput;
+-(double) blueColorFromHexString:(NSString*)hexInput;
 
 @end

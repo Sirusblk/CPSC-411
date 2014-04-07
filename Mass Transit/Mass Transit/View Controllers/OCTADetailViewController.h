@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "TransitRoute.h"
+#import "DetailView.h"
 
 @interface OCTADetailViewController : UIViewController
 

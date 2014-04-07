@@ -87,4 +87,24 @@ static GTF_SQLiteDB* _databaseObject;
     return routeArray;
 }
 
+-(NSArray*) stopTimes:(NSString*) routeID {
+    //Store the results in a mutable array
+    NSMutableArray* stopTimesArray = [[NSMutableArray alloc] init];
+    NSString* query = [NSString stringWithFormat:@"SELECT * FROM stop_times, trips, routes WHERE trips.route_id = '%@' AND trips.trip_id = stop_times.trip_id;", routeID];
+    sqlite3_stmt *stmt;
+    
+    //Send the query, store results in stmt.
+    if(sqlite3_prepare_v2(databaseConnection, [query UTF8String], [query length], &stmt, nil) == SQLITE_OK)
+    {
+        //Step through the results
+        while(sqlite3_step(stmt) == SQLITE_ROW)
+        {
+            
+        }
+    }
+    
+    //Return mutable array as nonmutable array
+    return stopTimesArray;
+}
+
 @end

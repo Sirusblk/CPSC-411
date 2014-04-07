@@ -37,6 +37,10 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    //This is where the magic happens!
+    [(DetailView*)self.view setHeaderColor:currentRoute.route_color];
+    
     if ([queryType  isEqualToString: @"Bus Routes"]) {
         [headerIcon setImage:[UIImage imageNamed:@"bus-head.png"]];
         //headerIcon.layer.cornerRadius = 28;
