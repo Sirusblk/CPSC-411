@@ -14,6 +14,8 @@
 
 @implementation MetrolinkMapViewController
 
+@synthesize MetrolinkMap;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];

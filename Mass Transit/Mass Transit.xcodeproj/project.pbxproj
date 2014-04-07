@@ -43,6 +43,8 @@
 		EC75E4B218F10A310091213B /* OCTADetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC75E4B118F10A310091213B /* OCTADetailViewController.m */; };
 		EC75E4B518F20D1A0091213B /* DetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = EC75E4B418F20D1A0091213B /* DetailView.m */; };
 		EC75E4B718F226B20091213B /* bus-head.png in Resources */ = {isa = PBXBuildFile; fileRef = EC75E4B618F226B20091213B /* bus-head.png */; };
+		EC75E4B918F26F4E0091213B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC75E4B818F26F4E0091213B /* MapKit.framework */; };
+		EC75E4BB18F2725B0091213B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC75E4BA18F2725B0091213B /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +109,8 @@
 		EC75E4B318F20D1A0091213B /* DetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailView.h; sourceTree = "<group>"; };
 		EC75E4B418F20D1A0091213B /* DetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailView.m; sourceTree = "<group>"; };
 		EC75E4B618F226B20091213B /* bus-head.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bus-head.png"; sourceTree = "<group>"; };
+		EC75E4B818F26F4E0091213B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		EC75E4BA18F2725B0091213B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +119,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC75E49B18F0A61B0091213B /* libsqlite3.dylib in Frameworks */,
+				EC75E4B918F26F4E0091213B /* MapKit.framework in Frameworks */,
+				EC75E4BB18F2725B0091213B /* CoreLocation.framework in Frameworks */,
 				EC1C7EBE18EF361800332D70 /* CoreGraphics.framework in Frameworks */,
 				EC1C7EC018EF361800332D70 /* UIKit.framework in Frameworks */,
 				EC1C7EBC18EF361700332D70 /* Foundation.framework in Frameworks */,
@@ -156,6 +162,8 @@
 		EC1C7EBA18EF361700332D70 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EC75E4BA18F2725B0091213B /* CoreLocation.framework */,
+				EC75E4B818F26F4E0091213B /* MapKit.framework */,
 				EC75E49A18F0A61B0091213B /* libsqlite3.dylib */,
 				EC1C7EBB18EF361700332D70 /* Foundation.framework */,
 				EC1C7EBD18EF361800332D70 /* CoreGraphics.framework */,

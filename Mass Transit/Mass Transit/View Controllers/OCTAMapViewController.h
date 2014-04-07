@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MapKit/MapKit.h"
 
 @interface OCTAMapViewController : UIViewController
+@property (weak, nonatomic) IBOutlet MKMapView *OCTAmap;
 
 @end
