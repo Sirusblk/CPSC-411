@@ -45,7 +45,7 @@
         [headerIcon setImage:[UIImage imageNamed:@"bus-head.png"]];
         //headerIcon.layer.cornerRadius = 28;
         headerIcon.clipsToBounds = YES;
-        [headerText setText:[NSString stringWithFormat:@"Bus Route #%@", currentRoute.route_id]];
+        [headerText setText:[NSString stringWithFormat:@"Bus Route %@", currentRoute.route_id]];
         [headerText setTextColor:[UIColor whiteColor]];
         [subheadTitle setText:[NSString stringWithFormat:@"%@", currentRoute.route_long_name]];
         [subheadSubtitle setText:[NSString stringWithFormat:@"%@", currentRoute.route_desc]];

@@ -35,7 +35,22 @@ static GTF_SQLiteDB* _databaseObject;
 -(NSArray*) routes {
     //Store the results in a mutable array
     NSMutableArray* routeArray = [[NSMutableArray alloc] init];
+    
+    NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+    NSDateComponents *comps = [gregorian components:NSWeekdayCalendarUnit fromDate:[NSDate date]];
+    int weekday = [comps weekday];
+    NSString* today = [[NSString alloc] init];
+    
+    if (weekday == 1) {
+        today = @"SU";
+    } else if (weekday == 7) {
+        today = @"SA";
+    } else {
+        today = @"WD";
+    }
+    
     NSString* query = @"SELECT * FROM routes;";
+    //NSString* query = [NSString stringWithFormat:@"SELECT DISTINCT * FROM routes, trips WHERE routes.route_id=trips.route_id AND trips.service_id='%@';", today];
     sqlite3_stmt *stmt;
     
     //Temporary stores
