@@ -46,6 +46,7 @@
 		EC75E4B918F26F4E0091213B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC75E4B818F26F4E0091213B /* MapKit.framework */; };
 		EC75E4BB18F2725B0091213B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC75E4BA18F2725B0091213B /* CoreLocation.framework */; };
 		EC75E4BE18F2767C0091213B /* StopLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = EC75E4BD18F2767C0091213B /* StopLocation.m */; };
+		EC75E4C018F3D17F0091213B /* train-head.png in Resources */ = {isa = PBXBuildFile; fileRef = EC75E4BF18F3D17F0091213B /* train-head.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,6 +115,7 @@
 		EC75E4BA18F2725B0091213B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		EC75E4BC18F2767C0091213B /* StopLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StopLocation.h; sourceTree = "<group>"; };
 		EC75E4BD18F2767C0091213B /* StopLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StopLocation.m; sourceTree = "<group>"; };
+		EC75E4BF18F3D17F0091213B /* train-head.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "train-head.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -228,6 +230,7 @@
 		EC1C7EF318EF3D4300332D70 /* Icons */ = {
 			isa = PBXGroup;
 			children = (
+				EC75E4BF18F3D17F0091213B /* train-head.png */,
 				EC75E4B618F226B20091213B /* bus-head.png */,
 				EC1C7F0018EF482F00332D70 /* train.png */,
 				EC1C7EFF18EF482F00332D70 /* train@2x.png */,
@@ -374,6 +377,7 @@
 				EC75E4A018F0AFC80091213B /* Metrolink.sl3 in Resources */,
 				EC75E4B718F226B20091213B /* bus-head.png in Resources */,
 				EC1C7F0218EF482F00332D70 /* train.png in Resources */,
+				EC75E4C018F3D17F0091213B /* train-head.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

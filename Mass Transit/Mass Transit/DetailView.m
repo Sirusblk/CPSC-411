@@ -33,7 +33,6 @@
     green = [self greenColorFromHexString:headerColor];
     blue = [self blueColorFromHexString:headerColor];
     CGContextSetRGBFillColor(context, red, green, blue, 1.0);
-    //CGContextSetRGBFillColor(context, 0.412, 0.545, 0.443, 1.0);
     CGContextFillRect(context, CGRectMake(0.0, 64.0, 320.0, 100.0));
     
     //Divider Bar

@@ -35,7 +35,7 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-    NSLog(@"OCTA Query View Loaded!");
+    NSLog(@"Metrolink Query View Loaded!");
     
     //Set up queries
     //queries = @[@"Search by Train Route", @"Search by Train Station", @"Search by Train Number"];
@@ -118,15 +118,24 @@
 }
 */
 
-/*
-#pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    
+    NSLog(@"prepareForSegue: %@", segue.identifier);
+    
+    if ([segue.identifier isEqualToString:@"querySegueOCTA"]) {
+        MetrolinkTableViewController* tableVC = segue.destinationViewController;
+        //NSIndexPath *selectedRowIndex = [self.tableView indexPathForSelectedRow];
+        if([[self.tableView indexPathForSelectedRow] row] == 0)
+        {
+            tableVC.queryType = @"Train Routes";
+        }
+        //tableVC.currentRoute = [self.OCTA_routes objectAtIndex:selectedRowIndex.row];
+    }
 }
-*/
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "OCTATableViewController.h"
 
 @interface OCTAQueryTableViewController : UITableViewController
 

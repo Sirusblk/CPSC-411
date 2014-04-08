@@ -7,7 +7,6 @@
 //
 
 #import "OCTAQueryTableViewController.h"
-#import "OCTATableViewController.h"
 
 @interface OCTAQueryTableViewController ()
 

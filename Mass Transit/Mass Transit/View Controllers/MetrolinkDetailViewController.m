@@ -14,6 +14,15 @@
 
 @implementation MetrolinkDetailViewController
 
+@synthesize queryType;
+@synthesize currentRoute;
+
+@synthesize headerIcon;
+@synthesize headerText;
+@synthesize subheadTitle;
+@synthesize subheadSubtitle;
+@synthesize detailStops;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -27,6 +36,15 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [(DetailView*)self.view setHeaderColor:currentRoute.route_color];
+    
+    [headerIcon setImage:[UIImage imageNamed:@"train-head.png"]];
+    headerIcon.clipsToBounds = YES;
+    [headerText setText:[NSString stringWithFormat:@"Train Route %@", currentRoute.route_id]];
+    [headerText setTextColor:[UIColor whiteColor]];
+    [subheadTitle setText:[NSString stringWithFormat:@"%@", currentRoute.route_long_name]];
+    [subheadSubtitle setText:[NSString stringWithFormat:@"%@", currentRoute.route_desc]];
+    [detailStops setText:@""];
 }
 
 - (void)didReceiveMemoryWarning

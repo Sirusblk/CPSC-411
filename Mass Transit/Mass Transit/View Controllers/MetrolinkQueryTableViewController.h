@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MetrolinkTableViewController.h"
 
 @interface MetrolinkQueryTableViewController : UITableViewController
 

@@ -180,7 +180,7 @@
                         <viewControllerLayoutGuide type="top" id="ahI-hX-6xf"/>
                         <viewControllerLayoutGuide type="bottom" id="VSm-Rq-UrA"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Dll-99-P8p">
+                    <view key="view" contentMode="scaleToFill" id="Dll-99-P8p" customClass="DetailView">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
@@ -220,6 +220,13 @@
                     <navigationItem key="navigationItem" title="Metrolink Details" id="f5m-AQ-RWf">
                         <barButtonItem key="backBarButtonItem" title="Back" id="bhC-5l-3mK"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="detailStops" destination="F6z-Bu-Rvl" id="c92-V5-Nzf"/>
+                        <outlet property="headerIcon" destination="WZD-1V-IPk" id="XNr-Xu-lcN"/>
+                        <outlet property="headerText" destination="BKh-s6-Fg0" id="TMD-hb-vQ1"/>
+                        <outlet property="subheadSubtitle" destination="r9o-fD-eeh" id="ZCM-CC-5g3"/>
+                        <outlet property="subheadTitle" destination="3xf-rZ-2oj" id="ON1-Uh-33z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UFS-du-kef" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -400,7 +407,7 @@
         <image name="bus.png" width="30" height="30"/>
         <image name="metrolink.png" width="30" height="30"/>
         <image name="octa.png" width="30" height="30"/>
-        <image name="train-head.png" width="1024" height="768"/>
+        <image name="train-head.png" width="120" height="120"/>
         <image name="train.png" width="30" height="30"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
