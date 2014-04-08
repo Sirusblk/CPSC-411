@@ -7,7 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreLocation/CoreLocation.h>
 #import "TransitRoute.h"
+#import "StopLocation.h"
 #import "sqlite3.h"
 
 @interface GTF_SQLiteDB : NSObject
@@ -18,5 +20,6 @@
 - (id) initWithName:(NSString*) databaseName;
 -(NSArray*) routes;
 -(NSArray*) stopTimes:(NSString*) routeID;
+-(NSArray*) stopLocations;
 
 @end

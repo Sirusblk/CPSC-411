@@ -122,4 +122,42 @@ static GTF_SQLiteDB* _databaseObject;
     return stopTimesArray;
 }
 
+-(NSArray*) stopLocations {
+    //Store the results in a mutable array
+    NSMutableArray* stopLocsArray = [[NSMutableArray alloc] init];
+    NSString* query = @"SELECT * FROM stops;";
+    sqlite3_stmt *stmt;
+    
+    //Temporary stores
+    const unsigned char* text;
+    NSString *stopName;
+    double longitude, latitude;
+    
+    //Send the query, store results in stmt.
+    if(sqlite3_prepare_v2(databaseConnection, [query UTF8String], [query length], &stmt, nil) == SQLITE_OK)
+    {
+        //Step through the results
+        while(sqlite3_step(stmt) == SQLITE_ROW)
+        {
+            //Grab route_id
+            text = sqlite3_column_text(stmt, 0);
+            if(text)
+                stopName = [NSString stringWithCString: (const char*)text encoding:NSUTF8StringEncoding];
+            else
+                stopName = nil;
+        }
+        
+        longitude = sqlite3_column_double(stmt, 4);
+        latitude = sqlite3_column_double(stmt, 5);
+        CLLocationCoordinate2D coord = CLLocationCoordinate2DMake(longitude, latitude);
+        
+        //Create location and add to array
+        StopLocation *locationItem = [[StopLocation alloc] initWithName:stopName coord:coord];
+        [stopLocsArray addObject:locationItem];
+    }
+    
+    //Return mutable array as nonmutable array
+    return stopLocsArray;
+}
+
 @end

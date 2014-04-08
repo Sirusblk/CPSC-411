@@ -7,7 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreLocation/CoreLocation.h>
 
-@interface StopLocations : NSObject
+@interface StopLocation : NSObject
+
+@property NSString* stop_name;
+@property CLLocationCoordinate2D coord;
+
+-(id) initWithName:(NSString*)stopName coord:(CLLocationCoordinate2D) inputCoord;
 
 @end

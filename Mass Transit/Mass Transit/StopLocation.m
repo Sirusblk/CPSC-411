@@ -6,8 +6,21 @@
 //  Copyright (c) 2014 David McLaren. All rights reserved.
 //
 
-#import "StopLocations.h"
+#import "StopLocation.h"
 
-@implementation StopLocations
+@implementation StopLocation
+
+@synthesize stop_name;
+@synthesize coord;
+
+-(id) initWithName:(NSString*)stopName coord:(CLLocationCoordinate2D) inputCoord
+{
+    self = [super init];
+    if (self) {
+        stop_name = stopName;
+        coord = inputCoord;
+    }
+    return self;
+}
 
 @end
