@@ -45,6 +45,7 @@
 		EC75E4B718F226B20091213B /* bus-head.png in Resources */ = {isa = PBXBuildFile; fileRef = EC75E4B618F226B20091213B /* bus-head.png */; };
 		EC75E4B918F26F4E0091213B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC75E4B818F26F4E0091213B /* MapKit.framework */; };
 		EC75E4BB18F2725B0091213B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC75E4BA18F2725B0091213B /* CoreLocation.framework */; };
+		EC75E4BE18F2767C0091213B /* StopLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = EC75E4BD18F2767C0091213B /* StopLocation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +112,8 @@
 		EC75E4B618F226B20091213B /* bus-head.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bus-head.png"; sourceTree = "<group>"; };
 		EC75E4B818F26F4E0091213B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		EC75E4BA18F2725B0091213B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		EC75E4BC18F2767C0091213B /* StopLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StopLocation.h; sourceTree = "<group>"; };
+		EC75E4BD18F2767C0091213B /* StopLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StopLocation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -275,6 +278,8 @@
 			children = (
 				EC75E4A218F0B4E10091213B /* TransitRoute.h */,
 				EC75E4A318F0B4E10091213B /* TransitRoute.m */,
+				EC75E4BC18F2767C0091213B /* StopLocation.h */,
+				EC75E4BD18F2767C0091213B /* StopLocation.m */,
 			);
 			name = "Transit Objects";
 			sourceTree = "<group>";
@@ -395,6 +400,7 @@
 				EC75E49018EF4FA50091213B /* OCTATableViewController.m in Sources */,
 				EC1C7EFE18EF46B600332D70 /* OCTAMapViewController.m in Sources */,
 				EC75E4B218F10A310091213B /* OCTADetailViewController.m in Sources */,
+				EC75E4BE18F2767C0091213B /* StopLocation.m in Sources */,
 				EC75E4AE18F0E2580091213B /* MetrolinkQueryTableViewController.m in Sources */,
 				EC75E49318EF5C970091213B /* MetrolinkTableViewController.m in Sources */,
 				EC1C7F0918EF4CFA00332D70 /* MetrolinkMapViewController.m in Sources */,

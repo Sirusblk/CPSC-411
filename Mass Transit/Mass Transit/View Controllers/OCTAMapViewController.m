@@ -29,8 +29,6 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-    [self.map setCenterCoordinate: self.location.coord animated: YES];
 }
 
 - (void)didReceiveMemoryWarning

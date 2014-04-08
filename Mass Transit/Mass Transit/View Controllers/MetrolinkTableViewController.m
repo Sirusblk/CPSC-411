@@ -14,6 +14,10 @@
 
 @implementation MetrolinkTableViewController
 
+@synthesize queryType;
+@synthesize Metrolink_database;
+@synthesize Metrolink_routes;
+
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
@@ -32,6 +36,9 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    Metrolink_database = [[GTF_SQLiteDB alloc] initWithName:@"Metrolink"];
+    self.Metrolink_routes = Metrolink_database.routes;
 }
 
 - (void)didReceiveMemoryWarning
@@ -56,16 +63,23 @@
     return 0;
 }
 
-/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    static NSString *cellIdentifier = @"ItemID";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
     
     // Configure the cell...
+    if (cell == nil) {
+		// Use the default cell style.
+		cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellIdentifier];
+    }
+    
+    TransitRoute *route = [self.Metrolink_routes objectAtIndex: indexPath.row];
+    cell.textLabel.text = route.route_long_name;
+    cell.detailTextLabel.text = route.route_desc;
     
     return cell;
 }
-*/
 
 /*
 // Override to support conditional editing of the table view.
@@ -105,15 +119,22 @@
 }
 */
 
-/*
 #pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+
+    NSLog(@"prepareForSegue: %@", segue.identifier);
+
+    if ([segue.identifier isEqualToString:@"detailSegueMetrolink"]) {
+        MetrolinkDetailViewController* detailVC = segue.destinationViewController;
+        NSIndexPath *selectedRowIndex = [self.tableView indexPathForSelectedRow];
+        detailVC.queryType = self.queryType;
+        NSLog(@"Selected Row Index: %@", selectedRowIndex);
+        detailVC.currentRoute = [self.Metrolink_routes objectAtIndex:selectedRowIndex.row];
+    }
 }
-*/
 
 @end

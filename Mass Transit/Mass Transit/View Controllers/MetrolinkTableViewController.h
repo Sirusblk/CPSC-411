@@ -8,7 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "GTF_SQLiteDB.h"
+#import "MetrolinkDetailViewController.h"
 
 @interface MetrolinkTableViewController : UITableViewController
+
+@property NSString* queryType;
+@property GTF_SQLiteDB* Metrolink_database;
+@property NSArray* Metrolink_routes;
 
 @end

@@ -130,7 +130,7 @@
     
     NSLog(@"prepareForSegue: %@", segue.identifier);
     
-    if ([segue.identifier isEqualToString:@"detailSegue"]) {
+    if ([segue.identifier isEqualToString:@"detailSegueOCTA"]) {
         OCTADetailViewController* detailVC = segue.destinationViewController;
         NSIndexPath *selectedRowIndex = [self.tableView indexPathForSelectedRow];
         detailVC.queryType = self.queryType;

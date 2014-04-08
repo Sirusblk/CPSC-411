@@ -21,7 +21,6 @@
 @synthesize headerText;
 @synthesize subheadTitle;
 @synthesize subheadSubtitle;
-@synthesize detailDesc;
 @synthesize detailStops;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -49,6 +48,7 @@
         [headerText setTextColor:[UIColor whiteColor]];
         [subheadTitle setText:[NSString stringWithFormat:@"%@", currentRoute.route_long_name]];
         [subheadSubtitle setText:[NSString stringWithFormat:@"%@", currentRoute.route_desc]];
+        [detailStops setText:@""];
     }
 }
 

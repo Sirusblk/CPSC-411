@@ -11,4 +11,7 @@
 
 @interface MetrolinkDetailViewController : UIViewController
 
+@property NSString *queryType;
+@property TransitRoute *currentRoute;
+
 @end

@@ -30,7 +30,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="Qe0-lE-Lfc" kind="push" identifier="detailSegue" id="UPy-6y-V6t"/>
+                                    <segue destination="Qe0-lE-Lfc" kind="push" identifier="detailSegueOCTA" id="UPy-6y-V6t"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -73,7 +73,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="yTM-kc-Be4" kind="push" identifier="querySegue" id="Z0d-aD-QqV"/>
+                                    <segue destination="yTM-kc-Be4" kind="push" identifier="querySegueOCTA" id="Z0d-aD-QqV"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -114,7 +114,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="67E-6I-Tde" kind="push" id="pvO-l7-bSR"/>
+                                    <segue destination="67E-6I-Tde" kind="push" identifier="querySegueMetrolink" id="pvO-l7-bSR"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -138,7 +138,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ItemID" textLabel="bSF-Wa-F97" detailTextLabel="L1P-B3-sMT" style="IBUITableViewCellStyleSubtitle" id="4RL-dM-7WT">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ItemID" textLabel="bSF-Wa-F97" style="IBUITableViewCellStyleDefault" id="4RL-dM-7WT">
                                 <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4RL-dM-7WT" id="2Ze-y3-Mf2">
@@ -146,23 +146,16 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bSF-Wa-F97">
-                                            <rect key="frame" x="15" y="3" width="34" height="22"/>
+                                            <rect key="frame" x="15" y="0.0" width="270" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="L1P-B3-sMT">
-                                            <rect key="frame" x="15" y="25" width="43" height="15"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="JN5-Hj-c4I" kind="push" id="SuV-1p-Qo9"/>
+                                    <segue destination="JN5-Hj-c4I" kind="push" identifier="detailSegueMetrolink" id="SuV-1p-Qo9"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -179,7 +172,7 @@
             </objects>
             <point key="canvasLocation" x="1189" y="-463"/>
         </scene>
-        <!--Metrolink Detail View Controller - Result Details-->
+        <!--Metrolink Detail View Controller - Metrolink Details-->
         <scene sceneID="1Y7-NV-hnS">
             <objects>
                 <viewController id="JN5-Hj-c4I" customClass="MetrolinkDetailViewController" sceneMemberID="viewController">
@@ -190,9 +183,41 @@
                     <view key="view" contentMode="scaleToFill" id="Dll-99-P8p">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Subtitle" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="r9o-fD-eeh">
+                                <rect key="frame" x="20" y="202" width="280" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3xf-rZ-2oj">
+                                <rect key="frame" x="20" y="174" width="280" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="train-head.png" translatesAutoresizingMaskIntoConstraints="NO" id="WZD-1V-IPk">
+                                <rect key="frame" x="20" y="84" width="60" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" scrollEnabled="NO" editable="NO" text="Details" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F6z-Bu-Rvl">
+                                <rect key="frame" x="20" y="244" width="280" height="166"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Transport #XXX" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BKh-s6-Fg0">
+                                <rect key="frame" x="98" y="84" width="202" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Result Details" id="f5m-AQ-RWf">
+                    <navigationItem key="navigationItem" title="Metrolink Details" id="f5m-AQ-RWf">
                         <barButtonItem key="backBarButtonItem" title="Back" id="bhC-5l-3mK"/>
                     </navigationItem>
                 </viewController>
@@ -281,7 +306,7 @@
             </objects>
             <point key="canvasLocation" x="386" y="191"/>
         </scene>
-        <!--Detail View Controller - Result Details-->
+        <!--Detail View Controller - OCTA Details-->
         <scene sceneID="n8T-6Q-DKG">
             <objects>
                 <viewController id="Qe0-lE-Lfc" customClass="OCTADetailViewController" sceneMemberID="viewController">
@@ -306,7 +331,7 @@
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bus@2x.png" translatesAutoresizingMaskIntoConstraints="NO" id="iz9-cS-U8L">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bus-head.png" translatesAutoresizingMaskIntoConstraints="NO" id="iz9-cS-U8L">
                                 <rect key="frame" x="20" y="84" width="60" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -326,7 +351,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Result Details" id="DV2-Hp-ZUi">
+                    <navigationItem key="navigationItem" title="OCTA Details" id="DV2-Hp-ZUi">
                         <barButtonItem key="backBarButtonItem" title="Back" id="1k6-Hx-yk5"/>
                     </navigationItem>
                     <connections>
@@ -371,10 +396,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="bus-head.png" width="120" height="120"/>
         <image name="bus.png" width="30" height="30"/>
-        <image name="bus@2x.png" width="1024" height="768"/>
         <image name="metrolink.png" width="30" height="30"/>
         <image name="octa.png" width="30" height="30"/>
+        <image name="train-head.png" width="1024" height="768"/>
         <image name="train.png" width="30" height="30"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

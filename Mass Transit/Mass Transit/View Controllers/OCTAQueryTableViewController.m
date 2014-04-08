@@ -39,7 +39,8 @@
     NSLog(@"OCTA Query View Loaded!");
     
     //Set up queries
-    queries = @[@"Search by Bus Route", @"Search by Bus Stop", @"Search by Bus Number"];
+    //queries = @[@"Search by Bus Route", @"Search by Bus Stop", @"Search by Bus Number"];
+    queries = @[@"Search by Bus Route"];
 }
 
 - (void)didReceiveMemoryWarning
@@ -124,7 +125,7 @@
     
     NSLog(@"prepareForSegue: %@", segue.identifier);
     
-    if ([segue.identifier isEqualToString:@"querySegue"]) {
+    if ([segue.identifier isEqualToString:@"querySegueOCTA"]) {
         OCTATableViewController* tableVC = segue.destinationViewController;
         //NSIndexPath *selectedRowIndex = [self.tableView indexPathForSelectedRow];
         if([[self.tableView indexPathForSelectedRow] row] == 0)

@@ -38,7 +38,8 @@
     NSLog(@"OCTA Query View Loaded!");
     
     //Set up queries
-    queries = @[@"Search by Train Route", @"Search by Train Station", @"Search by Train Number"];
+    //queries = @[@"Search by Train Route", @"Search by Train Station", @"Search by Train Number"];
+    queries = @[@"Search by Train Route"];
 }
 
 - (void)didReceiveMemoryWarning
