@@ -20,7 +20,6 @@
 @synthesize headerIcon;
 @synthesize headerText;
 @synthesize subheadTitle;
-@synthesize subheadSubtitle;
 @synthesize detailStops;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -41,9 +40,15 @@
     [headerIcon setImage:[UIImage imageNamed:@"train-head.png"]];
     headerIcon.clipsToBounds = YES;
     [headerText setText:[NSString stringWithFormat:@"Train Route %@", currentRoute.route_id]];
-    [headerText setTextColor:[UIColor whiteColor]];
+    
+    NSLog(@"Text Color: %@", currentRoute.route_text_color);
+    
+    if ([currentRoute.route_text_color isEqualToString: @"FFFFFF"])
+        [headerText setTextColor:[UIColor whiteColor]];
+    else
+        [headerText setTextColor:[UIColor blackColor]];
+    
     [subheadTitle setText:[NSString stringWithFormat:@"%@", currentRoute.route_long_name]];
-    [subheadSubtitle setText:[NSString stringWithFormat:@"%@", currentRoute.route_desc]];
     [detailStops setText:@""];
 }
 

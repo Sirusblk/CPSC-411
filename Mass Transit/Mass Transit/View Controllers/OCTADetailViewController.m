@@ -20,7 +20,6 @@
 @synthesize headerIcon;
 @synthesize headerText;
 @synthesize subheadTitle;
-@synthesize subheadSubtitle;
 @synthesize detailStops;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -44,9 +43,15 @@
         [headerIcon setImage:[UIImage imageNamed:@"bus-head.png"]];
         headerIcon.clipsToBounds = YES;
         [headerText setText:[NSString stringWithFormat:@"Bus Route %@", currentRoute.route_id]];
-        [headerText setTextColor:[UIColor whiteColor]];
+        
+        NSLog(@"Text Color: %@", currentRoute.route_text_color);
+        
+        if ([currentRoute.route_text_color isEqualToString: @"000000"])
+            [headerText setTextColor:[UIColor blackColor]];
+        else
+            [headerText setTextColor:[UIColor whiteColor]];
+        
         [subheadTitle setText:[NSString stringWithFormat:@"%@", currentRoute.route_long_name]];
-        [subheadSubtitle setText:[NSString stringWithFormat:@"%@", currentRoute.route_desc]];
         [detailStops setText:@""];
     }
 }

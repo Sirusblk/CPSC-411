@@ -49,13 +49,13 @@ static GTF_SQLiteDB* _databaseObject;
         today = @"WD";
     }
     
-    NSString* query = @"SELECT * FROM routes;";
+    NSString* query = @"SELECT route_id, route_long_name, route_color, route_text_color FROM routes;";
     //NSString* query = [NSString stringWithFormat:@"SELECT DISTINCT * FROM routes, trips WHERE routes.route_id=trips.route_id AND trips.service_id='%@';", today];
     sqlite3_stmt *stmt;
     
     //Temporary stores
     const unsigned char* text;
-    NSString *routeID, *routeLongName, *routeDesc, *routeColor;
+    NSString *routeID, *routeLongName, *routeColor, *routeTextColor;
     
     //Send the query, store results in stmt.
     if(sqlite3_prepare_v2(databaseConnection, [query UTF8String], [query length], &stmt, nil) == SQLITE_OK)
@@ -71,28 +71,28 @@ static GTF_SQLiteDB* _databaseObject;
                 routeID = nil;
             
             //Grab route_long_name
-            text = sqlite3_column_text(stmt, 3);
+            text = sqlite3_column_text(stmt, 1);
             if( text )
                 routeLongName = [NSString stringWithCString: (const char*)text encoding:NSUTF8StringEncoding];
             else
                 routeLongName = nil;
             
-            //Grab route_desc
-            text = sqlite3_column_text(stmt, 4);
-            if( text )
-                routeDesc = [NSString stringWithCString: (const char*)text encoding:NSUTF8StringEncoding];
-            else
-                routeDesc = nil;
-            
             //Grab route_color
-            text = sqlite3_column_text(stmt, 7);
+            text = sqlite3_column_text(stmt, 2);
             if( text )
                 routeColor = [NSString stringWithCString: (const char*)text encoding:NSUTF8StringEncoding];
             else
                 routeColor = nil;
             
+            //Grab route_text_color
+            text = sqlite3_column_text(stmt, 3);
+            if ( text )
+                routeTextColor = [NSString stringWithCString: (const char*)text encoding:NSUTF8StringEncoding];
+            else
+                routeTextColor = @"FFFFFF";
+            
             //Create TransitRoute Object and store in array
-            TransitRoute *transitRoute = [[TransitRoute alloc] initWithID:routeID longName:routeLongName desc:routeDesc color:routeColor];
+            TransitRoute *transitRoute = [[TransitRoute alloc] initWithID:routeID longName:routeLongName color:routeColor textColor: routeTextColor];
             [routeArray addObject:transitRoute];
         }
         sqlite3_finalize(stmt);
