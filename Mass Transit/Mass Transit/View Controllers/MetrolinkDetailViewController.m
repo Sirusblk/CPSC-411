@@ -17,6 +17,9 @@
 @synthesize queryType;
 @synthesize currentRoute;
 
+@synthesize Metrolink_database;
+@synthesize Metrolink_stopTimes;
+
 @synthesize headerIcon;
 @synthesize headerText;
 @synthesize subheadTitle;
@@ -49,6 +52,12 @@
         [headerText setTextColor:[UIColor blackColor]];
     
     [subheadTitle setText:[NSString stringWithFormat:@"%@", currentRoute.route_long_name]];
+    
+    
+    //Display stop times
+    Metrolink_database = [[GTF_SQLiteDB alloc] initWithName:@"OCTA"];
+    Metrolink_stopTimes = [Metrolink_database stopTimes:currentRoute.route_id];
+    
     [detailStops setText:@""];
 }
 
