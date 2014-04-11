@@ -77,7 +77,6 @@
     
     TransitRoute *route = [self.OCTA_routes objectAtIndex: indexPath.row];
     cell.textLabel.text = route.route_long_name;
-    cell.detailTextLabel.text = route.route_desc;
     
     return cell;
 }

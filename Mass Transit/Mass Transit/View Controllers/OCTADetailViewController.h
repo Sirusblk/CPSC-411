@@ -18,7 +18,6 @@
 @property (weak, nonatomic) IBOutlet UIImageView *headerIcon;
 @property (weak, nonatomic) IBOutlet UILabel *headerText;
 @property (weak, nonatomic) IBOutlet UILabel *subheadTitle;
-@property (weak, nonatomic) IBOutlet UILabel *subheadSubtitle;
 @property (weak, nonatomic) IBOutlet UITextView *detailStops;
 
 @end

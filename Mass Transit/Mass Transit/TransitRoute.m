@@ -12,8 +12,8 @@
 
 @synthesize route_id;
 @synthesize route_long_name;
-@synthesize route_desc;
 @synthesize route_color;
+@synthesize route_text_color;
 
 -(id) initWithID:(NSString*) routeID longName:(NSString*) routeLongName desc:(NSString*) routeDesc
 {
@@ -21,19 +21,18 @@
     if (self) {
         route_id = routeID;
         route_long_name = routeLongName;
-        route_desc = routeDesc;
     }
     return self;
 }
 
--(id) initWithID:(NSString*) routeID longName:(NSString*) routeLongName desc:(NSString*) routeDesc color:(NSString*) routeColor
+-(id) initWithID:(NSString*) routeID longName:(NSString*) routeLongName color:(NSString*) routeColor textColor:(NSString*) routeTextColor
 {
     self = [super init];
     if (self) {
         route_id = routeID;
         route_long_name = routeLongName;
-        route_desc = routeDesc;
         route_color = routeColor;
+        route_text_color = routeTextColor;
     }
     return self;
 }
