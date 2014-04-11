@@ -19,7 +19,7 @@
 +(GTF_SQLiteDB*) database;
 - (id) initWithName:(NSString*) databaseName;
 -(NSArray*) routes;
--(NSArray*) stopTimes:(NSString*) routeID;
--(NSArray*) stopLocations;
+-(NSArray*) tenStops:(NSString*) routeID;
+-(NSArray*) stops:(NSString*) routeID;
 
 @end

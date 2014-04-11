@@ -10,13 +10,17 @@
 
 @implementation StopLocation
 
+@synthesize stop_id;
+@synthesize departure_time;
 @synthesize stop_name;
 @synthesize coord;
 
--(id) initWithName:(NSString*)stopName coord:(CLLocationCoordinate2D) inputCoord
+-(id) initWithID:(NSString*)stopID departure:(NSString*) departureTime stopName:(NSString*) stopName coord:(CLLocationCoordinate2D) inputCoord
 {
     self = [super init];
     if (self) {
+        stop_id = stopID;
+        departure_time = departureTime;
         stop_name = stopName;
         coord = inputCoord;
     }

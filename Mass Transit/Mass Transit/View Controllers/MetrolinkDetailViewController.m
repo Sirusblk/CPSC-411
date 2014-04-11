@@ -56,7 +56,7 @@
     
     //Display stop times
     Metrolink_database = [[GTF_SQLiteDB alloc] initWithName:@"OCTA"];
-    Metrolink_stopTimes = [Metrolink_database stopTimes:currentRoute.route_id];
+    Metrolink_stopTimes = [Metrolink_database stops:currentRoute.route_id];
     
     [detailStops setText:@""];
 }

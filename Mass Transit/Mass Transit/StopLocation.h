@@ -11,9 +11,11 @@
 
 @interface StopLocation : NSObject
 
+@property NSString* stop_id;
+@property NSString* departure_time;
 @property NSString* stop_name;
 @property CLLocationCoordinate2D coord;
 
--(id) initWithName:(NSString*)stopName coord:(CLLocationCoordinate2D) inputCoord;
+-(id) initWithID:(NSString*)stopID departure:(NSString*) departureTime stopName:(NSString*) stopName coord:(CLLocationCoordinate2D) inputCoord;
 
 @end

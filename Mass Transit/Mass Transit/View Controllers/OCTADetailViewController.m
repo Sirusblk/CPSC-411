@@ -39,6 +39,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    NSMutableString *text = [NSMutableString stringWithString:@"Stops:\n"];
+    NSLog(@"DEBUG: %@", text);
+    
     //This is where the magic happens!
     [(DetailView*)self.view setHeaderColor:currentRoute.route_color];
     
@@ -59,9 +62,16 @@
         
         //Display stop times
         OCTA_database = [[GTF_SQLiteDB alloc] initWithName:@"OCTA"];
-        OCTA_stopTimes = [OCTA_database stopTimes:currentRoute.route_id];
+        OCTA_stopTimes = [OCTA_database tenStops:currentRoute.route_id];
         
-        [detailStops setText:@""];
+        for (int i=0; i<[OCTA_stopTimes count]; i++) {
+            [text appendString:@"\n\n"];
+            [text appendString:[[OCTA_stopTimes objectAtIndex:i] stop_name]];
+            [text appendString:@"\n"];
+            [text appendString:[[OCTA_stopTimes objectAtIndex:i] departure_time]];
+        }
+        
+        [detailStops setText:text];
     }
 }
 

@@ -36,21 +36,7 @@ static GTF_SQLiteDB* _databaseObject;
     //Store the results in a mutable array
     NSMutableArray* routeArray = [[NSMutableArray alloc] init];
     
-    NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
-    NSDateComponents *comps = [gregorian components:NSWeekdayCalendarUnit fromDate:[NSDate date]];
-    int weekday = [comps weekday];
-    NSString* today = [[NSString alloc] init];
-    
-    if (weekday == 1) {
-        today = @"SU";
-    } else if (weekday == 7) {
-        today = @"SA";
-    } else {
-        today = @"WD";
-    }
-    
     NSString* query = @"SELECT route_id, route_long_name, route_color, route_text_color FROM routes;";
-    //NSString* query = [NSString stringWithFormat:@"SELECT DISTINCT * FROM routes, trips WHERE routes.route_id=trips.route_id AND trips.service_id='%@';", today];
     sqlite3_stmt *stmt;
     
     //Temporary stores
@@ -102,46 +88,42 @@ static GTF_SQLiteDB* _databaseObject;
     return routeArray;
 }
 
--(NSArray*) stopTimes:(NSString*) routeID {
+-(NSArray*) tenStops:(NSString*) routeID {
+    //Store the results in a mutable array
+    NSMutableArray* stopArray = [[NSMutableArray alloc] init];
+    
     // Grab current time
-    NSDate *today = [NSDate date];
+    NSDate *todaysDate = [NSDate date];
     NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
     [dateFormat setDateFormat:@"HH:mm:ss"];
-    NSString *currentTime = [dateFormat stringFromDate:today];
+    NSString *currentTime = [dateFormat stringFromDate:todaysDate];
     NSLog(@"24 hour time: %@", currentTime);
     
+    //Grab the correct schedule
+    NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+    NSDateComponents *comps = [gregorian components:NSWeekdayCalendarUnit fromDate:[NSDate date]];
+    int weekday = [comps weekday];
+    NSString* today = [[NSString alloc] init];
     
-    //Store the results in a mutable array
-    NSMutableArray* stopTimesArray = [[NSMutableArray alloc] init];
-    NSString* query = [NSString stringWithFormat:@"SELECT * FROM stop_times, trips, routes WHERE trips.route_id = '%@' AND trips.trip_id = stop_times.trip_id;", routeID];
-    sqlite3_stmt *stmt;
-    
-    /*
-    //Send the query, store results in stmt.
-    if(sqlite3_prepare_v2(databaseConnection, [query UTF8String], [query length], &stmt, nil) == SQLITE_OK)
-    {
-        //Step through the results
-        while(sqlite3_step(stmt) == SQLITE_ROW)
-        {
-            
-        }
+    if (weekday == 1) {
+        today = @"SU";
+    } else if (weekday == 7) {
+        today = @"SA";
+    } else {
+        today = @"WD";
     }
-     */
-    
-    //Return mutable array as nonmutable array
-    return stopTimesArray;
-}
-
--(NSArray*) stopLocations {
-    //Store the results in a mutable array
-    NSMutableArray* stopLocsArray = [[NSMutableArray alloc] init];
-    NSString* query = @"SELECT * FROM stops;";
-    sqlite3_stmt *stmt;
     
     //Temporary stores
     const unsigned char* text;
-    NSString *stopName;
-    double longitude, latitude;
+    double lat, lon;
+    NSString *stopID, *departueTime, *stopName;
+    
+    
+    NSString* query = [NSString stringWithFormat:@"SELECT stops.stop_id, departure_time, stop_name, stop_lat, stop_lon FROM stops, stop_times, trips, routes WHERE trips.service_id = '%@' AND trips.route_id = '%@' AND stop_times.departure_time >= '%@' AND trips.trip_id = stop_times.trip_id AND stops.stop_id = stop_times.stop_id LIMIT 10;", today, routeID, currentTime];
+    sqlite3_stmt *stmt;
+    
+    //Departure time and arrival time are the same for both OCTA and Metrolink,
+    //Only store departure time.
     
     //Send the query, store results in stmt.
     if(sqlite3_prepare_v2(databaseConnection, [query UTF8String], [query length], &stmt, nil) == SQLITE_OK)
@@ -149,25 +131,109 @@ static GTF_SQLiteDB* _databaseObject;
         //Step through the results
         while(sqlite3_step(stmt) == SQLITE_ROW)
         {
-            //Grab route_id
             text = sqlite3_column_text(stmt, 0);
-            if(text)
+            if (text)
+                stopID = [NSString stringWithCString: (const char*)text encoding:NSUTF8StringEncoding];
+            else
+                stopID = nil;
+            
+            text = sqlite3_column_text(stmt, 1);
+            if (text)
+                departueTime = [NSString stringWithCString: (const char*)text encoding:NSUTF8StringEncoding];
+            else
+                departueTime = nil;
+            
+            text = sqlite3_column_text(stmt, 2);
+            if (text)
                 stopName = [NSString stringWithCString: (const char*)text encoding:NSUTF8StringEncoding];
             else
                 stopName = nil;
+            
+            lat = sqlite3_column_double(stmt, 3);
+            lon = sqlite3_column_double(stmt, 4);
+            
+            CLLocationCoordinate2D coord = CLLocationCoordinate2DMake(lon, lat);
+            StopLocation *stopLocation = [[StopLocation alloc] initWithID:stopID departure:departueTime stopName:stopName coord:coord];
+            [stopArray addObject:stopLocation];
         }
-        
-        longitude = sqlite3_column_double(stmt, 4);
-        latitude = sqlite3_column_double(stmt, 5);
-        CLLocationCoordinate2D coord = CLLocationCoordinate2DMake(longitude, latitude);
-        
-        //Create location and add to array
-        StopLocation *locationItem = [[StopLocation alloc] initWithName:stopName coord:coord];
-        [stopLocsArray addObject:locationItem];
     }
     
     //Return mutable array as nonmutable array
-    return stopLocsArray;
+    return stopArray;
+}
+
+-(NSArray*) stops:(NSString*) routeID {
+    //Store the results in a mutable array
+    NSMutableArray* stopArray = [[NSMutableArray alloc] init];
+    
+    // Grab current time
+    NSDate *todaysDate = [NSDate date];
+    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+    [dateFormat setDateFormat:@"HH:mm:ss"];
+    NSString *currentTime = [dateFormat stringFromDate:todaysDate];
+    NSLog(@"24 hour time: %@", currentTime);
+    
+    //Grab the correct schedule
+    NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+    NSDateComponents *comps = [gregorian components:NSWeekdayCalendarUnit fromDate:[NSDate date]];
+    int weekday = [comps weekday];
+    NSString* today = [[NSString alloc] init];
+    
+    if (weekday == 1) {
+        today = @"SU";
+    } else if (weekday == 7) {
+        today = @"SA";
+    } else {
+        today = @"WD";
+    }
+    
+    //Temporary stores
+    const unsigned char* text;
+    double lat, lon;
+    NSString *stopID, *departueTime, *stopName;
+    
+    
+    NSString* query = [NSString stringWithFormat:@"SELECT stops.stop_id, departure_time, stop_name, stop_lat, stop_lon FROM stops, stop_times, trips, routes WHERE trips.service_id = '%@' AND trips.route_id = '%@' AND stop_times.departure_time >= '%@' AND trips.trip_id = stop_times.trip_id AND stops.stop_id = stop_times.stop_id;", today, routeID, currentTime];
+    sqlite3_stmt *stmt;
+    
+    //Departure time and arrival time are the same for both OCTA and Metrolink,
+    //Only store departure time.
+    
+    //Send the query, store results in stmt.
+    if(sqlite3_prepare_v2(databaseConnection, [query UTF8String], [query length], &stmt, nil) == SQLITE_OK)
+    {
+        //Step through the results
+        while(sqlite3_step(stmt) == SQLITE_ROW)
+        {
+            text = sqlite3_column_text(stmt, 0);
+            if (text)
+                stopID = [NSString stringWithCString: (const char*)text encoding:NSUTF8StringEncoding];
+            else
+                stopID = nil;
+            
+            text = sqlite3_column_text(stmt, 1);
+            if (text)
+                departueTime = [NSString stringWithCString: (const char*)text encoding:NSUTF8StringEncoding];
+            else
+                departueTime = nil;
+            
+            text = sqlite3_column_text(stmt, 2);
+            if (text)
+                stopName = [NSString stringWithCString: (const char*)text encoding:NSUTF8StringEncoding];
+            else
+                stopName = nil;
+            
+            lat = sqlite3_column_double(stmt, 3);
+            lon = sqlite3_column_double(stmt, 4);
+            
+            CLLocationCoordinate2D coord = CLLocationCoordinate2DMake(lon, lat);
+            StopLocation *stopLocation = [[StopLocation alloc] initWithID:stopID departure:departueTime stopName:stopName coord:coord];
+            [stopArray addObject:stopLocation];
+        }
+    }
+    
+    //Return mutable array as nonmutable array
+    return stopArray;
 }
 
 @end
