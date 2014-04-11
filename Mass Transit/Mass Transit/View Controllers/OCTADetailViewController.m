@@ -17,6 +17,9 @@
 @synthesize queryType;
 @synthesize currentRoute;
 
+@synthesize OCTA_database;
+@synthesize OCTA_stopTimes;
+
 @synthesize headerIcon;
 @synthesize headerText;
 @synthesize subheadTitle;
@@ -52,6 +55,12 @@
             [headerText setTextColor:[UIColor whiteColor]];
         
         [subheadTitle setText:[NSString stringWithFormat:@"%@", currentRoute.route_long_name]];
+        
+        
+        //Display stop times
+        OCTA_database = [[GTF_SQLiteDB alloc] initWithName:@"OCTA"];
+        OCTA_stopTimes = [OCTA_database stopTimes:currentRoute.route_id];
+        
         [detailStops setText:@""];
     }
 }

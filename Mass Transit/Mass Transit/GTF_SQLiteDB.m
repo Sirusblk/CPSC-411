@@ -103,11 +103,20 @@ static GTF_SQLiteDB* _databaseObject;
 }
 
 -(NSArray*) stopTimes:(NSString*) routeID {
+    // Grab current time
+    NSDate *today = [NSDate date];
+    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+    [dateFormat setDateFormat:@"HH:mm:ss"];
+    NSString *currentTime = [dateFormat stringFromDate:today];
+    NSLog(@"24 hour time: %@", currentTime);
+    
+    
     //Store the results in a mutable array
     NSMutableArray* stopTimesArray = [[NSMutableArray alloc] init];
     NSString* query = [NSString stringWithFormat:@"SELECT * FROM stop_times, trips, routes WHERE trips.route_id = '%@' AND trips.trip_id = stop_times.trip_id;", routeID];
     sqlite3_stmt *stmt;
     
+    /*
     //Send the query, store results in stmt.
     if(sqlite3_prepare_v2(databaseConnection, [query UTF8String], [query length], &stmt, nil) == SQLITE_OK)
     {
@@ -117,6 +126,7 @@ static GTF_SQLiteDB* _databaseObject;
             
         }
     }
+     */
     
     //Return mutable array as nonmutable array
     return stopTimesArray;

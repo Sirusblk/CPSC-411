@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GTF_SQLiteDB.h"
 #import "TransitRoute.h"
 #import "DetailView.h"
 
@@ -14,6 +15,9 @@
 
 @property NSString *queryType;
 @property TransitRoute *currentRoute;
+
+@property GTF_SQLiteDB* OCTA_database;
+@property NSArray* OCTA_stopTimes;
 
 @property (weak, nonatomic) IBOutlet UIImageView *headerIcon;
 @property (weak, nonatomic) IBOutlet UILabel *headerText;

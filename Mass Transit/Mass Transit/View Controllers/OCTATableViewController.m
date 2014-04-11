@@ -39,7 +39,7 @@
     
     //Access database
     OCTA_database = [[GTF_SQLiteDB alloc] initWithName:@"OCTA"];
-    self.OCTA_routes = OCTA_database.routes;
+    OCTA_routes = OCTA_database.routes;
 }
 
 - (void)didReceiveMemoryWarning
