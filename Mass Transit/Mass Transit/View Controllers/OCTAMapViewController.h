@@ -9,7 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "MapKit/MapKit.h"
 
-@interface OCTAMapViewController : UIViewController
+@interface OCTAMapViewController : UIViewController <CLLocationManagerDelegate>
+
+@property CLLocationManager *locationManager;
+
 @property (weak, nonatomic) IBOutlet MKMapView *OCTAmap;
 
 @end
