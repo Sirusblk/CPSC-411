@@ -23,7 +23,7 @@
 @synthesize headerIcon;
 @synthesize headerText;
 @synthesize subheadTitle;
-@synthesize detailStops;
+@synthesize detailView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -45,6 +45,10 @@
     //This is where the magic happens!
     [(DetailView*)self.view setHeaderColor:currentRoute.route_color];
     
+    //Display stop times
+    OCTA_database = [[GTF_SQLiteDB alloc] initWithName:@"OCTA"];
+    OCTA_stopTimes = [OCTA_database tenStops:currentRoute.route_id];
+    
     if ([queryType  isEqualToString: @"Bus Routes"]) {
         [headerIcon setImage:[UIImage imageNamed:@"bus-head.png"]];
         headerIcon.clipsToBounds = YES;
@@ -59,20 +63,51 @@
         
         [subheadTitle setText:[NSString stringWithFormat:@"%@", currentRoute.route_long_name]];
         
-        
-        //Display stop times
-        OCTA_database = [[GTF_SQLiteDB alloc] initWithName:@"OCTA"];
-        OCTA_stopTimes = [OCTA_database tenStops:currentRoute.route_id];
-        
+        /*
         for (int i=0; i<[OCTA_stopTimes count]; i++) {
             [text appendString:@"\n\n"];
             [text appendString:[[OCTA_stopTimes objectAtIndex:i] stop_name]];
             [text appendString:@"\n"];
             [text appendString:[[OCTA_stopTimes objectAtIndex:i] departure_time]];
+            //[detailTableView ]
         }
         
-        [detailStops setText:text];
+        //[detailStops setText:text];
+         */
     }
+}
+
+#pragma mark - Table view data source
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    // Return the number of sections.
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    // Return the number of rows in the section.
+    NSLog(@"Number of OCTA stop times: %lu", (unsigned long)[OCTA_stopTimes count]);
+    return [OCTA_stopTimes count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *cellIdentifier = @"detailCell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    
+    // Configure the cell...
+    if (cell == nil) {
+		// Use the default cell style.
+		cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+    }
+    
+    StopLocation *stopLocation = [self.OCTA_stopTimes objectAtIndex: indexPath.row];
+    cell.textLabel.text = stopLocation.stop_name;
+    cell.detailTextLabel.text = stopLocation.departure_time;
+    
+    return cell;
 }
 
 - (void)didReceiveMemoryWarning
