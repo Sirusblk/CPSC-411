@@ -39,6 +39,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    //IMPORTANT...?
+    self.detailView.delegate = self;
+    self.detailView.dataSource = self;
+    
     NSMutableString *text = [NSMutableString stringWithString:@"Stops:\n"];
     NSLog(@"DEBUG: %@", text);
     
@@ -96,16 +100,18 @@
 {
     static NSString *cellIdentifier = @"detailCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    cell.textLabel.adjustsFontSizeToFitWidth = YES;
     
     // Configure the cell...
     if (cell == nil) {
 		// Use the default cell style.
-		cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+		cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:cellIdentifier];
     }
     
     StopLocation *stopLocation = [self.OCTA_stopTimes objectAtIndex: indexPath.row];
-    cell.textLabel.text = stopLocation.stop_name;
-    cell.detailTextLabel.text = stopLocation.departure_time;
+    //NSLog(@"%@ %@", stopLocation.stop_name, stopLocation.departure_time);
+    cell.textLabel.text = [stopLocation returnTime];
+    cell.detailTextLabel.text = stopLocation.stop_name;
     
     return cell;
 }

@@ -12,6 +12,7 @@
 
 static GTF_SQLiteDB* _databaseObject;
 
+@synthesize databaseName;
 @synthesize databaseConnection;
 
 +(GTF_SQLiteDB*) database {
@@ -21,9 +22,10 @@ static GTF_SQLiteDB* _databaseObject;
     return _databaseObject;
 }
 
-- (id) initWithName:(NSString*) databaseName {
+- (id) initWithName:(NSString*) _databaseName {
     self = [super init];
     if (self) {
+        databaseName = _databaseName;
         NSString* dbpath = [[NSBundle mainBundle] pathForResource:databaseName ofType:@"sl3"];
         if (sqlite3_open([dbpath UTF8String], &databaseConnection) != SQLITE_OK) {
             NSLog(@"Failed to open database.");
@@ -36,12 +38,32 @@ static GTF_SQLiteDB* _databaseObject;
     //Store the results in a mutable array
     NSMutableArray* routeArray = [[NSMutableArray alloc] init];
     
-    NSString* query = @"SELECT route_id, route_long_name, route_color, route_text_color FROM routes;";
+    //Grab the correct schedule
+    NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+    NSDateComponents *comps = [gregorian components:NSWeekdayCalendarUnit fromDate:[NSDate date]];
+    int weekday = [comps weekday];
+    NSString* today = [[NSString alloc] init];
+    
+    if (weekday == 1) {
+        today = @"SU";
+    } else if (weekday == 7) {
+        today = @"SA";
+    } else {
+        today = @"WD";
+    }
+    
+    NSString* query = @"SELECT route_id, route_long_name, route_color, route_text_color, route_url FROM routes;";
+    
+    if ([databaseName isEqualToString: @"OCTA"]) {
+        query = [NSString stringWithFormat:@"SELECT DISTINCT trips.route_id, route_long_name, route_color, route_text_color, route_url FROM routes, trips WHERE trips.service_id = '%@' AND routes.route_id = trips.route_id;", today];
+    }
+    
+    //NSString* query = [NSString stringWithFormat:@"SELECT DISTINCT trips.route_id, route_long_name, route_color, route_text_color, route_url FROM routes, trips WHERE trips.service_id = '%@' AND routes.route_id = trips.route_id;", today];
     sqlite3_stmt *stmt;
     
     //Temporary stores
     const unsigned char* text;
-    NSString *routeID, *routeLongName, *routeColor, *routeTextColor;
+    NSString *routeID, *routeLongName, *routeColor, *routeTextColor, *routeURL;
     
     //Send the query, store results in stmt.
     if(sqlite3_prepare_v2(databaseConnection, [query UTF8String], [query length], &stmt, nil) == SQLITE_OK)
@@ -77,8 +99,15 @@ static GTF_SQLiteDB* _databaseObject;
             else
                 routeTextColor = @"FFFFFF";
             
+            //Grab route_url
+            text = sqlite3_column_text(stmt, 4);
+            if ( text )
+                routeURL = [NSString stringWithCString: (const char*)text encoding:NSUTF8StringEncoding];
+            else
+                routeURL = nil;
+            
             //Create TransitRoute Object and store in array
-            TransitRoute *transitRoute = [[TransitRoute alloc] initWithID:routeID longName:routeLongName color:routeColor textColor: routeTextColor];
+            TransitRoute *transitRoute = [[TransitRoute alloc] initWithID:routeID longName:routeLongName url:routeURL color:routeColor textColor:routeTextColor];
             [routeArray addObject:transitRoute];
         }
         sqlite3_finalize(stmt);

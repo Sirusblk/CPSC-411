@@ -14,6 +14,7 @@
 
 @interface GTF_SQLiteDB : NSObject
 
+@property NSString* databaseName;
 @property sqlite3* databaseConnection;
 
 +(GTF_SQLiteDB*) database;

@@ -17,5 +17,6 @@
 @property CLLocationCoordinate2D coord;
 
 -(id) initWithID:(NSString*)stopID departure:(NSString*) departureTime stopName:(NSString*) stopName coord:(CLLocationCoordinate2D) inputCoord;
+-(NSString*) returnTime;
 
 @end

@@ -12,10 +12,11 @@
 
 @property NSString* route_id;
 @property NSString* route_long_name;
+@property NSString* route_url;
 @property NSString* route_color;        //Optional
 @property NSString* route_text_color;   //Optional
 
--(id) initWithID:(NSString*) routeID longName:(NSString*) routeLongName;
--(id) initWithID:(NSString*) routeID longName:(NSString*) routeLongName color:(NSString*) routeColor textColor:(NSString*) routeTextColor;
+-(id) initWithID:(NSString*) routeID longName:(NSString*) routeLongName url:(NSString*) routeURL;
+-(id) initWithID:(NSString*) routeID longName:(NSString*) routeLongName url:(NSString*) routeURL color:(NSString*) routeColor textColor:(NSString*) routeTextColor;
 
 @end

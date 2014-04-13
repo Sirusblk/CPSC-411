@@ -27,4 +27,22 @@
     return self;
 }
 
+-(NSString*) returnTime
+{
+    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+    NSLocale *localTime = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US_POSIX"];
+    [dateFormat setLocale:localTime];
+    [dateFormat setDateFormat:@"HH:mm:ss"];
+    NSDate *time = [dateFormat dateFromString:(NSString*) departure_time];
+    //NSLog(@"Time: %@", time);
+    
+    //Change format!
+    [dateFormat setDateFormat:@"hh:mm a"];
+    
+    NSString *output = [dateFormat stringFromDate:time];
+    //NSLog(@"Output Time: %@", output);
+    
+    return output;
+}
+
 @end
