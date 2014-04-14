@@ -14,6 +14,7 @@
 @synthesize departure_time;
 @synthesize stop_name;
 @synthesize coord;
+@synthesize coordinate;         //Confused about this...
 
 -(id) initWithID:(NSString*)stopID departure:(NSString*) departureTime stopName:(NSString*) stopName coord:(CLLocationCoordinate2D) inputCoord
 {

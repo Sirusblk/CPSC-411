@@ -22,5 +22,6 @@
 -(NSArray*) routes;
 -(NSArray*) tenStops:(NSString*) routeID;
 -(NSArray*) stops:(NSString*) routeID;
+-(NSArray*) allStops;
 
 @end

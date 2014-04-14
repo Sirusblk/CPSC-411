@@ -8,6 +8,8 @@
 
 #import "MetrolinkMapViewController.h"
 
+#define METERS_PER_MILE 1609.344
+
 @interface MetrolinkMapViewController ()
 
 @end
@@ -29,12 +31,37 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    MKCoordinateRegion mapRegion;
+    mapRegion.center.latitude = MetrolinkMap.userLocation.coordinate.latitude;
+    mapRegion.center.longitude = MetrolinkMap.userLocation.coordinate.longitude;
+    mapRegion.span.latitudeDelta = 0.2;
+    mapRegion.span.longitudeDelta = 0.2;
+    [MetrolinkMap setRegion:mapRegion animated: YES];
+    
+    MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(MetrolinkMap.userLocation.coordinate, 0.5*METERS_PER_MILE, 0.5*METERS_PER_MILE);
+    [MetrolinkMap setRegion:viewRegion animated:YES];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    NSLog(@"View Will Appear");
+    MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(MetrolinkMap.userLocation.coordinate, 0.5*METERS_PER_MILE, 0.5*METERS_PER_MILE);
+    
+    [MetrolinkMap setRegion:viewRegion animated:YES];
+}
+
+-(void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation
+{
+    MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(MetrolinkMap.userLocation.coordinate, 0.5*METERS_PER_MILE, 0.5*METERS_PER_MILE);
+    
+    [MetrolinkMap setRegion:viewRegion animated:YES];
 }
 
 /*

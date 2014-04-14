@@ -7,11 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MapKit/MapKit.h"
+#import <MapKit/MapKit.h>
+#import "StopLocation.h"
+#import "GTF_SQLiteDB.h"
 
 @interface OCTAMapViewController : UIViewController <CLLocationManagerDelegate>
 
 @property CLLocationManager *locationManager;
+@property GTF_SQLiteDB* OCTA_database;
+@property NSArray* OCTA_stops;
 
 @property (weak, nonatomic) IBOutlet MKMapView *OCTAmap;
 

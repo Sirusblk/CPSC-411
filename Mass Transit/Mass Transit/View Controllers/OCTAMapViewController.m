@@ -16,7 +16,9 @@
 
 @implementation OCTAMapViewController
 
-@synthesize locationManager;
+@synthesize OCTA_stops;
+@synthesize OCTA_database;
+//@synthesize locationManager;
 @synthesize OCTAmap;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -33,6 +35,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    NSLog(@"\nView Did Load");
+    
     //locationManager = [[CLLocationManager alloc] init];
     //[locationManager startUpdatingLocation];
     
@@ -44,7 +48,23 @@
     [OCTAmap setRegion:mapRegion animated: YES];
     
     NSLog(@"OCTA Map View Loaded");
-    NSLog(@"User Latitude: %f", OCTAmap.userLocation.coordinate.latitude);
+    NSLog(@"User Latitude: %f %f", OCTAmap.userLocation.coordinate.latitude, OCTAmap.userLocation.coordinate.longitude);
+    
+    MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(OCTAmap.userLocation.coordinate, 0.5*METERS_PER_MILE, 0.5*METERS_PER_MILE);
+    [OCTAmap setRegion:viewRegion animated:YES];
+    
+    //Setup annotations
+    OCTA_stops = [OCTA_database allStops];
+    
+    NSLog(@"OCTA Stop: %@", OCTA_stops[0]);
+    
+    StopLocation *annotation = OCTA_stops[0];
+    [self.OCTAmap addAnnotation:annotation];
+    
+    for(StopLocation *annotation in OCTA_stops) {
+        NSLog(@"Annotation: %@", annotation);
+        [self.OCTAmap addAnnotation:annotation];
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -54,21 +74,15 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-    CLLocationCoordinate2D zoomLocation;
-    zoomLocation.latitude = OCTAmap.userLocation.coordinate.latitude;
-    zoomLocation.longitude= OCTAmap.userLocation.coordinate.longitude;
+    NSLog(@"View Will Appear");
     
-    NSLog(@"User Latitude: %f", OCTAmap.userLocation.coordinate.latitude);
-    
-    MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(zoomLocation, 0.5*METERS_PER_MILE, 0.5*METERS_PER_MILE);
+    MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(OCTAmap.userLocation.coordinate, 0.5*METERS_PER_MILE, 0.5*METERS_PER_MILE);
     
     [OCTAmap setRegion:viewRegion animated:YES];
 }
 
 -(void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation
 {
-    NSLog(@"User Latitude: %f", OCTAmap.userLocation.coordinate.latitude);
-    
     MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(OCTAmap.userLocation.coordinate, 0.5*METERS_PER_MILE, 0.5*METERS_PER_MILE);
     
     [OCTAmap setRegion:viewRegion animated:YES];
