@@ -128,27 +128,32 @@ static GTF_SQLiteDB* _databaseObject;
     NSString *currentTime = [dateFormat stringFromDate:todaysDate];
     NSLog(@"24 hour time: %@", currentTime);
     
-    //Grab the correct schedule
-    NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
-    NSDateComponents *comps = [gregorian components:NSWeekdayCalendarUnit fromDate:[NSDate date]];
-    int weekday = [comps weekday];
-    NSString* today = [[NSString alloc] init];
+    NSString* query;
     
-    if (weekday == 1) {
-        today = @"SU";
-    } else if (weekday == 7) {
-        today = @"SA";
+    if ([databaseName isEqualToString: @"OCTA"]) {
+        //Grab the correct schedule
+        NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+        NSDateComponents *comps = [gregorian components:NSWeekdayCalendarUnit fromDate:[NSDate date]];
+        int weekday = [comps weekday];
+        NSString* today = [[NSString alloc] init];
+        
+        if (weekday == 1) {
+            today = @"SU";
+        } else if (weekday == 7) {
+            today = @"SA";
+        } else {
+            today = @"WD";
+        }
+        
+        query = [NSString stringWithFormat:@"SELECT stops.stop_id, departure_time, stop_name, stop_lat, stop_lon FROM stops, stop_times, trips, routes WHERE trips.service_id = '%@' AND trips.route_id = '%@' AND stop_times.departure_time >= '%@' AND trips.trip_id = stop_times.trip_id AND stops.stop_id = stop_times.stop_id LIMIT 10;", today, routeID, currentTime];
     } else {
-        today = @"WD";
+        query = [NSString stringWithFormat:@"SELECT stops.stop_id, departure_time, stop_name, stop_lat, stop_lon FROM stops, stop_times, trips, routes WHERE trips.route_id = '%@' AND stop_times.departure_time >= '%@' AND trips.trip_id = stop_times.trip_id AND stops.stop_id = stop_times.stop_id LIMIT 10;", routeID, currentTime];
     }
     
     //Temporary stores
     const unsigned char* text;
     double lat, lon;
     NSString *stopID, *departueTime, *stopName;
-    
-    
-    NSString* query = [NSString stringWithFormat:@"SELECT stops.stop_id, departure_time, stop_name, stop_lat, stop_lon FROM stops, stop_times, trips, routes WHERE trips.service_id = '%@' AND trips.route_id = '%@' AND stop_times.departure_time >= '%@' AND trips.trip_id = stop_times.trip_id AND stops.stop_id = stop_times.stop_id LIMIT 10;", today, routeID, currentTime];
     sqlite3_stmt *stmt;
     
     //Departure time and arrival time are the same for both OCTA and Metrolink,
@@ -183,6 +188,7 @@ static GTF_SQLiteDB* _databaseObject;
             
             CLLocationCoordinate2D coord = CLLocationCoordinate2DMake(lon, lat);
             StopLocation *stopLocation = [[StopLocation alloc] initWithID:stopID departure:departueTime stopName:stopName coord:coord];
+            NSLog(@"Stop Location: %@", stopLocation);
             [stopArray addObject:stopLocation];
         }
     }

@@ -37,9 +37,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
     
-    //IMPORTANT...?
+    //IMPORTANT!
     self.detailView.delegate = self;
     self.detailView.dataSource = self;
     
@@ -53,32 +52,18 @@
     OCTA_database = [[GTF_SQLiteDB alloc] initWithName:@"OCTA"];
     OCTA_stopTimes = [OCTA_database tenStops:currentRoute.route_id];
     
-    if ([queryType  isEqualToString: @"Bus Routes"]) {
-        [headerIcon setImage:[UIImage imageNamed:@"bus-head.png"]];
-        headerIcon.clipsToBounds = YES;
-        [headerText setText:[NSString stringWithFormat:@"Bus Route %@", currentRoute.route_id]];
-        
-        NSLog(@"Text Color: %@", currentRoute.route_text_color);
-        
-        if ([currentRoute.route_text_color isEqualToString: @"000000"])
-            [headerText setTextColor:[UIColor blackColor]];
-        else
-            [headerText setTextColor:[UIColor whiteColor]];
-        
-        [subheadTitle setText:[NSString stringWithFormat:@"%@", currentRoute.route_long_name]];
-        
-        /*
-        for (int i=0; i<[OCTA_stopTimes count]; i++) {
-            [text appendString:@"\n\n"];
-            [text appendString:[[OCTA_stopTimes objectAtIndex:i] stop_name]];
-            [text appendString:@"\n"];
-            [text appendString:[[OCTA_stopTimes objectAtIndex:i] departure_time]];
-            //[detailTableView ]
-        }
-        
-        //[detailStops setText:text];
-         */
-    }
+    [headerIcon setImage:[UIImage imageNamed:@"bus-head.png"]];
+    headerIcon.clipsToBounds = YES;
+    [headerText setText:[NSString stringWithFormat:@"Bus Route %@", currentRoute.route_id]];
+    
+    NSLog(@"Text Color: %@", currentRoute.route_text_color);
+    
+    if ([currentRoute.route_text_color isEqualToString: @"000000"])
+        [headerText setTextColor:[UIColor blackColor]];
+    else
+        [headerText setTextColor:[UIColor whiteColor]];
+    
+    [subheadTitle setText:[NSString stringWithFormat:@"%@", currentRoute.route_long_name]];
 }
 
 #pragma mark - Table view data source
@@ -109,7 +94,6 @@
     }
     
     StopLocation *stopLocation = [self.OCTA_stopTimes objectAtIndex: indexPath.row];
-    //NSLog(@"%@ %@", stopLocation.stop_name, stopLocation.departure_time);
     cell.textLabel.text = [stopLocation returnTime];
     cell.detailTextLabel.text = stopLocation.stop_name;
     
