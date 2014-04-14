@@ -23,5 +23,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *headerText;
 @property (weak, nonatomic) IBOutlet UILabel *subheadTitle;
 @property (weak, nonatomic) IBOutlet UITableView *detailView;
+- (IBAction)urlButtonPress:(id)sender;
 
 @end

@@ -117,4 +117,8 @@
  }
  */
 
+- (IBAction)urlButtonPress:(id)sender {
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:currentRoute.route_url]];
+}
+
 @end
