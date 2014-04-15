@@ -61,6 +61,8 @@
     StopLocation *annotation = OCTA_stops[0];
     [self.OCTAmap addAnnotation:annotation];
     
+    //For some reason this doesn't work
+    // Coords are (null)...
     for(StopLocation *annotation in OCTA_stops) {
         NSLog(@"Annotation: %@", annotation);
         [self.OCTAmap addAnnotation:annotation];

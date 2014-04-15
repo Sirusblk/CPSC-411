@@ -6,10 +6,12 @@ Select query type (currently only one), Select Route, See details.
 
 All icons made by me.
 
-Unfinished To-do:
+Done:
 Display pickup times from current time to end of the day.
 Clean up Metrolink (not as clean as OCTA)
+Make maps zoomed in on current location.
+
+Unfinished To-do:
 Plot points for OCTA bus stops
 Plot points for Metrolink train stations
 Add more query types.
-Make maps zoomed in on current location.
