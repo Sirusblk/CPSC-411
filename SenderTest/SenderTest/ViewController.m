@@ -26,4 +26,13 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)buttonPress:(id)sender {
+    UIButton * button = (UIButton*) sender;
+    
+    if (button.tag == 0) {
+        NSLog(@"Hello World!");
+    } else if (button.tag == 1) {
+        NSLog(@"Goodbye World...");
+    }
+}
 @end
