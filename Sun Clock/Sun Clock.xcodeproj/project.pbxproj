@@ -14,14 +14,14 @@
 		EC7EB1CA1904949900B5D7CA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EC7EB1C91904949900B5D7CA /* main.m */; };
 		EC7EB1CE1904949900B5D7CA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EC7EB1CD1904949900B5D7CA /* AppDelegate.m */; };
 		EC7EB1D11904949900B5D7CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC7EB1CF1904949900B5D7CA /* Main.storyboard */; };
-		EC7EB1D41904949900B5D7CA /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC7EB1D31904949900B5D7CA /* FirstViewController.m */; };
-		EC7EB1D71904949900B5D7CA /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC7EB1D61904949900B5D7CA /* SecondViewController.m */; };
 		EC7EB1D91904949900B5D7CA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC7EB1D81904949900B5D7CA /* Images.xcassets */; };
 		EC7EB1E01904949900B5D7CA /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC7EB1DF1904949900B5D7CA /* XCTest.framework */; };
 		EC7EB1E11904949900B5D7CA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC7EB1BD1904949900B5D7CA /* Foundation.framework */; };
 		EC7EB1E21904949900B5D7CA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC7EB1C11904949900B5D7CA /* UIKit.framework */; };
 		EC7EB1EA1904949900B5D7CA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EC7EB1E81904949900B5D7CA /* InfoPlist.strings */; };
 		EC7EB1EC1904949900B5D7CA /* Sun_ClockTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EC7EB1EB1904949900B5D7CA /* Sun_ClockTests.m */; };
+		EC7EB1F61904994400B5D7CA /* us_cities_with_timezones.sl3 in Resources */ = {isa = PBXBuildFile; fileRef = EC7EB1F51904994400B5D7CA /* us_cities_with_timezones.sl3 */; };
+		EC7EB1F919049B9300B5D7CA /* StateTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC7EB1F819049B9300B5D7CA /* StateTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,16 +46,15 @@
 		EC7EB1CC1904949900B5D7CA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EC7EB1CD1904949900B5D7CA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		EC7EB1D01904949900B5D7CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		EC7EB1D21904949900B5D7CA /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		EC7EB1D31904949900B5D7CA /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		EC7EB1D51904949900B5D7CA /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		EC7EB1D61904949900B5D7CA /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		EC7EB1D81904949900B5D7CA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		EC7EB1DE1904949900B5D7CA /* Sun ClockTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Sun ClockTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC7EB1DF1904949900B5D7CA /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		EC7EB1E71904949900B5D7CA /* Sun ClockTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Sun ClockTests-Info.plist"; sourceTree = "<group>"; };
 		EC7EB1E91904949900B5D7CA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		EC7EB1EB1904949900B5D7CA /* Sun_ClockTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Sun_ClockTests.m; sourceTree = "<group>"; };
+		EC7EB1F51904994400B5D7CA /* us_cities_with_timezones.sl3 */ = {isa = PBXFileReference; lastKnownFileType = file; name = us_cities_with_timezones.sl3; path = ../us_cities_with_timezones.sl3; sourceTree = "<group>"; };
+		EC7EB1F719049B9300B5D7CA /* StateTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StateTableViewController.h; path = ViewControllers/StateTableViewController.h; sourceTree = "<group>"; };
+		EC7EB1F819049B9300B5D7CA /* StateTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StateTableViewController.m; path = ViewControllers/StateTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,10 +117,7 @@
 				EC7EB1CC1904949900B5D7CA /* AppDelegate.h */,
 				EC7EB1CD1904949900B5D7CA /* AppDelegate.m */,
 				EC7EB1CF1904949900B5D7CA /* Main.storyboard */,
-				EC7EB1D21904949900B5D7CA /* FirstViewController.h */,
-				EC7EB1D31904949900B5D7CA /* FirstViewController.m */,
-				EC7EB1D51904949900B5D7CA /* SecondViewController.h */,
-				EC7EB1D61904949900B5D7CA /* SecondViewController.m */,
+				EC7EB1FA19049B9C00B5D7CA /* View Controllers */,
 				EC7EB1D81904949900B5D7CA /* Images.xcassets */,
 				EC7EB1C41904949900B5D7CA /* Supporting Files */,
 			);
@@ -131,6 +127,7 @@
 		EC7EB1C41904949900B5D7CA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				EC7EB1F51904994400B5D7CA /* us_cities_with_timezones.sl3 */,
 				EC7EB1C51904949900B5D7CA /* Sun Clock-Info.plist */,
 				EC7EB1C61904949900B5D7CA /* InfoPlist.strings */,
 				EC7EB1C91904949900B5D7CA /* main.m */,
@@ -155,6 +152,15 @@
 				EC7EB1E81904949900B5D7CA /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EC7EB1FA19049B9C00B5D7CA /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EC7EB1F719049B9300B5D7CA /* StateTableViewController.h */,
+				EC7EB1F819049B9300B5D7CA /* StateTableViewController.m */,
+			);
+			name = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,6 +239,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC7EB1F61904994400B5D7CA /* us_cities_with_timezones.sl3 in Resources */,
 				EC7EB1D91904949900B5D7CA /* Images.xcassets in Resources */,
 				EC7EB1C81904949900B5D7CA /* InfoPlist.strings in Resources */,
 				EC7EB1D11904949900B5D7CA /* Main.storyboard in Resources */,
@@ -254,9 +261,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC7EB1D71904949900B5D7CA /* SecondViewController.m in Sources */,
+				EC7EB1F919049B9300B5D7CA /* StateTableViewController.m in Sources */,
 				EC7EB1CE1904949900B5D7CA /* AppDelegate.m in Sources */,
-				EC7EB1D41904949900B5D7CA /* FirstViewController.m in Sources */,
 				EC7EB1CA1904949900B5D7CA /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

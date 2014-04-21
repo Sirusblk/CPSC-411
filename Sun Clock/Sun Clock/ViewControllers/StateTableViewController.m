@@ -1,5 +1,5 @@
 //
-//  CityTableViewController.m
+//  StateTableViewController.m
 //  Sun Clock
 //
 //  Created by David McLaren on 4/20/14.
