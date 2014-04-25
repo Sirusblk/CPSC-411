@@ -1,0 +1,602 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		ECB7B9EE1908CB5200BABDD5 /* aberration.c in Sources */ = {isa = PBXBuildFile; fileRef = ECB7B9A91908CB5200BABDD5 /* aberration.c */; };
+		ECB7B9EF1908CB5200BABDD5 /* airmass.c in Sources */ = {isa = PBXBuildFile; fileRef = ECB7B9AA1908CB5200BABDD5 /* airmass.c */; };
+		ECB7B9F01908CB5200BABDD5 /* angular_separation.c in Sources */ = {isa = PBXBuildFile; fileRef = ECB7B9AB1908CB5200BABDD5 /* angular_separation.c */; };
+		ECB7B9F11908CB5200BABDD5 /* apparent_position.c in Sources */ = {isa = PBXBuildFile; fileRef = ECB7B9AC1908CB5200BABDD5 /* apparent_position.c */; };
+		ECB7B9F21908CB5200BABDD5 /* asteroid.c in Sources */ = {isa = PBXBuildFile; fileRef = ECB7B9AD1908CB5200BABDD5 /* asteroid.c */; };
+		ECB7B9F31908CB5200BABDD5 /* comet.c in Sources */ = {isa = PBXBuildFile; fileRef = ECB7B9AE1908CB5200BABDD5 /* comet.c */; };
+		ECB7B9F41908CB5200BABDD5 /* dynamical_time.c in Sources */ = {isa = PBXBuildFile; fileRef = ECB7B9AF1908CB5200BABDD5 /* dynamical_time.c */; };
+		ECB7B9F51908CB5200BABDD5 /* earth.c in Sources */ = {isa = PBXBuildFile; fileRef = ECB7B9B01908CB5200BABDD5 /* earth.c */; };
+		ECB7B9F61908CB5200BABDD5 /* elliptic_motion.c in Sources */ = {isa = PBXBuildFile; fileRef = ECB7B9B11908CB5200BABDD5 /* elliptic_motion.c */; };
+		ECB7B9F71908CB5200BABDD5 /* heliocentric_time.c in Sources */ = {isa = PBXBuildFile; fileRef = ECB7B9B21908CB5200BABDD5 /* heliocentric_time.c */; };
+		ECB7B9F81908CB5200BABDD5 /* hyperbolic_motion.c in Sources */ = {isa = PBXBuildFile; fileRef = ECB7B9B31908CB5200BABDD5 /* hyperbolic_motion.c */; };
+		ECB7B9F91908CB5200BABDD5 /* julian_day.c in Sources */ = {isa = PBXBuildFile; fileRef = ECB7B9B41908CB5200BABDD5 /* julian_day.c */; };
+		ECB7B9FA1908CB5200BABDD5 /* jupiter.c in Sources */ = {isa = PBXBuildFile; fileRef = ECB7B9B51908CB5200BABDD5 /* jupiter.c */; };
+		ECB7B9FB1908CB5200BABDD5 /* aberration.h in Headers */ = {isa = PBXBuildFile; fileRef = ECB7B9B71908CB5200BABDD5 /* aberration.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ECB7B9FC1908CB5200BABDD5 /* airmass.h in Headers */ = {isa = PBXBuildFile; fileRef = ECB7B9B81908CB5200BABDD5 /* airmass.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ECB7B9FD1908CB5200BABDD5 /* angular_separation.h in Headers */ = {isa = PBXBuildFile; fileRef = ECB7B9B91908CB5200BABDD5 /* angular_separation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ECB7B9FE1908CB5200BABDD5 /* apparent_position.h in Headers */ = {isa = PBXBuildFile; fileRef = ECB7B9BA1908CB5200BABDD5 /* apparent_position.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ECB7B9FF1908CB5200BABDD5 /* asteroid.h in Headers */ = {isa = PBXBuildFile; fileRef = ECB7B9BB1908CB5200BABDD5 /* asteroid.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ECB7BA001908CB5200BABDD5 /* comet.h in Headers */ = {isa = PBXBuildFile; fileRef = ECB7B9BC1908CB5200BABDD5 /* comet.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ECB7BA011908CB5200BABDD5 /* dynamical_time.h in Headers */ = {isa = PBXBuildFile; fileRef = ECB7B9BD1908CB5200BABDD5 /* dynamical_time.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ECB7BA021908CB5200BABDD5 /* earth.h in Headers */ = {isa = PBXBuildFile; fileRef = ECB7B9BE1908CB5200BABDD5 /* earth.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ECB7BA031908CB5200BABDD5 /* elliptic_motion.h in Headers */ = {isa = PBXBuildFile; fileRef = ECB7B9BF1908CB5200BABDD5 /* elliptic_motion.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ECB7BA041908CB5200BABDD5 /* heliocentric_time.h in Headers */ = {isa = PBXBuildFile; fileRef = ECB7B9C01908CB5200BABDD5 /* heliocentric_time.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ECB7BA051908CB5200BABDD5 /* hyperbolic_motion.h in Headers */ = {isa = PBXBuildFile; fileRef = ECB7B9C11908CB5200BABDD5 /* hyperbolic_motion.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ECB7BA061908CB5200BABDD5 /* julian_day.h in Headers */ = {isa = PBXBuildFile; fileRef = ECB7B9C21908CB5200BABDD5 /* julian_day.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ECB7BA071908CB5200BABDD5 /* jupiter.h in Headers */ = {isa = PBXBuildFile; fileRef = ECB7B9C31908CB5200BABDD5 /* jupiter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ECB7BA081908CB5200BABDD5 /* libnova.h in Headers */ = {isa = PBXBuildFile; fileRef = ECB7B9C41908CB5200BABDD5 /* libnova.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ECB7BA091908CB5200BABDD5 /* ln_types.h in Headers */ = {isa = PBXBuildFile; fileRef = ECB7B9C51908CB5200BABDD5 /* ln_types.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ECB7BA0A1908CB5200BABDD5 /* lunar.h in Headers */ = {isa = PBXBuildFile; fileRef = ECB7B9C61908CB5200BABDD5 /* lunar.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ECB7BA0B1908CB5200BABDD5 /* mars.h in Headers */ = {isa = PBXBuildFile; fileRef = ECB7B9C71908CB5200BABDD5 /* mars.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ECB7BA0C1908CB5200BABDD5 /* mercury.h in Headers */ = {isa = PBXBuildFile; fileRef = ECB7B9C81908CB5200BABDD5 /* mercury.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ECB7BA0D1908CB5200BABDD5 /* neptune.h in Headers */ = {isa = PBXBuildFile; fileRef = ECB7B9C91908CB5200BABDD5 /* neptune.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ECB7BA0E1908CB5200BABDD5 /* nutation.h in Headers */ = {isa = PBXBuildFile; fileRef = ECB7B9CA1908CB5200BABDD5 /* nutation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ECB7BA0F1908CB5200BABDD5 /* parabolic_motion.h in Headers */ = {isa = PBXBuildFile; fileRef = ECB7B9CB1908CB5200BABDD5 /* parabolic_motion.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ECB7BA101908CB5200BABDD5 /* parallax.h in Headers */ = {isa = PBXBuildFile; fileRef = ECB7B9CC1908CB5200BABDD5 /* parallax.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ECB7BA111908CB5200BABDD5 /* pluto.h in Headers */ = {isa = PBXBuildFile; fileRef = ECB7B9CD1908CB5200BABDD5 /* pluto.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ECB7BA121908CB5200BABDD5 /* precession.h in Headers */ = {isa = PBXBuildFile; fileRef = ECB7B9CE1908CB5200BABDD5 /* precession.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ECB7BA131908CB5200BABDD5 /* proper_motion.h in Headers */ = {isa = PBXBuildFile; fileRef = ECB7B9CF1908CB5200BABDD5 /* proper_motion.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ECB7BA141908CB5200BABDD5 /* refraction.h in Headers */ = {isa = PBXBuildFile; fileRef = ECB7B9D01908CB5200BABDD5 /* refraction.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ECB7BA151908CB5200BABDD5 /* rise_set.h in Headers */ = {isa = PBXBuildFile; fileRef = ECB7B9D11908CB5200BABDD5 /* rise_set.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ECB7BA161908CB5200BABDD5 /* saturn.h in Headers */ = {isa = PBXBuildFile; fileRef = ECB7B9D21908CB5200BABDD5 /* saturn.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ECB7BA171908CB5200BABDD5 /* sidereal_time.h in Headers */ = {isa = PBXBuildFile; fileRef = ECB7B9D31908CB5200BABDD5 /* sidereal_time.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ECB7BA181908CB5200BABDD5 /* solar.h in Headers */ = {isa = PBXBuildFile; fileRef = ECB7B9D41908CB5200BABDD5 /* solar.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ECB7BA191908CB5200BABDD5 /* transform.h in Headers */ = {isa = PBXBuildFile; fileRef = ECB7B9D51908CB5200BABDD5 /* transform.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ECB7BA1A1908CB5200BABDD5 /* uranus.h in Headers */ = {isa = PBXBuildFile; fileRef = ECB7B9D61908CB5200BABDD5 /* uranus.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ECB7BA1B1908CB5200BABDD5 /* utility.h in Headers */ = {isa = PBXBuildFile; fileRef = ECB7B9D71908CB5200BABDD5 /* utility.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ECB7BA1C1908CB5200BABDD5 /* venus.h in Headers */ = {isa = PBXBuildFile; fileRef = ECB7B9D81908CB5200BABDD5 /* venus.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ECB7BA1D1908CB5200BABDD5 /* vsop87.h in Headers */ = {isa = PBXBuildFile; fileRef = ECB7B9D91908CB5200BABDD5 /* vsop87.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ECB7BA1E1908CB5200BABDD5 /* lunar.c in Sources */ = {isa = PBXBuildFile; fileRef = ECB7B9DA1908CB5200BABDD5 /* lunar.c */; };
+		ECB7BA1F1908CB5200BABDD5 /* mars.c in Sources */ = {isa = PBXBuildFile; fileRef = ECB7B9DB1908CB5200BABDD5 /* mars.c */; };
+		ECB7BA201908CB5200BABDD5 /* mercury.c in Sources */ = {isa = PBXBuildFile; fileRef = ECB7B9DC1908CB5200BABDD5 /* mercury.c */; };
+		ECB7BA211908CB5200BABDD5 /* neptune.c in Sources */ = {isa = PBXBuildFile; fileRef = ECB7B9DD1908CB5200BABDD5 /* neptune.c */; };
+		ECB7BA221908CB5200BABDD5 /* nutation.c in Sources */ = {isa = PBXBuildFile; fileRef = ECB7B9DE1908CB5200BABDD5 /* nutation.c */; };
+		ECB7BA231908CB5200BABDD5 /* parabolic_motion.c in Sources */ = {isa = PBXBuildFile; fileRef = ECB7B9DF1908CB5200BABDD5 /* parabolic_motion.c */; };
+		ECB7BA241908CB5200BABDD5 /* parallax.c in Sources */ = {isa = PBXBuildFile; fileRef = ECB7B9E01908CB5200BABDD5 /* parallax.c */; };
+		ECB7BA251908CB5200BABDD5 /* pluto.c in Sources */ = {isa = PBXBuildFile; fileRef = ECB7B9E11908CB5200BABDD5 /* pluto.c */; };
+		ECB7BA261908CB5200BABDD5 /* precession.c in Sources */ = {isa = PBXBuildFile; fileRef = ECB7B9E21908CB5200BABDD5 /* precession.c */; };
+		ECB7BA271908CB5200BABDD5 /* proper_motion.c in Sources */ = {isa = PBXBuildFile; fileRef = ECB7B9E31908CB5200BABDD5 /* proper_motion.c */; };
+		ECB7BA281908CB5200BABDD5 /* refraction.c in Sources */ = {isa = PBXBuildFile; fileRef = ECB7B9E41908CB5200BABDD5 /* refraction.c */; };
+		ECB7BA291908CB5200BABDD5 /* rise_set.c in Sources */ = {isa = PBXBuildFile; fileRef = ECB7B9E51908CB5200BABDD5 /* rise_set.c */; };
+		ECB7BA2A1908CB5200BABDD5 /* saturn.c in Sources */ = {isa = PBXBuildFile; fileRef = ECB7B9E61908CB5200BABDD5 /* saturn.c */; };
+		ECB7BA2B1908CB5200BABDD5 /* sidereal_time.c in Sources */ = {isa = PBXBuildFile; fileRef = ECB7B9E71908CB5200BABDD5 /* sidereal_time.c */; };
+		ECB7BA2C1908CB5200BABDD5 /* solar.c in Sources */ = {isa = PBXBuildFile; fileRef = ECB7B9E81908CB5200BABDD5 /* solar.c */; };
+		ECB7BA2D1908CB5200BABDD5 /* transform.c in Sources */ = {isa = PBXBuildFile; fileRef = ECB7B9E91908CB5200BABDD5 /* transform.c */; };
+		ECB7BA2E1908CB5200BABDD5 /* uranus.c in Sources */ = {isa = PBXBuildFile; fileRef = ECB7B9EA1908CB5200BABDD5 /* uranus.c */; };
+		ECB7BA2F1908CB5200BABDD5 /* utility.c in Sources */ = {isa = PBXBuildFile; fileRef = ECB7B9EB1908CB5200BABDD5 /* utility.c */; };
+		ECB7BA301908CB5200BABDD5 /* venus.c in Sources */ = {isa = PBXBuildFile; fileRef = ECB7B9EC1908CB5200BABDD5 /* venus.c */; };
+		ECB7BA311908CB5200BABDD5 /* vsop87.c in Sources */ = {isa = PBXBuildFile; fileRef = ECB7B9ED1908CB5200BABDD5 /* vsop87.c */; };
+		ECFFBE491909FD2A0046A504 /* aberration.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = ECB7B9B71908CB5200BABDD5 /* aberration.h */; };
+		ECFFBE4A1909FD2A0046A504 /* airmass.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = ECB7B9B81908CB5200BABDD5 /* airmass.h */; };
+		ECFFBE4B1909FD2A0046A504 /* angular_separation.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = ECB7B9B91908CB5200BABDD5 /* angular_separation.h */; };
+		ECFFBE4C1909FD2A0046A504 /* apparent_position.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = ECB7B9BA1908CB5200BABDD5 /* apparent_position.h */; };
+		ECFFBE4D1909FD2A0046A504 /* asteroid.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = ECB7B9BB1908CB5200BABDD5 /* asteroid.h */; };
+		ECFFBE4E1909FD2A0046A504 /* comet.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = ECB7B9BC1908CB5200BABDD5 /* comet.h */; };
+		ECFFBE4F1909FD2A0046A504 /* dynamical_time.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = ECB7B9BD1908CB5200BABDD5 /* dynamical_time.h */; };
+		ECFFBE501909FD2A0046A504 /* earth.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = ECB7B9BE1908CB5200BABDD5 /* earth.h */; };
+		ECFFBE511909FD2A0046A504 /* elliptic_motion.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = ECB7B9BF1908CB5200BABDD5 /* elliptic_motion.h */; };
+		ECFFBE521909FD2A0046A504 /* heliocentric_time.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = ECB7B9C01908CB5200BABDD5 /* heliocentric_time.h */; };
+		ECFFBE531909FD2A0046A504 /* hyperbolic_motion.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = ECB7B9C11908CB5200BABDD5 /* hyperbolic_motion.h */; };
+		ECFFBE541909FD2A0046A504 /* julian_day.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = ECB7B9C21908CB5200BABDD5 /* julian_day.h */; };
+		ECFFBE551909FD2A0046A504 /* jupiter.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = ECB7B9C31908CB5200BABDD5 /* jupiter.h */; };
+		ECFFBE561909FD2A0046A504 /* libnova.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = ECB7B9C41908CB5200BABDD5 /* libnova.h */; };
+		ECFFBE571909FD2A0046A504 /* ln_types.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = ECB7B9C51908CB5200BABDD5 /* ln_types.h */; };
+		ECFFBE581909FD2A0046A504 /* lunar.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = ECB7B9C61908CB5200BABDD5 /* lunar.h */; };
+		ECFFBE591909FD2A0046A504 /* mars.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = ECB7B9C71908CB5200BABDD5 /* mars.h */; };
+		ECFFBE5A1909FD2A0046A504 /* mercury.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = ECB7B9C81908CB5200BABDD5 /* mercury.h */; };
+		ECFFBE5B1909FD2A0046A504 /* neptune.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = ECB7B9C91908CB5200BABDD5 /* neptune.h */; };
+		ECFFBE5C1909FD2A0046A504 /* nutation.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = ECB7B9CA1908CB5200BABDD5 /* nutation.h */; };
+		ECFFBE5D1909FD2A0046A504 /* parabolic_motion.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = ECB7B9CB1908CB5200BABDD5 /* parabolic_motion.h */; };
+		ECFFBE5E1909FD2A0046A504 /* parallax.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = ECB7B9CC1908CB5200BABDD5 /* parallax.h */; };
+		ECFFBE5F1909FD2A0046A504 /* pluto.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = ECB7B9CD1908CB5200BABDD5 /* pluto.h */; };
+		ECFFBE601909FD2A0046A504 /* precession.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = ECB7B9CE1908CB5200BABDD5 /* precession.h */; };
+		ECFFBE611909FD2A0046A504 /* proper_motion.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = ECB7B9CF1908CB5200BABDD5 /* proper_motion.h */; };
+		ECFFBE621909FD2A0046A504 /* refraction.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = ECB7B9D01908CB5200BABDD5 /* refraction.h */; };
+		ECFFBE631909FD2A0046A504 /* rise_set.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = ECB7B9D11908CB5200BABDD5 /* rise_set.h */; };
+		ECFFBE641909FD2A0046A504 /* saturn.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = ECB7B9D21908CB5200BABDD5 /* saturn.h */; };
+		ECFFBE651909FD2A0046A504 /* sidereal_time.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = ECB7B9D31908CB5200BABDD5 /* sidereal_time.h */; };
+		ECFFBE661909FD2A0046A504 /* solar.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = ECB7B9D41908CB5200BABDD5 /* solar.h */; };
+		ECFFBE671909FD2A0046A504 /* transform.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = ECB7B9D51908CB5200BABDD5 /* transform.h */; };
+		ECFFBE681909FD2A0046A504 /* uranus.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = ECB7B9D61908CB5200BABDD5 /* uranus.h */; };
+		ECFFBE691909FD2A0046A504 /* utility.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = ECB7B9D71908CB5200BABDD5 /* utility.h */; };
+		ECFFBE6A1909FD2A0046A504 /* venus.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = ECB7B9D81908CB5200BABDD5 /* venus.h */; };
+		ECFFBE6B1909FD2A0046A504 /* vsop87.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = ECB7B9D91908CB5200BABDD5 /* vsop87.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		ECFFBE481909FCFA0046A504 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = libnova;
+			dstSubfolderSpec = 16;
+			files = (
+				ECFFBE491909FD2A0046A504 /* aberration.h in CopyFiles */,
+				ECFFBE4A1909FD2A0046A504 /* airmass.h in CopyFiles */,
+				ECFFBE4B1909FD2A0046A504 /* angular_separation.h in CopyFiles */,
+				ECFFBE4C1909FD2A0046A504 /* apparent_position.h in CopyFiles */,
+				ECFFBE4D1909FD2A0046A504 /* asteroid.h in CopyFiles */,
+				ECFFBE4E1909FD2A0046A504 /* comet.h in CopyFiles */,
+				ECFFBE4F1909FD2A0046A504 /* dynamical_time.h in CopyFiles */,
+				ECFFBE501909FD2A0046A504 /* earth.h in CopyFiles */,
+				ECFFBE511909FD2A0046A504 /* elliptic_motion.h in CopyFiles */,
+				ECFFBE521909FD2A0046A504 /* heliocentric_time.h in CopyFiles */,
+				ECFFBE531909FD2A0046A504 /* hyperbolic_motion.h in CopyFiles */,
+				ECFFBE541909FD2A0046A504 /* julian_day.h in CopyFiles */,
+				ECFFBE551909FD2A0046A504 /* jupiter.h in CopyFiles */,
+				ECFFBE561909FD2A0046A504 /* libnova.h in CopyFiles */,
+				ECFFBE571909FD2A0046A504 /* ln_types.h in CopyFiles */,
+				ECFFBE581909FD2A0046A504 /* lunar.h in CopyFiles */,
+				ECFFBE591909FD2A0046A504 /* mars.h in CopyFiles */,
+				ECFFBE5A1909FD2A0046A504 /* mercury.h in CopyFiles */,
+				ECFFBE5B1909FD2A0046A504 /* neptune.h in CopyFiles */,
+				ECFFBE5C1909FD2A0046A504 /* nutation.h in CopyFiles */,
+				ECFFBE5D1909FD2A0046A504 /* parabolic_motion.h in CopyFiles */,
+				ECFFBE5E1909FD2A0046A504 /* parallax.h in CopyFiles */,
+				ECFFBE5F1909FD2A0046A504 /* pluto.h in CopyFiles */,
+				ECFFBE601909FD2A0046A504 /* precession.h in CopyFiles */,
+				ECFFBE611909FD2A0046A504 /* proper_motion.h in CopyFiles */,
+				ECFFBE621909FD2A0046A504 /* refraction.h in CopyFiles */,
+				ECFFBE631909FD2A0046A504 /* rise_set.h in CopyFiles */,
+				ECFFBE641909FD2A0046A504 /* saturn.h in CopyFiles */,
+				ECFFBE651909FD2A0046A504 /* sidereal_time.h in CopyFiles */,
+				ECFFBE661909FD2A0046A504 /* solar.h in CopyFiles */,
+				ECFFBE671909FD2A0046A504 /* transform.h in CopyFiles */,
+				ECFFBE681909FD2A0046A504 /* uranus.h in CopyFiles */,
+				ECFFBE691909FD2A0046A504 /* utility.h in CopyFiles */,
+				ECFFBE6A1909FD2A0046A504 /* venus.h in CopyFiles */,
+				ECFFBE6B1909FD2A0046A504 /* vsop87.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		ECB7B9A21908CB3A00BABDD5 /* libMac-Nova.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libMac-Nova.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECB7B9A91908CB5200BABDD5 /* aberration.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = aberration.c; sourceTree = "<group>"; };
+		ECB7B9AA1908CB5200BABDD5 /* airmass.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = airmass.c; sourceTree = "<group>"; };
+		ECB7B9AB1908CB5200BABDD5 /* angular_separation.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = angular_separation.c; sourceTree = "<group>"; };
+		ECB7B9AC1908CB5200BABDD5 /* apparent_position.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = apparent_position.c; sourceTree = "<group>"; };
+		ECB7B9AD1908CB5200BABDD5 /* asteroid.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = asteroid.c; sourceTree = "<group>"; };
+		ECB7B9AE1908CB5200BABDD5 /* comet.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = comet.c; sourceTree = "<group>"; };
+		ECB7B9AF1908CB5200BABDD5 /* dynamical_time.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = dynamical_time.c; sourceTree = "<group>"; };
+		ECB7B9B01908CB5200BABDD5 /* earth.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = earth.c; sourceTree = "<group>"; };
+		ECB7B9B11908CB5200BABDD5 /* elliptic_motion.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = elliptic_motion.c; sourceTree = "<group>"; };
+		ECB7B9B21908CB5200BABDD5 /* heliocentric_time.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = heliocentric_time.c; sourceTree = "<group>"; };
+		ECB7B9B31908CB5200BABDD5 /* hyperbolic_motion.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = hyperbolic_motion.c; sourceTree = "<group>"; };
+		ECB7B9B41908CB5200BABDD5 /* julian_day.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = julian_day.c; sourceTree = "<group>"; };
+		ECB7B9B51908CB5200BABDD5 /* jupiter.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = jupiter.c; sourceTree = "<group>"; };
+		ECB7B9B71908CB5200BABDD5 /* aberration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aberration.h; sourceTree = "<group>"; };
+		ECB7B9B81908CB5200BABDD5 /* airmass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = airmass.h; sourceTree = "<group>"; };
+		ECB7B9B91908CB5200BABDD5 /* angular_separation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = angular_separation.h; sourceTree = "<group>"; };
+		ECB7B9BA1908CB5200BABDD5 /* apparent_position.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = apparent_position.h; sourceTree = "<group>"; };
+		ECB7B9BB1908CB5200BABDD5 /* asteroid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = asteroid.h; sourceTree = "<group>"; };
+		ECB7B9BC1908CB5200BABDD5 /* comet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = comet.h; sourceTree = "<group>"; };
+		ECB7B9BD1908CB5200BABDD5 /* dynamical_time.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dynamical_time.h; sourceTree = "<group>"; };
+		ECB7B9BE1908CB5200BABDD5 /* earth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = earth.h; sourceTree = "<group>"; };
+		ECB7B9BF1908CB5200BABDD5 /* elliptic_motion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = elliptic_motion.h; sourceTree = "<group>"; };
+		ECB7B9C01908CB5200BABDD5 /* heliocentric_time.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = heliocentric_time.h; sourceTree = "<group>"; };
+		ECB7B9C11908CB5200BABDD5 /* hyperbolic_motion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hyperbolic_motion.h; sourceTree = "<group>"; };
+		ECB7B9C21908CB5200BABDD5 /* julian_day.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = julian_day.h; sourceTree = "<group>"; };
+		ECB7B9C31908CB5200BABDD5 /* jupiter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jupiter.h; sourceTree = "<group>"; };
+		ECB7B9C41908CB5200BABDD5 /* libnova.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = libnova.h; sourceTree = "<group>"; };
+		ECB7B9C51908CB5200BABDD5 /* ln_types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ln_types.h; sourceTree = "<group>"; };
+		ECB7B9C61908CB5200BABDD5 /* lunar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lunar.h; sourceTree = "<group>"; };
+		ECB7B9C71908CB5200BABDD5 /* mars.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mars.h; sourceTree = "<group>"; };
+		ECB7B9C81908CB5200BABDD5 /* mercury.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mercury.h; sourceTree = "<group>"; };
+		ECB7B9C91908CB5200BABDD5 /* neptune.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = neptune.h; sourceTree = "<group>"; };
+		ECB7B9CA1908CB5200BABDD5 /* nutation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = nutation.h; sourceTree = "<group>"; };
+		ECB7B9CB1908CB5200BABDD5 /* parabolic_motion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = parabolic_motion.h; sourceTree = "<group>"; };
+		ECB7B9CC1908CB5200BABDD5 /* parallax.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = parallax.h; sourceTree = "<group>"; };
+		ECB7B9CD1908CB5200BABDD5 /* pluto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pluto.h; sourceTree = "<group>"; };
+		ECB7B9CE1908CB5200BABDD5 /* precession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = precession.h; sourceTree = "<group>"; };
+		ECB7B9CF1908CB5200BABDD5 /* proper_motion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = proper_motion.h; sourceTree = "<group>"; };
+		ECB7B9D01908CB5200BABDD5 /* refraction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = refraction.h; sourceTree = "<group>"; };
+		ECB7B9D11908CB5200BABDD5 /* rise_set.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rise_set.h; sourceTree = "<group>"; };
+		ECB7B9D21908CB5200BABDD5 /* saturn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = saturn.h; sourceTree = "<group>"; };
+		ECB7B9D31908CB5200BABDD5 /* sidereal_time.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sidereal_time.h; sourceTree = "<group>"; };
+		ECB7B9D41908CB5200BABDD5 /* solar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = solar.h; sourceTree = "<group>"; };
+		ECB7B9D51908CB5200BABDD5 /* transform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = transform.h; sourceTree = "<group>"; };
+		ECB7B9D61908CB5200BABDD5 /* uranus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = uranus.h; sourceTree = "<group>"; };
+		ECB7B9D71908CB5200BABDD5 /* utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = utility.h; sourceTree = "<group>"; };
+		ECB7B9D81908CB5200BABDD5 /* venus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = venus.h; sourceTree = "<group>"; };
+		ECB7B9D91908CB5200BABDD5 /* vsop87.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vsop87.h; sourceTree = "<group>"; };
+		ECB7B9DA1908CB5200BABDD5 /* lunar.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lunar.c; sourceTree = "<group>"; };
+		ECB7B9DB1908CB5200BABDD5 /* mars.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mars.c; sourceTree = "<group>"; };
+		ECB7B9DC1908CB5200BABDD5 /* mercury.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mercury.c; sourceTree = "<group>"; };
+		ECB7B9DD1908CB5200BABDD5 /* neptune.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = neptune.c; sourceTree = "<group>"; };
+		ECB7B9DE1908CB5200BABDD5 /* nutation.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = nutation.c; sourceTree = "<group>"; };
+		ECB7B9DF1908CB5200BABDD5 /* parabolic_motion.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = parabolic_motion.c; sourceTree = "<group>"; };
+		ECB7B9E01908CB5200BABDD5 /* parallax.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = parallax.c; sourceTree = "<group>"; };
+		ECB7B9E11908CB5200BABDD5 /* pluto.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pluto.c; sourceTree = "<group>"; };
+		ECB7B9E21908CB5200BABDD5 /* precession.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = precession.c; sourceTree = "<group>"; };
+		ECB7B9E31908CB5200BABDD5 /* proper_motion.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = proper_motion.c; sourceTree = "<group>"; };
+		ECB7B9E41908CB5200BABDD5 /* refraction.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = refraction.c; sourceTree = "<group>"; };
+		ECB7B9E51908CB5200BABDD5 /* rise_set.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = rise_set.c; sourceTree = "<group>"; };
+		ECB7B9E61908CB5200BABDD5 /* saturn.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = saturn.c; sourceTree = "<group>"; };
+		ECB7B9E71908CB5200BABDD5 /* sidereal_time.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sidereal_time.c; sourceTree = "<group>"; };
+		ECB7B9E81908CB5200BABDD5 /* solar.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = solar.c; sourceTree = "<group>"; };
+		ECB7B9E91908CB5200BABDD5 /* transform.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = transform.c; sourceTree = "<group>"; };
+		ECB7B9EA1908CB5200BABDD5 /* uranus.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = uranus.c; sourceTree = "<group>"; };
+		ECB7B9EB1908CB5200BABDD5 /* utility.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = utility.c; sourceTree = "<group>"; };
+		ECB7B9EC1908CB5200BABDD5 /* venus.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = venus.c; sourceTree = "<group>"; };
+		ECB7B9ED1908CB5200BABDD5 /* vsop87.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = vsop87.c; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ECB7B99F1908CB3A00BABDD5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		ECB7B9991908CB3A00BABDD5 = {
+			isa = PBXGroup;
+			children = (
+				ECB7BA321908CB5C00BABDD5 /* src */,
+				ECB7B9B61908CB5200BABDD5 /* libnova */,
+				ECB7B9A31908CB3A00BABDD5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		ECB7B9A31908CB3A00BABDD5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ECB7B9A21908CB3A00BABDD5 /* libMac-Nova.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ECB7B9B61908CB5200BABDD5 /* libnova */ = {
+			isa = PBXGroup;
+			children = (
+				ECB7B9B71908CB5200BABDD5 /* aberration.h */,
+				ECB7B9B81908CB5200BABDD5 /* airmass.h */,
+				ECB7B9B91908CB5200BABDD5 /* angular_separation.h */,
+				ECB7B9BA1908CB5200BABDD5 /* apparent_position.h */,
+				ECB7B9BB1908CB5200BABDD5 /* asteroid.h */,
+				ECB7B9BC1908CB5200BABDD5 /* comet.h */,
+				ECB7B9BD1908CB5200BABDD5 /* dynamical_time.h */,
+				ECB7B9BE1908CB5200BABDD5 /* earth.h */,
+				ECB7B9BF1908CB5200BABDD5 /* elliptic_motion.h */,
+				ECB7B9C01908CB5200BABDD5 /* heliocentric_time.h */,
+				ECB7B9C11908CB5200BABDD5 /* hyperbolic_motion.h */,
+				ECB7B9C21908CB5200BABDD5 /* julian_day.h */,
+				ECB7B9C31908CB5200BABDD5 /* jupiter.h */,
+				ECB7B9C41908CB5200BABDD5 /* libnova.h */,
+				ECB7B9C51908CB5200BABDD5 /* ln_types.h */,
+				ECB7B9C61908CB5200BABDD5 /* lunar.h */,
+				ECB7B9C71908CB5200BABDD5 /* mars.h */,
+				ECB7B9C81908CB5200BABDD5 /* mercury.h */,
+				ECB7B9C91908CB5200BABDD5 /* neptune.h */,
+				ECB7B9CA1908CB5200BABDD5 /* nutation.h */,
+				ECB7B9CB1908CB5200BABDD5 /* parabolic_motion.h */,
+				ECB7B9CC1908CB5200BABDD5 /* parallax.h */,
+				ECB7B9CD1908CB5200BABDD5 /* pluto.h */,
+				ECB7B9CE1908CB5200BABDD5 /* precession.h */,
+				ECB7B9CF1908CB5200BABDD5 /* proper_motion.h */,
+				ECB7B9D01908CB5200BABDD5 /* refraction.h */,
+				ECB7B9D11908CB5200BABDD5 /* rise_set.h */,
+				ECB7B9D21908CB5200BABDD5 /* saturn.h */,
+				ECB7B9D31908CB5200BABDD5 /* sidereal_time.h */,
+				ECB7B9D41908CB5200BABDD5 /* solar.h */,
+				ECB7B9D51908CB5200BABDD5 /* transform.h */,
+				ECB7B9D61908CB5200BABDD5 /* uranus.h */,
+				ECB7B9D71908CB5200BABDD5 /* utility.h */,
+				ECB7B9D81908CB5200BABDD5 /* venus.h */,
+				ECB7B9D91908CB5200BABDD5 /* vsop87.h */,
+			);
+			path = libnova;
+			sourceTree = "<group>";
+		};
+		ECB7BA321908CB5C00BABDD5 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				ECB7B9A91908CB5200BABDD5 /* aberration.c */,
+				ECB7B9AA1908CB5200BABDD5 /* airmass.c */,
+				ECB7B9AB1908CB5200BABDD5 /* angular_separation.c */,
+				ECB7B9AC1908CB5200BABDD5 /* apparent_position.c */,
+				ECB7B9AD1908CB5200BABDD5 /* asteroid.c */,
+				ECB7B9AE1908CB5200BABDD5 /* comet.c */,
+				ECB7B9AF1908CB5200BABDD5 /* dynamical_time.c */,
+				ECB7B9B01908CB5200BABDD5 /* earth.c */,
+				ECB7B9B11908CB5200BABDD5 /* elliptic_motion.c */,
+				ECB7B9B21908CB5200BABDD5 /* heliocentric_time.c */,
+				ECB7B9B31908CB5200BABDD5 /* hyperbolic_motion.c */,
+				ECB7B9B41908CB5200BABDD5 /* julian_day.c */,
+				ECB7B9B51908CB5200BABDD5 /* jupiter.c */,
+				ECB7B9DA1908CB5200BABDD5 /* lunar.c */,
+				ECB7B9DB1908CB5200BABDD5 /* mars.c */,
+				ECB7B9DC1908CB5200BABDD5 /* mercury.c */,
+				ECB7B9DD1908CB5200BABDD5 /* neptune.c */,
+				ECB7B9DE1908CB5200BABDD5 /* nutation.c */,
+				ECB7B9DF1908CB5200BABDD5 /* parabolic_motion.c */,
+				ECB7B9E01908CB5200BABDD5 /* parallax.c */,
+				ECB7B9E11908CB5200BABDD5 /* pluto.c */,
+				ECB7B9E21908CB5200BABDD5 /* precession.c */,
+				ECB7B9E31908CB5200BABDD5 /* proper_motion.c */,
+				ECB7B9E41908CB5200BABDD5 /* refraction.c */,
+				ECB7B9E51908CB5200BABDD5 /* rise_set.c */,
+				ECB7B9E61908CB5200BABDD5 /* saturn.c */,
+				ECB7B9E71908CB5200BABDD5 /* sidereal_time.c */,
+				ECB7B9E81908CB5200BABDD5 /* solar.c */,
+				ECB7B9E91908CB5200BABDD5 /* transform.c */,
+				ECB7B9EA1908CB5200BABDD5 /* uranus.c */,
+				ECB7B9EB1908CB5200BABDD5 /* utility.c */,
+				ECB7B9EC1908CB5200BABDD5 /* venus.c */,
+				ECB7B9ED1908CB5200BABDD5 /* vsop87.c */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		ECB7B9A01908CB3A00BABDD5 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECB7BA0D1908CB5200BABDD5 /* neptune.h in Headers */,
+				ECB7BA0C1908CB5200BABDD5 /* mercury.h in Headers */,
+				ECB7B9FE1908CB5200BABDD5 /* apparent_position.h in Headers */,
+				ECB7BA1B1908CB5200BABDD5 /* utility.h in Headers */,
+				ECB7BA021908CB5200BABDD5 /* earth.h in Headers */,
+				ECB7BA191908CB5200BABDD5 /* transform.h in Headers */,
+				ECB7BA041908CB5200BABDD5 /* heliocentric_time.h in Headers */,
+				ECB7BA141908CB5200BABDD5 /* refraction.h in Headers */,
+				ECB7BA131908CB5200BABDD5 /* proper_motion.h in Headers */,
+				ECB7BA161908CB5200BABDD5 /* saturn.h in Headers */,
+				ECB7BA051908CB5200BABDD5 /* hyperbolic_motion.h in Headers */,
+				ECB7BA1D1908CB5200BABDD5 /* vsop87.h in Headers */,
+				ECB7BA081908CB5200BABDD5 /* libnova.h in Headers */,
+				ECB7BA031908CB5200BABDD5 /* elliptic_motion.h in Headers */,
+				ECB7BA0B1908CB5200BABDD5 /* mars.h in Headers */,
+				ECB7BA181908CB5200BABDD5 /* solar.h in Headers */,
+				ECB7BA101908CB5200BABDD5 /* parallax.h in Headers */,
+				ECB7BA171908CB5200BABDD5 /* sidereal_time.h in Headers */,
+				ECB7B9FB1908CB5200BABDD5 /* aberration.h in Headers */,
+				ECB7BA061908CB5200BABDD5 /* julian_day.h in Headers */,
+				ECB7BA0F1908CB5200BABDD5 /* parabolic_motion.h in Headers */,
+				ECB7B9FC1908CB5200BABDD5 /* airmass.h in Headers */,
+				ECB7BA011908CB5200BABDD5 /* dynamical_time.h in Headers */,
+				ECB7BA001908CB5200BABDD5 /* comet.h in Headers */,
+				ECB7BA151908CB5200BABDD5 /* rise_set.h in Headers */,
+				ECB7BA1C1908CB5200BABDD5 /* venus.h in Headers */,
+				ECB7B9FD1908CB5200BABDD5 /* angular_separation.h in Headers */,
+				ECB7B9FF1908CB5200BABDD5 /* asteroid.h in Headers */,
+				ECB7BA071908CB5200BABDD5 /* jupiter.h in Headers */,
+				ECB7BA091908CB5200BABDD5 /* ln_types.h in Headers */,
+				ECB7BA0E1908CB5200BABDD5 /* nutation.h in Headers */,
+				ECB7BA1A1908CB5200BABDD5 /* uranus.h in Headers */,
+				ECB7BA121908CB5200BABDD5 /* precession.h in Headers */,
+				ECB7BA111908CB5200BABDD5 /* pluto.h in Headers */,
+				ECB7BA0A1908CB5200BABDD5 /* lunar.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		ECB7B9A11908CB3A00BABDD5 /* Mac-Nova */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ECB7B9A61908CB3A00BABDD5 /* Build configuration list for PBXNativeTarget "Mac-Nova" */;
+			buildPhases = (
+				ECB7B99E1908CB3A00BABDD5 /* Sources */,
+				ECB7B99F1908CB3A00BABDD5 /* Frameworks */,
+				ECB7B9A01908CB3A00BABDD5 /* Headers */,
+				ECFFBE481909FCFA0046A504 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Mac-Nova";
+			productName = "Mac-Nova";
+			productReference = ECB7B9A21908CB3A00BABDD5 /* libMac-Nova.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ECB7B99A1908CB3A00BABDD5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "David McLaren";
+			};
+			buildConfigurationList = ECB7B99D1908CB3A00BABDD5 /* Build configuration list for PBXProject "Mac-Nova" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = ECB7B9991908CB3A00BABDD5;
+			productRefGroup = ECB7B9A31908CB3A00BABDD5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ECB7B9A11908CB3A00BABDD5 /* Mac-Nova */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ECB7B99E1908CB3A00BABDD5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECB7BA241908CB5200BABDD5 /* parallax.c in Sources */,
+				ECB7BA2B1908CB5200BABDD5 /* sidereal_time.c in Sources */,
+				ECB7BA1F1908CB5200BABDD5 /* mars.c in Sources */,
+				ECB7BA2D1908CB5200BABDD5 /* transform.c in Sources */,
+				ECB7BA201908CB5200BABDD5 /* mercury.c in Sources */,
+				ECB7BA2F1908CB5200BABDD5 /* utility.c in Sources */,
+				ECB7B9F31908CB5200BABDD5 /* comet.c in Sources */,
+				ECB7B9F81908CB5200BABDD5 /* hyperbolic_motion.c in Sources */,
+				ECB7BA2E1908CB5200BABDD5 /* uranus.c in Sources */,
+				ECB7BA301908CB5200BABDD5 /* venus.c in Sources */,
+				ECB7B9EF1908CB5200BABDD5 /* airmass.c in Sources */,
+				ECB7B9F41908CB5200BABDD5 /* dynamical_time.c in Sources */,
+				ECB7B9F01908CB5200BABDD5 /* angular_separation.c in Sources */,
+				ECB7BA2A1908CB5200BABDD5 /* saturn.c in Sources */,
+				ECB7B9F91908CB5200BABDD5 /* julian_day.c in Sources */,
+				ECB7BA1E1908CB5200BABDD5 /* lunar.c in Sources */,
+				ECB7B9F51908CB5200BABDD5 /* earth.c in Sources */,
+				ECB7BA211908CB5200BABDD5 /* neptune.c in Sources */,
+				ECB7BA261908CB5200BABDD5 /* precession.c in Sources */,
+				ECB7BA291908CB5200BABDD5 /* rise_set.c in Sources */,
+				ECB7BA251908CB5200BABDD5 /* pluto.c in Sources */,
+				ECB7BA2C1908CB5200BABDD5 /* solar.c in Sources */,
+				ECB7BA271908CB5200BABDD5 /* proper_motion.c in Sources */,
+				ECB7B9EE1908CB5200BABDD5 /* aberration.c in Sources */,
+				ECB7B9FA1908CB5200BABDD5 /* jupiter.c in Sources */,
+				ECB7B9F11908CB5200BABDD5 /* apparent_position.c in Sources */,
+				ECB7BA281908CB5200BABDD5 /* refraction.c in Sources */,
+				ECB7B9F71908CB5200BABDD5 /* heliocentric_time.c in Sources */,
+				ECB7BA231908CB5200BABDD5 /* parabolic_motion.c in Sources */,
+				ECB7BA221908CB5200BABDD5 /* nutation.c in Sources */,
+				ECB7BA311908CB5200BABDD5 /* vsop87.c in Sources */,
+				ECB7B9F21908CB5200BABDD5 /* asteroid.c in Sources */,
+				ECB7B9F61908CB5200BABDD5 /* elliptic_motion.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		ECB7B9A41908CB3A00BABDD5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				PUBLIC_HEADERS_FOLDER_PATH = "$(BUILT_PRODUCTS_DIR)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		ECB7B9A51908CB3A00BABDD5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PUBLIC_HEADERS_FOLDER_PATH = "$(BUILT_PRODUCTS_DIR)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		ECB7B9A71908CB3A00BABDD5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EXECUTABLE_PREFIX = lib;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		ECB7B9A81908CB3A00BABDD5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EXECUTABLE_PREFIX = lib;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ECB7B99D1908CB3A00BABDD5 /* Build configuration list for PBXProject "Mac-Nova" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ECB7B9A41908CB3A00BABDD5 /* Debug */,
+				ECB7B9A51908CB3A00BABDD5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ECB7B9A61908CB3A00BABDD5 /* Build configuration list for PBXNativeTarget "Mac-Nova" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ECB7B9A71908CB3A00BABDD5 /* Debug */,
+				ECB7B9A81908CB3A00BABDD5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = ECB7B99A1908CB3A00BABDD5 /* Project object */;
+}
