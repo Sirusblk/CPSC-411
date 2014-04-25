@@ -12,6 +12,35 @@
 @synthesize databaseConnection;
 @synthesize US_Cities;
 
+static US_Cities_DB * databaseObject;
+
++(US_Cities_DB *) database {
+    if (databaseObject == nil) {
+        databaseObject = [[US_Cities_DB alloc] init];
+    }
+    
+    return databaseObject;
+}
+
+-(id) init {
+    self = [super init];
+    
+    if (self) {
+        NSString* dbpath = [[NSBundle mainBundle] pathForResource:@"us_cities_with_timezones" ofType:@"sq3"];
+        if (sqlite3_open([dbpath UTF8String], & databaseConnection) != SQLITE_OK) {
+            NSLog(@"Failed to open database.");
+        }
+    }
+    
+    [self getInfo];
+    
+    return self;
+}
+
+- (void) dealloc {
+    sqlite3_close(databaseConnection);
+}
+
 -(void) getInfo {
     
     //Do Something...

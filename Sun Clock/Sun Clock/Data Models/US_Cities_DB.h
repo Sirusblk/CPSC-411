@@ -13,7 +13,7 @@
 @property sqlite3 * databaseConnection;
 @property NSArray * US_Cities;
 
--(void) getInfo;
++(US_Cities_DB *) database;
 -(NSArray *) getTimeZones;
 -(NSArray *) getStatesFromTimezone:(NSString *) time_zone;
 -(NSArray *) getCitiesFromState:(NSString *) state;
