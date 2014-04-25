@@ -1,0 +1,648 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		ECB7BA421908CF8500BABDD5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECB7BA411908CF8500BABDD5 /* Foundation.framework */; };
+		ECB7BA471908CF8500BABDD5 /* iOS_Nova.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = ECB7BA461908CF8500BABDD5 /* iOS_Nova.h */; };
+		ECB7BA491908CF8500BABDD5 /* iOS_Nova.m in Sources */ = {isa = PBXBuildFile; fileRef = ECB7BA481908CF8500BABDD5 /* iOS_Nova.m */; };
+		ECB7BA501908CF8500BABDD5 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECB7BA4F1908CF8500BABDD5 /* XCTest.framework */; };
+		ECB7BA511908CF8500BABDD5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECB7BA411908CF8500BABDD5 /* Foundation.framework */; };
+		ECB7BA531908CF8500BABDD5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECB7BA521908CF8500BABDD5 /* UIKit.framework */; };
+		ECB7BA561908CF8500BABDD5 /* libiOS-Nova.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ECB7BA3E1908CF8500BABDD5 /* libiOS-Nova.a */; };
+		ECB7BA5C1908CF8500BABDD5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = ECB7BA5A1908CF8500BABDD5 /* InfoPlist.strings */; };
+		ECB7BA5E1908CF8500BABDD5 /* iOS_NovaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ECB7BA5D1908CF8500BABDD5 /* iOS_NovaTests.m */; };
+		ECB7BAAC1908CFAB00BABDD5 /* aberration.c in Sources */ = {isa = PBXBuildFile; fileRef = ECB7BA671908CFAB00BABDD5 /* aberration.c */; };
+		ECB7BAAD1908CFAB00BABDD5 /* airmass.c in Sources */ = {isa = PBXBuildFile; fileRef = ECB7BA681908CFAB00BABDD5 /* airmass.c */; };
+		ECB7BAAE1908CFAB00BABDD5 /* angular_separation.c in Sources */ = {isa = PBXBuildFile; fileRef = ECB7BA691908CFAB00BABDD5 /* angular_separation.c */; };
+		ECB7BAAF1908CFAB00BABDD5 /* apparent_position.c in Sources */ = {isa = PBXBuildFile; fileRef = ECB7BA6A1908CFAB00BABDD5 /* apparent_position.c */; };
+		ECB7BAB01908CFAB00BABDD5 /* asteroid.c in Sources */ = {isa = PBXBuildFile; fileRef = ECB7BA6B1908CFAB00BABDD5 /* asteroid.c */; };
+		ECB7BAB11908CFAB00BABDD5 /* comet.c in Sources */ = {isa = PBXBuildFile; fileRef = ECB7BA6C1908CFAB00BABDD5 /* comet.c */; };
+		ECB7BAB21908CFAB00BABDD5 /* dynamical_time.c in Sources */ = {isa = PBXBuildFile; fileRef = ECB7BA6D1908CFAB00BABDD5 /* dynamical_time.c */; };
+		ECB7BAB31908CFAB00BABDD5 /* earth.c in Sources */ = {isa = PBXBuildFile; fileRef = ECB7BA6E1908CFAB00BABDD5 /* earth.c */; };
+		ECB7BAB41908CFAB00BABDD5 /* elliptic_motion.c in Sources */ = {isa = PBXBuildFile; fileRef = ECB7BA6F1908CFAB00BABDD5 /* elliptic_motion.c */; };
+		ECB7BAB51908CFAB00BABDD5 /* heliocentric_time.c in Sources */ = {isa = PBXBuildFile; fileRef = ECB7BA701908CFAB00BABDD5 /* heliocentric_time.c */; };
+		ECB7BAB61908CFAB00BABDD5 /* hyperbolic_motion.c in Sources */ = {isa = PBXBuildFile; fileRef = ECB7BA711908CFAB00BABDD5 /* hyperbolic_motion.c */; };
+		ECB7BAB71908CFAB00BABDD5 /* julian_day.c in Sources */ = {isa = PBXBuildFile; fileRef = ECB7BA721908CFAB00BABDD5 /* julian_day.c */; };
+		ECB7BAB81908CFAB00BABDD5 /* jupiter.c in Sources */ = {isa = PBXBuildFile; fileRef = ECB7BA731908CFAB00BABDD5 /* jupiter.c */; };
+		ECB7BAB91908CFAB00BABDD5 /* lunar.c in Sources */ = {isa = PBXBuildFile; fileRef = ECB7BA981908CFAB00BABDD5 /* lunar.c */; };
+		ECB7BABA1908CFAB00BABDD5 /* mars.c in Sources */ = {isa = PBXBuildFile; fileRef = ECB7BA991908CFAB00BABDD5 /* mars.c */; };
+		ECB7BABB1908CFAB00BABDD5 /* mercury.c in Sources */ = {isa = PBXBuildFile; fileRef = ECB7BA9A1908CFAB00BABDD5 /* mercury.c */; };
+		ECB7BABC1908CFAB00BABDD5 /* neptune.c in Sources */ = {isa = PBXBuildFile; fileRef = ECB7BA9B1908CFAB00BABDD5 /* neptune.c */; };
+		ECB7BABD1908CFAB00BABDD5 /* nutation.c in Sources */ = {isa = PBXBuildFile; fileRef = ECB7BA9C1908CFAB00BABDD5 /* nutation.c */; };
+		ECB7BABE1908CFAB00BABDD5 /* parabolic_motion.c in Sources */ = {isa = PBXBuildFile; fileRef = ECB7BA9D1908CFAB00BABDD5 /* parabolic_motion.c */; };
+		ECB7BABF1908CFAB00BABDD5 /* parallax.c in Sources */ = {isa = PBXBuildFile; fileRef = ECB7BA9E1908CFAB00BABDD5 /* parallax.c */; };
+		ECB7BAC01908CFAB00BABDD5 /* pluto.c in Sources */ = {isa = PBXBuildFile; fileRef = ECB7BA9F1908CFAB00BABDD5 /* pluto.c */; };
+		ECB7BAC11908CFAB00BABDD5 /* precession.c in Sources */ = {isa = PBXBuildFile; fileRef = ECB7BAA01908CFAB00BABDD5 /* precession.c */; };
+		ECB7BAC21908CFAB00BABDD5 /* proper_motion.c in Sources */ = {isa = PBXBuildFile; fileRef = ECB7BAA11908CFAB00BABDD5 /* proper_motion.c */; };
+		ECB7BAC31908CFAB00BABDD5 /* refraction.c in Sources */ = {isa = PBXBuildFile; fileRef = ECB7BAA21908CFAB00BABDD5 /* refraction.c */; };
+		ECB7BAC41908CFAB00BABDD5 /* rise_set.c in Sources */ = {isa = PBXBuildFile; fileRef = ECB7BAA31908CFAB00BABDD5 /* rise_set.c */; };
+		ECB7BAC51908CFAB00BABDD5 /* saturn.c in Sources */ = {isa = PBXBuildFile; fileRef = ECB7BAA41908CFAB00BABDD5 /* saturn.c */; };
+		ECB7BAC61908CFAB00BABDD5 /* sidereal_time.c in Sources */ = {isa = PBXBuildFile; fileRef = ECB7BAA51908CFAB00BABDD5 /* sidereal_time.c */; };
+		ECB7BAC71908CFAB00BABDD5 /* solar.c in Sources */ = {isa = PBXBuildFile; fileRef = ECB7BAA61908CFAB00BABDD5 /* solar.c */; };
+		ECB7BAC81908CFAB00BABDD5 /* transform.c in Sources */ = {isa = PBXBuildFile; fileRef = ECB7BAA71908CFAB00BABDD5 /* transform.c */; };
+		ECB7BAC91908CFAB00BABDD5 /* uranus.c in Sources */ = {isa = PBXBuildFile; fileRef = ECB7BAA81908CFAB00BABDD5 /* uranus.c */; };
+		ECB7BACA1908CFAB00BABDD5 /* utility.c in Sources */ = {isa = PBXBuildFile; fileRef = ECB7BAA91908CFAB00BABDD5 /* utility.c */; };
+		ECB7BACB1908CFAB00BABDD5 /* venus.c in Sources */ = {isa = PBXBuildFile; fileRef = ECB7BAAA1908CFAB00BABDD5 /* venus.c */; };
+		ECB7BACC1908CFAB00BABDD5 /* vsop87.c in Sources */ = {isa = PBXBuildFile; fileRef = ECB7BAAB1908CFAB00BABDD5 /* vsop87.c */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		ECB7BA541908CF8500BABDD5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ECB7BA361908CF8500BABDD5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ECB7BA3D1908CF8500BABDD5;
+			remoteInfo = "iOS-Nova";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		ECB7BA3C1908CF8500BABDD5 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				ECB7BA471908CF8500BABDD5 /* iOS_Nova.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		ECB7BA3E1908CF8500BABDD5 /* libiOS-Nova.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libiOS-Nova.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECB7BA411908CF8500BABDD5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		ECB7BA451908CF8500BABDD5 /* iOS-Nova-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOS-Nova-Prefix.pch"; sourceTree = "<group>"; };
+		ECB7BA461908CF8500BABDD5 /* iOS_Nova.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iOS_Nova.h; sourceTree = "<group>"; };
+		ECB7BA481908CF8500BABDD5 /* iOS_Nova.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOS_Nova.m; sourceTree = "<group>"; };
+		ECB7BA4E1908CF8500BABDD5 /* iOS-NovaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS-NovaTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECB7BA4F1908CF8500BABDD5 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		ECB7BA521908CF8500BABDD5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		ECB7BA591908CF8500BABDD5 /* iOS-NovaTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iOS-NovaTests-Info.plist"; sourceTree = "<group>"; };
+		ECB7BA5B1908CF8500BABDD5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		ECB7BA5D1908CF8500BABDD5 /* iOS_NovaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOS_NovaTests.m; sourceTree = "<group>"; };
+		ECB7BA671908CFAB00BABDD5 /* aberration.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = aberration.c; sourceTree = "<group>"; };
+		ECB7BA681908CFAB00BABDD5 /* airmass.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = airmass.c; sourceTree = "<group>"; };
+		ECB7BA691908CFAB00BABDD5 /* angular_separation.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = angular_separation.c; sourceTree = "<group>"; };
+		ECB7BA6A1908CFAB00BABDD5 /* apparent_position.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = apparent_position.c; sourceTree = "<group>"; };
+		ECB7BA6B1908CFAB00BABDD5 /* asteroid.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = asteroid.c; sourceTree = "<group>"; };
+		ECB7BA6C1908CFAB00BABDD5 /* comet.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = comet.c; sourceTree = "<group>"; };
+		ECB7BA6D1908CFAB00BABDD5 /* dynamical_time.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = dynamical_time.c; sourceTree = "<group>"; };
+		ECB7BA6E1908CFAB00BABDD5 /* earth.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = earth.c; sourceTree = "<group>"; };
+		ECB7BA6F1908CFAB00BABDD5 /* elliptic_motion.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = elliptic_motion.c; sourceTree = "<group>"; };
+		ECB7BA701908CFAB00BABDD5 /* heliocentric_time.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = heliocentric_time.c; sourceTree = "<group>"; };
+		ECB7BA711908CFAB00BABDD5 /* hyperbolic_motion.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = hyperbolic_motion.c; sourceTree = "<group>"; };
+		ECB7BA721908CFAB00BABDD5 /* julian_day.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = julian_day.c; sourceTree = "<group>"; };
+		ECB7BA731908CFAB00BABDD5 /* jupiter.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = jupiter.c; sourceTree = "<group>"; };
+		ECB7BA751908CFAB00BABDD5 /* aberration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aberration.h; sourceTree = "<group>"; };
+		ECB7BA761908CFAB00BABDD5 /* airmass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = airmass.h; sourceTree = "<group>"; };
+		ECB7BA771908CFAB00BABDD5 /* angular_separation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = angular_separation.h; sourceTree = "<group>"; };
+		ECB7BA781908CFAB00BABDD5 /* apparent_position.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = apparent_position.h; sourceTree = "<group>"; };
+		ECB7BA791908CFAB00BABDD5 /* asteroid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = asteroid.h; sourceTree = "<group>"; };
+		ECB7BA7A1908CFAB00BABDD5 /* comet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = comet.h; sourceTree = "<group>"; };
+		ECB7BA7B1908CFAB00BABDD5 /* dynamical_time.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dynamical_time.h; sourceTree = "<group>"; };
+		ECB7BA7C1908CFAB00BABDD5 /* earth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = earth.h; sourceTree = "<group>"; };
+		ECB7BA7D1908CFAB00BABDD5 /* elliptic_motion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = elliptic_motion.h; sourceTree = "<group>"; };
+		ECB7BA7E1908CFAB00BABDD5 /* heliocentric_time.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = heliocentric_time.h; sourceTree = "<group>"; };
+		ECB7BA7F1908CFAB00BABDD5 /* hyperbolic_motion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hyperbolic_motion.h; sourceTree = "<group>"; };
+		ECB7BA801908CFAB00BABDD5 /* julian_day.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = julian_day.h; sourceTree = "<group>"; };
+		ECB7BA811908CFAB00BABDD5 /* jupiter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jupiter.h; sourceTree = "<group>"; };
+		ECB7BA821908CFAB00BABDD5 /* libnova.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = libnova.h; sourceTree = "<group>"; };
+		ECB7BA831908CFAB00BABDD5 /* ln_types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ln_types.h; sourceTree = "<group>"; };
+		ECB7BA841908CFAB00BABDD5 /* lunar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lunar.h; sourceTree = "<group>"; };
+		ECB7BA851908CFAB00BABDD5 /* mars.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mars.h; sourceTree = "<group>"; };
+		ECB7BA861908CFAB00BABDD5 /* mercury.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mercury.h; sourceTree = "<group>"; };
+		ECB7BA871908CFAB00BABDD5 /* neptune.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = neptune.h; sourceTree = "<group>"; };
+		ECB7BA881908CFAB00BABDD5 /* nutation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = nutation.h; sourceTree = "<group>"; };
+		ECB7BA891908CFAB00BABDD5 /* parabolic_motion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = parabolic_motion.h; sourceTree = "<group>"; };
+		ECB7BA8A1908CFAB00BABDD5 /* parallax.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = parallax.h; sourceTree = "<group>"; };
+		ECB7BA8B1908CFAB00BABDD5 /* pluto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pluto.h; sourceTree = "<group>"; };
+		ECB7BA8C1908CFAB00BABDD5 /* precession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = precession.h; sourceTree = "<group>"; };
+		ECB7BA8D1908CFAB00BABDD5 /* proper_motion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = proper_motion.h; sourceTree = "<group>"; };
+		ECB7BA8E1908CFAB00BABDD5 /* refraction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = refraction.h; sourceTree = "<group>"; };
+		ECB7BA8F1908CFAB00BABDD5 /* rise_set.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rise_set.h; sourceTree = "<group>"; };
+		ECB7BA901908CFAB00BABDD5 /* saturn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = saturn.h; sourceTree = "<group>"; };
+		ECB7BA911908CFAB00BABDD5 /* sidereal_time.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sidereal_time.h; sourceTree = "<group>"; };
+		ECB7BA921908CFAB00BABDD5 /* solar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = solar.h; sourceTree = "<group>"; };
+		ECB7BA931908CFAB00BABDD5 /* transform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = transform.h; sourceTree = "<group>"; };
+		ECB7BA941908CFAB00BABDD5 /* uranus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = uranus.h; sourceTree = "<group>"; };
+		ECB7BA951908CFAB00BABDD5 /* utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = utility.h; sourceTree = "<group>"; };
+		ECB7BA961908CFAB00BABDD5 /* venus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = venus.h; sourceTree = "<group>"; };
+		ECB7BA971908CFAB00BABDD5 /* vsop87.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vsop87.h; sourceTree = "<group>"; };
+		ECB7BA981908CFAB00BABDD5 /* lunar.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lunar.c; sourceTree = "<group>"; };
+		ECB7BA991908CFAB00BABDD5 /* mars.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mars.c; sourceTree = "<group>"; };
+		ECB7BA9A1908CFAB00BABDD5 /* mercury.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mercury.c; sourceTree = "<group>"; };
+		ECB7BA9B1908CFAB00BABDD5 /* neptune.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = neptune.c; sourceTree = "<group>"; };
+		ECB7BA9C1908CFAB00BABDD5 /* nutation.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = nutation.c; sourceTree = "<group>"; };
+		ECB7BA9D1908CFAB00BABDD5 /* parabolic_motion.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = parabolic_motion.c; sourceTree = "<group>"; };
+		ECB7BA9E1908CFAB00BABDD5 /* parallax.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = parallax.c; sourceTree = "<group>"; };
+		ECB7BA9F1908CFAB00BABDD5 /* pluto.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pluto.c; sourceTree = "<group>"; };
+		ECB7BAA01908CFAB00BABDD5 /* precession.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = precession.c; sourceTree = "<group>"; };
+		ECB7BAA11908CFAB00BABDD5 /* proper_motion.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = proper_motion.c; sourceTree = "<group>"; };
+		ECB7BAA21908CFAB00BABDD5 /* refraction.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = refraction.c; sourceTree = "<group>"; };
+		ECB7BAA31908CFAB00BABDD5 /* rise_set.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = rise_set.c; sourceTree = "<group>"; };
+		ECB7BAA41908CFAB00BABDD5 /* saturn.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = saturn.c; sourceTree = "<group>"; };
+		ECB7BAA51908CFAB00BABDD5 /* sidereal_time.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sidereal_time.c; sourceTree = "<group>"; };
+		ECB7BAA61908CFAB00BABDD5 /* solar.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = solar.c; sourceTree = "<group>"; };
+		ECB7BAA71908CFAB00BABDD5 /* transform.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = transform.c; sourceTree = "<group>"; };
+		ECB7BAA81908CFAB00BABDD5 /* uranus.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = uranus.c; sourceTree = "<group>"; };
+		ECB7BAA91908CFAB00BABDD5 /* utility.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = utility.c; sourceTree = "<group>"; };
+		ECB7BAAA1908CFAB00BABDD5 /* venus.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = venus.c; sourceTree = "<group>"; };
+		ECB7BAAB1908CFAB00BABDD5 /* vsop87.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = vsop87.c; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ECB7BA3B1908CF8500BABDD5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECB7BA421908CF8500BABDD5 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECB7BA4B1908CF8500BABDD5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECB7BA501908CF8500BABDD5 /* XCTest.framework in Frameworks */,
+				ECB7BA531908CF8500BABDD5 /* UIKit.framework in Frameworks */,
+				ECB7BA511908CF8500BABDD5 /* Foundation.framework in Frameworks */,
+				ECB7BA561908CF8500BABDD5 /* libiOS-Nova.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		ECB7BA351908CF8500BABDD5 = {
+			isa = PBXGroup;
+			children = (
+				ECB7BA431908CF8500BABDD5 /* iOS-Nova */,
+				ECB7BA571908CF8500BABDD5 /* iOS-NovaTests */,
+				ECB7BA401908CF8500BABDD5 /* Frameworks */,
+				ECB7BA3F1908CF8500BABDD5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		ECB7BA3F1908CF8500BABDD5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ECB7BA3E1908CF8500BABDD5 /* libiOS-Nova.a */,
+				ECB7BA4E1908CF8500BABDD5 /* iOS-NovaTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ECB7BA401908CF8500BABDD5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ECB7BA411908CF8500BABDD5 /* Foundation.framework */,
+				ECB7BA4F1908CF8500BABDD5 /* XCTest.framework */,
+				ECB7BA521908CF8500BABDD5 /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ECB7BA431908CF8500BABDD5 /* iOS-Nova */ = {
+			isa = PBXGroup;
+			children = (
+				ECB7BACD1908CFC000BABDD5 /* src */,
+				ECB7BA741908CFAB00BABDD5 /* libnova */,
+				ECB7BA461908CF8500BABDD5 /* iOS_Nova.h */,
+				ECB7BA481908CF8500BABDD5 /* iOS_Nova.m */,
+				ECB7BA441908CF8500BABDD5 /* Supporting Files */,
+			);
+			path = "iOS-Nova";
+			sourceTree = "<group>";
+		};
+		ECB7BA441908CF8500BABDD5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				ECB7BA451908CF8500BABDD5 /* iOS-Nova-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		ECB7BA571908CF8500BABDD5 /* iOS-NovaTests */ = {
+			isa = PBXGroup;
+			children = (
+				ECB7BA5D1908CF8500BABDD5 /* iOS_NovaTests.m */,
+				ECB7BA581908CF8500BABDD5 /* Supporting Files */,
+			);
+			path = "iOS-NovaTests";
+			sourceTree = "<group>";
+		};
+		ECB7BA581908CF8500BABDD5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				ECB7BA591908CF8500BABDD5 /* iOS-NovaTests-Info.plist */,
+				ECB7BA5A1908CF8500BABDD5 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		ECB7BA741908CFAB00BABDD5 /* libnova */ = {
+			isa = PBXGroup;
+			children = (
+				ECB7BA751908CFAB00BABDD5 /* aberration.h */,
+				ECB7BA761908CFAB00BABDD5 /* airmass.h */,
+				ECB7BA771908CFAB00BABDD5 /* angular_separation.h */,
+				ECB7BA781908CFAB00BABDD5 /* apparent_position.h */,
+				ECB7BA791908CFAB00BABDD5 /* asteroid.h */,
+				ECB7BA7A1908CFAB00BABDD5 /* comet.h */,
+				ECB7BA7B1908CFAB00BABDD5 /* dynamical_time.h */,
+				ECB7BA7C1908CFAB00BABDD5 /* earth.h */,
+				ECB7BA7D1908CFAB00BABDD5 /* elliptic_motion.h */,
+				ECB7BA7E1908CFAB00BABDD5 /* heliocentric_time.h */,
+				ECB7BA7F1908CFAB00BABDD5 /* hyperbolic_motion.h */,
+				ECB7BA801908CFAB00BABDD5 /* julian_day.h */,
+				ECB7BA811908CFAB00BABDD5 /* jupiter.h */,
+				ECB7BA821908CFAB00BABDD5 /* libnova.h */,
+				ECB7BA831908CFAB00BABDD5 /* ln_types.h */,
+				ECB7BA841908CFAB00BABDD5 /* lunar.h */,
+				ECB7BA851908CFAB00BABDD5 /* mars.h */,
+				ECB7BA861908CFAB00BABDD5 /* mercury.h */,
+				ECB7BA871908CFAB00BABDD5 /* neptune.h */,
+				ECB7BA881908CFAB00BABDD5 /* nutation.h */,
+				ECB7BA891908CFAB00BABDD5 /* parabolic_motion.h */,
+				ECB7BA8A1908CFAB00BABDD5 /* parallax.h */,
+				ECB7BA8B1908CFAB00BABDD5 /* pluto.h */,
+				ECB7BA8C1908CFAB00BABDD5 /* precession.h */,
+				ECB7BA8D1908CFAB00BABDD5 /* proper_motion.h */,
+				ECB7BA8E1908CFAB00BABDD5 /* refraction.h */,
+				ECB7BA8F1908CFAB00BABDD5 /* rise_set.h */,
+				ECB7BA901908CFAB00BABDD5 /* saturn.h */,
+				ECB7BA911908CFAB00BABDD5 /* sidereal_time.h */,
+				ECB7BA921908CFAB00BABDD5 /* solar.h */,
+				ECB7BA931908CFAB00BABDD5 /* transform.h */,
+				ECB7BA941908CFAB00BABDD5 /* uranus.h */,
+				ECB7BA951908CFAB00BABDD5 /* utility.h */,
+				ECB7BA961908CFAB00BABDD5 /* venus.h */,
+				ECB7BA971908CFAB00BABDD5 /* vsop87.h */,
+			);
+			path = libnova;
+			sourceTree = "<group>";
+		};
+		ECB7BACD1908CFC000BABDD5 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				ECB7BA671908CFAB00BABDD5 /* aberration.c */,
+				ECB7BA681908CFAB00BABDD5 /* airmass.c */,
+				ECB7BA691908CFAB00BABDD5 /* angular_separation.c */,
+				ECB7BA6A1908CFAB00BABDD5 /* apparent_position.c */,
+				ECB7BA6B1908CFAB00BABDD5 /* asteroid.c */,
+				ECB7BA6C1908CFAB00BABDD5 /* comet.c */,
+				ECB7BA6D1908CFAB00BABDD5 /* dynamical_time.c */,
+				ECB7BA6E1908CFAB00BABDD5 /* earth.c */,
+				ECB7BA6F1908CFAB00BABDD5 /* elliptic_motion.c */,
+				ECB7BA701908CFAB00BABDD5 /* heliocentric_time.c */,
+				ECB7BA711908CFAB00BABDD5 /* hyperbolic_motion.c */,
+				ECB7BA721908CFAB00BABDD5 /* julian_day.c */,
+				ECB7BA731908CFAB00BABDD5 /* jupiter.c */,
+				ECB7BA981908CFAB00BABDD5 /* lunar.c */,
+				ECB7BA991908CFAB00BABDD5 /* mars.c */,
+				ECB7BA9A1908CFAB00BABDD5 /* mercury.c */,
+				ECB7BA9B1908CFAB00BABDD5 /* neptune.c */,
+				ECB7BA9C1908CFAB00BABDD5 /* nutation.c */,
+				ECB7BA9D1908CFAB00BABDD5 /* parabolic_motion.c */,
+				ECB7BA9E1908CFAB00BABDD5 /* parallax.c */,
+				ECB7BA9F1908CFAB00BABDD5 /* pluto.c */,
+				ECB7BAA01908CFAB00BABDD5 /* precession.c */,
+				ECB7BAA11908CFAB00BABDD5 /* proper_motion.c */,
+				ECB7BAA21908CFAB00BABDD5 /* refraction.c */,
+				ECB7BAA31908CFAB00BABDD5 /* rise_set.c */,
+				ECB7BAA41908CFAB00BABDD5 /* saturn.c */,
+				ECB7BAA51908CFAB00BABDD5 /* sidereal_time.c */,
+				ECB7BAA61908CFAB00BABDD5 /* solar.c */,
+				ECB7BAA71908CFAB00BABDD5 /* transform.c */,
+				ECB7BAA81908CFAB00BABDD5 /* uranus.c */,
+				ECB7BAA91908CFAB00BABDD5 /* utility.c */,
+				ECB7BAAA1908CFAB00BABDD5 /* venus.c */,
+				ECB7BAAB1908CFAB00BABDD5 /* vsop87.c */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ECB7BA3D1908CF8500BABDD5 /* iOS-Nova */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ECB7BA611908CF8500BABDD5 /* Build configuration list for PBXNativeTarget "iOS-Nova" */;
+			buildPhases = (
+				ECB7BA3A1908CF8500BABDD5 /* Sources */,
+				ECB7BA3B1908CF8500BABDD5 /* Frameworks */,
+				ECB7BA3C1908CF8500BABDD5 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "iOS-Nova";
+			productName = "iOS-Nova";
+			productReference = ECB7BA3E1908CF8500BABDD5 /* libiOS-Nova.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		ECB7BA4D1908CF8500BABDD5 /* iOS-NovaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ECB7BA641908CF8500BABDD5 /* Build configuration list for PBXNativeTarget "iOS-NovaTests" */;
+			buildPhases = (
+				ECB7BA4A1908CF8500BABDD5 /* Sources */,
+				ECB7BA4B1908CF8500BABDD5 /* Frameworks */,
+				ECB7BA4C1908CF8500BABDD5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ECB7BA551908CF8500BABDD5 /* PBXTargetDependency */,
+			);
+			name = "iOS-NovaTests";
+			productName = "iOS-NovaTests";
+			productReference = ECB7BA4E1908CF8500BABDD5 /* iOS-NovaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ECB7BA361908CF8500BABDD5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "David McLaren";
+			};
+			buildConfigurationList = ECB7BA391908CF8500BABDD5 /* Build configuration list for PBXProject "iOS-Nova" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = ECB7BA351908CF8500BABDD5;
+			productRefGroup = ECB7BA3F1908CF8500BABDD5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ECB7BA3D1908CF8500BABDD5 /* iOS-Nova */,
+				ECB7BA4D1908CF8500BABDD5 /* iOS-NovaTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ECB7BA4C1908CF8500BABDD5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECB7BA5C1908CF8500BABDD5 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ECB7BA3A1908CF8500BABDD5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECB7BAC71908CFAB00BABDD5 /* solar.c in Sources */,
+				ECB7BAB31908CFAB00BABDD5 /* earth.c in Sources */,
+				ECB7BAAE1908CFAB00BABDD5 /* angular_separation.c in Sources */,
+				ECB7BAB61908CFAB00BABDD5 /* hyperbolic_motion.c in Sources */,
+				ECB7BABD1908CFAB00BABDD5 /* nutation.c in Sources */,
+				ECB7BAB21908CFAB00BABDD5 /* dynamical_time.c in Sources */,
+				ECB7BAC21908CFAB00BABDD5 /* proper_motion.c in Sources */,
+				ECB7BAB11908CFAB00BABDD5 /* comet.c in Sources */,
+				ECB7BAC61908CFAB00BABDD5 /* sidereal_time.c in Sources */,
+				ECB7BAC01908CFAB00BABDD5 /* pluto.c in Sources */,
+				ECB7BAB51908CFAB00BABDD5 /* heliocentric_time.c in Sources */,
+				ECB7BAC41908CFAB00BABDD5 /* rise_set.c in Sources */,
+				ECB7BAB91908CFAB00BABDD5 /* lunar.c in Sources */,
+				ECB7BAAC1908CFAB00BABDD5 /* aberration.c in Sources */,
+				ECB7BACA1908CFAB00BABDD5 /* utility.c in Sources */,
+				ECB7BABE1908CFAB00BABDD5 /* parabolic_motion.c in Sources */,
+				ECB7BA491908CF8500BABDD5 /* iOS_Nova.m in Sources */,
+				ECB7BAC31908CFAB00BABDD5 /* refraction.c in Sources */,
+				ECB7BAC51908CFAB00BABDD5 /* saturn.c in Sources */,
+				ECB7BABC1908CFAB00BABDD5 /* neptune.c in Sources */,
+				ECB7BABF1908CFAB00BABDD5 /* parallax.c in Sources */,
+				ECB7BAC11908CFAB00BABDD5 /* precession.c in Sources */,
+				ECB7BAC91908CFAB00BABDD5 /* uranus.c in Sources */,
+				ECB7BAAD1908CFAB00BABDD5 /* airmass.c in Sources */,
+				ECB7BAC81908CFAB00BABDD5 /* transform.c in Sources */,
+				ECB7BABA1908CFAB00BABDD5 /* mars.c in Sources */,
+				ECB7BAB81908CFAB00BABDD5 /* jupiter.c in Sources */,
+				ECB7BABB1908CFAB00BABDD5 /* mercury.c in Sources */,
+				ECB7BAB71908CFAB00BABDD5 /* julian_day.c in Sources */,
+				ECB7BAB01908CFAB00BABDD5 /* asteroid.c in Sources */,
+				ECB7BACC1908CFAB00BABDD5 /* vsop87.c in Sources */,
+				ECB7BACB1908CFAB00BABDD5 /* venus.c in Sources */,
+				ECB7BAAF1908CFAB00BABDD5 /* apparent_position.c in Sources */,
+				ECB7BAB41908CFAB00BABDD5 /* elliptic_motion.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECB7BA4A1908CF8500BABDD5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECB7BA5E1908CF8500BABDD5 /* iOS_NovaTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		ECB7BA551908CF8500BABDD5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ECB7BA3D1908CF8500BABDD5 /* iOS-Nova */;
+			targetProxy = ECB7BA541908CF8500BABDD5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		ECB7BA5A1908CF8500BABDD5 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ECB7BA5B1908CF8500BABDD5 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		ECB7BA5F1908CF8500BABDD5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		ECB7BA601908CF8500BABDD5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		ECB7BA621908CF8500BABDD5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/iOS_Nova.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iOS-Nova/iOS-Nova-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"\"$(SRCROOT)/iOS-Nova\"",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		ECB7BA631908CF8500BABDD5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/iOS_Nova.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iOS-Nova/iOS-Nova-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"\"$(SRCROOT)/iOS-Nova\"",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		ECB7BA651908CF8500BABDD5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iOS-Nova/iOS-Nova-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "iOS-NovaTests/iOS-NovaTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		ECB7BA661908CF8500BABDD5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iOS-Nova/iOS-Nova-Prefix.pch";
+				INFOPLIST_FILE = "iOS-NovaTests/iOS-NovaTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ECB7BA391908CF8500BABDD5 /* Build configuration list for PBXProject "iOS-Nova" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ECB7BA5F1908CF8500BABDD5 /* Debug */,
+				ECB7BA601908CF8500BABDD5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ECB7BA611908CF8500BABDD5 /* Build configuration list for PBXNativeTarget "iOS-Nova" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ECB7BA621908CF8500BABDD5 /* Debug */,
+				ECB7BA631908CF8500BABDD5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		ECB7BA641908CF8500BABDD5 /* Build configuration list for PBXNativeTarget "iOS-NovaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ECB7BA651908CF8500BABDD5 /* Debug */,
+				ECB7BA661908CF8500BABDD5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = ECB7BA361908CF8500BABDD5 /* Project object */;
+}
