@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>E5B3780A-20F6-45C1-B625-93C523DE54E4</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Sunset Terminal Workspace</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>FE59C804-3DC8-428B-9D21-B1F07F12DB4A</key>
+		<string>https://github.com/Sirusblk/CPSC-411.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Sunset Terminal Example/Sunset Terminal Workspace.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>FE59C804-3DC8-428B-9D21-B1F07F12DB4A</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/Sirusblk/CPSC-411.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>FE59C804-3DC8-428B-9D21-B1F07F12DB4A</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>FE59C804-3DC8-428B-9D21-B1F07F12DB4A</string>
+			<key>IDESourceControlWCCName</key>
+			<string>CPSC 411</string>
+		</dict>
+	</array>
+</dict>
+</plist>
