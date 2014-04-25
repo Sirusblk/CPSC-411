@@ -6,13 +6,13 @@
 //  Copyright (c) 2014 David McLaren. All rights reserved.
 //
 
-#import "CityTableViewController.h"
+#import "StateTableViewController.h"
 
-@interface CityTableViewController ()
+@interface StateTableViewController ()
 
 @end
 
-@implementation CityTableViewController
+@implementation StateTableViewController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -44,7 +44,7 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
+#warning Incomplete method implementation.
     // Return the number of sections.
     return 0;
 }
