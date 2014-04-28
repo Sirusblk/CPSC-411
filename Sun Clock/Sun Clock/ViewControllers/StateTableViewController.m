@@ -63,7 +63,12 @@
 {
 #warning Incomplete method implementation. THIS DOESN'T WORK! :(
     // Return the number of rows in the section.
-    states = [database getStatesFromTimezone:[time_zones objectAtIndex:section]];
+    for (int i = 0; i < [time_zones count]; i++) {
+        if (section == i) {
+            states = [database getStatesFromTimezone:[time_zones objectAtIndex:0]];
+            return [states count];
+        }
+    }
     
     return [states count];
 }
