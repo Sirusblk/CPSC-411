@@ -53,12 +53,12 @@ static US_Cities_DB * databaseObject;
         while(sqlite3_step(stmt) == SQLITE_ROW) {
             text = sqlite3_column_text(stmt, 0);
             if(text)
-                name = [NSString stringWithCString: (const char *)text encoding:NSUTF8StringEncoding];
+                name = [NSString stringWithCString:(const char *) text encoding:NSUTF8StringEncoding];
             else
                 name = nil;
             text = sqlite3_column_text(stmt, 1);
             if(text)
-                state = [NSString stringWithCString: (const char *)text encoding:NSUTF8StringEncoding];
+                state = [NSString stringWithCString:(const char *) text encoding:NSUTF8StringEncoding];
             else
                 state = nil;
             latitude = sqlite3_column_double(stmt, 2);
@@ -66,7 +66,7 @@ static US_Cities_DB * databaseObject;
             CLLocationCoordinate2D coord = CLLocationCoordinate2DMake(latitude, longitude);
             text = sqlite3_column_text(stmt, 4);
             if(text)
-                time_zone = [NSString stringWithCString: (const char *)text encoding:NSUTF8StringEncoding];
+                time_zone = [NSString stringWithCString:(const char *) text encoding:NSUTF8StringEncoding];
             else
                 time_zone = nil;
             City *thisCity = [[City alloc] initWithName:name andState:state andCoord:coord andTimezone:time_zone];
@@ -80,24 +80,66 @@ static US_Cities_DB * databaseObject;
 
 -(NSArray *) getTimeZones {
     NSMutableArray * timeZones;
+    NSString* query = @"SELECT DISTINCT(time_zone) FROM cities;";
+    sqlite3_stmt *stmt;
+    const unsigned char* text;
+    NSString *time_zone;
     
-    //Do Something...
+    if(sqlite3_prepare_v2(databaseConnection, [query UTF8String], [query length], &stmt, nil) == SQLITE_OK){
+        while(sqlite3_step(stmt) == SQLITE_ROW) {
+            text = sqlite3_column_text(stmt, 0);
+            if(text)
+                time_zone = [NSString stringWithCString:(const char *) text encoding:NSUTF8StringEncoding];
+            else
+                time_zone = nil;
+            [timeZones addObject:time_zone];
+        }
+        sqlite3_finalize(stmt);
+    }
     
     return (NSArray *) timeZones;
 }
 
 -(NSArray *) getStatesFromTimezone:(NSString *)time_zone {
     NSMutableArray * listOfStates;
+    NSString* query = [NSString stringWithFormat:@"SELECT DISTINCT(state) WHERE time_zone = '%@' FROM cities;", time_zone];
+    sqlite3_stmt *stmt;
+    const unsigned char* text;
+    NSString *state;
     
-    //Do Something...
+    if(sqlite3_prepare_v2(databaseConnection, [query UTF8String], [query length], &stmt, nil) == SQLITE_OK){
+        while(sqlite3_step(stmt) == SQLITE_ROW) {
+            text = sqlite3_column_text(stmt, 0);
+            if(text)
+                state = [NSString stringWithCString:(const char *) text encoding:NSUTF8StringEncoding];
+            else
+                state = nil;
+            [listOfStates addObject:state];
+        }
+        sqlite3_finalize(stmt);
+    }
     
     return (NSArray *) listOfStates;
 }
 
 -(NSArray *) getCitiesFromState:(NSString *)state {
     NSMutableArray * listOfCities;
+    NSString* query = [NSString stringWithFormat:@"SELECT DISTINCT(name) WHERE state = '%@' FROM cities;", state];
+    sqlite3_stmt *stmt;
+    const unsigned char* text;
+    NSString *city;
     
-    //Do Something...
+    if(sqlite3_prepare_v2(databaseConnection, [query UTF8String], [query length], &stmt, nil) == SQLITE_OK){
+        while(sqlite3_step(stmt) == SQLITE_ROW) {
+            text = sqlite3_column_text(stmt, 0);
+            if(text)
+                city = [NSString stringWithCString:(const char *) text encoding:NSUTF8StringEncoding];
+            else
+                city = nil;
+            [listOfCities addObject:city];
+        }
+        sqlite3_finalize(stmt);
+    }
     
     return (NSArray *) listOfCities;
 }
