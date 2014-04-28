@@ -16,6 +16,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="qSc-jm-Gby" kind="relationship" relationship="viewControllers" id="Qzs-q8-P9M"/>
+                        <segue destination="5ea-mp-es6" kind="relationship" relationship="viewControllers" id="nDU-lo-NI6"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FNP-y4-bzi" sceneMemberID="firstResponder"/>
@@ -71,7 +72,7 @@
                         <viewControllerLayoutGuide type="top" id="x7f-BZ-g0f"/>
                         <viewControllerLayoutGuide type="bottom" id="taM-ec-kiB"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Peb-GL-GNJ">
+                    <view key="view" contentMode="scaleToFill" id="Peb-GL-GNJ" customClass="SunClockView">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -124,11 +125,11 @@
             </objects>
             <point key="canvasLocation" x="940" y="-325"/>
         </scene>
-        <!--Navigation Controller - Item-->
+        <!--Navigation Controller - Location List-->
         <scene sceneID="KYU-Tq-LHe">
             <objects>
                 <navigationController definesPresentationContext="YES" id="qSc-jm-Gby" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="qgt-7a-R5Q"/>
+                    <tabBarItem key="tabBarItem" title="Location List" image="first" id="qgt-7a-R5Q"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="JfA-Cp-MDf">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -140,7 +141,30 @@
             </objects>
             <point key="canvasLocation" x="540" y="-325"/>
         </scene>
+        <!--View Controller - Test-->
+        <scene sceneID="I7I-xy-eZQ">
+            <objects>
+                <viewController id="5ea-mp-es6" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7zR-vG-h33"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ubg-Fx-GFQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1Kq-03-Ao5" customClass="SunClockView">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Test" image="second" badgeValue="Test" id="wcU-A8-Cjl"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ver-Hi-P5s" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="540" y="341"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="first" width="30" height="30"/>
+        <image name="second" width="30" height="30"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
