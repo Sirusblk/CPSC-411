@@ -27,6 +27,9 @@
 		EC7EB2031906C11E00B5D7CA /* City.m in Sources */ = {isa = PBXBuildFile; fileRef = EC7EB2021906C11E00B5D7CA /* City.m */; };
 		EC7EB2061906C1EC00B5D7CA /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC7EB2051906C1EC00B5D7CA /* CoreLocation.framework */; };
 		ECB7BACF1908D0AD00BABDD5 /* libiOS-Nova.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ECB7BACE1908D0AD00BABDD5 /* libiOS-Nova.a */; };
+		ECFFBE6E190DF8180046A504 /* CityTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECFFBE6D190DF8180046A504 /* CityTableViewController.m */; };
+		ECFFBE71190DF88E0046A504 /* SunClockView.m in Sources */ = {isa = PBXBuildFile; fileRef = ECFFBE70190DF88E0046A504 /* SunClockView.m */; };
+		ECFFBE75190DF9DF0046A504 /* SunClockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECFFBE74190DF9DF0046A504 /* SunClockViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +70,12 @@
 		EC7EB2021906C11E00B5D7CA /* City.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = City.m; path = Objects/City.m; sourceTree = "<group>"; };
 		EC7EB2051906C1EC00B5D7CA /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		ECB7BACE1908D0AD00BABDD5 /* libiOS-Nova.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libiOS-Nova.a"; path = "../iOS-Nova/build/Debug-iphoneos/libiOS-Nova.a"; sourceTree = "<group>"; };
+		ECFFBE6C190DF8180046A504 /* CityTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CityTableViewController.h; path = ViewControllers/CityTableViewController.h; sourceTree = "<group>"; };
+		ECFFBE6D190DF8180046A504 /* CityTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CityTableViewController.m; path = ViewControllers/CityTableViewController.m; sourceTree = "<group>"; };
+		ECFFBE6F190DF88E0046A504 /* SunClockView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SunClockView.h; path = Views/SunClockView.h; sourceTree = "<group>"; };
+		ECFFBE70190DF88E0046A504 /* SunClockView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SunClockView.m; path = Views/SunClockView.m; sourceTree = "<group>"; };
+		ECFFBE73190DF9DF0046A504 /* SunClockViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SunClockViewController.h; path = ViewControllers/SunClockViewController.h; sourceTree = "<group>"; };
+		ECFFBE74190DF9DF0046A504 /* SunClockViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SunClockViewController.m; path = ViewControllers/SunClockViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +147,7 @@
 				EC7EB2041906C12A00B5D7CA /* Objects */,
 				EC7EB1FE19049F9C00B5D7CA /* Data Models */,
 				EC7EB1FA19049B9C00B5D7CA /* View Controllers */,
+				ECFFBE72190DF8940046A504 /* Views */,
 				EC7EB1D81904949900B5D7CA /* Images.xcassets */,
 				EC7EB1C41904949900B5D7CA /* Supporting Files */,
 			);
@@ -179,6 +189,10 @@
 			children = (
 				EC7EB1F719049B9300B5D7CA /* StateTableViewController.h */,
 				EC7EB1F819049B9300B5D7CA /* StateTableViewController.m */,
+				ECFFBE6C190DF8180046A504 /* CityTableViewController.h */,
+				ECFFBE6D190DF8180046A504 /* CityTableViewController.m */,
+				ECFFBE73190DF9DF0046A504 /* SunClockViewController.h */,
+				ECFFBE74190DF9DF0046A504 /* SunClockViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -199,6 +213,15 @@
 				EC7EB2021906C11E00B5D7CA /* City.m */,
 			);
 			name = Objects;
+			sourceTree = "<group>";
+		};
+		ECFFBE72190DF8940046A504 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				ECFFBE6F190DF88E0046A504 /* SunClockView.h */,
+				ECFFBE70190DF88E0046A504 /* SunClockView.m */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -299,8 +322,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECFFBE6E190DF8180046A504 /* CityTableViewController.m in Sources */,
+				ECFFBE71190DF88E0046A504 /* SunClockView.m in Sources */,
 				EC7EB2031906C11E00B5D7CA /* City.m in Sources */,
 				EC7EB1F919049B9300B5D7CA /* StateTableViewController.m in Sources */,
+				ECFFBE75190DF9DF0046A504 /* SunClockViewController.m in Sources */,
 				EC7EB1CE1904949900B5D7CA /* AppDelegate.m in Sources */,
 				EC7EB1FD19049F9700B5D7CA /* US_Cities_DB.m in Sources */,
 				EC7EB1CA1904949900B5D7CA /* main.m in Sources */,
