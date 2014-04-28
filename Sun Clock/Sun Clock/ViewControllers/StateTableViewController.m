@@ -14,11 +14,17 @@
 
 @implementation StateTableViewController
 
+@synthesize database;
+@synthesize time_zones;
+@synthesize states;
+
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
     if (self) {
         // Custom initialization
+        database = [[US_Cities_DB alloc] init];
+        time_zones = [database getTimeZones];
     }
     return self;
 }
@@ -44,16 +50,22 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return [time_zones count];
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    return [time_zones objectAtIndex:section];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
+#warning Incomplete method implementation. THIS DOESN'T WORK! :(
     // Return the number of rows in the section.
-    return 0;
+    states = [database getStatesFromTimezone:[time_zones objectAtIndex:section]];
+    
+    return [states count];
 }
 
 /*
