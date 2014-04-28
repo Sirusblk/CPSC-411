@@ -7,7 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "sqlite3.h"
+#import <CoreLocation/CoreLocation.h>
+#import <sqlite3.h>
+#import "City.h"
 
 @interface US_Cities_DB : NSObject
 @property sqlite3 * databaseConnection;

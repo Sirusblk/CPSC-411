@@ -42,9 +42,40 @@ static US_Cities_DB * databaseObject;
 }
 
 -(void) getInfo {
+    NSMutableArray * results = [[NSMutableArray alloc] init];
+    NSString* query = @"SELECT * FROM cities;";
+    sqlite3_stmt *stmt;
+    const unsigned char* text;
+    NSString *name, *state, *time_zone;
+    double longitude, latitude;
     
-    //Do Something...
+    if(sqlite3_prepare_v2(databaseConnection, [query UTF8String], [query length], &stmt, nil) == SQLITE_OK){
+        while(sqlite3_step(stmt) == SQLITE_ROW) {
+            text = sqlite3_column_text(stmt, 0);
+            if(text)
+                name = [NSString stringWithCString: (const char *)text encoding:NSUTF8StringEncoding];
+            else
+                name = nil;
+            text = sqlite3_column_text(stmt, 1);
+            if(text)
+                state = [NSString stringWithCString: (const char *)text encoding:NSUTF8StringEncoding];
+            else
+                state = nil;
+            latitude = sqlite3_column_double(stmt, 2);
+            longitude = sqlite3_column_double(stmt, 3);
+            CLLocationCoordinate2D coord = CLLocationCoordinate2DMake(latitude, longitude);
+            text = sqlite3_column_text(stmt, 4);
+            if(text)
+                time_zone = [NSString stringWithCString: (const char *)text encoding:NSUTF8StringEncoding];
+            else
+                time_zone = nil;
+            City *thisCity = [[City alloc] initWithName:name andState:state andCoord:coord andTimezone:time_zone];
+            [results addObject:thisCity];
+        }
+        sqlite3_finalize(stmt);
+    }
     
+    US_Cities = (NSMutableArray *) results;
 }
 
 -(NSArray *) getTimeZones {

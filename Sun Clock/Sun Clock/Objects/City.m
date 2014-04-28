@@ -15,4 +15,15 @@
 @synthesize coordinates;
 @synthesize time_zone;
 
+-(id) initWithName:(NSString *) input_name andState:(NSString *) input_state andCoord:(CLLocationCoordinate2D) input_coord andTimezone:(NSString *) input_time_zone {
+    self = [super init];
+    if (self) {
+        name = input_name;
+        state = input_state;
+        coordinates = CLLocationCoordinate2DMake(input_coord.longitude, input_coord.latitude);
+        time_zone = input_time_zone;
+    }
+    return self;
+}
+
 @end

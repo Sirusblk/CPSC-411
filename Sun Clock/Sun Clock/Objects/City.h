@@ -13,7 +13,9 @@
 
 @property NSString * name;
 @property NSString * state;
-@property CLLocationCoordinate2D * coordinates;
+@property CLLocationCoordinate2D coordinates;
 @property NSString * time_zone;
+
+-(id) initWithName:(NSString *) input_name andState:(NSString *) input_state andCoord:(CLLocationCoordinate2D) input_coord andTimezone:(NSString *) input_time_zone;
 
 @end
