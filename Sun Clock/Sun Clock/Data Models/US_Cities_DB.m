@@ -1,5 +1,5 @@
 //
-//  US_Cities.m
+//  US_Cities_DB.m
 //  Sun Clock
 //
 //  Created by David McLaren on 4/20/14.
@@ -26,13 +26,11 @@ static US_Cities_DB * databaseObject;
     self = [super init];
     
     if (self) {
-        NSString* dbpath = [[NSBundle mainBundle] pathForResource:@"us_cities_with_timezones" ofType:@"sq3"];
+        NSString* dbpath = [[NSBundle mainBundle] pathForResource:@"us_cities_with_timezones" ofType:@"sl3"];
         if (sqlite3_open([dbpath UTF8String], & databaseConnection) != SQLITE_OK) {
             NSLog(@"Failed to open database.");
         }
     }
-    
-    [self getInfo];
     
     return self;
 }
@@ -79,13 +77,15 @@ static US_Cities_DB * databaseObject;
 }
 
 -(NSArray *) getTimeZones {
-    NSMutableArray * timeZones;
+    NSMutableArray * timeZones = [[NSMutableArray alloc] init];;
     NSString* query = @"SELECT DISTINCT(time_zone) FROM cities;";
     sqlite3_stmt *stmt;
     const unsigned char* text;
     NSString *time_zone;
     
-    if(sqlite3_prepare_v2(databaseConnection, [query UTF8String], [query length], &stmt, nil) == SQLITE_OK){
+    assert(self.databaseConnection != NULL);
+    
+    if(sqlite3_prepare_v2(self.databaseConnection, [query UTF8String], [query length], &stmt, NULL) == SQLITE_OK) {
         while(sqlite3_step(stmt) == SQLITE_ROW) {
             text = sqlite3_column_text(stmt, 0);
             if(text)
@@ -101,7 +101,7 @@ static US_Cities_DB * databaseObject;
 }
 
 -(NSArray *) getStatesFromTimezone:(NSString *)time_zone {
-    NSMutableArray * listOfStates;
+    NSMutableArray * listOfStates = [[NSMutableArray alloc] init];;
     NSString* query = [NSString stringWithFormat:@"SELECT DISTINCT(state) WHERE time_zone = '%@' FROM cities;", time_zone];
     sqlite3_stmt *stmt;
     const unsigned char* text;
@@ -123,7 +123,7 @@ static US_Cities_DB * databaseObject;
 }
 
 -(NSArray *) getCitiesFromState:(NSString *)state {
-    NSMutableArray * listOfCities;
+    NSMutableArray * listOfCities = [[NSMutableArray alloc] init];;
     NSString* query = [NSString stringWithFormat:@"SELECT DISTINCT(name) WHERE state = '%@' FROM cities;", state];
     sqlite3_stmt *stmt;
     const unsigned char* text;

@@ -7,15 +7,41 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		ECB7BA421908CF8500BABDD5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECB7BA411908CF8500BABDD5 /* Foundation.framework */; };
-		ECB7BA471908CF8500BABDD5 /* iOS_Nova.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = ECB7BA461908CF8500BABDD5 /* iOS_Nova.h */; };
-		ECB7BA491908CF8500BABDD5 /* iOS_Nova.m in Sources */ = {isa = PBXBuildFile; fileRef = ECB7BA481908CF8500BABDD5 /* iOS_Nova.m */; };
-		ECB7BA501908CF8500BABDD5 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECB7BA4F1908CF8500BABDD5 /* XCTest.framework */; };
-		ECB7BA511908CF8500BABDD5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECB7BA411908CF8500BABDD5 /* Foundation.framework */; };
-		ECB7BA531908CF8500BABDD5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECB7BA521908CF8500BABDD5 /* UIKit.framework */; };
-		ECB7BA561908CF8500BABDD5 /* libiOS-Nova.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ECB7BA3E1908CF8500BABDD5 /* libiOS-Nova.a */; };
-		ECB7BA5C1908CF8500BABDD5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = ECB7BA5A1908CF8500BABDD5 /* InfoPlist.strings */; };
-		ECB7BA5E1908CF8500BABDD5 /* iOS_NovaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ECB7BA5D1908CF8500BABDD5 /* iOS_NovaTests.m */; };
+		EC9DA3331910D61500FA37AC /* aberration.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = ECB7BA751908CFAB00BABDD5 /* aberration.h */; };
+		EC9DA3341910D61500FA37AC /* airmass.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = ECB7BA761908CFAB00BABDD5 /* airmass.h */; };
+		EC9DA3351910D61500FA37AC /* angular_separation.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = ECB7BA771908CFAB00BABDD5 /* angular_separation.h */; };
+		EC9DA3361910D61500FA37AC /* apparent_position.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = ECB7BA781908CFAB00BABDD5 /* apparent_position.h */; };
+		EC9DA3371910D61500FA37AC /* asteroid.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = ECB7BA791908CFAB00BABDD5 /* asteroid.h */; };
+		EC9DA3381910D61500FA37AC /* comet.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = ECB7BA7A1908CFAB00BABDD5 /* comet.h */; };
+		EC9DA3391910D61500FA37AC /* dynamical_time.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = ECB7BA7B1908CFAB00BABDD5 /* dynamical_time.h */; };
+		EC9DA33A1910D61500FA37AC /* earth.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = ECB7BA7C1908CFAB00BABDD5 /* earth.h */; };
+		EC9DA33B1910D61500FA37AC /* elliptic_motion.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = ECB7BA7D1908CFAB00BABDD5 /* elliptic_motion.h */; };
+		EC9DA33C1910D61500FA37AC /* heliocentric_time.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = ECB7BA7E1908CFAB00BABDD5 /* heliocentric_time.h */; };
+		EC9DA33D1910D61500FA37AC /* hyperbolic_motion.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = ECB7BA7F1908CFAB00BABDD5 /* hyperbolic_motion.h */; };
+		EC9DA33E1910D61500FA37AC /* julian_day.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = ECB7BA801908CFAB00BABDD5 /* julian_day.h */; };
+		EC9DA33F1910D61500FA37AC /* jupiter.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = ECB7BA811908CFAB00BABDD5 /* jupiter.h */; };
+		EC9DA3401910D61500FA37AC /* libnova.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = ECB7BA821908CFAB00BABDD5 /* libnova.h */; };
+		EC9DA3411910D61500FA37AC /* ln_types.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = ECB7BA831908CFAB00BABDD5 /* ln_types.h */; };
+		EC9DA3421910D61500FA37AC /* lunar.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = ECB7BA841908CFAB00BABDD5 /* lunar.h */; };
+		EC9DA3431910D61500FA37AC /* mars.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = ECB7BA851908CFAB00BABDD5 /* mars.h */; };
+		EC9DA3441910D61500FA37AC /* mercury.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = ECB7BA861908CFAB00BABDD5 /* mercury.h */; };
+		EC9DA3451910D61500FA37AC /* neptune.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = ECB7BA871908CFAB00BABDD5 /* neptune.h */; };
+		EC9DA3461910D61500FA37AC /* nutation.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = ECB7BA881908CFAB00BABDD5 /* nutation.h */; };
+		EC9DA3471910D61500FA37AC /* parabolic_motion.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = ECB7BA891908CFAB00BABDD5 /* parabolic_motion.h */; };
+		EC9DA3481910D61500FA37AC /* parallax.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = ECB7BA8A1908CFAB00BABDD5 /* parallax.h */; };
+		EC9DA3491910D61500FA37AC /* pluto.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = ECB7BA8B1908CFAB00BABDD5 /* pluto.h */; };
+		EC9DA34A1910D61500FA37AC /* precession.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = ECB7BA8C1908CFAB00BABDD5 /* precession.h */; };
+		EC9DA34B1910D61500FA37AC /* proper_motion.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = ECB7BA8D1908CFAB00BABDD5 /* proper_motion.h */; };
+		EC9DA34C1910D61500FA37AC /* refraction.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = ECB7BA8E1908CFAB00BABDD5 /* refraction.h */; };
+		EC9DA34D1910D61500FA37AC /* rise_set.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = ECB7BA8F1908CFAB00BABDD5 /* rise_set.h */; };
+		EC9DA34E1910D61500FA37AC /* saturn.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = ECB7BA901908CFAB00BABDD5 /* saturn.h */; };
+		EC9DA34F1910D61500FA37AC /* sidereal_time.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = ECB7BA911908CFAB00BABDD5 /* sidereal_time.h */; };
+		EC9DA3501910D61500FA37AC /* solar.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = ECB7BA921908CFAB00BABDD5 /* solar.h */; };
+		EC9DA3511910D61500FA37AC /* transform.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = ECB7BA931908CFAB00BABDD5 /* transform.h */; };
+		EC9DA3521910D61500FA37AC /* uranus.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = ECB7BA941908CFAB00BABDD5 /* uranus.h */; };
+		EC9DA3531910D61500FA37AC /* utility.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = ECB7BA951908CFAB00BABDD5 /* utility.h */; };
+		EC9DA3541910D61500FA37AC /* venus.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = ECB7BA961908CFAB00BABDD5 /* venus.h */; };
+		EC9DA3551910D61500FA37AC /* vsop87.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = ECB7BA971908CFAB00BABDD5 /* vsop87.h */; };
 		ECB7BAAC1908CFAB00BABDD5 /* aberration.c in Sources */ = {isa = PBXBuildFile; fileRef = ECB7BA671908CFAB00BABDD5 /* aberration.c */; };
 		ECB7BAAD1908CFAB00BABDD5 /* airmass.c in Sources */ = {isa = PBXBuildFile; fileRef = ECB7BA681908CFAB00BABDD5 /* airmass.c */; };
 		ECB7BAAE1908CFAB00BABDD5 /* angular_separation.c in Sources */ = {isa = PBXBuildFile; fileRef = ECB7BA691908CFAB00BABDD5 /* angular_separation.c */; };
@@ -51,24 +77,48 @@
 		ECB7BACC1908CFAB00BABDD5 /* vsop87.c in Sources */ = {isa = PBXBuildFile; fileRef = ECB7BAAB1908CFAB00BABDD5 /* vsop87.c */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		ECB7BA541908CF8500BABDD5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = ECB7BA361908CF8500BABDD5 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = ECB7BA3D1908CF8500BABDD5;
-			remoteInfo = "iOS-Nova";
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXCopyFilesBuildPhase section */
 		ECB7BA3C1908CF8500BABDD5 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
-			dstPath = "include/$(PRODUCT_NAME)";
+			dstPath = include/libnova;
 			dstSubfolderSpec = 16;
 			files = (
-				ECB7BA471908CF8500BABDD5 /* iOS_Nova.h in CopyFiles */,
+				EC9DA3331910D61500FA37AC /* aberration.h in CopyFiles */,
+				EC9DA3341910D61500FA37AC /* airmass.h in CopyFiles */,
+				EC9DA3351910D61500FA37AC /* angular_separation.h in CopyFiles */,
+				EC9DA3361910D61500FA37AC /* apparent_position.h in CopyFiles */,
+				EC9DA3371910D61500FA37AC /* asteroid.h in CopyFiles */,
+				EC9DA3381910D61500FA37AC /* comet.h in CopyFiles */,
+				EC9DA3391910D61500FA37AC /* dynamical_time.h in CopyFiles */,
+				EC9DA33A1910D61500FA37AC /* earth.h in CopyFiles */,
+				EC9DA33B1910D61500FA37AC /* elliptic_motion.h in CopyFiles */,
+				EC9DA33C1910D61500FA37AC /* heliocentric_time.h in CopyFiles */,
+				EC9DA33D1910D61500FA37AC /* hyperbolic_motion.h in CopyFiles */,
+				EC9DA33E1910D61500FA37AC /* julian_day.h in CopyFiles */,
+				EC9DA33F1910D61500FA37AC /* jupiter.h in CopyFiles */,
+				EC9DA3401910D61500FA37AC /* libnova.h in CopyFiles */,
+				EC9DA3411910D61500FA37AC /* ln_types.h in CopyFiles */,
+				EC9DA3421910D61500FA37AC /* lunar.h in CopyFiles */,
+				EC9DA3431910D61500FA37AC /* mars.h in CopyFiles */,
+				EC9DA3441910D61500FA37AC /* mercury.h in CopyFiles */,
+				EC9DA3451910D61500FA37AC /* neptune.h in CopyFiles */,
+				EC9DA3461910D61500FA37AC /* nutation.h in CopyFiles */,
+				EC9DA3471910D61500FA37AC /* parabolic_motion.h in CopyFiles */,
+				EC9DA3481910D61500FA37AC /* parallax.h in CopyFiles */,
+				EC9DA3491910D61500FA37AC /* pluto.h in CopyFiles */,
+				EC9DA34A1910D61500FA37AC /* precession.h in CopyFiles */,
+				EC9DA34B1910D61500FA37AC /* proper_motion.h in CopyFiles */,
+				EC9DA34C1910D61500FA37AC /* refraction.h in CopyFiles */,
+				EC9DA34D1910D61500FA37AC /* rise_set.h in CopyFiles */,
+				EC9DA34E1910D61500FA37AC /* saturn.h in CopyFiles */,
+				EC9DA34F1910D61500FA37AC /* sidereal_time.h in CopyFiles */,
+				EC9DA3501910D61500FA37AC /* solar.h in CopyFiles */,
+				EC9DA3511910D61500FA37AC /* transform.h in CopyFiles */,
+				EC9DA3521910D61500FA37AC /* uranus.h in CopyFiles */,
+				EC9DA3531910D61500FA37AC /* utility.h in CopyFiles */,
+				EC9DA3541910D61500FA37AC /* venus.h in CopyFiles */,
+				EC9DA3551910D61500FA37AC /* vsop87.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,14 +128,8 @@
 		ECB7BA3E1908CF8500BABDD5 /* libiOS-Nova.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libiOS-Nova.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECB7BA411908CF8500BABDD5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		ECB7BA451908CF8500BABDD5 /* iOS-Nova-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOS-Nova-Prefix.pch"; sourceTree = "<group>"; };
-		ECB7BA461908CF8500BABDD5 /* iOS_Nova.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iOS_Nova.h; sourceTree = "<group>"; };
-		ECB7BA481908CF8500BABDD5 /* iOS_Nova.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOS_Nova.m; sourceTree = "<group>"; };
-		ECB7BA4E1908CF8500BABDD5 /* iOS-NovaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS-NovaTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECB7BA4F1908CF8500BABDD5 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		ECB7BA521908CF8500BABDD5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		ECB7BA591908CF8500BABDD5 /* iOS-NovaTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iOS-NovaTests-Info.plist"; sourceTree = "<group>"; };
-		ECB7BA5B1908CF8500BABDD5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		ECB7BA5D1908CF8500BABDD5 /* iOS_NovaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOS_NovaTests.m; sourceTree = "<group>"; };
 		ECB7BA671908CFAB00BABDD5 /* aberration.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = aberration.c; sourceTree = "<group>"; };
 		ECB7BA681908CFAB00BABDD5 /* airmass.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = airmass.c; sourceTree = "<group>"; };
 		ECB7BA691908CFAB00BABDD5 /* angular_separation.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = angular_separation.c; sourceTree = "<group>"; };
@@ -161,18 +205,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ECB7BA421908CF8500BABDD5 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		ECB7BA4B1908CF8500BABDD5 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				ECB7BA501908CF8500BABDD5 /* XCTest.framework in Frameworks */,
-				ECB7BA531908CF8500BABDD5 /* UIKit.framework in Frameworks */,
-				ECB7BA511908CF8500BABDD5 /* Foundation.framework in Frameworks */,
-				ECB7BA561908CF8500BABDD5 /* libiOS-Nova.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,7 +215,6 @@
 			isa = PBXGroup;
 			children = (
 				ECB7BA431908CF8500BABDD5 /* iOS-Nova */,
-				ECB7BA571908CF8500BABDD5 /* iOS-NovaTests */,
 				ECB7BA401908CF8500BABDD5 /* Frameworks */,
 				ECB7BA3F1908CF8500BABDD5 /* Products */,
 			);
@@ -193,7 +224,6 @@
 			isa = PBXGroup;
 			children = (
 				ECB7BA3E1908CF8500BABDD5 /* libiOS-Nova.a */,
-				ECB7BA4E1908CF8500BABDD5 /* iOS-NovaTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -213,8 +243,6 @@
 			children = (
 				ECB7BACD1908CFC000BABDD5 /* src */,
 				ECB7BA741908CFAB00BABDD5 /* libnova */,
-				ECB7BA461908CF8500BABDD5 /* iOS_Nova.h */,
-				ECB7BA481908CF8500BABDD5 /* iOS_Nova.m */,
 				ECB7BA441908CF8500BABDD5 /* Supporting Files */,
 			);
 			path = "iOS-Nova";
@@ -224,24 +252,6 @@
 			isa = PBXGroup;
 			children = (
 				ECB7BA451908CF8500BABDD5 /* iOS-Nova-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		ECB7BA571908CF8500BABDD5 /* iOS-NovaTests */ = {
-			isa = PBXGroup;
-			children = (
-				ECB7BA5D1908CF8500BABDD5 /* iOS_NovaTests.m */,
-				ECB7BA581908CF8500BABDD5 /* Supporting Files */,
-			);
-			path = "iOS-NovaTests";
-			sourceTree = "<group>";
-		};
-		ECB7BA581908CF8500BABDD5 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				ECB7BA591908CF8500BABDD5 /* iOS-NovaTests-Info.plist */,
-				ECB7BA5A1908CF8500BABDD5 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -348,24 +358,6 @@
 			productReference = ECB7BA3E1908CF8500BABDD5 /* libiOS-Nova.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		ECB7BA4D1908CF8500BABDD5 /* iOS-NovaTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = ECB7BA641908CF8500BABDD5 /* Build configuration list for PBXNativeTarget "iOS-NovaTests" */;
-			buildPhases = (
-				ECB7BA4A1908CF8500BABDD5 /* Sources */,
-				ECB7BA4B1908CF8500BABDD5 /* Frameworks */,
-				ECB7BA4C1908CF8500BABDD5 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				ECB7BA551908CF8500BABDD5 /* PBXTargetDependency */,
-			);
-			name = "iOS-NovaTests";
-			productName = "iOS-NovaTests";
-			productReference = ECB7BA4E1908CF8500BABDD5 /* iOS-NovaTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -388,21 +380,9 @@
 			projectRoot = "";
 			targets = (
 				ECB7BA3D1908CF8500BABDD5 /* iOS-Nova */,
-				ECB7BA4D1908CF8500BABDD5 /* iOS-NovaTests */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXResourcesBuildPhase section */
-		ECB7BA4C1908CF8500BABDD5 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				ECB7BA5C1908CF8500BABDD5 /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		ECB7BA3A1908CF8500BABDD5 /* Sources */ = {
@@ -425,7 +405,6 @@
 				ECB7BAAC1908CFAB00BABDD5 /* aberration.c in Sources */,
 				ECB7BACA1908CFAB00BABDD5 /* utility.c in Sources */,
 				ECB7BABE1908CFAB00BABDD5 /* parabolic_motion.c in Sources */,
-				ECB7BA491908CF8500BABDD5 /* iOS_Nova.m in Sources */,
 				ECB7BAC31908CFAB00BABDD5 /* refraction.c in Sources */,
 				ECB7BAC51908CFAB00BABDD5 /* saturn.c in Sources */,
 				ECB7BABC1908CFAB00BABDD5 /* neptune.c in Sources */,
@@ -446,34 +425,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		ECB7BA4A1908CF8500BABDD5 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				ECB7BA5E1908CF8500BABDD5 /* iOS_NovaTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		ECB7BA551908CF8500BABDD5 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = ECB7BA3D1908CF8500BABDD5 /* iOS-Nova */;
-			targetProxy = ECB7BA541908CF8500BABDD5 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		ECB7BA5A1908CF8500BABDD5 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				ECB7BA5B1908CF8500BABDD5 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		ECB7BA5F1908CF8500BABDD5 /* Debug */ = {
@@ -553,10 +505,10 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					"\"$(SRCROOT)/iOS-Nova\"",
+					"$(SRCROOT)/iOS-Nova/",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "iOS-Nova";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -570,47 +522,11 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					"\"$(SRCROOT)/iOS-Nova\"",
+					"$(SRCROOT)/iOS-Nova/",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "iOS-Nova";
 				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		ECB7BA651908CF8500BABDD5 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "iOS-Nova/iOS-Nova-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "iOS-NovaTests/iOS-NovaTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		ECB7BA661908CF8500BABDD5 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "iOS-Nova/iOS-Nova-Prefix.pch";
-				INFOPLIST_FILE = "iOS-NovaTests/iOS-NovaTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;
 		};
@@ -633,14 +549,7 @@
 				ECB7BA631908CF8500BABDD5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-		};
-		ECB7BA641908CF8500BABDD5 /* Build configuration list for PBXNativeTarget "iOS-NovaTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				ECB7BA651908CF8500BABDD5 /* Debug */,
-				ECB7BA661908CF8500BABDD5 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

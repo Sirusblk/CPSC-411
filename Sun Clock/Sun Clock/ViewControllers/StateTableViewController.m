@@ -18,13 +18,12 @@
 @synthesize time_zones;
 @synthesize states;
 
-- (id)initWithStyle:(UITableViewStyle)style
+- (id)initWithCoder:(NSCoder *)aDecoder
 {
-    self = [super initWithStyle:style];
+    self = [super initWithCoder:aDecoder];
     if (self) {
         // Custom initialization
-        database = [[US_Cities_DB alloc] init];
-        time_zones = [database getTimeZones];
+        time_zones = [[US_Cities_DB database] getTimeZones];
     }
     return self;
 }
@@ -51,38 +50,38 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
-    return [time_zones count];
+    return 1;
 }
 
+/*
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
     return [time_zones objectAtIndex:section];
 }
+ */
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation. THIS DOESN'T WORK! :(
     // Return the number of rows in the section.
-    for (int i = 0; i < [time_zones count]; i++) {
-        if (section == i) {
-            states = [database getStatesFromTimezone:[time_zones objectAtIndex:0]];
-            return [states count];
-        }
-    }
-    
-    return [states count];
+    NSLog(@"Number of Time Zones: %lu", (unsigned long)[time_zones count]);
+    return [time_zones count];
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"US_State" forIndexPath:indexPath];
     
     // Configure the cell...
+    if (cell == nil) {
+		// Use the default cell style.
+		cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"US_State"];
+    }
+    
+    cell.textLabel.text = [time_zones objectAtIndex:indexPath.row];
     
     return cell;
 }
-*/
 
 /*
 // Override to support conditional editing of the table view.

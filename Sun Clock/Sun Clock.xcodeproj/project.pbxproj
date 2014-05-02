@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EC6912B319130FDD00274030 /* libiOS-Nova.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EC6912B219130FDD00274030 /* libiOS-Nova.a */; };
 		EC7EB1BE1904949900B5D7CA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC7EB1BD1904949900B5D7CA /* Foundation.framework */; };
 		EC7EB1C01904949900B5D7CA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC7EB1BF1904949900B5D7CA /* CoreGraphics.framework */; };
 		EC7EB1C21904949900B5D7CA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC7EB1C11904949900B5D7CA /* UIKit.framework */; };
@@ -15,35 +16,18 @@
 		EC7EB1CE1904949900B5D7CA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EC7EB1CD1904949900B5D7CA /* AppDelegate.m */; };
 		EC7EB1D11904949900B5D7CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC7EB1CF1904949900B5D7CA /* Main.storyboard */; };
 		EC7EB1D91904949900B5D7CA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC7EB1D81904949900B5D7CA /* Images.xcassets */; };
-		EC7EB1E01904949900B5D7CA /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC7EB1DF1904949900B5D7CA /* XCTest.framework */; };
-		EC7EB1E11904949900B5D7CA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC7EB1BD1904949900B5D7CA /* Foundation.framework */; };
-		EC7EB1E21904949900B5D7CA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC7EB1C11904949900B5D7CA /* UIKit.framework */; };
-		EC7EB1EA1904949900B5D7CA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EC7EB1E81904949900B5D7CA /* InfoPlist.strings */; };
-		EC7EB1EC1904949900B5D7CA /* Sun_ClockTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EC7EB1EB1904949900B5D7CA /* Sun_ClockTests.m */; };
 		EC7EB1F61904994400B5D7CA /* us_cities_with_timezones.sl3 in Resources */ = {isa = PBXBuildFile; fileRef = EC7EB1F51904994400B5D7CA /* us_cities_with_timezones.sl3 */; };
 		EC7EB1F919049B9300B5D7CA /* StateTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC7EB1F819049B9300B5D7CA /* StateTableViewController.m */; };
 		EC7EB1FD19049F9700B5D7CA /* US_Cities_DB.m in Sources */ = {isa = PBXBuildFile; fileRef = EC7EB1FC19049F9700B5D7CA /* US_Cities_DB.m */; };
 		EC7EB2001904C87F00B5D7CA /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EC7EB1FF1904C87F00B5D7CA /* libsqlite3.dylib */; };
 		EC7EB2031906C11E00B5D7CA /* City.m in Sources */ = {isa = PBXBuildFile; fileRef = EC7EB2021906C11E00B5D7CA /* City.m */; };
 		EC7EB2061906C1EC00B5D7CA /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC7EB2051906C1EC00B5D7CA /* CoreLocation.framework */; };
-		ECB7BACF1908D0AD00BABDD5 /* libiOS-Nova.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ECB7BACE1908D0AD00BABDD5 /* libiOS-Nova.a */; };
-		ECFFBE6E190DF8180046A504 /* CityTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECFFBE6D190DF8180046A504 /* CityTableViewController.m */; };
 		ECFFBE71190DF88E0046A504 /* SunClockView.m in Sources */ = {isa = PBXBuildFile; fileRef = ECFFBE70190DF88E0046A504 /* SunClockView.m */; };
 		ECFFBE75190DF9DF0046A504 /* SunClockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECFFBE74190DF9DF0046A504 /* SunClockViewController.m */; };
-		ECFFBE78190E2AF20046A504 /* TestClockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECFFBE77190E2AF20046A504 /* TestClockViewController.m */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		EC7EB1E31904949900B5D7CA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EC7EB1B21904949900B5D7CA /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = EC7EB1B91904949900B5D7CA;
-			remoteInfo = "Sun Clock";
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
+		EC6912B219130FDD00274030 /* libiOS-Nova.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libiOS-Nova.a"; path = "../../../../../Library/Developer/Xcode/DerivedData/Sun_Clock_Workspace-fzisvhsedaelxybxhapgkqetbmmk/Build/Products/Debug-iphoneos/libiOS-Nova.a"; sourceTree = "<group>"; };
 		EC7EB1BA1904949900B5D7CA /* Sun Clock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sun Clock.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC7EB1BD1904949900B5D7CA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EC7EB1BF1904949900B5D7CA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -56,7 +40,6 @@
 		EC7EB1CD1904949900B5D7CA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		EC7EB1D01904949900B5D7CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EC7EB1D81904949900B5D7CA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		EC7EB1DE1904949900B5D7CA /* Sun ClockTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Sun ClockTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC7EB1DF1904949900B5D7CA /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		EC7EB1E71904949900B5D7CA /* Sun ClockTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Sun ClockTests-Info.plist"; sourceTree = "<group>"; };
 		EC7EB1E91904949900B5D7CA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -71,14 +54,10 @@
 		EC7EB2021906C11E00B5D7CA /* City.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = City.m; path = Objects/City.m; sourceTree = "<group>"; };
 		EC7EB2051906C1EC00B5D7CA /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		ECB7BACE1908D0AD00BABDD5 /* libiOS-Nova.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libiOS-Nova.a"; path = "../iOS-Nova/build/Debug-iphoneos/libiOS-Nova.a"; sourceTree = "<group>"; };
-		ECFFBE6C190DF8180046A504 /* CityTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CityTableViewController.h; path = ViewControllers/CityTableViewController.h; sourceTree = "<group>"; };
-		ECFFBE6D190DF8180046A504 /* CityTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CityTableViewController.m; path = ViewControllers/CityTableViewController.m; sourceTree = "<group>"; };
 		ECFFBE6F190DF88E0046A504 /* SunClockView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SunClockView.h; path = Views/SunClockView.h; sourceTree = "<group>"; };
 		ECFFBE70190DF88E0046A504 /* SunClockView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SunClockView.m; path = Views/SunClockView.m; sourceTree = "<group>"; };
 		ECFFBE73190DF9DF0046A504 /* SunClockViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SunClockViewController.h; path = ViewControllers/SunClockViewController.h; sourceTree = "<group>"; };
 		ECFFBE74190DF9DF0046A504 /* SunClockViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SunClockViewController.m; path = ViewControllers/SunClockViewController.m; sourceTree = "<group>"; };
-		ECFFBE76190E2AF20046A504 /* TestClockViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TestClockViewController.h; path = ViewControllers/TestClockViewController.h; sourceTree = "<group>"; };
-		ECFFBE77190E2AF20046A504 /* TestClockViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TestClockViewController.m; path = ViewControllers/TestClockViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,22 +65,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ECB7BACF1908D0AD00BABDD5 /* libiOS-Nova.a in Frameworks */,
+				EC6912B319130FDD00274030 /* libiOS-Nova.a in Frameworks */,
 				EC7EB2001904C87F00B5D7CA /* libsqlite3.dylib in Frameworks */,
 				EC7EB2061906C1EC00B5D7CA /* CoreLocation.framework in Frameworks */,
 				EC7EB1C01904949900B5D7CA /* CoreGraphics.framework in Frameworks */,
 				EC7EB1C21904949900B5D7CA /* UIKit.framework in Frameworks */,
 				EC7EB1BE1904949900B5D7CA /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EC7EB1DB1904949900B5D7CA /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EC7EB1E01904949900B5D7CA /* XCTest.framework in Frameworks */,
-				EC7EB1E21904949900B5D7CA /* UIKit.framework in Frameworks */,
-				EC7EB1E11904949900B5D7CA /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,7 +91,6 @@
 			isa = PBXGroup;
 			children = (
 				EC7EB1BA1904949900B5D7CA /* Sun Clock.app */,
-				EC7EB1DE1904949900B5D7CA /* Sun ClockTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -130,6 +98,7 @@
 		EC7EB1BC1904949900B5D7CA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EC6912B219130FDD00274030 /* libiOS-Nova.a */,
 				ECB7BACE1908D0AD00BABDD5 /* libiOS-Nova.a */,
 				EC7EB2051906C1EC00B5D7CA /* CoreLocation.framework */,
 				EC7EB1FF1904C87F00B5D7CA /* libsqlite3.dylib */,
@@ -192,12 +161,8 @@
 			children = (
 				EC7EB1F719049B9300B5D7CA /* StateTableViewController.h */,
 				EC7EB1F819049B9300B5D7CA /* StateTableViewController.m */,
-				ECFFBE6C190DF8180046A504 /* CityTableViewController.h */,
-				ECFFBE6D190DF8180046A504 /* CityTableViewController.m */,
 				ECFFBE73190DF9DF0046A504 /* SunClockViewController.h */,
 				ECFFBE74190DF9DF0046A504 /* SunClockViewController.m */,
-				ECFFBE76190E2AF20046A504 /* TestClockViewController.h */,
-				ECFFBE77190E2AF20046A504 /* TestClockViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -249,24 +214,6 @@
 			productReference = EC7EB1BA1904949900B5D7CA /* Sun Clock.app */;
 			productType = "com.apple.product-type.application";
 		};
-		EC7EB1DD1904949900B5D7CA /* Sun ClockTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = EC7EB1F21904949900B5D7CA /* Build configuration list for PBXNativeTarget "Sun ClockTests" */;
-			buildPhases = (
-				EC7EB1DA1904949900B5D7CA /* Sources */,
-				EC7EB1DB1904949900B5D7CA /* Frameworks */,
-				EC7EB1DC1904949900B5D7CA /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				EC7EB1E41904949900B5D7CA /* PBXTargetDependency */,
-			);
-			name = "Sun ClockTests";
-			productName = "Sun ClockTests";
-			productReference = EC7EB1DE1904949900B5D7CA /* Sun ClockTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -275,11 +222,6 @@
 			attributes = {
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "David McLaren";
-				TargetAttributes = {
-					EC7EB1DD1904949900B5D7CA = {
-						TestTargetID = EC7EB1B91904949900B5D7CA;
-					};
-				};
 			};
 			buildConfigurationList = EC7EB1B51904949900B5D7CA /* Build configuration list for PBXProject "Sun Clock" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -295,7 +237,6 @@
 			projectRoot = "";
 			targets = (
 				EC7EB1B91904949900B5D7CA /* Sun Clock */,
-				EC7EB1DD1904949900B5D7CA /* Sun ClockTests */,
 			);
 		};
 /* End PBXProject section */
@@ -312,14 +253,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EC7EB1DC1904949900B5D7CA /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EC7EB1EA1904949900B5D7CA /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -327,8 +260,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ECFFBE6E190DF8180046A504 /* CityTableViewController.m in Sources */,
-				ECFFBE78190E2AF20046A504 /* TestClockViewController.m in Sources */,
 				ECFFBE71190DF88E0046A504 /* SunClockView.m in Sources */,
 				EC7EB2031906C11E00B5D7CA /* City.m in Sources */,
 				EC7EB1F919049B9300B5D7CA /* StateTableViewController.m in Sources */,
@@ -339,23 +270,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EC7EB1DA1904949900B5D7CA /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EC7EB1EC1904949900B5D7CA /* Sun_ClockTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		EC7EB1E41904949900B5D7CA /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = EC7EB1B91904949900B5D7CA /* Sun Clock */;
-			targetProxy = EC7EB1E31904949900B5D7CA /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		EC7EB1C61904949900B5D7CA /* InfoPlist.strings */ = {
@@ -465,13 +380,14 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					"$(BUILD_PROJECT_DIR)/usr/local/include",
+					"$(BUILD_PROJECT_DIR)/include",
 				);
 				INFOPLIST_FILE = "Sun Clock/Sun Clock-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/sirusblk/Documents/School/Coding/CPSC,
 					"411/iOS-Nova/build/Debug-iphoneos",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/Sun_Clock_Workspace-fzisvhsedaelxybxhapgkqetbmmk/Build/Products/Debug-iphoneos",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -488,56 +404,17 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					"$(BUILD_PROJECT_DIR)/usr/local/include",
+					"$(BUILD_PROJECT_DIR)/include",
 				);
 				INFOPLIST_FILE = "Sun Clock/Sun Clock-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/sirusblk/Documents/School/Coding/CPSC,
 					"411/iOS-Nova/build/Debug-iphoneos",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/Sun_Clock_Workspace-fzisvhsedaelxybxhapgkqetbmmk/Build/Products/Debug-iphoneos",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
-			};
-			name = Release;
-		};
-		EC7EB1F31904949900B5D7CA /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Sun Clock.app/Sun Clock";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Sun Clock/Sun Clock-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "Sun ClockTests/Sun ClockTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		EC7EB1F41904949900B5D7CA /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Sun Clock.app/Sun Clock";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Sun Clock/Sun Clock-Prefix.pch";
-				INFOPLIST_FILE = "Sun ClockTests/Sun ClockTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;
 		};
@@ -558,15 +435,6 @@
 			buildConfigurations = (
 				EC7EB1F01904949900B5D7CA /* Debug */,
 				EC7EB1F11904949900B5D7CA /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		EC7EB1F21904949900B5D7CA /* Build configuration list for PBXNativeTarget "Sun ClockTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				EC7EB1F31904949900B5D7CA /* Debug */,
-				EC7EB1F41904949900B5D7CA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
