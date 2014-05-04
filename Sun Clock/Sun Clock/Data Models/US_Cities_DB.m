@@ -97,6 +97,7 @@ static US_Cities_DB * databaseObject;
         sqlite3_finalize(stmt);
     }
     
+    [timeZones sortUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
     return (NSArray *) timeZones;
 }
 

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		EC6912B319130FDD00274030 /* libiOS-Nova.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EC6912B219130FDD00274030 /* libiOS-Nova.a */; };
+		EC69134319133B9000274030 /* SunClockData.m in Sources */ = {isa = PBXBuildFile; fileRef = EC69134219133B9000274030 /* SunClockData.m */; };
 		EC7EB1BE1904949900B5D7CA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC7EB1BD1904949900B5D7CA /* Foundation.framework */; };
 		EC7EB1C01904949900B5D7CA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC7EB1BF1904949900B5D7CA /* CoreGraphics.framework */; };
 		EC7EB1C21904949900B5D7CA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC7EB1C11904949900B5D7CA /* UIKit.framework */; };
@@ -28,6 +29,8 @@
 
 /* Begin PBXFileReference section */
 		EC6912B219130FDD00274030 /* libiOS-Nova.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libiOS-Nova.a"; path = "../../../../../Library/Developer/Xcode/DerivedData/Sun_Clock_Workspace-fzisvhsedaelxybxhapgkqetbmmk/Build/Products/Debug-iphoneos/libiOS-Nova.a"; sourceTree = "<group>"; };
+		EC69134119133B9000274030 /* SunClockData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SunClockData.h; path = "Data Models/SunClockData.h"; sourceTree = "<group>"; };
+		EC69134219133B9000274030 /* SunClockData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SunClockData.m; path = "Data Models/SunClockData.m"; sourceTree = "<group>"; };
 		EC7EB1BA1904949900B5D7CA /* Sun Clock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sun Clock.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC7EB1BD1904949900B5D7CA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EC7EB1BF1904949900B5D7CA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -172,6 +175,8 @@
 			children = (
 				EC7EB1FB19049F9700B5D7CA /* US_Cities_DB.h */,
 				EC7EB1FC19049F9700B5D7CA /* US_Cities_DB.m */,
+				EC69134119133B9000274030 /* SunClockData.h */,
+				EC69134219133B9000274030 /* SunClockData.m */,
 			);
 			name = "Data Models";
 			sourceTree = "<group>";
@@ -265,6 +270,7 @@
 				EC7EB1F919049B9300B5D7CA /* StateTableViewController.m in Sources */,
 				ECFFBE75190DF9DF0046A504 /* SunClockViewController.m in Sources */,
 				EC7EB1CE1904949900B5D7CA /* AppDelegate.m in Sources */,
+				EC69134319133B9000274030 /* SunClockData.m in Sources */,
 				EC7EB1FD19049F9700B5D7CA /* US_Cities_DB.m in Sources */,
 				EC7EB1CA1904949900B5D7CA /* main.m in Sources */,
 			);

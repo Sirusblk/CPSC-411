@@ -63,7 +63,6 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    NSLog(@"Number of Time Zones: %lu", (unsigned long)[time_zones count]);
     return [time_zones count];
 }
 
