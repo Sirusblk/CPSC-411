@@ -30,6 +30,7 @@
     // Do any additional setup after loading the view.
     NSLog(@"SunClockView loaded...");
     [[SunClockData alloc] updateDawn];
+    [[SunClockData alloc] updateSunrise];
 }
 
 - (void)didReceiveMemoryWarning

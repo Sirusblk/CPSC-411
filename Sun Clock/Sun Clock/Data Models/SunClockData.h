@@ -33,5 +33,6 @@
 +(SunClockData *) sunClock;
 -(void) updateLocationLat:(double) latitude Long:(double) longitude;
 -(void) updateDawn;
+-(void) updateSunrise;
 
 @end

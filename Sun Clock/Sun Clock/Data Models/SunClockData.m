@@ -53,6 +53,9 @@ static SunClockData *clockData;
 
 -(void) updateDawn
 {
+    //12 degrees below horizon
+    // Nautical Twilight
+    
     //TEST DATA
     observer.lat = 33.907233;
     observer.lng = -117.857183;
@@ -60,24 +63,20 @@ static SunClockData *clockData;
 	
     /* get Julian day from local time */
 	JD = ln_get_julian_from_sys();
-	printf ("JD %f\n", JD);
 	
 	/* geometric coordinates */
 	ln_get_solar_geom_coords (JD, &pos);
-	printf("Solar Coords longitude (deg) %f\n", pos.L);
-	printf("             latitude (deg) %f\n", pos.B);
-	printf("             radius vector (AU) %f\n", pos.R);
 	
 	/* ra, dec */
 	ln_get_solar_equ_coords (JD, &equ);
-	printf("Solar Position RA %f\n", equ.ra);
-	printf("               DEC %f\n", equ.dec);
     
-    ln_get_solar_rst (JD, &observer, &rst);
+    ln_get_solar_rst_horizon(JD, &observer, -12.0, &rst);
     ln_get_local_date (rst.rise, &rise);
     
+    /*
+    //DEBUG
     NSLog(@"--------------------------");
-    NSLog(@"Sun Rise: ");
+    NSLog(@"Dawn: ");
     NSLog(@"    Years: %d", rise.years);
     NSLog(@"    Month: %d", rise.months);
     NSLog(@"    Days: %d", rise.days);
@@ -85,6 +84,7 @@ static SunClockData *clockData;
     NSLog(@"    Minutes: %d", rise.minutes);
     NSLog(@"    Seconds: %.0f", rise.seconds);
     NSLog(@"--------------------------");
+     */
     
     NSString *dawnString = [NSString stringWithFormat:@"%d-%d-%d %d:%d:%.0f", rise.years, rise.months, rise.days, rise.hours, rise.minutes, rise.seconds];
     NSLog(@"Dawn is at: %@", dawnString);
@@ -95,12 +95,46 @@ static SunClockData *clockData;
     dawn = [dateFormater dateFromString:dawnString];
     
     assert(dawn);
-    NSLog(@"Dawn: %@", dawn);
 }
 
 -(void) updateSunrise
 {
+    //TEST DATA
+    observer.lat = 33.907233;
+    observer.lng = -117.857183;
+    //---------
+	
+	JD = ln_get_julian_from_sys();
+	
+	ln_get_solar_geom_coords (JD, &pos);
+	
+	ln_get_solar_equ_coords (JD, &equ);
     
+    ln_get_solar_rst (JD, &observer, &rst);
+    ln_get_local_date (rst.rise, &rise);
+    
+    /*
+    //DEBUG
+    NSLog(@"--------------------------");
+    NSLog(@"Sun Rise: ");
+    NSLog(@"    Years: %d", rise.years);
+    NSLog(@"    Month: %d", rise.months);
+    NSLog(@"    Days: %d", rise.days);
+    NSLog(@"    Hours: %d", rise.hours);
+    NSLog(@"    Minutes: %d", rise.minutes);
+    NSLog(@"    Seconds: %.0f", rise.seconds);
+    NSLog(@"--------------------------");
+     */
+    
+    NSString *dawnString = [NSString stringWithFormat:@"%d-%d-%d %d:%d:%.0f", rise.years, rise.months, rise.days, rise.hours, rise.minutes, rise.seconds];
+    NSLog(@"Sunrise is at: %@", dawnString);
+    
+    // Change this to create a date, not use Date Formatter
+    NSDateFormatter *dateFormater = [[NSDateFormatter alloc] init];
+    [dateFormater setDateFormat:@"yyyy-MM-DD HH:mm:ss"];
+    dawn = [dateFormater dateFromString:dawnString];
+    
+    assert(dawn);
 }
 
 #pragma mark - Sunset
