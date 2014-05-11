@@ -17,7 +17,7 @@
 {
     struct ln_equ_posn equ;
 	struct ln_rst_time rst;
-	struct ln_zonedate rise, set, transit;
+	struct ln_zonedate rise, set;
 	struct ln_lnlat_posn observer;
 	struct ln_helio_posn pos;
 	double JD;
@@ -34,5 +34,7 @@
 -(void) updateLocationLat:(double) latitude Long:(double) longitude;
 -(void) updateDawn;
 -(void) updateSunrise;
+-(void) updateSunset;
+-(void) updateDusk;
 
 @end

@@ -31,6 +31,9 @@
     NSLog(@"SunClockView loaded...");
     [[SunClockData alloc] updateDawn];
     [[SunClockData alloc] updateSunrise];
+    [[SunClockData alloc] updateSunset];
+    [[SunClockData alloc] updateDusk];
+    //[SunClockView drawRect];
 }
 
 - (void)didReceiveMemoryWarning

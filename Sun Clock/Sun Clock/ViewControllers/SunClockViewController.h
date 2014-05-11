@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "SunClockData.h"
+#import "SunClockView.h"
 
 @interface SunClockViewController : UIViewController
 
