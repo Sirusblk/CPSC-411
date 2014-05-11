@@ -22,10 +22,10 @@
             </objects>
             <point key="canvasLocation" x="26" y="99"/>
         </scene>
-        <!--View Controller-->
+        <!--Sun Clock View Controller-->
         <scene sceneID="KFA-h9-lfF">
             <objects>
-                <viewController id="RCO-TQ-OxN" sceneMemberID="viewController">
+                <viewController id="RCO-TQ-OxN" customClass="SunClockViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="x7f-BZ-g0f"/>
                         <viewControllerLayoutGuide type="bottom" id="taM-ec-kiB"/>

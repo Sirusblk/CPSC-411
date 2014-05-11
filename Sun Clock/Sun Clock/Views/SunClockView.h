@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <libnova/lunar.h>
+#import "SunClockData.h"
 
 @interface SunClockView : UIView
 

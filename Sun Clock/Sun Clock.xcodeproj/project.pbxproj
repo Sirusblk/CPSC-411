@@ -389,12 +389,7 @@
 					"$(BUILD_PROJECT_DIR)/include",
 				);
 				INFOPLIST_FILE = "Sun Clock/Sun Clock-Info.plist";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					/Users/sirusblk/Documents/School/Coding/CPSC,
-					"411/iOS-Nova/build/Debug-iphoneos",
-					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/Sun_Clock_Workspace-fzisvhsedaelxybxhapgkqetbmmk/Build/Products/Debug-iphoneos",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -413,12 +408,7 @@
 					"$(BUILD_PROJECT_DIR)/include",
 				);
 				INFOPLIST_FILE = "Sun Clock/Sun Clock-Info.plist";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					/Users/sirusblk/Documents/School/Coding/CPSC,
-					"411/iOS-Nova/build/Debug-iphoneos",
-					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/Sun_Clock_Workspace-fzisvhsedaelxybxhapgkqetbmmk/Build/Products/Debug-iphoneos",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

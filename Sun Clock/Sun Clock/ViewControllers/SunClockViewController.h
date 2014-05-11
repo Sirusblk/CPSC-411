@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <libnova/solar.h>
+#import "SunClockData.h"
 
 @interface SunClockViewController : UIViewController
 
