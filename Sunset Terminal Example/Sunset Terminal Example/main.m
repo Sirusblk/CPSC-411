@@ -72,6 +72,17 @@ int main (int argc, char * argv[])
 		ln_get_local_date (rst.rise, &rise);
 		ln_get_local_date (rst.transit, &transit);
 		ln_get_local_date (rst.set, &set);
+        
+        NSLog(@"--------------------------");
+        NSLog(@"Sun Rise: ");
+        NSLog(@"    Years: %d", rise.years);
+        NSLog(@"    Month: %d", rise.months);
+        NSLog(@"    Days: %d", rise.days);
+        NSLog(@"    Hours: %d", rise.hours);
+        NSLog(@"    Minutes: %d", rise.minutes);
+        NSLog(@"    Seconds: %f", rise.seconds);
+        NSLog(@"--------------------------");
+        
 		print_date ("Rise", &rise);
 		print_date ("Transit", &transit);
 		print_date ("Set", &set);

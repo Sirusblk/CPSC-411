@@ -43,6 +43,7 @@ static SunClockData *clockData;
     if (latitude == 0 || longitude == 0) {
         [clockData.locationManager startUpdatingLocation];
         [clockData.locationManager stopUpdatingLocation];
+        //observerLocation = [clockData.locationManager lastObject];
     } else {
         //observerLocation = CLLocationCoordinate2DMake(latitude, longitude);
     }
@@ -52,14 +53,29 @@ static SunClockData *clockData;
 
 -(void) updateDawn
 {
-    ln_get_solar_geom_coords (JD, &pos);
+    //TEST DATA
+    observer.lat = 33.907233;
+    observer.lng = -117.857183;
+    //---------
+	
+    /* get Julian day from local time */
+	JD = ln_get_julian_from_sys();
+	printf ("JD %f\n", JD);
+	
+	/* geometric coordinates */
+	ln_get_solar_geom_coords (JD, &pos);
 	printf("Solar Coords longitude (deg) %f\n", pos.L);
 	printf("             latitude (deg) %f\n", pos.B);
 	printf("             radius vector (AU) %f\n", pos.R);
+	
+	/* ra, dec */
+	ln_get_solar_equ_coords (JD, &equ);
+	printf("Solar Position RA %f\n", equ.ra);
+	printf("               DEC %f\n", equ.dec);
     
+    ln_get_solar_rst (JD, &observer, &rst);
     ln_get_local_date (rst.rise, &rise);
     
-    NSLog(@"");
     NSLog(@"--------------------------");
     NSLog(@"Sun Rise: ");
     NSLog(@"    Years: %d", rise.years);
@@ -67,11 +83,10 @@ static SunClockData *clockData;
     NSLog(@"    Days: %d", rise.days);
     NSLog(@"    Hours: %d", rise.hours);
     NSLog(@"    Minutes: %d", rise.minutes);
-    NSLog(@"    Seconds: %f", rise.seconds);
+    NSLog(@"    Seconds: %.0f", rise.seconds);
     NSLog(@"--------------------------");
-    NSLog(@"");
     
-    NSString *dawnString = [NSString stringWithFormat:@"%d-%d-%d %d:%d:%f +0000", rise.years, rise.months, rise.days, rise.hours, rise.minutes, rise.seconds];
+    NSString *dawnString = [NSString stringWithFormat:@"%d-%d-%d %d:%d:%.0f", rise.years, rise.months, rise.days, rise.hours, rise.minutes, rise.seconds];
     NSLog(@"Dawn is at: %@", dawnString);
     
     // Change this to create a date, not use Date Formatter
@@ -79,6 +94,7 @@ static SunClockData *clockData;
     [dateFormater setDateFormat:@"yyyy-MM-DD HH:mm:ss"];
     dawn = [dateFormater dateFromString:dawnString];
     
+    assert(dawn);
     NSLog(@"Dawn: %@", dawn);
 }
 
