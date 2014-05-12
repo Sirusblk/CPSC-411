@@ -70,6 +70,18 @@
     CGContextFillPath(context);
     
     // Draw Sunrise to Sunset
+    startHours = endHours;
+    startMin = endMin;
+    endHours = [self getHours:sunset];
+    endMin = [self getMinutes:sunset];
+    
+    start = origin + ((360.0 / 24.0) * (startHours + (startMin / 60.0)) * (M_PI / 180));
+    end = origin + (360.0 / 24.0) * (endHours + (endMin / 60.0)) * (M_PI / 180);
+    
+    CGContextSetRGBFillColor(context, 193/255.0f, 131/255.0f, 106/255.0f, 1.0);
+    CGContextMoveToPoint(context, circleCenter.x, circleCenter.y);
+    CGContextAddArc(context, circleCenter.x, circleCenter.y, circleSize / 2, start, end, 0);
+    CGContextFillPath(context);
     
     // Draw Sunset to Dusk
 }
