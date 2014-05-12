@@ -98,6 +98,23 @@
     CGContextFillPath(context);
     
     // Draw Hand for current time
+    // Do parmetric equation for a circle
+    NSDate *now = [NSDate date];
+    startHours = [self getHours:now];
+    startMin = [self getMinutes:now];
+    NSLog(@"The Time: %.0f:%.0f", startHours, startMin);
+    // Rotate 90 degrees to correct clock
+    double angle = 90 + (360.0 / 24.0) * (startHours + (startMin / 60.0));
+    
+    NSLog(@"Angle: %f", angle);
+    
+    double posX = circleCenter.x + ((circleSize / 2) + 2) * cos(angle * (M_PI / 180));
+    double posY = circleCenter.y + ((circleSize / 2) + 2) * sin(angle * (M_PI / 180));
+    CGContextSetRGBStrokeColor(context, 222/255.0f, 166/255.0f, 119/255.0f, 1.0);
+    CGContextSetLineWidth(context, 4.0);
+    CGContextMoveToPoint(context, circleCenter.x, circleCenter.y);
+    CGContextAddLineToPoint(context, posX, posY);
+    CGContextStrokePath(context);
     
     // Draw Hand center point
     CGRect circleframe2 = CGRectMake(circleCenter.x - 6, circleCenter.y - 6, 12, 12);
@@ -121,6 +138,7 @@
 -(double) getHours:(NSDate *) input
 {
     NSCalendar *calendar = [NSCalendar currentCalendar];
+    [calendar setTimeZone: [NSTimeZone systemTimeZone]];
     NSDateComponents *components = [calendar components:(NSHourCalendarUnit | NSMinuteCalendarUnit) fromDate:input];
     NSNumber *hours = [NSNumber numberWithUnsignedInteger:[components hour]];
     return [hours doubleValue];
@@ -129,6 +147,7 @@
 -(double) getMinutes:(NSDate *) input
 {
     NSCalendar *calendar = [NSCalendar currentCalendar];
+    [calendar setTimeZone: [NSTimeZone systemTimeZone]];
     NSDateComponents *components = [calendar components:(NSHourCalendarUnit | NSMinuteCalendarUnit) fromDate:input];
     NSNumber *mins = [NSNumber numberWithUnsignedInteger:[components minute]];
     return [mins doubleValue];
