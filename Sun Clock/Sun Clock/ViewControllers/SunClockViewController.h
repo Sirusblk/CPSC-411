@@ -13,5 +13,9 @@
 @interface SunClockViewController : UIViewController
 
 @property SunClockData *sunClock;
+@property (weak, nonatomic) IBOutlet UILabel *DawnValue;
+@property (weak, nonatomic) IBOutlet UILabel *DuskValue;
+@property (weak, nonatomic) IBOutlet UILabel *RiseValue;
+@property (weak, nonatomic) IBOutlet UILabel *SetValue;
 
 @end
