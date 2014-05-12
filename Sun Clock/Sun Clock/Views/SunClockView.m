@@ -34,7 +34,7 @@
     CGContextRef context = UIGraphicsGetCurrentContext();
     
     // Draw Background
-    CGContextSetRGBFillColor(context, 71/255.0f, 83/255.0f, 94/255.0f, 1.0);
+    CGContextSetRGBFillColor(context, 50/255.0f, 65/255.0f, 82/255.0f, 1.0);
     CGContextFillRect(context, CGRectMake(0.0, 0.0, 320.0, 500.0));
     
     // Draw Shadow
@@ -43,7 +43,7 @@
     
     // Draw Circle
     CGRect circleframe = CGRectMake(circleCenter.x - (circleSize / 2), circleCenter.y - (circleSize / 2), circleSize, circleSize);
-    CGContextSetRGBFillColor(context, 50/255.0f, 65/255.0f, 82/255.0f, 1.0);
+    CGContextSetRGBFillColor(context, 71/255.0f, 83/255.0f, 94/255.0f, 1.0);
     CGContextFillEllipseInRect(context, circleframe);
     
     // Restore State for drop shadow
@@ -96,6 +96,13 @@
     CGContextMoveToPoint(context, circleCenter.x, circleCenter.y);
     CGContextAddArc(context, circleCenter.x, circleCenter.y, circleSize / 2, start, end, 0);
     CGContextFillPath(context);
+    
+    // Draw Hand for current time
+    
+    // Draw Hand center point
+    CGRect circleframe2 = CGRectMake(circleCenter.x - 6, circleCenter.y - 6, 12, 12);
+    CGContextSetRGBFillColor(context, 222/255.0f, 166/255.0f, 119/255.0f, 1.0);
+    CGContextFillEllipseInRect(context, circleframe2);
 }
 
 -(void) setDawn:(NSDate *) input_dawn Sunrise:(NSDate *) input_sunrise Sunset:(NSDate *) input_sunset Dusk:(NSDate *) input_dusk
