@@ -12,4 +12,6 @@
 
 @interface SunClockViewController : UIViewController
 
+@property SunClockData *sunClock;
+
 @end

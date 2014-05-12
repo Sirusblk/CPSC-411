@@ -15,6 +15,8 @@
 
 @implementation SunClockViewController
 
+@synthesize sunClock;
+
 - (id)initWithCoder:(NSCoder *)aDecoder
 {
     self = [super initWithCoder:aDecoder];
@@ -29,11 +31,12 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     NSLog(@"SunClockView loaded...");
-    [[SunClockData alloc] updateDawn];
-    [[SunClockData alloc] updateSunrise];
-    [[SunClockData alloc] updateSunset];
-    [[SunClockData alloc] updateDusk];
-    //[SunClockView drawRect];
+    [sunClock updateDawn];
+    [sunClock updateSunrise];
+    [sunClock updateSunset];
+    [sunClock updateDusk];
+    
+    [(SunClockView *)self.view setDawn:[sunClock dawn] Sunrise:[sunClock sunrise] Sunset:[sunClock sunset] Dusk:[sunClock dusk]];
 }
 
 - (void)didReceiveMemoryWarning

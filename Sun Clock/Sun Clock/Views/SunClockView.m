@@ -10,6 +10,11 @@
 
 @implementation SunClockView
 
+@synthesize dawn;
+@synthesize sunrise;
+@synthesize sunset;
+@synthesize dusk;
+
 - (id)initWithCoder:(NSCoder *)aDecoder
 {
     self = [super initWithCoder:aDecoder];
@@ -61,6 +66,14 @@
     // Draw Sunrise to Sunset
     
     // Draw Sunset to Dusk
+}
+
+-(void) setDawn:(NSDate *) input_dawn Sunrise:(NSDate *) input_sunrise Sunset:(NSDate *) input_sunset Dusk:(NSDate *) input_dusk
+{
+    dawn = input_dawn;
+    sunrise = input_sunrise;
+    sunset = input_sunset;
+    dusk = input_dusk;
 }
 
 @end

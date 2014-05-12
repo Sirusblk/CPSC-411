@@ -214,6 +214,7 @@ static SunClockData *clockData;
      NSLog(@"--------------------------");
      */
     
+    // May not be necessary...
     NSString *duskString = [NSString stringWithFormat:@"%d-%d-%d %d:%d:%.0f", set.years, set.months, set.days, set.hours, set.minutes, set.seconds];
     NSLog(@"Dawn is at: %@", duskString);
     
