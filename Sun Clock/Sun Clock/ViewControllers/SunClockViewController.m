@@ -31,6 +31,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     NSLog(@"SunClockView loaded...");
+    sunClock = [[SunClockData alloc] init];
     [sunClock updateDawn];
     [sunClock updateSunrise];
     [sunClock updateSunset];

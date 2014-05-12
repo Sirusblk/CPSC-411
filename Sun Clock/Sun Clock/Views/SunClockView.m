@@ -49,10 +49,16 @@
     // Restore State for drop shadow
     CGContextRestoreGState(context);
     
-    // Draw Dawn to Sunrise
     double origin = M_PI / 2;
-    double start = origin + ((4.0 / 24.0 * 360) * (M_PI / 180));
-    double end = origin + (5.0 / 24.0 * 360) * (M_PI / 180);
+    
+    // Draw Dawn to Sunrise
+    double startHours = [self getHours: dawn];
+    double startMin = [self getMinutes: dawn];
+    double endHours = [self getHours: sunrise];
+    double endMin = [self getMinutes: sunrise];
+    
+    double start = origin + ((360.0 / 24.0) * (startHours + (startMin / 60.0)) * (M_PI / 180));
+    double end = origin + (360.0 / 24.0) * (endHours + (endMin / 60.0)) * (M_PI / 180);
 
     NSLog(@"Origin: %f", origin);
     NSLog(@"Start:  %f", start);
@@ -74,6 +80,27 @@
     sunrise = input_sunrise;
     sunset = input_sunset;
     dusk = input_dusk;
+    
+    assert(dawn);
+    assert(sunrise);
+    assert(sunset);
+    assert(dusk);
+}
+
+-(double) getHours:(NSDate *) input
+{
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSDateComponents *components = [calendar components:(NSHourCalendarUnit | NSMinuteCalendarUnit) fromDate:input];
+    NSNumber *hours = [NSNumber numberWithUnsignedInteger:[components hour]];
+    return [hours doubleValue];
+}
+
+-(double) getMinutes:(NSDate *) input
+{
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSDateComponents *components = [calendar components:(NSHourCalendarUnit | NSMinuteCalendarUnit) fromDate:input];
+    NSNumber *mins = [NSNumber numberWithUnsignedInteger:[components minute]];
+    return [mins doubleValue];
 }
 
 @end

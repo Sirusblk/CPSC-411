@@ -17,5 +17,7 @@
 @property NSDate *dusk;
 
 -(void) setDawn:(NSDate *) input_dawn Sunrise:(NSDate *) input_sunrise Sunset:(NSDate *) input_sunset Dusk:(NSDate *) input_dusk;
+-(double) getHours:(NSDate *) input;
+-(double) getMinutes:(NSDate *) input;
 
 @end
