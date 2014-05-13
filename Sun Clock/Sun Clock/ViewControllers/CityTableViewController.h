@@ -1,5 +1,5 @@
 //
-//  StateTableViewController.h
+//  CityTableViewController.h
 //  Sun Clock
 //
 //  Created by David McLaren on 5/12/14.
@@ -7,13 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "CityTableViewController.h"
 #import "US_Cities_DB.h"
 
-@interface StateTableViewController : UITableViewController
+@interface CityTableViewController : UITableViewController
 
 @property (retain) US_Cities_DB *database;
-@property (retain) NSString *timezone;
-@property (retain) NSArray *states;
+@property (retain) NSString *us_state;
+@property (retain) NSArray *cities;
 
 @end

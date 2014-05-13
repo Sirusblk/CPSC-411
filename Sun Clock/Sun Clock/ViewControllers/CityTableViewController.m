@@ -1,22 +1,22 @@
 //
-//  StateTableViewController.m
+//  CityTableViewController.m
 //  Sun Clock
 //
 //  Created by David McLaren on 5/12/14.
 //  Copyright (c) 2014 David McLaren. All rights reserved.
 //
 
-#import "StateTableViewController.h"
+#import "CityTableViewController.h"
 
-@interface StateTableViewController ()
+@interface CityTableViewController ()
 
 @end
 
-@implementation StateTableViewController
+@implementation CityTableViewController
 
 @synthesize database;
-@synthesize timezone;
-@synthesize states;
+@synthesize us_state;
+@synthesize cities;
 
 - (id)initWithCoder:(NSCoder *)aDecoder
 {
@@ -37,7 +37,7 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-    states = [[US_Cities_DB database] getStatesFromTimezone:timezone];
+    cities = [[US_Cities_DB database] getCitiesFromState:us_state];
 }
 
 - (void)didReceiveMemoryWarning
@@ -57,20 +57,20 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return [states count];
+    return [cities count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"US_State" forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"US_City" forIndexPath:indexPath];
     
     // Configure the cell...
     if (cell == nil) {
 		// Use the default cell style.
-		cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"US_State"];
+		cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"US_City"];
     }
     
-    cell.textLabel.text = [states objectAtIndex:indexPath.row];
+    cell.textLabel.text = [cities objectAtIndex:indexPath.row];
     
     return cell;
 }
@@ -113,6 +113,7 @@
 }
 */
 
+/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -120,12 +121,7 @@
 {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
-    CityTableViewController *secondViewController = [segue destinationViewController];
-    NSIndexPath *selectedRowIndex = [self.tableView indexPathForSelectedRow];
-    
-    NSLog(@"%@", [self.states objectAtIndex:selectedRowIndex.row]);
-    
-    secondViewController.us_state = [self.states objectAtIndex:selectedRowIndex.row];
 }
+*/
 
 @end

@@ -48,16 +48,16 @@
             </objects>
             <point key="canvasLocation" x="1005" y="-325"/>
         </scene>
-        <!--Table View Controller - Choose City-->
+        <!--City Table View Controller - Choose City-->
         <scene sceneID="LgW-AR-9lD">
             <objects>
-                <tableViewController id="R80-Yy-i84" sceneMemberID="viewController">
+                <tableViewController id="R80-Yy-i84" customClass="CityTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="MmF-n4-Tww">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="TmV-ow-nOG" style="IBUITableViewCellStyleDefault" id="BIV-85-ShS">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="US_City" textLabel="TmV-ow-nOG" style="IBUITableViewCellStyleDefault" id="BIV-85-ShS">
                                 <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BIV-85-ShS" id="bMH-8p-LeZ">

@@ -130,7 +130,6 @@
     StateTableViewController *secondViewController = [segue destinationViewController];
     NSIndexPath *selectedRowIndex = [self.tableView indexPathForSelectedRow];
     secondViewController.timezone = [self.time_zones objectAtIndex:selectedRowIndex.row];
-    NSLog(@"%@", secondViewController.timezone);
 }
 
 @end

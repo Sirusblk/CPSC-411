@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		EC2A5AE51921E56000BAEBBD /* StateTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC2A5AE41921E56000BAEBBD /* StateTableViewController.m */; };
+		EC2A5AE81921F24B00BAEBBD /* CityTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC2A5AE71921F24B00BAEBBD /* CityTableViewController.m */; };
 		EC6912B319130FDD00274030 /* libiOS-Nova.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EC6912B219130FDD00274030 /* libiOS-Nova.a */; };
 		EC69134319133B9000274030 /* SunClockData.m in Sources */ = {isa = PBXBuildFile; fileRef = EC69134219133B9000274030 /* SunClockData.m */; };
 		EC7EB1BE1904949900B5D7CA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC7EB1BD1904949900B5D7CA /* Foundation.framework */; };
@@ -31,6 +32,8 @@
 /* Begin PBXFileReference section */
 		EC2A5AE31921E56000BAEBBD /* StateTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StateTableViewController.h; path = ViewControllers/StateTableViewController.h; sourceTree = "<group>"; };
 		EC2A5AE41921E56000BAEBBD /* StateTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StateTableViewController.m; path = ViewControllers/StateTableViewController.m; sourceTree = "<group>"; };
+		EC2A5AE61921F24B00BAEBBD /* CityTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CityTableViewController.h; path = ViewControllers/CityTableViewController.h; sourceTree = "<group>"; };
+		EC2A5AE71921F24B00BAEBBD /* CityTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CityTableViewController.m; path = ViewControllers/CityTableViewController.m; sourceTree = "<group>"; };
 		EC6912B219130FDD00274030 /* libiOS-Nova.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libiOS-Nova.a"; path = "../../../../../Library/Developer/Xcode/DerivedData/Sun_Clock_Workspace-fzisvhsedaelxybxhapgkqetbmmk/Build/Products/Debug-iphoneos/libiOS-Nova.a"; sourceTree = "<group>"; };
 		EC69134119133B9000274030 /* SunClockData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SunClockData.h; path = "Data Models/SunClockData.h"; sourceTree = "<group>"; };
 		EC69134219133B9000274030 /* SunClockData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SunClockData.m; path = "Data Models/SunClockData.m"; sourceTree = "<group>"; };
@@ -169,6 +172,8 @@
 				EC7EB1F819049B9300B5D7CA /* TimezoneTableViewController.m */,
 				EC2A5AE31921E56000BAEBBD /* StateTableViewController.h */,
 				EC2A5AE41921E56000BAEBBD /* StateTableViewController.m */,
+				EC2A5AE61921F24B00BAEBBD /* CityTableViewController.h */,
+				EC2A5AE71921F24B00BAEBBD /* CityTableViewController.m */,
 				ECFFBE73190DF9DF0046A504 /* SunClockViewController.h */,
 				ECFFBE74190DF9DF0046A504 /* SunClockViewController.m */,
 			);
@@ -276,6 +281,7 @@
 				EC7EB1F919049B9300B5D7CA /* TimezoneTableViewController.m in Sources */,
 				ECFFBE75190DF9DF0046A504 /* SunClockViewController.m in Sources */,
 				EC7EB1CE1904949900B5D7CA /* AppDelegate.m in Sources */,
+				EC2A5AE81921F24B00BAEBBD /* CityTableViewController.m in Sources */,
 				EC69134319133B9000274030 /* SunClockData.m in Sources */,
 				EC7EB1FD19049F9700B5D7CA /* US_Cities_DB.m in Sources */,
 				EC7EB1CA1904949900B5D7CA /* main.m in Sources */,

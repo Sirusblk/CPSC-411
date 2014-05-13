@@ -125,7 +125,7 @@ static US_Cities_DB * databaseObject;
 
 -(NSArray *) getCitiesFromState:(NSString *)state {
     NSMutableArray * listOfCities = [[NSMutableArray alloc] init];;
-    NSString* query = [NSString stringWithFormat:@"SELECT DISTINCT(name) WHERE state = '%@' FROM cities;", state];
+    NSString* query = [NSString stringWithFormat:@"SELECT DISTINCT(name) FROM cities WHERE state = '%@';", state];
     sqlite3_stmt *stmt;
     const unsigned char* text;
     NSString *city;
