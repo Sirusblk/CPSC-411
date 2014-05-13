@@ -18,7 +18,7 @@
 		EC7EB1D11904949900B5D7CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC7EB1CF1904949900B5D7CA /* Main.storyboard */; };
 		EC7EB1D91904949900B5D7CA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC7EB1D81904949900B5D7CA /* Images.xcassets */; };
 		EC7EB1F61904994400B5D7CA /* us_cities_with_timezones.sl3 in Resources */ = {isa = PBXBuildFile; fileRef = EC7EB1F51904994400B5D7CA /* us_cities_with_timezones.sl3 */; };
-		EC7EB1F919049B9300B5D7CA /* StateTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC7EB1F819049B9300B5D7CA /* StateTableViewController.m */; };
+		EC7EB1F919049B9300B5D7CA /* TimezoneTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC7EB1F819049B9300B5D7CA /* TimezoneTableViewController.m */; };
 		EC7EB1FD19049F9700B5D7CA /* US_Cities_DB.m in Sources */ = {isa = PBXBuildFile; fileRef = EC7EB1FC19049F9700B5D7CA /* US_Cities_DB.m */; };
 		EC7EB2001904C87F00B5D7CA /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EC7EB1FF1904C87F00B5D7CA /* libsqlite3.dylib */; };
 		EC7EB2031906C11E00B5D7CA /* City.m in Sources */ = {isa = PBXBuildFile; fileRef = EC7EB2021906C11E00B5D7CA /* City.m */; };
@@ -48,8 +48,8 @@
 		EC7EB1E91904949900B5D7CA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		EC7EB1EB1904949900B5D7CA /* Sun_ClockTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Sun_ClockTests.m; sourceTree = "<group>"; };
 		EC7EB1F51904994400B5D7CA /* us_cities_with_timezones.sl3 */ = {isa = PBXFileReference; lastKnownFileType = file; path = us_cities_with_timezones.sl3; sourceTree = "<group>"; };
-		EC7EB1F719049B9300B5D7CA /* StateTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StateTableViewController.h; path = ViewControllers/StateTableViewController.h; sourceTree = "<group>"; };
-		EC7EB1F819049B9300B5D7CA /* StateTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StateTableViewController.m; path = ViewControllers/StateTableViewController.m; sourceTree = "<group>"; };
+		EC7EB1F719049B9300B5D7CA /* TimezoneTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TimezoneTableViewController.h; path = ViewControllers/TimezoneTableViewController.h; sourceTree = "<group>"; };
+		EC7EB1F819049B9300B5D7CA /* TimezoneTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TimezoneTableViewController.m; path = ViewControllers/TimezoneTableViewController.m; sourceTree = "<group>"; };
 		EC7EB1FB19049F9700B5D7CA /* US_Cities_DB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = US_Cities_DB.h; path = "Data Models/US_Cities_DB.h"; sourceTree = "<group>"; };
 		EC7EB1FC19049F9700B5D7CA /* US_Cities_DB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = US_Cities_DB.m; path = "Data Models/US_Cities_DB.m"; sourceTree = "<group>"; };
 		EC7EB1FF1904C87F00B5D7CA /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
@@ -162,8 +162,8 @@
 		EC7EB1FA19049B9C00B5D7CA /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				EC7EB1F719049B9300B5D7CA /* StateTableViewController.h */,
-				EC7EB1F819049B9300B5D7CA /* StateTableViewController.m */,
+				EC7EB1F719049B9300B5D7CA /* TimezoneTableViewController.h */,
+				EC7EB1F819049B9300B5D7CA /* TimezoneTableViewController.m */,
 				ECFFBE73190DF9DF0046A504 /* SunClockViewController.h */,
 				ECFFBE74190DF9DF0046A504 /* SunClockViewController.m */,
 			);
@@ -267,7 +267,7 @@
 			files = (
 				ECFFBE71190DF88E0046A504 /* SunClockView.m in Sources */,
 				EC7EB2031906C11E00B5D7CA /* City.m in Sources */,
-				EC7EB1F919049B9300B5D7CA /* StateTableViewController.m in Sources */,
+				EC7EB1F919049B9300B5D7CA /* TimezoneTableViewController.m in Sources */,
 				ECFFBE75190DF9DF0046A504 /* SunClockViewController.m in Sources */,
 				EC7EB1CE1904949900B5D7CA /* AppDelegate.m in Sources */,
 				EC69134319133B9000274030 /* SunClockData.m in Sources */,

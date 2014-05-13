@@ -1,18 +1,18 @@
 //
-//  StateTableViewController.m
+//  TimezoneTableViewController.m
 //  Sun Clock
 //
 //  Created by David McLaren on 4/20/14.
 //  Copyright (c) 2014 David McLaren. All rights reserved.
 //
 
-#import "StateTableViewController.h"
+#import "TimezoneTableViewController.h"
 
-@interface StateTableViewController ()
+@interface TimezoneTableViewController ()
 
 @end
 
-@implementation StateTableViewController
+@implementation TimezoneTableViewController
 
 @synthesize database;
 @synthesize time_zones;
