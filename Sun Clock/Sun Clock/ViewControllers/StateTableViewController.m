@@ -1,29 +1,28 @@
 //
-//  TimezoneTableViewController.m
+//  StateTableViewController.m
 //  Sun Clock
 //
-//  Created by David McLaren on 4/20/14.
+//  Created by David McLaren on 5/12/14.
 //  Copyright (c) 2014 David McLaren. All rights reserved.
 //
 
-#import "TimezoneTableViewController.h"
+#import "StateTableViewController.h"
 
-@interface TimezoneTableViewController ()
+@interface StateTableViewController ()
 
 @end
 
-@implementation TimezoneTableViewController
+@implementation StateTableViewController
 
 @synthesize database;
-@synthesize time_zones;
-@synthesize selected_timezone;
+@synthesize timezone;
+@synthesize states;
 
 - (id)initWithCoder:(NSCoder *)aDecoder
 {
     self = [super initWithCoder:aDecoder];
     if (self) {
         // Custom initialization
-        time_zones = [[US_Cities_DB database] getTimeZones];
     }
     return self;
 }
@@ -37,6 +36,10 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    NSLog(@"%@", timezone);
+    states = [[US_Cities_DB database] getStatesFromTimezone:timezone];
+    NSLog(@"%@", states);
 }
 
 - (void)didReceiveMemoryWarning
@@ -53,31 +56,23 @@
     return 1;
 }
 
-/*
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
-{
-    return [time_zones objectAtIndex:section];
-}
- */
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return [time_zones count];
+    return [states count];
 }
-
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"US_Timezone" forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"US_State" forIndexPath:indexPath];
     
     // Configure the cell...
     if (cell == nil) {
 		// Use the default cell style.
-		cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"US_Timezone"];
+		cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"US_State"];
     }
     
-    cell.textLabel.text = [time_zones objectAtIndex:indexPath.row];
+    cell.textLabel.text = [states objectAtIndex:indexPath.row];
     
     return cell;
 }
@@ -120,6 +115,7 @@
 }
 */
 
+/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -127,10 +123,7 @@
 {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
-    StateTableViewController *secondViewController = [segue destinationViewController];
-    NSIndexPath *selectedRowIndex = [self.tableView indexPathForSelectedRow];
-    secondViewController.timezone = [self.time_zones objectAtIndex:selectedRowIndex.row];
-    NSLog(@"%@", secondViewController.timezone);
 }
+*/
 
 @end

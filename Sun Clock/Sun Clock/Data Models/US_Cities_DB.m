@@ -103,7 +103,7 @@ static US_Cities_DB * databaseObject;
 
 -(NSArray *) getStatesFromTimezone:(NSString *)time_zone {
     NSMutableArray * listOfStates = [[NSMutableArray alloc] init];;
-    NSString* query = [NSString stringWithFormat:@"SELECT DISTINCT(state) WHERE time_zone = '%@' FROM cities;", time_zone];
+    NSString* query = [NSString stringWithFormat:@"SELECT DISTINCT(state) FROM cities WHERE time_zone = '%@';", time_zone];
     sqlite3_stmt *stmt;
     const unsigned char* text;
     NSString *state;

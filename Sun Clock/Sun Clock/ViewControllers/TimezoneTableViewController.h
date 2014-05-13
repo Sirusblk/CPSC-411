@@ -7,12 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "StateTableViewController.h"
 #import "US_Cities_DB.h"
 
 @interface TimezoneTableViewController : UITableViewController
 
-@property (retain) US_Cities_DB * database;
-@property (retain) NSArray * time_zones;
-@property (retain) NSArray * states;
+@property (retain) US_Cities_DB *database;
+@property (retain) NSArray *time_zones;
+@property (retain) NSString *selected_timezone;
 
 @end
