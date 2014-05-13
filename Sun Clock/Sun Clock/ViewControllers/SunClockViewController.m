@@ -16,6 +16,10 @@
 @implementation SunClockViewController
 
 @synthesize sunClock;
+@synthesize DawnValue;
+@synthesize RiseValue;
+@synthesize SetValue;
+@synthesize DuskValue;
 
 - (id)initWithCoder:(NSCoder *)aDecoder
 {
@@ -38,6 +42,11 @@
     [sunClock updateDusk];
     
     [(SunClockView *)self.view setDawn:[sunClock dawn] Sunrise:[sunClock sunrise] Sunset:[sunClock sunset] Dusk:[sunClock dusk]];
+    
+    [self updateLable:DawnValue WithSource:[sunClock dawn]];
+    [self updateLable:RiseValue WithSource:[sunClock sunrise]];
+    [self updateLable:SetValue WithSource:[sunClock sunset]];
+    [self updateLable:DuskValue WithSource:[sunClock dusk]];
 }
 
 - (void)didReceiveMemoryWarning
@@ -56,5 +65,37 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+-(void) updateLable:(UILabel*) input WithSource:(NSDate*) source
+{
+    double hours = [self getHours:source];
+    double mins = [self getMinutes:source];
+    NSString *type = @"AM";
+    
+    if (hours > 12) {
+        hours -= 12;
+        type = @"PM";
+    }
+    
+    [input setText:[NSString stringWithFormat:@"%.0f:%.0f %@", hours, mins, type]];
+}
+
+-(double) getHours:(NSDate *) input
+{
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    [calendar setTimeZone: [NSTimeZone systemTimeZone]];
+    NSDateComponents *components = [calendar components:(NSHourCalendarUnit | NSMinuteCalendarUnit) fromDate:input];
+    NSNumber *hours = [NSNumber numberWithUnsignedInteger:[components hour]];
+    return [hours doubleValue];
+}
+
+-(double) getMinutes:(NSDate *) input
+{
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    [calendar setTimeZone: [NSTimeZone systemTimeZone]];
+    NSDateComponents *components = [calendar components:(NSHourCalendarUnit | NSMinuteCalendarUnit) fromDate:input];
+    NSNumber *mins = [NSNumber numberWithUnsignedInteger:[components minute]];
+    return [mins doubleValue];
+}
 
 @end

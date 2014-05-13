@@ -18,4 +18,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *RiseValue;
 @property (weak, nonatomic) IBOutlet UILabel *SetValue;
 
+-(void) updateLable;
+-(double) getHours:(NSDate *) input;
+-(double) getMinutes:(NSDate *) input;
+
 @end
