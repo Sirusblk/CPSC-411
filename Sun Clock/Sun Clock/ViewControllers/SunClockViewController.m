@@ -15,6 +15,8 @@
 
 @implementation SunClockViewController
 
+@synthesize latitude;
+@synthesize longitude;
 @synthesize sunClock;
 @synthesize DawnValue;
 @synthesize RiseValue;
@@ -36,6 +38,7 @@
     // Do any additional setup after loading the view.
     NSLog(@"SunClockView loaded...");
     sunClock = [[SunClockData alloc] init];
+    [sunClock updateLocationLat:latitude Long:longitude];
     [sunClock updateDawn];
     [sunClock updateSunrise];
     [sunClock updateSunset];

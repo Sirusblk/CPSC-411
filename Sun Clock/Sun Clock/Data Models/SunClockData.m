@@ -45,7 +45,8 @@ static SunClockData *clockData;
         [clockData.locationManager stopUpdatingLocation];
         //observerLocation = [clockData.locationManager lastObject];
     } else {
-        //observerLocation = CLLocationCoordinate2DMake(latitude, longitude);
+        observer.lat = latitude;
+        observer.lng = longitude;
     }
 }
 
@@ -55,11 +56,6 @@ static SunClockData *clockData;
 {
     //12 degrees below horizon
     // Nautical Twilight
-    
-    //TEST DATA
-    observer.lat = 33.907233;
-    observer.lng = -117.857183;
-    //---------
 	
     /* get Julian day from local time */
 	JD = ln_get_julian_from_sys();
@@ -99,11 +95,6 @@ static SunClockData *clockData;
 
 -(void) updateSunrise
 {
-    //TEST DATA
-    observer.lat = 33.907233;
-    observer.lng = -117.857183;
-    //---------
-	
 	JD = ln_get_julian_from_sys();
 	
 	ln_get_solar_geom_coords (JD, &pos);
@@ -141,11 +132,6 @@ static SunClockData *clockData;
 
 -(void) updateSunset
 {
-    //TEST DATA
-    observer.lat = 33.907233;
-    observer.lng = -117.857183;
-    //---------
-	
 	JD = ln_get_julian_from_sys();
 	
 	ln_get_solar_geom_coords (JD, &pos);
@@ -183,11 +169,6 @@ static SunClockData *clockData;
 {
     //12 degrees below horizon
     // Nautical Twilight
-    
-    //TEST DATA
-    observer.lat = 33.907233;
-    observer.lng = -117.857183;
-    //---------
 	
     /* get Julian day from local time */
 	JD = ln_get_julian_from_sys();

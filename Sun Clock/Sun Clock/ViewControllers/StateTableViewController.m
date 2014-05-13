@@ -122,9 +122,6 @@
     // Pass the selected object to the new view controller.
     CityTableViewController *secondViewController = [segue destinationViewController];
     NSIndexPath *selectedRowIndex = [self.tableView indexPathForSelectedRow];
-    
-    NSLog(@"%@", [self.states objectAtIndex:selectedRowIndex.row]);
-    
     secondViewController.us_state = [self.states objectAtIndex:selectedRowIndex.row];
 }
 

@@ -13,6 +13,8 @@
 @interface SunClockViewController : UIViewController
 
 @property SunClockData *sunClock;
+@property double latitude;
+@property double longitude;
 @property (weak, nonatomic) IBOutlet UILabel *DawnValue;
 @property (weak, nonatomic) IBOutlet UILabel *DuskValue;
 @property (weak, nonatomic) IBOutlet UILabel *RiseValue;

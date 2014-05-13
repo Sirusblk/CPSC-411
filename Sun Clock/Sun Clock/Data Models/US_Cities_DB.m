@@ -77,7 +77,7 @@ static US_Cities_DB * databaseObject;
 }
 
 -(NSArray *) getTimeZones {
-    NSMutableArray * timeZones = [[NSMutableArray alloc] init];;
+    NSMutableArray * timeZones = [[NSMutableArray alloc] init];
     NSString* query = @"SELECT DISTINCT(time_zone) FROM cities;";
     sqlite3_stmt *stmt;
     const unsigned char* text;
@@ -102,7 +102,7 @@ static US_Cities_DB * databaseObject;
 }
 
 -(NSArray *) getStatesFromTimezone:(NSString *)time_zone {
-    NSMutableArray * listOfStates = [[NSMutableArray alloc] init];;
+    NSMutableArray * listOfStates = [[NSMutableArray alloc] init];
     NSString* query = [NSString stringWithFormat:@"SELECT DISTINCT(state) FROM cities WHERE time_zone = '%@';", time_zone];
     sqlite3_stmt *stmt;
     const unsigned char* text;
@@ -124,7 +124,7 @@ static US_Cities_DB * databaseObject;
 }
 
 -(NSArray *) getCitiesFromState:(NSString *)state {
-    NSMutableArray * listOfCities = [[NSMutableArray alloc] init];;
+    NSMutableArray * listOfCities = [[NSMutableArray alloc] init];
     NSString* query = [NSString stringWithFormat:@"SELECT DISTINCT(name) FROM cities WHERE state = '%@';", state];
     sqlite3_stmt *stmt;
     const unsigned char* text;
@@ -143,6 +143,46 @@ static US_Cities_DB * databaseObject;
     }
     
     return (NSArray *) listOfCities;
+}
+
+-(NSString *) getLongitudeFromCity:(NSString *) city {
+    NSString* query = [NSString stringWithFormat:@"SELECT DISTINCT(longitude) FROM cities WHERE name = '%@';", city];
+    sqlite3_stmt *stmt;
+    const unsigned char* text;
+    NSString *longitude;
+    
+    if(sqlite3_prepare_v2(databaseConnection, [query UTF8String], [query length], &stmt, nil) == SQLITE_OK){
+        while(sqlite3_step(stmt) == SQLITE_ROW) {
+            text = sqlite3_column_text(stmt, 0);
+            if(text)
+                longitude = [NSString stringWithCString:(const char *) text encoding:NSUTF8StringEncoding];
+            else
+                longitude = nil;
+        }
+        sqlite3_finalize(stmt);
+    }
+    
+    return longitude;
+}
+
+-(NSString *) getLatitudeFromCity:(NSString *) city {
+    NSString* query = [NSString stringWithFormat:@"SELECT DISTINCT(latitude) FROM cities WHERE name = '%@';", city];
+    sqlite3_stmt *stmt;
+    const unsigned char* text;
+    NSString *latitude;
+    
+    if(sqlite3_prepare_v2(databaseConnection, [query UTF8String], [query length], &stmt, nil) == SQLITE_OK){
+        while(sqlite3_step(stmt) == SQLITE_ROW) {
+            text = sqlite3_column_text(stmt, 0);
+            if(text)
+                latitude = [NSString stringWithCString:(const char *) text encoding:NSUTF8StringEncoding];
+            else
+                latitude = nil;
+        }
+        sqlite3_finalize(stmt);
+    }
+    
+    return latitude;
 }
 
 @end

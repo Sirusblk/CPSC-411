@@ -19,5 +19,7 @@
 -(NSArray *) getTimeZones;
 -(NSArray *) getStatesFromTimezone:(NSString *) time_zone;
 -(NSArray *) getCitiesFromState:(NSString *) state;
+-(NSString *) getLongitudeFromCity:(NSString *) city;
+-(NSString *) getLatitudeFromCity:(NSString *) city;
 
 @end

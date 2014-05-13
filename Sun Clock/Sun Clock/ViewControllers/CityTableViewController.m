@@ -113,7 +113,6 @@
 }
 */
 
-/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -121,7 +120,13 @@
 {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    SunClockViewController *secondViewController = [segue destinationViewController];
+    NSIndexPath *selectedRowIndex = [self.tableView indexPathForSelectedRow];
+    NSString *city = [self.cities objectAtIndex:selectedRowIndex.row];
+    NSString *temp = [[US_Cities_DB database] getLongitudeFromCity:city];
+    secondViewController.longitude = [temp doubleValue];
+    temp = [[US_Cities_DB database] getLatitudeFromCity:city];
+    secondViewController.latitude = [temp doubleValue];
 }
-*/
 
 @end

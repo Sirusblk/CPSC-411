@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SunClockViewController.h"
 #import "US_Cities_DB.h"
 
 @interface CityTableViewController : UITableViewController
