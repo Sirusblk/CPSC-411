@@ -56,6 +56,20 @@ int main(void){
         NSLog(@"%@", [sorted[1] num]);
         NSLog(@"%@", [sorted[2] num]);
         
+        //7
+        void (^isWord)(id obj, NSUInteger idx, BOOL *stop) = ^void(id obj, NSUInteger idx, BOOL *stop) {
+            if ([obj isEqual: @17]) {
+                idx = 1;
+            }
+        };
+        
+        NSUInteger output;
+        BOOL check = YES;
+        
+        isWord(allTheThings, output, &check);
+        
+        NSLog(@"%lu", (unsigned long)output);
+        
         return 0;
     }
 }
