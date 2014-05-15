@@ -21,6 +21,46 @@ int main(void){
         Thing* myCopy = [myThing copy];
         printf("%s\n", [[myCopy formattedString] UTF8String]);
         
+        /*
+        //5
+        NSArray *test_array = [@"Abazaba", @"Blabadaba"];
+        n_mergesort(test_array, [test_array size], [test_array width], int (^n_cmp)(const void *, const void *))
+        
+        int (^n_cmp)(const void *, const void *) = ^int (const void *elem_a, const void *elem_b) {
+            return 0;
+        };
+         */
+        
+        //6
+        Thing *thing1 = [[Thing alloc] init];
+        Thing *thing2 = [[Thing alloc] init];
+        Thing *thing3 = [[Thing alloc] init];
+        
+        [thing1 setNum:@17];
+        [thing2 setNum:@3.1417];
+        [thing3 setNum:@42];
+        
+        NSArray *allTheThings = [NSArray arrayWithObjects:thing1, thing2, thing3, nil];
+        NSArray *sorted = [allTheThings sortedArrayUsingComparator: ^NSComparisonResult(Thing *obj1, Thing *obj2) {
+            if ([obj1.num doubleValue] > [obj2.num doubleValue]) {
+                return 1;
+            }
+            else if ([obj1.num doubleValue] < [obj2.num doubleValue])
+            {
+                return -1;
+            }
+            return 0;
+        }];
+        
+        NSLog(@"%@", [sorted[0] num]);
+        NSLog(@"%@", [sorted[1] num]);
+        NSLog(@"%@", [sorted[2] num]);
+        
         return 0;
     }
+}
+
+void n_mergesort(void *base, size_t nel, size_t width, int (^cmp)(const void *, const void *))
+{
+    
 }

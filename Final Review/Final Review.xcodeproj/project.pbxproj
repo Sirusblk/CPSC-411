@@ -37,6 +37,7 @@
 		EC2A5B0419252DCF00BAEBBD /* camelCaseString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = camelCaseString.m; sourceTree = "<group>"; };
 		EC2A5B0619253A8A00BAEBBD /* Thing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Thing.h; sourceTree = "<group>"; };
 		EC2A5B0719253A8A00BAEBBD /* Thing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Thing.m; sourceTree = "<group>"; };
+		EC2A5B0919256E0900BAEBBD /* Done.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Done.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				EC2A5AF819252CF100BAEBBD /* main.m */,
+				EC2A5B0919256E0900BAEBBD /* Done.h */,
 				EC2A5B0319252DCF00BAEBBD /* camelCaseString.h */,
 				EC2A5B0419252DCF00BAEBBD /* camelCaseString.m */,
 				EC2A5B0619253A8A00BAEBBD /* Thing.h */,
