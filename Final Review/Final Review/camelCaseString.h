@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-@interface camelCaseString : NSString
+@interface NSString (camelCaseString)
+
+-(NSString *) camelCaseString;
 
 @end

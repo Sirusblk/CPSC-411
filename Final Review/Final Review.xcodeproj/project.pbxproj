@@ -10,6 +10,8 @@
 		EC2A5AF619252CF100BAEBBD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC2A5AF519252CF100BAEBBD /* Foundation.framework */; };
 		EC2A5AF919252CF100BAEBBD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EC2A5AF819252CF100BAEBBD /* main.m */; };
 		EC2A5AFD19252CF100BAEBBD /* Final_Review.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = EC2A5AFC19252CF100BAEBBD /* Final_Review.1 */; };
+		EC2A5B0519252DCF00BAEBBD /* camelCaseString.m in Sources */ = {isa = PBXBuildFile; fileRef = EC2A5B0419252DCF00BAEBBD /* camelCaseString.m */; };
+		EC2A5B0819253A8A00BAEBBD /* Thing.m in Sources */ = {isa = PBXBuildFile; fileRef = EC2A5B0719253A8A00BAEBBD /* Thing.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +33,10 @@
 		EC2A5AF819252CF100BAEBBD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		EC2A5AFB19252CF100BAEBBD /* Final Review-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Final Review-Prefix.pch"; sourceTree = "<group>"; };
 		EC2A5AFC19252CF100BAEBBD /* Final_Review.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = Final_Review.1; sourceTree = "<group>"; };
+		EC2A5B0319252DCF00BAEBBD /* camelCaseString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = camelCaseString.h; sourceTree = "<group>"; };
+		EC2A5B0419252DCF00BAEBBD /* camelCaseString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = camelCaseString.m; sourceTree = "<group>"; };
+		EC2A5B0619253A8A00BAEBBD /* Thing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Thing.h; sourceTree = "<group>"; };
+		EC2A5B0719253A8A00BAEBBD /* Thing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Thing.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +80,10 @@
 			isa = PBXGroup;
 			children = (
 				EC2A5AF819252CF100BAEBBD /* main.m */,
+				EC2A5B0319252DCF00BAEBBD /* camelCaseString.h */,
+				EC2A5B0419252DCF00BAEBBD /* camelCaseString.m */,
+				EC2A5B0619253A8A00BAEBBD /* Thing.h */,
+				EC2A5B0719253A8A00BAEBBD /* Thing.m */,
 				EC2A5AFC19252CF100BAEBBD /* Final_Review.1 */,
 				EC2A5AFA19252CF100BAEBBD /* Supporting Files */,
 			);
@@ -139,7 +149,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC2A5B0819253A8A00BAEBBD /* Thing.m in Sources */,
 				EC2A5AF919252CF100BAEBBD /* main.m in Sources */,
+				EC2A5B0519252DCF00BAEBBD /* camelCaseString.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

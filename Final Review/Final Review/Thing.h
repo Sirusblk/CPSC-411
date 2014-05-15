@@ -8,6 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Thing : NSObject
+@interface Thing : NSObject <NSCopying>
+
+@property NSNumber *num;
+
+-(NSString *) formattedString;
 
 @end

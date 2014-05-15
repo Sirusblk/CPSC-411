@@ -7,16 +7,20 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "camelCaseString.h"
+#import "Thing.h"
 
-int main(int argc, const char * argv[])
-{
-
-    @autoreleasepool {
+int main(void){
+    @autoreleasepool{
+        NSString *s = @"smashed , squashed , and splattered";
+        s = [s camelCaseString];
+        printf("%s\n", [s UTF8String]);
         
-        // insert code here...
-        NSLog(@"Hello, World!");
+        Thing* myThing = [[Thing alloc] init];
+        myThing.num = @3.1416;
+        Thing* myCopy = [myThing copy];
+        printf("%s\n", [[myCopy formattedString] UTF8String]);
         
+        return 0;
     }
-    return 0;
 }
-

@@ -8,6 +8,22 @@
 
 #import "camelCaseString.h"
 
-@implementation camelCaseString
+@implementation NSString (camelCaseString)
+
+-(NSString *) camelCaseString
+{
+    NSString *output = self;
+    NSArray *components = [self componentsSeparatedByString:@", "];
+    
+    output = components[0];
+    
+    for (int i = 1; i < [components count]; ++i) {
+        output = [output stringByAppendingString:[components[i] capitalizedString]];
+    }
+    
+    output = [output stringByReplacingOccurrencesOfString:@" " withString:@""];
+    
+    return output;
+}
 
 @end

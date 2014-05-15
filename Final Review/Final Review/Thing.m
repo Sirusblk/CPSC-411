@@ -10,4 +10,26 @@
 
 @implementation Thing
 
+@synthesize num;
+
+-(id) copyWithZone:(NSZone *) zone
+{
+    Thing* copy = [[Thing allocWithZone:zone] init];
+    
+    if(copy) {
+        copy.num = num;
+    }
+    
+    return copy;
+}
+
+-(NSString *) formattedString
+{
+    NSNumberFormatter *format = [[NSNumberFormatter alloc] init];
+    [format setFormat:@"##0.00"];
+    NSString *output = [format stringFromNumber:num];
+    
+    return output;
+}
+
 @end
